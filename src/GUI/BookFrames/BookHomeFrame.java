@@ -7,7 +7,7 @@ import javax.swing.*;
 
 public class BookHomeFrame {
     CreateFrame bhFrame = new CreateFrame();
-    CreateLabel label = new CreateLabel("Add a Book");
+    CreateLabel label = new CreateLabel("Books Management System");
     JButton button1 = new JButton("Add Book");
     JButton button2 = new JButton("Remove Book");
     JButton button3 = new JButton("Search Book");
