@@ -7,6 +7,7 @@ import javax.swing.*;
 
 public class CreateExitButton extends JButton implements ActionListener {
 
+    //default Constructor
     public CreateExitButton(){
         this.setLocation(580,390);
         this.setSize(80,40);
