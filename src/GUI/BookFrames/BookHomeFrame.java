@@ -10,8 +10,7 @@ public class BookHomeFrame {
     CreateLabel label = new CreateLabel("Add a Book");
     JButton button1 = new JButton("Add Book");
     JButton button2 = new JButton("Remove Book");
-    JButton button3 = new JButton("Search Book by ID");
-    JButton button4 = new JButton("Search Book by Author");
+    JButton button3 = new JButton("Search Book");
     JButton button5 = new JButton("Display Available Books");
     JButton button6 = new JButton("Issue Book");
     JButton button7 = new JButton("Return Book");
