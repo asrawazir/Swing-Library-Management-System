@@ -5,6 +5,7 @@ import javax.swing.*;
 
 public class CreateSubmitButton extends JButton{
 
+    //default constructor
     public CreateSubmitButton(String title){
         this.setLocation(50,390);
         this.setSize(100,40);
