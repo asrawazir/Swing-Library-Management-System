@@ -1,4 +1,8 @@
 package GUI.AdditionalClasses;
 
-public class CreateBackButton {
+import java.awt.*;
+import javax.swing.*;
+
+public class CreateBackButton extends JButton{
+
 }
