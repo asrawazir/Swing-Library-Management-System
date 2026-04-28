@@ -5,6 +5,7 @@ import javax.swing.*;
 
 public class CreateBackButton extends JButton{
 
+    //default constructor
     public CreateBackButton(){
         this.setLocation(480,390);
         this.setSize(80,40);
@@ -14,5 +15,4 @@ public class CreateBackButton extends JButton{
         this.setText("Back");
         this.setOpaque(true);
     }
-
 }
