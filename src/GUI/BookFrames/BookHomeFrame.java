@@ -26,6 +26,8 @@ public class BookHomeFrame implements ActionListener {
         bhFrame.add(backButton);
         bhFrame.add(exitButton);
 
+        button1.addActionListener(this);
+
         bhFrame.add(button1);
         bhFrame.add(button2);
         bhFrame.add(button3);
