@@ -14,5 +14,6 @@ public class CreateSubmitButton extends JButton{
         this.setForeground(Color.BLACK);
         this.setText(title);
         this.setOpaque(true);
+        this.setFocusable(false);
     }
 }
