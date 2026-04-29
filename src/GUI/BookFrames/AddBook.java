@@ -41,6 +41,13 @@ public class AddBook {
         quantityLabel.setFont(new Font("Inter",Font.BOLD,14));
         quantityLabel.setBackground(Color.LIGHT_GRAY);
 
+
+
+        abFrame.add(idLabel);
+        abFrame.add(titleLabel);
+        abFrame.add(authorLabel);
+        abFrame.add(quantityLabel);
+
         abFrame.add(label);
         abFrame.setVisible(true);
     }
