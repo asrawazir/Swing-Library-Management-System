@@ -81,6 +81,7 @@ public class AddBook implements ActionListener {
         abFrame.add(authorTextField);
         abFrame.add(quantityTextField);
 
+        backButton.addActionListener(this);
         abFrame.add(label);
         abFrame.setVisible(true);
 
