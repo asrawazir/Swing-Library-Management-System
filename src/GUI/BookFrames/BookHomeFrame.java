@@ -1,6 +1,7 @@
 package GUI.BookFrames;
 
 import GUI.AdditionalClasses.*;
+import GUI.HomeFrame;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -26,6 +27,8 @@ public class BookHomeFrame implements ActionListener {
         bhFrame.add(backButton);
         bhFrame.add(exitButton);
 
+        backButton.addActionListener(this);
+
         button1.addActionListener(this);
         button2.addActionListener(this);
         button3.addActionListener(this);
@@ -46,6 +49,10 @@ public class BookHomeFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e){
+        if (e.getSource()==backButton){
+            bhFrame.dispose();
+            new HomeFrame();
+        }
         if (e.getSource()==button1){
             bhFrame.dispose();
             new AddBook();
