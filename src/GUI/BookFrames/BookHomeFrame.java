@@ -3,8 +3,10 @@ package GUI.BookFrames;
 import GUI.AdditionalClasses.*;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class BookHomeFrame {
+public class BookHomeFrame implements ActionListener {
     CreateFrame bhFrame = new CreateFrame();
     CreateLabel label = new CreateLabel("Books Management System");
 
@@ -33,5 +35,9 @@ public class BookHomeFrame {
         bhFrame.add(button7);
         bhFrame.add(label);
         bhFrame.setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent e){
+
     }
 }
