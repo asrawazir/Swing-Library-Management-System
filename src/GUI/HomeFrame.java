@@ -1,5 +1,6 @@
 package GUI;
 import GUI.AdditionalClasses.*;
+import GUI.BookFrames.BookHomeFrame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -30,6 +31,8 @@ public class HomeFrame implements ActionListener {
 
     }
     public void actionPerformed(ActionEvent e){
-
+        if (e.getSource()==button1){
+            new BookHomeFrame();
+        }
     }
 }
