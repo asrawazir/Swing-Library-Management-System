@@ -1,5 +1,6 @@
 import GUI.AdditionalClasses.CreateFrame;
 import GUI.BookFrames.BookHomeFrame;
+import GUI.HomeFrame;
 import GUI.StudyRoomFrames.StudyRoomHomeFrame;
 
 import  java.util.Scanner;
@@ -15,7 +16,7 @@ public class Main{
             new BookHomeFrame();
         }
         if(inp==3){
-            new StudyRoomHomeFrame();
+            new HomeFrame();
 
         }
     }
