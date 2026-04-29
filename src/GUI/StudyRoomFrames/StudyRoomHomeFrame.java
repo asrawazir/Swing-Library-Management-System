@@ -16,10 +16,9 @@ public class StudyRoomHomeFrame  {
        JButton button3=new JButton();
        JLabel l1=new JLabel("STUDY ROOM MANAGEMENT");
 
-//default constructor
+
    public  StudyRoomHomeFrame(){
-       frame =new CreateFrame();
-       frame.setTitle("StudyRoomHomeFrame");
+       frame =new CreateFrame("StudyRoom Frame");
        button=new CreateBackButton();
 
         l1.setBounds(150,30,400,40);
