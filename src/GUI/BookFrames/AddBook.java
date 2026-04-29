@@ -41,6 +41,10 @@ public class AddBook {
         quantityLabel.setFont(new Font("Inter",Font.BOLD,14));
         quantityLabel.setBackground(Color.LIGHT_GRAY);
 
+        idTextField.setBounds(10,80,670,30);
+        titleTextField.setBounds(10,150,670,30);
+        authorTextField.setBounds(10,220,670,30);
+        quantityTextField.setBounds(10,290,670,30);
 
 
         abFrame.add(idLabel);
