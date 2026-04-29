@@ -14,6 +14,11 @@ public class AddBook {
     JLabel authorLabel = new JLabel();
     JLabel quantityLabel = new JLabel();
 
+    JTextField idTextField = new JTextField();
+    JTextField titleTextField = new JTextField();
+    JTextField authorTextField = new JTextField();
+    JTextField quantityTextField = new JTextField();
+
     public AddBook(){
 
         abFrame.add(label);
