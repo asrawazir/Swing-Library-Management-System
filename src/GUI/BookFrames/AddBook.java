@@ -21,6 +21,11 @@ public class AddBook {
 
     public AddBook(){
 
+        idLabel.setText("Enter Book ID : ");
+        titleLabel.setText("Enter Book Title : ");
+        authorLabel.setText("Enter Author Name : ");
+        quantityLabel.setText("Enter Total Quantity : ");
+
         abFrame.add(label);
         abFrame.setVisible(true);
     }
