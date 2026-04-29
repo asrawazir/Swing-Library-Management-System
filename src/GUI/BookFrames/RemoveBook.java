@@ -5,6 +5,7 @@ import GUI.AdditionalClasses.CreateExitButton;
 import GUI.AdditionalClasses.CreateFrame;
 import GUI.AdditionalClasses.CreateLabel;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -13,6 +14,9 @@ public class RemoveBook implements ActionListener {
     CreateLabel label = new CreateLabel("Remove Book");
     CreateExitButton exitButton = new CreateExitButton();
     CreateBackButton backButton = new CreateBackButton();
+
+    JLabel idLabel = new JLabel();
+    JTextField idTextField = new JTextField();
 
     public RemoveBook(){
 
