@@ -5,6 +5,7 @@ import javax.swing.*;
 
 public class FrameButtons extends JButton {
 
+    //default constructor
     public FrameButtons(String title, int x, int y){
         this.setLocation(x,y);
         this.setSize(150,75);
