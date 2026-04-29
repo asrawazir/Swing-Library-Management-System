@@ -26,6 +26,11 @@ public class AddBook {
         authorLabel.setText("Enter Author Name : ");
         quantityLabel.setText("Enter Total Quantity : ");
 
+        idLabel.setBounds(10,50,680,30);
+        titleLabel.setBounds(10,120,680,30);
+        authorLabel.setBounds(10,190,680,30);
+        quantityLabel.setBounds(10,260,680,30);
+
         abFrame.add(label);
         abFrame.setVisible(true);
     }
