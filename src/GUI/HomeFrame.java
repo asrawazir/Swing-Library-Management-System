@@ -22,6 +22,8 @@ public class HomeFrame implements ActionListener {
         button2=new FrameButtons(" Member Menu",260,150);
         button3=new FrameButtons(" Room Menu",455,150);
 
+        button1.addActionListener(this);
+
         frame.add(label);
         frame.add(button1);
         frame.add(button2);
@@ -32,6 +34,7 @@ public class HomeFrame implements ActionListener {
     }
     public void actionPerformed(ActionEvent e){
         if (e.getSource()==button1){
+            frame.dispose();
             new BookHomeFrame();
         }
     }
