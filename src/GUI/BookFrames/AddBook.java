@@ -4,8 +4,10 @@ import GUI.AdditionalClasses.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class AddBook {
+public class AddBook implements ActionListener {
     CreateFrame abFrame = new CreateFrame();
     CreateLabel label = new CreateLabel("Add a Book");
 
@@ -85,5 +87,10 @@ public class AddBook {
         abFrame.add(backButton);
         abFrame.add(exitButton);
         abFrame.add(submitButton);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e){
+
     }
 }
