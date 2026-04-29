@@ -14,6 +14,7 @@ public class CreateExitButton extends JButton implements ActionListener {
         this.setFont(new Font("Roboto", Font.BOLD, 12));
         this.setBackground(Color.LIGHT_GRAY);
         this.setForeground(Color.BLACK);
+        this.addActionListener(this);
         this.setText("Exit");
         this.setOpaque(true);
     }
