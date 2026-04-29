@@ -46,6 +46,25 @@ public class AddBook {
         authorTextField.setBounds(10,220,670,30);
         quantityTextField.setBounds(10,290,670,30);
 
+        idTextField.setFont(new Font("Inter",Font.PLAIN,14));
+        idTextField.setForeground(Color.BLACK);
+        idTextField.setBackground(Color.WHITE);
+        idTextField.setCaretColor(Color.BLACK);
+
+        titleTextField.setFont(new Font("Inter",Font.PLAIN,14));
+        titleTextField.setForeground(Color.BLACK);
+        titleTextField.setBackground(Color.WHITE);
+        titleTextField.setCaretColor(Color.BLACK);
+
+        authorTextField.setFont(new Font("Inter",Font.PLAIN,14));
+        authorTextField.setForeground(Color.BLACK);
+        authorTextField.setBackground(Color.WHITE);
+        authorTextField.setCaretColor(Color.BLACK);
+
+        quantityTextField.setFont(new Font("Inter",Font.PLAIN,14));
+        quantityTextField.setForeground(Color.BLACK);
+        quantityTextField.setBackground(Color.WHITE);
+        quantityTextField.setCaretColor(Color.BLACK);
 
         abFrame.add(idLabel);
         abFrame.add(titleLabel);
