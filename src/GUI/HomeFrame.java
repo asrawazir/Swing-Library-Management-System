@@ -9,7 +9,6 @@ import java.awt.event.ActionListener;
 public class HomeFrame implements ActionListener {
     CreateFrame frame;
     CreateLabel label;
-    CreateBackButton button;
     CreateExitButton exitButton;
     FrameButtons button1;
     FrameButtons button2;
@@ -17,7 +16,6 @@ public class HomeFrame implements ActionListener {
     public HomeFrame(){
         frame=new CreateFrame();
         label=new CreateLabel("HOME FRAME");
-        button=new CreateBackButton();
         exitButton=new CreateExitButton();
         button1=new FrameButtons(" Book Menu",70,150);
         button2=new FrameButtons(" Member Menu",260,150);
@@ -28,7 +26,6 @@ public class HomeFrame implements ActionListener {
         frame.add(button2);
         frame.add(button3);
         frame.add(exitButton);
-        frame.add(button);
         frame.setVisible(true);
 
     }
