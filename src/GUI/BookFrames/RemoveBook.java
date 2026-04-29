@@ -16,6 +16,8 @@ public class RemoveBook implements ActionListener {
 
     public RemoveBook(){
 
+        backButton.addActionListener(this);
+
         rbFrame.add(backButton);
         rbFrame.add(exitButton);
         rbFrame.add(label);
@@ -23,6 +25,9 @@ public class RemoveBook implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e){
-
+        if (e.getSource()==backButton){
+            rbFrame.dispose();
+            new BookHomeFrame();
+        }
     }
 }
