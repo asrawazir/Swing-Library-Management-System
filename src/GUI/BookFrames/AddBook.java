@@ -71,6 +71,11 @@ public class AddBook {
         abFrame.add(authorLabel);
         abFrame.add(quantityLabel);
 
+        abFrame.add(idTextField);
+        abFrame.add(titleTextField);
+        abFrame.add(authorTextField);
+        abFrame.add(quantityTextField);
+
         abFrame.add(label);
         abFrame.setVisible(true);
     }
