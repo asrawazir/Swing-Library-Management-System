@@ -3,7 +3,10 @@ import GUI.AdditionalClasses.*;
 
 import javax.swing.*;
 import java.awt.*;
-public class HomeFrame {
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class HomeFrame implements ActionListener {
     CreateFrame frame;
     CreateLabel label;
     CreateBackButton button;
@@ -28,8 +31,8 @@ public class HomeFrame {
         frame.add(button);
         frame.setVisible(true);
 
-
-
+    }
+    public void actionPerformed(ActionEvent e){
 
     }
 }
