@@ -17,6 +17,7 @@ public class CreateExitButton extends JButton implements ActionListener {
         this.addActionListener(this);
         this.setText("Exit");
         this.setOpaque(true);
+        this.setFocusable(false);
     }
 
     @Override
