@@ -5,7 +5,10 @@ import GUI.AdditionalClasses.CreateExitButton;
 import GUI.AdditionalClasses.CreateFrame;
 import GUI.AdditionalClasses.CreateLabel;
 
-public class RemoveBook {
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class RemoveBook implements ActionListener {
     CreateFrame rbFrame = new CreateFrame();
     CreateLabel label = new CreateLabel("Remove Book");
     CreateExitButton exitButton = new CreateExitButton();
@@ -17,5 +20,9 @@ public class RemoveBook {
         rbFrame.add(exitButton);
         rbFrame.add(label);
         rbFrame.setVisible(true);
+    }
+    @Override
+    public void actionPerformed(ActionEvent e){
+
     }
 }
