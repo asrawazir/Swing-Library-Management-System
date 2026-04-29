@@ -1,7 +1,6 @@
 package GUI.BookFrames;
 
-import GUI.AdditionalClasses.CreateFrame;
-import GUI.AdditionalClasses.CreateLabel;
+import GUI.AdditionalClasses.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,6 +18,10 @@ public class AddBook {
     JTextField titleTextField = new JTextField();
     JTextField authorTextField = new JTextField();
     JTextField quantityTextField = new JTextField();
+
+    CreateBackButton backButton = new CreateBackButton();
+    CreateExitButton exitButton =new CreateExitButton();
+    CreateSubmitButton submitButton = new CreateSubmitButton("Add");
 
     public AddBook(){
 
@@ -78,5 +81,9 @@ public class AddBook {
 
         abFrame.add(label);
         abFrame.setVisible(true);
+
+        abFrame.add(backButton);
+        abFrame.add(exitButton);
+        abFrame.add(submitButton);
     }
 }
