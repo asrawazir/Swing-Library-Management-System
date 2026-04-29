@@ -26,10 +26,16 @@ public class RemoveBook implements ActionListener {
         idLabel.setFont(new Font("Inter",Font.BOLD,14));
         idLabel.setBackground(Color.LIGHT_GRAY);
 
+        idTextField.setBounds(10,160,670,30);
+        idTextField.setFont(new Font("Inter",Font.PLAIN,14));
+        idTextField.setForeground(Color.BLACK);
+        idTextField.setBackground(Color.WHITE);
+        idTextField.setCaretColor(Color.BLACK);
 
         backButton.addActionListener(this);
 
         rbFrame.add(idLabel);
+        rbFrame.add(idTextField);
         rbFrame.add(backButton);
         rbFrame.add(exitButton);
         rbFrame.add(label);
