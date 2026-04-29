@@ -16,10 +16,9 @@ public class HomeFrame {
         label=new CreateLabel("HOME FRAME");
         button=new CreateBackButton();
         exitButton=new CreateExitButton();
-        button1=new FrameButtons(" Book Menu",210,110);
-        button2=new FrameButtons(" Member Menu",420,110);
-        button3=new FrameButtons(" Room Menu",310,200);
-
+        button1=new FrameButtons(" Book Menu",70,150);
+        button2=new FrameButtons(" Member Menu",260,150);
+        button3=new FrameButtons(" Room Menu",455,150);
 
         frame.add(label);
         frame.add(button1);
