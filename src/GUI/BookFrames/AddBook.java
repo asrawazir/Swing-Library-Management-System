@@ -4,6 +4,7 @@ import GUI.AdditionalClasses.CreateFrame;
 import GUI.AdditionalClasses.CreateLabel;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class AddBook {
     CreateFrame abFrame = new CreateFrame();
@@ -30,6 +31,15 @@ public class AddBook {
         titleLabel.setBounds(10,120,680,30);
         authorLabel.setBounds(10,190,680,30);
         quantityLabel.setBounds(10,260,680,30);
+
+        idLabel.setFont(new Font("Inter",Font.BOLD,14));
+        idLabel.setBackground(Color.LIGHT_GRAY);
+        titleLabel.setFont(new Font("Inter",Font.BOLD,14));
+        titleLabel.setBackground(Color.LIGHT_GRAY);
+        authorLabel.setFont(new Font("Inter",Font.BOLD,14));
+        authorLabel.setBackground(Color.LIGHT_GRAY);
+        quantityLabel.setFont(new Font("Inter",Font.BOLD,14));
+        quantityLabel.setBackground(Color.LIGHT_GRAY);
 
         abFrame.add(label);
         abFrame.setVisible(true);
