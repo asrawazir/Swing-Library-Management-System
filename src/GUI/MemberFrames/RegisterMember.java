@@ -19,6 +19,8 @@ public class RegisterMember implements ActionListener{
     JLabel phoneLabel;
     JLabel emailLabel;
 
+    JTextField idTextField;
+    JTextField nameTextField;
 
     public RegisterMember(){
         rmFrame = new CreateFrame();
