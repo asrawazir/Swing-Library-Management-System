@@ -1,9 +1,6 @@
 package GUI.BookFrames;
 
-import GUI.AdditionalClasses.CreateBackButton;
-import GUI.AdditionalClasses.CreateExitButton;
-import GUI.AdditionalClasses.CreateFrame;
-import GUI.AdditionalClasses.CreateLabel;
+import GUI.AdditionalClasses.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,6 +12,7 @@ public class RemoveBook implements ActionListener {
     CreateLabel label = new CreateLabel("Remove Book");
     CreateExitButton exitButton = new CreateExitButton();
     CreateBackButton backButton = new CreateBackButton();
+    CreateSubmitButton submitButton = new CreateSubmitButton("Remove");
 
     JLabel idLabel = new JLabel();
     JTextField idTextField = new JTextField();
@@ -34,6 +32,7 @@ public class RemoveBook implements ActionListener {
 
         backButton.addActionListener(this);
 
+        rbFrame.add(submitButton);
         rbFrame.add(idLabel);
         rbFrame.add(idTextField);
         rbFrame.add(backButton);
