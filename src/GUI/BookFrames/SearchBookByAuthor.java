@@ -4,6 +4,7 @@ import GUI.AdditionalClasses.CreateBackButton;
 import GUI.AdditionalClasses.CreateExitButton;
 import GUI.AdditionalClasses.CreateFrame;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -11,6 +12,9 @@ public class SearchBookByAuthor implements ActionListener {
     CreateFrame sbaFrame = new CreateFrame();
     CreateBackButton backButton = new CreateBackButton();
     CreateExitButton exitButton = new CreateExitButton();
+
+    JLabel authorLabel = new JLabel();
+    JTextField authorTextField = new JTextField();
 
     public SearchBookByAuthor(){
 
