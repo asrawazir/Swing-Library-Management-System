@@ -59,6 +59,12 @@ public class RegisterMember implements ActionListener{
         emailLabel.setBackground(Color.LIGHT_GRAY);
         emailLabel.setFont(new Font("Inter",Font.BOLD,14));
         emailLabel.setForeground(Color.BLACK);
+
+        idTextField.setBounds(10,80,670,30);
+        idTextField.setFont(new Font("Inter",Font.PLAIN,14));
+        idTextField.setForeground(Color.BLACK);
+        idTextField.setBackground(Color.WHITE);
+        idTextField.setCaretColor(Color.BLACK);
     }
 
 
