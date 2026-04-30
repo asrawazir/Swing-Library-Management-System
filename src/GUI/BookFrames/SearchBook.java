@@ -5,7 +5,10 @@ import GUI.AdditionalClasses.CreateExitButton;
 import GUI.AdditionalClasses.CreateFrame;
 import GUI.AdditionalClasses.CreateLabel;
 
-public class SearchBook {
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class SearchBook implements ActionListener {
 
     CreateFrame sbFrame = new CreateFrame();
     CreateLabel label = new CreateLabel("Search Book");
@@ -18,5 +21,10 @@ public class SearchBook {
         sbFrame.add(backButton);
         sbFrame.add(label);
         sbFrame.setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e){
+
     }
 }
