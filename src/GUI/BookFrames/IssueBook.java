@@ -7,8 +7,10 @@ import GUI.AdditionalClasses.CreateLabel;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class IssueBook {
+public class IssueBook implements ActionListener {
     CreateFrame ibFrame = new CreateFrame();
     CreateLabel label = new CreateLabel("Issue a Book");
 
@@ -54,5 +56,10 @@ public class IssueBook {
         ibFrame.add(bookIdLabel);
         ibFrame.add(label);
         ibFrame.setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e){
+
     }
 }
