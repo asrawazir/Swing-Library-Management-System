@@ -78,6 +78,11 @@ public class RegisterMember implements ActionListener{
         phoneTextField.setBackground(Color.WHITE);
         phoneTextField.setCaretColor(Color.BLACK);
 
+        emailTextField.setBounds(10,290,670,30);
+        emailTextField.setFont(new Font("Inter",Font.PLAIN,14));
+        emailTextField.setForeground(Color.BLACK);
+        emailTextField.setBackground(Color.WHITE);
+        emailTextField.setCaretColor(Color.BLACK);
     }
 
 
