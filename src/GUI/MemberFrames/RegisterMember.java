@@ -21,6 +21,8 @@ public class RegisterMember implements ActionListener{
 
     JTextField idTextField;
     JTextField nameTextField;
+    JTextField phoneTextField;
+    JTextField emailTextField;
 
     public RegisterMember(){
         rmFrame = new CreateFrame();
