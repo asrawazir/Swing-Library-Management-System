@@ -61,5 +61,10 @@ public class BookHomeFrame implements ActionListener {
             bhFrame.dispose();
             new RemoveBook();
         }
+
+        if (e.getSource()==button3){
+            bhFrame.dispose();
+            new SearchBook();
+        }
     }
 }
