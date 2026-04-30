@@ -18,7 +18,7 @@ public class StudyRoomHomeFrame  {
 
 
    public  StudyRoomHomeFrame(){
-       frame =new CreateFrame("StudyRoom Frame");
+       frame =new CreateFrame();
        button=new CreateBackButton();
 
         l1.setBounds(150,30,400,40);
