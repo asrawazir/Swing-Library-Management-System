@@ -33,6 +33,8 @@ public class RegisterMember implements ActionListener{
 
         idLabel = new JLabel();
         nameLabel = new JLabel();
+        phoneLabel = new JLabel();
+        emailLabel = new JLabel();
 
     }
 
