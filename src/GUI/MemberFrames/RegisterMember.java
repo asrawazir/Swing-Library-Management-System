@@ -14,6 +14,8 @@ public class RegisterMember implements ActionListener{
     CreateExitButton rmExitButton;
 
     public RegisterMember(){
+        rmFrame = new CreateFrame();
+        rmLabel = new CreateLabel();
 
     }
 
