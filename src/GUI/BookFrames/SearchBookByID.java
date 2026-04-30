@@ -26,8 +26,15 @@ public class SearchBookByID implements ActionListener {
         idLabel.setFont(new Font("Inter",Font.BOLD,14));
         idLabel.setBackground(Color.LIGHT_GRAY);
 
+        idTextField.setBounds(10,160,670,30);
+        idTextField.setFont(new Font("Inter",Font.PLAIN,14));
+        idTextField.setForeground(Color.BLACK);
+        idTextField.setBackground(Color.WHITE);
+        idTextField.setCaretColor(Color.BLACK);
+
         backButton.addActionListener(this);
 
+        sbiFrame.add(idTextField);
         sbiFrame.add(idLabel);
         sbiFrame.add(label);
         sbiFrame.add(backButton);
