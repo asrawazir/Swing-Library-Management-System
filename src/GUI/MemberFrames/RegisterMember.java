@@ -83,6 +83,11 @@ public class RegisterMember implements ActionListener{
         emailTextField.setForeground(Color.BLACK);
         emailTextField.setBackground(Color.WHITE);
         emailTextField.setCaretColor(Color.BLACK);
+
+        rmFrame.add(idLabel);
+        rmFrame.add(nameLabel);
+        rmFrame.add(phoneLabel);
+        rmFrame.add(emailLabel);
     }
 
 
