@@ -1,29 +1,33 @@
 package GUI.StudyRoomFrames;
 
-import GUI.AdditionalClasses.CreateBackButton;
-import GUI.AdditionalClasses.CreateExitButton;
-import GUI.AdditionalClasses.CreateFrame;
-import GUI.AdditionalClasses.CreateLabel;
+import GUI.AdditionalClasses.*;
+import GUI.HomeFrame;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class CancelReservationFrame {
+public class CancelReservationFrame implements ActionListener {
     CreateFrame frame;
     CreateBackButton button;
-    CreateExitButton exitButton;
     CreateLabel label;
     JLabel roomLabel=new JLabel();
     JLabel memberIDLabel =new JLabel();
-
+     CreateSubmitButton submitButton;
     JTextField roomField=new JTextField();
     JTextField memberField=new JTextField();
 
     public CancelReservationFrame(){
         frame=new CreateFrame();
         button=new CreateBackButton();
-        exitButton=new CreateExitButton();
+
         label=new CreateLabel("Cancel Reservation");
+        submitButton=new CreateSubmitButton("Submit");
+
+
+        button.addActionListener(this);
+        submitButton.addActionListener(this);
 
         roomLabel.setText("Enter Room Number:");
         memberIDLabel.setText("Enter Member ID:");
@@ -49,9 +53,19 @@ public class CancelReservationFrame {
         frame.add(memberIDLabel);
         frame.add(memberField);
         frame.add(button);
-        frame.add(exitButton);
 
+        frame.add(submitButton);
         frame.setVisible(true);
+
+    }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+        if (e.getSource() == button) {
+            frame.dispose();
+            new StudyRoomHomeFrame();
+        }
+
 
     }
 }
