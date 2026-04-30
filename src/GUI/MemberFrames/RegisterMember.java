@@ -7,6 +7,9 @@ import java.awt.event.ActionListener;
 
 public class RegisterMember implements ActionListener{
 
+    CreateFrame rmFrame;
+    CreateLabel rmLabel;
+
     @Override
     public void actionPerformed(ActionEvent e) {
 
