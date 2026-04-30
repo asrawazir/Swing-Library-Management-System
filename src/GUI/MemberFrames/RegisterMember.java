@@ -40,6 +40,12 @@ public class RegisterMember implements ActionListener{
         idLabel.setBackground(Color.LIGHT_GRAY);
         idLabel.setFont(new Font("Inter",Font.BOLD,14));
         idLabel.setForeground(Color.BLACK);
+
+        nameLabel.setText("Enter your id: ");
+        nameLabel.setBackground(Color.LIGHT_GRAY);
+        nameLabel.setFont(new Font("Inter",Font.BOLD,14));
+        nameLabel.setForeground(Color.BLACK);
+
     }
 
 
