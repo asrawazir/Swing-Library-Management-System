@@ -65,6 +65,13 @@ public class RegisterMember implements ActionListener{
         idTextField.setForeground(Color.BLACK);
         idTextField.setBackground(Color.WHITE);
         idTextField.setCaretColor(Color.BLACK);
+
+        nameTextField.setBounds(10,150,670,30);
+        nameTextField.setFont(new Font("Inter",Font.PLAIN,14));
+        nameTextField.setForeground(Color.BLACK);
+        nameTextField.setBackground(Color.WHITE);
+        nameTextField.setCaretColor(Color.BLACK);
+
     }
 
 
