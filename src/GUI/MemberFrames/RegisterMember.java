@@ -16,7 +16,8 @@ public class RegisterMember implements ActionListener{
 
     JLabel idLabel;
     JLabel nameLabel;
-
+    JLabel phoneLabel;
+    JLabel emailLabel;
 
 
     public RegisterMember(){
