@@ -9,6 +9,11 @@ public class RegisterMember implements ActionListener{
 
     CreateFrame rmFrame;
     CreateLabel rmLabel;
+    CreateSubmitButton rmSubmitButton;
+    CreateBackButton rmBackButton;
+    CreateExitButton rmExitButton;
+
+
 
     @Override
     public void actionPerformed(ActionEvent e) {
