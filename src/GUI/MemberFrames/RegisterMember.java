@@ -88,6 +88,11 @@ public class RegisterMember implements ActionListener{
         rmFrame.add(nameLabel);
         rmFrame.add(phoneLabel);
         rmFrame.add(emailLabel);
+
+        rmFrame.add(idTextField);
+        rmFrame.add(nameTextField);
+        rmFrame.add(phoneTextField);
+        rmFrame.add(emailTextField);
     }
 
 
