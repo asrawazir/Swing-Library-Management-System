@@ -6,6 +6,7 @@ import GUI.AdditionalClasses.CreateFrame;
 import GUI.AdditionalClasses.CreateLabel;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -20,8 +21,14 @@ public class SearchBookByID implements ActionListener {
 
     public SearchBookByID(){
 
+        idLabel.setText("Enter Book ID : ");
+        idLabel.setBounds(10,120,680,30);
+        idLabel.setFont(new Font("Inter",Font.BOLD,14));
+        idLabel.setBackground(Color.LIGHT_GRAY);
+
         backButton.addActionListener(this);
 
+        sbiFrame.add(idLabel);
         sbiFrame.add(label);
         sbiFrame.add(backButton);
         sbiFrame.add(exitButton);
