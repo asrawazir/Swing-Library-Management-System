@@ -16,6 +16,8 @@ public class DisplayBooks implements ActionListener {
 
     public DisplayBooks(){
 
+        backButton.addActionListener(this);
+
         dbFrame.add(backButton);
         dbFrame.add(exitButton);
         dbFrame.add(label);
@@ -24,6 +26,9 @@ public class DisplayBooks implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e){
-
+        if (e.getSource()==backButton){
+            dbFrame.dispose();
+            new BookHomeFrame();
+        }
     }
 }
