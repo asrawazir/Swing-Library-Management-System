@@ -36,6 +36,10 @@ public class RegisterMember implements ActionListener{
         phoneLabel = new JLabel();
         emailLabel = new JLabel();
 
+        idLabel.setText("Enter your id: ");
+        idLabel.setBackground(Color.LIGHT_GRAY);
+        idLabel.setFont(new Font("Inter",Font.BOLD,14));
+        idLabel.setForeground(Color.BLACK);
     }
 
 
