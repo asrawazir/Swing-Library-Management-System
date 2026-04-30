@@ -1,5 +1,7 @@
 package GUI.BookFrames;
 
+import GUI.AdditionalClasses.CreateBackButton;
+import GUI.AdditionalClasses.CreateExitButton;
 import GUI.AdditionalClasses.CreateFrame;
 import GUI.AdditionalClasses.CreateLabel;
 
@@ -15,6 +17,9 @@ public class IssueBook {
 
     JTextField memberIdTextField = new JTextField();
     JTextField bookIdTextField = new JTextField();
+
+    CreateBackButton backButton = new CreateBackButton();
+    CreateExitButton exitButton = new CreateExitButton();
 
     public IssueBook(){
 
@@ -41,6 +46,8 @@ public class IssueBook {
         bookIdTextField.setBackground(Color.WHITE);
         bookIdTextField.setCaretColor(Color.BLACK);
 
+        ibFrame.add(backButton);
+        ibFrame.add(exitButton);
         ibFrame.add(memberIdTextField);
         ibFrame.add(bookIdTextField);
         ibFrame.add(memberIdLabel);
