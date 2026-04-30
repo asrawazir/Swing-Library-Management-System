@@ -15,7 +15,9 @@ public class RegisterMember implements ActionListener{
 
     public RegisterMember(){
         rmFrame = new CreateFrame();
-        rmLabel = new CreateLabel();
+        rmLabel = new CreateLabel("Register Member");
+        rmSubmitButton = new CreateSubmitButton("Register");
+
 
     }
 
