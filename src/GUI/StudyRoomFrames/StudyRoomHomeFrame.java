@@ -1,9 +1,6 @@
 package GUI.StudyRoomFrames;
 
-import GUI.AdditionalClasses.CreateBackButton;
-import GUI.AdditionalClasses.CreateFrame;
-import GUI.AdditionalClasses.CreateLabel;
-import GUI.AdditionalClasses.FrameButtons;
+import GUI.AdditionalClasses.*;
 import GUI.HomeFrame;
 
 import javax.swing.*;
@@ -19,12 +16,14 @@ public class StudyRoomHomeFrame implements ActionListener  {
        FrameButtons button3;
        FrameButtons button4;
        CreateLabel label;
-
+       CreateExitButton exitButton;
 
    public  StudyRoomHomeFrame(){
        frame =new CreateFrame();
        button=new CreateBackButton();
        label=new CreateLabel("StudyRoom Management ");
+       exitButton=new CreateExitButton();
+
 
        button1=new FrameButtons("Display Rooms",100,150);
        button2=new FrameButtons("Reserve Room",300,150);
@@ -32,6 +31,7 @@ public class StudyRoomHomeFrame implements ActionListener  {
        button4=new FrameButtons("Check Reservation Status",300,220);
 
        button.addActionListener(this);
+       exitButton.addActionListener(this);
 
        button1.setFocusable(false);
        button2.setFocusable(false);
@@ -49,6 +49,7 @@ public class StudyRoomHomeFrame implements ActionListener  {
         frame.add(button3);
         frame.add(button4);
         frame.add(button);
+        frame.add(exitButton);
 
         frame.setVisible(true);
 
@@ -79,6 +80,7 @@ public class StudyRoomHomeFrame implements ActionListener  {
             frame.dispose();
             new HomeFrame();
         }
+
 
    }
        }
