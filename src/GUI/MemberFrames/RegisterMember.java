@@ -93,6 +93,10 @@ public class RegisterMember implements ActionListener{
         rmFrame.add(nameTextField);
         rmFrame.add(phoneTextField);
         rmFrame.add(emailTextField);
+
+        rmFrame.add(rmSubmitButton);
+        rmFrame.add(rmBackButton);
+        rmFrame.add(rmExitButton);
     }
 
 
