@@ -97,6 +97,9 @@ public class RegisterMember implements ActionListener{
         rmFrame.add(rmSubmitButton);
         rmFrame.add(rmBackButton);
         rmFrame.add(rmExitButton);
+
+        rmFrame.add(rmLabel);
+        rmFrame.setVisible(true);
     }
 
 
