@@ -1,6 +1,7 @@
 package GUI;
 import GUI.AdditionalClasses.*;
 import GUI.BookFrames.BookHomeFrame;
+import GUI.StudyRoomFrames.StudyRoomHomeFrame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -23,6 +24,7 @@ public class HomeFrame implements ActionListener {
         button3=new FrameButtons(" Room Menu",455,150);
 
         button1.addActionListener(this);
+        button3.addActionListener(this);
 
         frame.add(label);
         frame.add(button1);
@@ -36,6 +38,10 @@ public class HomeFrame implements ActionListener {
         if (e.getSource()==button1){
             frame.dispose();
             new BookHomeFrame();
+        }
+        if(e.getSource()==button3){
+            frame.dispose();
+            new StudyRoomHomeFrame();
         }
     }
 }
