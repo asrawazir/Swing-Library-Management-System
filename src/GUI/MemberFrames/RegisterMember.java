@@ -37,21 +37,25 @@ public class RegisterMember implements ActionListener{
         emailLabel = new JLabel();
 
         idLabel.setText("Enter your id: ");
+        idLabel.setBounds(10,50,680,30);
         idLabel.setBackground(Color.LIGHT_GRAY);
         idLabel.setFont(new Font("Inter",Font.BOLD,14));
         idLabel.setForeground(Color.BLACK);
 
-        nameLabel.setText("Enter your id: ");
+        nameLabel.setText("Enter your name: ");
+        nameLabel.setBounds(10,120,680,30);
         nameLabel.setBackground(Color.LIGHT_GRAY);
         nameLabel.setFont(new Font("Inter",Font.BOLD,14));
         nameLabel.setForeground(Color.BLACK);
 
-        phoneLabel.setText("Enter your id: ");
+        phoneLabel.setText("Enter your phone Number: ");
+        phoneLabel.setBounds(10,190,680,30);
         phoneLabel.setBackground(Color.LIGHT_GRAY);
         phoneLabel.setFont(new Font("Inter",Font.BOLD,14));
         phoneLabel.setForeground(Color.BLACK);
 
-        emailLabel.setText("Enter your id: ");
+        emailLabel.setText("Enter your email: ");
+        emailLabel.setBounds(10,260,680,30);
         emailLabel.setBackground(Color.LIGHT_GRAY);
         emailLabel.setFont(new Font("Inter",Font.BOLD,14));
         emailLabel.setForeground(Color.BLACK);
