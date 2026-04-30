@@ -14,6 +14,8 @@ public class SearchBookByID implements ActionListener {
 
     public SearchBookByID(){
 
+        backButton.addActionListener(this);
+
         sbiFrame.add(backButton);
         sbiFrame.add(exitButton);
         sbiFrame.setVisible(true);
@@ -21,6 +23,9 @@ public class SearchBookByID implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e){
-
+        if (e.getSource()==backButton){
+            sbiFrame.dispose();
+            new SearchBook();
+        }
     }
 }
