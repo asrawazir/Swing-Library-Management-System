@@ -1,15 +1,13 @@
 package GUI.StudyRoomFrames;
 
-import GUI.AdditionalClasses.CreateBackButton;
-import GUI.AdditionalClasses.CreateExitButton;
-import GUI.AdditionalClasses.CreateFrame;
-import GUI.AdditionalClasses.CreateLabel;
+import GUI.AdditionalClasses.*;
 import GUI.HomeFrame;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 
 public class ReserveRoomFrame implements ActionListener {
     CreateFrame frame;
@@ -20,15 +18,18 @@ public class ReserveRoomFrame implements ActionListener {
     JLabel memberIDLabel = new JLabel();
     JTextField roomField = new JTextField();
     JTextField memberField = new JTextField();
+    CreateSubmitButton submitButton;
 
     public ReserveRoomFrame() {
         frame = new CreateFrame();
         backButton = new CreateBackButton();
         label = new CreateLabel("Reserve Room");
         exitButton = new CreateExitButton();
+        submitButton=new CreateSubmitButton("Reserve Room");
 
         backButton.addActionListener(this);
         exitButton.addActionListener(this);
+        submitButton.addActionListener(this);
 
         roomLabel.setText("Enter Room Number:");
         memberIDLabel.setText("Enter Member ID:");
@@ -55,6 +56,8 @@ public class ReserveRoomFrame implements ActionListener {
         frame.add(memberField);
         frame.add(backButton);
         frame.add(exitButton);
+        frame.add(submitButton);
+
 
         frame.setVisible(true);
 
@@ -63,11 +66,7 @@ public class ReserveRoomFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == exitButton) {
-            frame.dispose();
-            new HomeFrame();
 
-        }
         if (e.getSource() == backButton) {
             frame.dispose();
             new StudyRoomHomeFrame();
