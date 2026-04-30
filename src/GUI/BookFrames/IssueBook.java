@@ -29,6 +29,20 @@ public class IssueBook {
         bookIdLabel.setFont(new Font("Inter",Font.BOLD,14));
         bookIdLabel.setBackground(Color.LIGHT_GRAY);
 
+        memberIdTextField.setBounds(10,150,670,30);
+        memberIdTextField.setFont(new Font("Inter",Font.PLAIN,14));
+        memberIdTextField.setForeground(Color.BLACK);
+        memberIdTextField.setBackground(Color.WHITE);
+        memberIdTextField.setCaretColor(Color.BLACK);
+
+        bookIdTextField.setBounds(10,220,670,30);
+        bookIdTextField.setFont(new Font("Inter",Font.PLAIN,14));
+        bookIdTextField.setForeground(Color.BLACK);
+        bookIdTextField.setBackground(Color.WHITE);
+        bookIdTextField.setCaretColor(Color.BLACK);
+
+        ibFrame.add(memberIdTextField);
+        ibFrame.add(bookIdTextField);
         ibFrame.add(memberIdLabel);
         ibFrame.add(bookIdLabel);
         ibFrame.add(label);
