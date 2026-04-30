@@ -2,6 +2,7 @@ package GUI.MemberFrames;
 
 import GUI.AdditionalClasses.*;
 
+import javax.script.ScriptEngine;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -17,6 +18,8 @@ public class RegisterMember implements ActionListener{
         rmFrame = new CreateFrame();
         rmLabel = new CreateLabel("Register Member");
         rmSubmitButton = new CreateSubmitButton("Register");
+        rmBackButton = new CreateBackButton();
+        rmExitButton = new CreateExitButton();
 
 
     }
