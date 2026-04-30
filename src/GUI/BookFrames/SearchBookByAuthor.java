@@ -4,7 +4,10 @@ import GUI.AdditionalClasses.CreateBackButton;
 import GUI.AdditionalClasses.CreateExitButton;
 import GUI.AdditionalClasses.CreateFrame;
 
-public class SearchBookByAuthor {
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class SearchBookByAuthor implements ActionListener {
     CreateFrame sbaFrame = new CreateFrame();
     CreateBackButton backButton = new CreateBackButton();
     CreateExitButton exitButton = new CreateExitButton();
@@ -14,5 +17,10 @@ public class SearchBookByAuthor {
         sbaFrame.add(backButton);
         sbaFrame.add(exitButton);
         sbaFrame.setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e){
+
     }
 }
