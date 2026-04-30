@@ -1,8 +1,6 @@
 package GUI.MemberFrames;
 
 import GUI.AdditionalClasses.*;
-
-import javax.script.ScriptEngine;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
