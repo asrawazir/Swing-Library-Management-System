@@ -51,6 +51,10 @@ public class RegisterMember implements ActionListener{
         phoneLabel.setFont(new Font("Inter",Font.BOLD,14));
         phoneLabel.setForeground(Color.BLACK);
 
+        emailLabel.setText("Enter your id: ");
+        emailLabel.setBackground(Color.LIGHT_GRAY);
+        emailLabel.setFont(new Font("Inter",Font.BOLD,14));
+        emailLabel.setForeground(Color.BLACK);
     }
 
 
