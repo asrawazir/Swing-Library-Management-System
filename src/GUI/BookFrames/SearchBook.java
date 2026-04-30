@@ -17,6 +17,8 @@ public class SearchBook implements ActionListener {
 
     public SearchBook(){
 
+        backButton.addActionListener(this);
+
         sbFrame.add(exitButton);
         sbFrame.add(backButton);
         sbFrame.add(label);
@@ -25,6 +27,9 @@ public class SearchBook implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e){
-
+        if (e.getSource()==backButton){
+            sbFrame.dispose();
+            new BookHomeFrame();
+        }
     }
 }
