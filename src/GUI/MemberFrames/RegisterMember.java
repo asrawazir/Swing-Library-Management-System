@@ -13,6 +13,9 @@ public class RegisterMember implements ActionListener{
     CreateBackButton rmBackButton;
     CreateExitButton rmExitButton;
 
+    public RegisterMember(){
+
+    }
 
 
     @Override
