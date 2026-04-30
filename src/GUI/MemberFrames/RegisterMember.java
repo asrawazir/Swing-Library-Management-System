@@ -31,6 +31,8 @@ public class RegisterMember implements ActionListener{
         rmBackButton = new CreateBackButton();
         rmExitButton = new CreateExitButton();
 
+        idLabel = new JLabel();
+        nameLabel = new JLabel();
 
     }
 
