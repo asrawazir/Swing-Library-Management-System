@@ -3,6 +3,8 @@ package GUI.MemberFrames;
 import GUI.AdditionalClasses.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.*;
+import javax.swing.*;
 
 public class RegisterMember implements ActionListener{
 
@@ -11,6 +13,11 @@ public class RegisterMember implements ActionListener{
     CreateSubmitButton rmSubmitButton;
     CreateBackButton rmBackButton;
     CreateExitButton rmExitButton;
+
+    JLabel idLabel;
+    JLabel nameLabel;
+
+
 
     public RegisterMember(){
         rmFrame = new CreateFrame();
