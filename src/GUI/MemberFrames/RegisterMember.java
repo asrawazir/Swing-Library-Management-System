@@ -102,9 +102,11 @@ public class RegisterMember implements ActionListener{
         rmFrame.setVisible(true);
     }
 
-
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        if(e.getSource() == rmBackButton){
+            rmFrame.dispose();
+            new MemberHomeFrame();
+        }
     }
 }
