@@ -1,9 +1,6 @@
 package GUI.BookFrames;
 
-import GUI.AdditionalClasses.CreateBackButton;
-import GUI.AdditionalClasses.CreateExitButton;
-import GUI.AdditionalClasses.CreateFrame;
-import GUI.AdditionalClasses.CreateLabel;
+import GUI.AdditionalClasses.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,11 +11,15 @@ public class SearchBook implements ActionListener {
     CreateLabel label = new CreateLabel("Search Book");
     CreateBackButton backButton = new CreateBackButton();
     CreateExitButton exitButton = new CreateExitButton();
+    FrameButtons button1 = new FrameButtons("Search by ID",120,150);
+    FrameButtons button2 = new FrameButtons("Search by Author",380,150);
 
     public SearchBook(){
 
         backButton.addActionListener(this);
 
+        sbFrame.add(button1);
+        sbFrame.add(button2);
         sbFrame.add(exitButton);
         sbFrame.add(backButton);
         sbFrame.add(label);
