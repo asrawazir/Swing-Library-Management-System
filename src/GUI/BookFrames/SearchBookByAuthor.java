@@ -3,6 +3,7 @@ package GUI.BookFrames;
 import GUI.AdditionalClasses.CreateBackButton;
 import GUI.AdditionalClasses.CreateExitButton;
 import GUI.AdditionalClasses.CreateFrame;
+import GUI.AdditionalClasses.CreateLabel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,6 +15,7 @@ public class SearchBookByAuthor implements ActionListener {
     CreateBackButton backButton = new CreateBackButton();
     CreateExitButton exitButton = new CreateExitButton();
 
+    CreateLabel label = new CreateLabel("Search Book by Author Name");
     JLabel authorLabel = new JLabel();
     JTextField authorTextField = new JTextField();
 
@@ -32,6 +34,7 @@ public class SearchBookByAuthor implements ActionListener {
 
         backButton.addActionListener(this);
 
+        sbaFrame.add(label);
         sbaFrame.add(authorTextField);
         sbaFrame.add(authorLabel);
         sbaFrame.add(backButton);
