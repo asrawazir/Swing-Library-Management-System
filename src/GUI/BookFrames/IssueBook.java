@@ -48,6 +48,8 @@ public class IssueBook implements ActionListener {
         bookIdTextField.setBackground(Color.WHITE);
         bookIdTextField.setCaretColor(Color.BLACK);
 
+        backButton.addActionListener(this);
+
         ibFrame.add(backButton);
         ibFrame.add(exitButton);
         ibFrame.add(memberIdTextField);
