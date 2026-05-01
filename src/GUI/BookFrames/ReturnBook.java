@@ -66,5 +66,9 @@ public class ReturnBook implements ActionListener {
             rbFrame.dispose();
             new BookHomeFrame();
         }
+
+        if (e.getSource()==submitButton){
+            new CreateDialogBox("Success", "Book Returned Successfully");
+        }
     }
 }
