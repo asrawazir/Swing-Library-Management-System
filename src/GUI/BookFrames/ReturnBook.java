@@ -46,6 +46,7 @@ public class ReturnBook implements ActionListener {
         bookIdTextField.setBackground(Color.WHITE);
         bookIdTextField.setCaretColor(Color.BLACK);
 
+        submitButton.addActionListener(this);
         backButton.addActionListener(this);
 
         rbFrame.add(submitButton);
@@ -64,6 +65,10 @@ public class ReturnBook implements ActionListener {
         if (e.getSource()==backButton){
             rbFrame.dispose();
             new BookHomeFrame();
+        }
+
+        if (e.getSource()==submitButton){
+            new CreateDialogBox("Success", "Book Returned Successfully");
         }
     }
 }

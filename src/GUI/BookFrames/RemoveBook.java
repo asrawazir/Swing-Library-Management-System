@@ -31,6 +31,7 @@ public class RemoveBook implements ActionListener {
         idTextField.setCaretColor(Color.BLACK);
 
         backButton.addActionListener(this);
+        submitButton.addActionListener(this);
 
         rbFrame.add(submitButton);
         rbFrame.add(idLabel);
@@ -45,6 +46,10 @@ public class RemoveBook implements ActionListener {
         if (e.getSource()==backButton){
             rbFrame.dispose();
             new BookHomeFrame();
+        }
+
+        if (e.getSource()==submitButton){
+            new CreateDialogBox("Success","Book Removed Successfully");
         }
     }
 }
