@@ -81,6 +81,7 @@ public class AddBook implements ActionListener {
         abFrame.add(authorTextField);
         abFrame.add(quantityTextField);
 
+        submitButton.addActionListener(this);
         backButton.addActionListener(this);
         abFrame.add(label);
         abFrame.setVisible(true);
@@ -95,6 +96,10 @@ public class AddBook implements ActionListener {
         if (e.getSource()==backButton){
             abFrame.dispose();
             new BookHomeFrame();
+        }
+
+        if (e.getSource()==submitButton){
+            new CreateDialogBox("Success","Book Added Successfully");
         }
 
     }
