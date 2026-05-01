@@ -14,6 +14,9 @@ public class SearchMember implements ActionListener {
     FrameButtons button1;
     FrameButtons button2;
 
+    public SearchMember(){
+
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
