@@ -47,5 +47,9 @@ public class RemoveBook implements ActionListener {
             rbFrame.dispose();
             new BookHomeFrame();
         }
+
+        if (e.getSource()==submitButton){
+            new CreateDialogBox("Success","Book Removed Successfully");
+        }
     }
 }
