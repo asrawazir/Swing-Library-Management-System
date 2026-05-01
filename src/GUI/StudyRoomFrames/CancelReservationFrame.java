@@ -17,17 +17,19 @@ public class CancelReservationFrame implements ActionListener {
      CreateSubmitButton submitButton;
     JTextField roomField=new JTextField();
     JTextField memberField=new JTextField();
+    CreateExitButton exitButton;
 
     public CancelReservationFrame(){
         frame=new CreateFrame();
         button=new CreateBackButton();
-
+        exitButton=new CreateExitButton();
         label=new CreateLabel("Cancel Reservation");
         submitButton=new CreateSubmitButton("Submit");
 
 
         button.addActionListener(this);
         submitButton.addActionListener(this);
+        exitButton.addActionListener(this);
 
         roomLabel.setText("Enter Room Number:");
         memberIDLabel.setText("Enter Member ID:");
@@ -53,6 +55,8 @@ public class CancelReservationFrame implements ActionListener {
         frame.add(memberIDLabel);
         frame.add(memberField);
         frame.add(button);
+        frame.add(exitButton);
+
 
         frame.add(submitButton);
         frame.setVisible(true);
