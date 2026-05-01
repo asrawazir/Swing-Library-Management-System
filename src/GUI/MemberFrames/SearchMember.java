@@ -24,6 +24,11 @@ public class SearchMember implements ActionListener {
         button1 = new FrameButtons("Search by ID",120,150);
         button2 = new FrameButtons("Search by Name",380,150);
 
+        smFrame.add(smLabel);
+        smFrame.add(smBackButton);
+        smFrame.add(smExitButton);
+
+
     }
 
     @Override
