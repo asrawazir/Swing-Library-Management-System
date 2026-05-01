@@ -31,6 +31,8 @@ public class MemberHomeFrame implements ActionListener {
         button4 = new FrameButtons("Remove Member", 160,220);
         button5 = new FrameButtons("Display All", 360,220);
 
+        mhBackButton = new CreateBackButton();
+        mhExitButton = new CreateExitButton();
     }
 
     @Override
