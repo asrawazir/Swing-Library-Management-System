@@ -1,9 +1,6 @@
 package GUI.BookFrames;
 
-import GUI.AdditionalClasses.CreateBackButton;
-import GUI.AdditionalClasses.CreateExitButton;
-import GUI.AdditionalClasses.CreateFrame;
-import GUI.AdditionalClasses.CreateLabel;
+import GUI.AdditionalClasses.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,6 +16,8 @@ public class ReturnBook {
 
     JTextField memberIdTextField = new JTextField();
     JTextField bookIdTextField = new JTextField();
+
+    CreateSubmitButton submitButton = new CreateSubmitButton("Return");
 
     public ReturnBook(){
 
@@ -45,6 +44,7 @@ public class ReturnBook {
         bookIdTextField.setBackground(Color.WHITE);
         bookIdTextField.setCaretColor(Color.BLACK);
 
+        rbFrame.add(submitButton);
         rbFrame.add(memberIdTextField);
         rbFrame.add(bookIdTextField);
         rbFrame.add(memberIdLabel);
