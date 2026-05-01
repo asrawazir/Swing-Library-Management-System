@@ -71,5 +71,10 @@ public class MemberHomeFrame implements ActionListener {
             new RemoveMember();
         }
 
+        if(e.getSource() == button5){
+            mhFrame.dispose();
+            new DisplayAllMembers();
+        }
+
     }
 }
