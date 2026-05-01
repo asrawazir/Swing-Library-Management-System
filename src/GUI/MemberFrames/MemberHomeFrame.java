@@ -36,6 +36,12 @@ public class MemberHomeFrame implements ActionListener {
         mhBackButton = new CreateBackButton();
         mhExitButton = new CreateExitButton();
 
+        button1.addActionListener(this);
+        button2.addActionListener(this);
+        button3.addActionListener(this);
+        button4.addActionListener(this);
+        button5.addActionListener(this);
+
         mhFrame.add(mhLabel);
         mhFrame.add(mhBackButton);
         mhFrame.add(mhExitButton);
