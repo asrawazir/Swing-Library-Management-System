@@ -37,5 +37,9 @@ public class SearchMember implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
+        if(e.getSource() == smBackButton){
+            smFrame.dispose();
+            new MemberHomeFrame();
+        }
     }
 }
