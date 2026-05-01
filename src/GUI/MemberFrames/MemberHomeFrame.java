@@ -2,6 +2,7 @@ package GUI.MemberFrames;
 
 import GUI.AdditionalClasses.*;
 import GUI.BookFrames.RemoveBook;
+import GUI.HomeFrame;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -50,6 +51,11 @@ public class MemberHomeFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+
+        if(e.getSource() == mhBackButton){
+            mhFrame.dispose();
+            new HomeFrame();
+        }
 
         if(e.getSource() == button1){
             mhFrame.dispose();
