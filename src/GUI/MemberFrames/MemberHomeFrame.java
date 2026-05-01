@@ -22,6 +22,8 @@ public class MemberHomeFrame implements ActionListener {
 
     public MemberHomeFrame(){
 
+        mhFrame = new CreateFrame();
+        mhLabel = new CreateLabel("Member Home Frame");
     }
 
     @Override
