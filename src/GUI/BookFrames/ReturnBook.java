@@ -4,8 +4,10 @@ import GUI.AdditionalClasses.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class ReturnBook {
+public class ReturnBook implements ActionListener {
     CreateFrame rbFrame = new CreateFrame();
     CreateLabel label = new CreateLabel("Return Book");
     CreateExitButton exitButton = new CreateExitButton();
@@ -53,5 +55,10 @@ public class ReturnBook {
         rbFrame.add(exitButton);
         rbFrame.add(label);
         rbFrame.setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e){
+
     }
 }
