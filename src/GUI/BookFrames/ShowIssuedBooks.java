@@ -2,7 +2,10 @@ package GUI.BookFrames;
 
 import GUI.AdditionalClasses.*;
 
-public class ShowIssuedBooks {
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class ShowIssuedBooks implements ActionListener {
     CreateFrame siFrame = new CreateFrame();
     CreateLabel label = new CreateLabel("Issued Books");
 
@@ -15,5 +18,10 @@ public class ShowIssuedBooks {
         siFrame.add(exitButton);
         siFrame.add(label);
         siFrame.setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e){
+
     }
 }
