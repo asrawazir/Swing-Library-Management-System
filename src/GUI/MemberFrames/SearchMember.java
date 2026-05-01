@@ -1,9 +1,6 @@
 package GUI.MemberFrames;
 
-import GUI.AdditionalClasses.CreateBackButton;
-import GUI.AdditionalClasses.CreateExitButton;
-import GUI.AdditionalClasses.CreateFrame;
-import GUI.AdditionalClasses.CreateLabel;
+import GUI.AdditionalClasses.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,6 +11,8 @@ public class SearchMember implements ActionListener {
     CreateLabel smLabel;
     CreateBackButton smBackButton;
     CreateExitButton smExitButton;
+    FrameButtons button1;
+    FrameButtons button2;
 
 
     @Override
