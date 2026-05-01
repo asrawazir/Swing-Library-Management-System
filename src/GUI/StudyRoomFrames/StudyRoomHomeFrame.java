@@ -25,10 +25,10 @@ public class StudyRoomHomeFrame implements ActionListener  {
        exitButton=new CreateExitButton();
 
 
-       button1=new FrameButtons("Display Rooms",100,150);
-       button2=new FrameButtons("Reserve Room",300,150);
-       button3=new FrameButtons("Cancel Reservation",100,220);
-       button4=new FrameButtons("Check Reservation Status",300,220);
+       button1=new FrameButtons("Display Rooms",140,130);
+       button2=new FrameButtons("Reserve Room",350,130);
+       button3=new FrameButtons("Cancel Reservation",140,200);
+       button4=new FrameButtons("Check Reservation ",350,200);
 
        button.addActionListener(this);
        exitButton.addActionListener(this);
@@ -69,6 +69,7 @@ public class StudyRoomHomeFrame implements ActionListener  {
         if(e.getSource()==button3){
             frame.dispose();
             new CancelReservationFrame();
+
         }
 
         if(e.getSource()==button4){
