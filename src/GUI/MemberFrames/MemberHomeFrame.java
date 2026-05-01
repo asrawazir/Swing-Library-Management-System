@@ -22,6 +22,7 @@ public class MemberHomeFrame implements ActionListener {
     CreateBackButton mhBackButton;
     CreateExitButton mhExitButton;
 
+    //default constructor
     public MemberHomeFrame(){
 
         mhFrame = new CreateFrame();
