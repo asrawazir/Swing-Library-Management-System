@@ -31,6 +31,7 @@ public class SearchMember implements ActionListener {
         smFrame.add(button1);
         smFrame.add(button2);
 
+        smFrame.setVisible(true);
     }
 
     @Override
