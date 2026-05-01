@@ -14,6 +14,8 @@ public class ShowIssuedBooks implements ActionListener {
 
     public ShowIssuedBooks(){
 
+        backButton.addActionListener(this);
+
         siFrame.add(backButton);
         siFrame.add(exitButton);
         siFrame.add(label);
@@ -22,6 +24,9 @@ public class ShowIssuedBooks implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e){
-
+        if (e.getSource()==backButton){
+            siFrame.dispose();
+            new BookHomeFrame();
+        }
     }
 }
