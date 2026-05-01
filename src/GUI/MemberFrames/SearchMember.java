@@ -15,6 +15,8 @@ public class SearchMember implements ActionListener {
     FrameButtons button2;
 
     public SearchMember(){
+        smFrame = new CreateFrame();
+        smLabel = new CreateLabel("Search Member");
 
     }
 
