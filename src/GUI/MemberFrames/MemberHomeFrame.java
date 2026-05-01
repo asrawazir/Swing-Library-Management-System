@@ -5,6 +5,7 @@ import GUI.AdditionalClasses.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.lang.reflect.Member;
 import javax.swing.*;
 
 public class MemberHomeFrame implements ActionListener {
@@ -18,6 +19,10 @@ public class MemberHomeFrame implements ActionListener {
     FrameButtons buttons5;
     CreateBackButton mhBackButton;
     CreateExitButton mhExitButton;
+
+    public MemberHomeFrame(){
+
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
