@@ -25,7 +25,7 @@ public class ReserveRoomFrame implements ActionListener {
         backButton = new CreateBackButton();
         label = new CreateLabel("Reserve Room");
         exitButton = new CreateExitButton();
-        submitButton=new CreateSubmitButton("Reserve Room");
+        submitButton=new CreateSubmitButton("Reserve");
 
         backButton.addActionListener(this);
         exitButton.addActionListener(this);
