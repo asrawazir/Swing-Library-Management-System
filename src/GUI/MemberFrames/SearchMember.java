@@ -27,6 +27,7 @@ public class SearchMember implements ActionListener {
         smBackButton.addActionListener(this);
         button1.addActionListener(this);
         button2.addActionListener(this);
+
         smFrame.add(smLabel);
         smFrame.add(smBackButton);
         smFrame.add(smExitButton);
