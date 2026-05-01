@@ -1,9 +1,6 @@
 package GUI.BookFrames;
 
-import GUI.AdditionalClasses.CreateBackButton;
-import GUI.AdditionalClasses.CreateExitButton;
-import GUI.AdditionalClasses.CreateFrame;
-import GUI.AdditionalClasses.CreateLabel;
+import GUI.AdditionalClasses.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,6 +19,7 @@ public class IssueBook implements ActionListener {
 
     CreateBackButton backButton = new CreateBackButton();
     CreateExitButton exitButton = new CreateExitButton();
+    CreateSubmitButton submitButton = new CreateSubmitButton("Issue");
 
     public IssueBook(){
 
@@ -50,6 +48,7 @@ public class IssueBook implements ActionListener {
 
         backButton.addActionListener(this);
 
+        ibFrame.add(submitButton);
         ibFrame.add(backButton);
         ibFrame.add(exitButton);
         ibFrame.add(memberIdTextField);
