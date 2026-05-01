@@ -1,8 +1,6 @@
 package GUI.MemberFrames;
 
-import GUI.AdditionalClasses.CreateFrame;
-import GUI.AdditionalClasses.CreateLabel;
-import GUI.AdditionalClasses.FrameButtons;
+import GUI.AdditionalClasses.*;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -18,6 +16,8 @@ public class MemberHomeFrame implements ActionListener {
     FrameButtons button3;
     FrameButtons button4;
     FrameButtons buttons5;
+    CreateBackButton mhBackButton;
+    CreateExitButton mhExitButton;
 
     @Override
     public void actionPerformed(ActionEvent e) {
