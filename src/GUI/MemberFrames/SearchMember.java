@@ -18,6 +18,9 @@ public class SearchMember implements ActionListener {
         smFrame = new CreateFrame();
         smLabel = new CreateLabel("Search Member");
 
+        smBackButton = new CreateBackButton();
+        smExitButton = new CreateExitButton();
+
     }
 
     @Override
