@@ -28,6 +28,8 @@ public class SearchMember implements ActionListener {
         smFrame.add(smBackButton);
         smFrame.add(smExitButton);
 
+        smFrame.add(button1);
+        smFrame.add(button2);
 
     }
 
