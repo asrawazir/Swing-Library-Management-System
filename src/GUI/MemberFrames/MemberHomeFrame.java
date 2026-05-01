@@ -1,6 +1,7 @@
 package GUI.MemberFrames;
 
 import GUI.AdditionalClasses.*;
+import GUI.BookFrames.RemoveBook;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -63,6 +64,16 @@ public class MemberHomeFrame implements ActionListener {
         if(e.getSource() == button3) {
             mhFrame.dispose();
             new ViewIssuedBooks();
+        }
+
+        if(e.getSource() == button4){
+            mhFrame.dispose();
+            new RemoveMember();
+        }
+
+        if(e.getSource() == button5){
+            mhFrame.dispose();
+            new DisplayAllMembers();
         }
     }
 }
