@@ -66,5 +66,9 @@ public class IssueBook implements ActionListener {
             ibFrame.dispose();
             new BookHomeFrame();
         }
+
+        if (e.getSource()==submitButton){
+            new CreateDialogBox("Success", "Book Issued Successfully");
+        }
     }
 }
