@@ -13,7 +13,6 @@ public class RemoveBook implements ActionListener {
     CreateExitButton exitButton = new CreateExitButton();
     CreateBackButton backButton = new CreateBackButton();
     CreateSubmitButton submitButton = new CreateSubmitButton("Remove");
-    CreateDialogBox dialogBox = new CreateDialogBox("Success","Book Removed Successfully");
 
     JLabel idLabel = new JLabel();
     JTextField idTextField = new JTextField();
@@ -32,6 +31,7 @@ public class RemoveBook implements ActionListener {
         idTextField.setCaretColor(Color.BLACK);
 
         backButton.addActionListener(this);
+        submitButton.addActionListener(this);
 
         rbFrame.add(submitButton);
         rbFrame.add(idLabel);
