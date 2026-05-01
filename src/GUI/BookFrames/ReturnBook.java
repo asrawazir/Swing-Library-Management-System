@@ -46,6 +46,7 @@ public class ReturnBook implements ActionListener {
         bookIdTextField.setBackground(Color.WHITE);
         bookIdTextField.setCaretColor(Color.BLACK);
 
+        submitButton.addActionListener(this);
         backButton.addActionListener(this);
 
         rbFrame.add(submitButton);
