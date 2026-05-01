@@ -16,6 +16,7 @@ public class CheckReservationFrame implements ActionListener {
 
     JTextField textField=new JTextField();
     CreateSubmitButton submitButton;
+    CreateExitButton exitButton;
 
 
 
@@ -24,12 +25,16 @@ public class CheckReservationFrame implements ActionListener {
         label=new CreateLabel("Check Reservation Status");
         jLabel=new JLabel("Enter room number :");
         backButton=new CreateBackButton();
+        exitButton=new CreateExitButton();
 
-        submitButton=new CreateSubmitButton("Submit");
+
+        submitButton=new CreateSubmitButton("Check");
 
         backButton.addActionListener(this);
         textField.addActionListener(this);
         submitButton.addActionListener(this);
+        exitButton.addActionListener(this);
+
 
          jLabel.setBounds(10,190,680,30);
          jLabel.setFont(new Font("Inter", Font.BOLD,14));
@@ -43,6 +48,7 @@ public class CheckReservationFrame implements ActionListener {
         frame.add(jLabel);
         frame.add(textField);
         frame.add(backButton);
+        frame.add(exitButton);
 
         frame.add(submitButton);
         frame.setVisible(true);
