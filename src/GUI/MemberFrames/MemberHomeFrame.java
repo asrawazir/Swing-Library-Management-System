@@ -44,6 +44,7 @@ public class MemberHomeFrame implements ActionListener {
         mhFrame.add(button4);
         mhFrame.add(button5);
 
+        mhFrame.setVisible(true);
     }
 
     @Override
