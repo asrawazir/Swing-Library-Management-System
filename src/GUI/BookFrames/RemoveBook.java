@@ -13,6 +13,7 @@ public class RemoveBook implements ActionListener {
     CreateExitButton exitButton = new CreateExitButton();
     CreateBackButton backButton = new CreateBackButton();
     CreateSubmitButton submitButton = new CreateSubmitButton("Remove");
+    CreateDialogBox dialogBox = new CreateDialogBox("Success","Book Removed Successfully");
 
     JLabel idLabel = new JLabel();
     JTextField idTextField = new JTextField();
