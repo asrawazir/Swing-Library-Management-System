@@ -6,6 +6,7 @@ import GUI.AdditionalClasses.CreateFrame;
 import GUI.AdditionalClasses.CreateLabel;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class ReturnBook {
     CreateFrame rbFrame = new CreateFrame();
@@ -21,6 +22,20 @@ public class ReturnBook {
 
     public ReturnBook(){
 
+        memberIdLabel.setText("Enter Member ID : ");
+        bookIdLabel.setText("Enter Book ID : ");
+
+        memberIdLabel.setBounds(10,120,680,30);
+        bookIdLabel.setBounds(10,190,680,30);
+
+        memberIdLabel.setFont(new Font("Inter",Font.BOLD,14));
+        memberIdLabel.setBackground(Color.LIGHT_GRAY);
+        bookIdLabel.setFont(new Font("Inter",Font.BOLD,14));
+        bookIdLabel.setBackground(Color.LIGHT_GRAY);
+
+
+        rbFrame.add(memberIdLabel);
+        rbFrame.add(bookIdLabel);
         rbFrame.add(backButton);
         rbFrame.add(exitButton);
         rbFrame.add(label);
