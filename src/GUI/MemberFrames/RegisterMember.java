@@ -36,6 +36,11 @@ public class RegisterMember implements ActionListener{
         phoneLabel = new JLabel();
         emailLabel = new JLabel();
 
+        idTextField = new JTextField();
+        nameTextField = new JTextField();
+        phoneTextField = new JTextField();
+        emailTextField = new JTextField();
+
         idLabel.setText("Enter your id: ");
         idLabel.setBounds(10,50,680,30);
         idLabel.setBackground(Color.LIGHT_GRAY);
@@ -83,6 +88,9 @@ public class RegisterMember implements ActionListener{
         emailTextField.setForeground(Color.BLACK);
         emailTextField.setBackground(Color.WHITE);
         emailTextField.setCaretColor(Color.BLACK);
+
+        rmSubmitButton.addActionListener(this);
+        rmBackButton.addActionListener(this);
 
         rmFrame.add(idLabel);
         rmFrame.add(nameLabel);

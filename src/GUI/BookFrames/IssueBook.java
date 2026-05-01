@@ -46,6 +46,7 @@ public class IssueBook implements ActionListener {
         bookIdTextField.setBackground(Color.WHITE);
         bookIdTextField.setCaretColor(Color.BLACK);
 
+        submitButton.addActionListener(this);
         backButton.addActionListener(this);
 
         ibFrame.add(submitButton);
@@ -64,6 +65,10 @@ public class IssueBook implements ActionListener {
         if (e.getSource()==backButton){
             ibFrame.dispose();
             new BookHomeFrame();
+        }
+
+        if (e.getSource()==submitButton){
+            new CreateDialogBox("Success", "Book Issued Successfully");
         }
     }
 }
