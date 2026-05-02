@@ -25,13 +25,29 @@ public class SearchMemberById implements ActionListener {
         siBackButton = new CreateBackButton();
         siExitButton = new CreateExitButton();
 
-        siIdLabel = new JLabel("Enter Member ID to search: ");
+        siIdLabel = new JLabel();
         siIdTextField = new JTextField();
+
+        siIdLabel.setText("Enter Book ID : ");
+        siIdLabel.setBounds(10,120,680,30);
+        siIdLabel.setFont(new Font("Inter",Font.BOLD,14));
+        siIdLabel.setBackground(Color.LIGHT_GRAY);
+
+        siIdTextField.setBounds(10,160,670,30);
+        siIdTextField.setFont(new Font("Inter",Font.PLAIN,14));
+        siIdTextField.setForeground(Color.BLACK);
+        siIdTextField.setBackground(Color.WHITE);
+        siIdTextField.setCaretColor(Color.BLACK);
 
         siFrame.add(siLabel);
         siFrame.add(siSubmitButton);
         siFrame.add(siBackButton);
         siFrame.add(siExitButton);
+
+        siFrame.add(siIdLabel);
+        siFrame.add(siIdTextField);
+
+
     }
     @Override
     public void actionPerformed(ActionEvent e) {
