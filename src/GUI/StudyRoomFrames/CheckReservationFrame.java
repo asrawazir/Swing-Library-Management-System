@@ -36,11 +36,11 @@ public class CheckReservationFrame implements ActionListener {
         exitButton.addActionListener(this);
 
 
-         jLabel.setBounds(10,190,680,30);
+         jLabel.setBounds(10,160,680,30);
          jLabel.setFont(new Font("Inter", Font.BOLD,14));
          jLabel.setBackground(Color.lightGray);
 
-         textField.setBounds(10,220,670,30);
+         textField.setBounds(10,190,670,30);
          textField.setFont(new Font("Inter", Font.PLAIN,14));
 
 
