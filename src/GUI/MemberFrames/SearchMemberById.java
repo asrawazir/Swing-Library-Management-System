@@ -54,7 +54,7 @@ public class SearchMemberById implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        if (e.getSource()==backButton){
+        if (e.getSource()==siBackButton){
             siFrame.dispose();
             new SearchMember();
         }
