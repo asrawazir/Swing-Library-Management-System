@@ -47,6 +47,7 @@ public class SearchMemberById implements ActionListener {
         siFrame.add(siIdLabel);
         siFrame.add(siIdTextField);
 
+        siFrame.setVisible(true);
 
     }
     @Override
