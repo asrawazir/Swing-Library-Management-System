@@ -17,6 +17,9 @@ public class SearchMemberById implements ActionListener {
     JLabel siIdLabel;
     JTextField siIdTextField;
 
+    public SearchMemberById(){
+
+    }
     @Override
     public void actionPerformed(ActionEvent e) {
 
