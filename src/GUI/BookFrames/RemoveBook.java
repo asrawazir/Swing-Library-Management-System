@@ -8,46 +8,67 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class RemoveBook implements ActionListener {
+
+    //Creating a frame from pre-defined CreateFrame class
     CreateFrame rbFrame = new CreateFrame();
+
+    //Creating a main label
     CreateLabel label = new CreateLabel("Remove Book");
+
+    //Creating a label and text field to receive book id
+    JLabel idLabel = new JLabel();
+    JTextField idTextField = new JTextField();
+
+    //Creating exit button, back button and submit button using pre-defined classes
     CreateExitButton exitButton = new CreateExitButton();
     CreateBackButton backButton = new CreateBackButton();
     CreateSubmitButton submitButton = new CreateSubmitButton("Remove");
 
-    JLabel idLabel = new JLabel();
-    JTextField idTextField = new JTextField();
-
     public RemoveBook(){
 
+        //Defining the properties for idLabel
         idLabel.setText("Enter Book ID : ");
         idLabel.setBounds(10,120,680,30);
         idLabel.setFont(new Font("Inter",Font.BOLD,14));
         idLabel.setBackground(Color.LIGHT_GRAY);
 
+        //Defining the properties for idTextField
         idTextField.setBounds(10,160,670,30);
         idTextField.setFont(new Font("Inter",Font.PLAIN,14));
         idTextField.setForeground(Color.BLACK);
         idTextField.setBackground(Color.WHITE);
         idTextField.setCaretColor(Color.BLACK);
 
+        //Adding action listeners to the buttons
         backButton.addActionListener(this);
         submitButton.addActionListener(this);
 
-        rbFrame.add(submitButton);
+        //Adding labels to the frame
+        rbFrame.add(label);
         rbFrame.add(idLabel);
+
+        //Adding text field to the frame
         rbFrame.add(idTextField);
+
+        //Adding buttons to the frame
+        rbFrame.add(submitButton);
         rbFrame.add(backButton);
         rbFrame.add(exitButton);
-        rbFrame.add(label);
+
+        //Making the frame visible
         rbFrame.setVisible(true);
     }
+
+    //Overriding actionPerformed method
     @Override
     public void actionPerformed(ActionEvent e){
+
+        //Defining the action for back button
         if (e.getSource()==backButton){
             rbFrame.dispose();
             new BookHomeFrame();
         }
-
+        //Defining the action for submit button
         if (e.getSource()==submitButton){
             new CreateDialogBox("Success","Book Removed Successfully");
         }
