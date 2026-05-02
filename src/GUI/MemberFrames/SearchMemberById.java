@@ -1,6 +1,7 @@
 package GUI.MemberFrames;
 
 import GUI.AdditionalClasses.*;
+import GUI.BookFrames.SearchBook;
 
 import java.awt.*;
 import javax.swing.*;
@@ -53,5 +54,9 @@ public class SearchMemberById implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
+        if (e.getSource()==backButton){
+            siFrame.dispose();
+            new SearchMember();
+        }
     }
 }
