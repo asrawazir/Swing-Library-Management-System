@@ -25,9 +25,9 @@ public class StudyRoomHomeFrame implements ActionListener  {
        exitButton=new CreateExitButton();
 
 
-       button1=new FrameButtons("Display Rooms",140,130);
-       button2=new FrameButtons("Reserve Room",350,130);
-       button3=new FrameButtons("Cancel Reservation",140,200);
+       button1=new FrameButtons("Display Rooms",150,120);
+       button2=new FrameButtons("Reserve Room",350,120);
+       button3=new FrameButtons("Cancel Reservation",150,200);
        button4=new FrameButtons("Check Reservation ",350,200);
 
        button.addActionListener(this);
