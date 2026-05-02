@@ -25,6 +25,8 @@ public class SearchMemberById implements ActionListener {
         siBackButton = new CreateBackButton();
         siExitButton = new CreateExitButton();
 
+        siIdLabel = new JLabel("Enter Member ID to search: ");
+        siIdTextField = new JTextField();
     }
     @Override
     public void actionPerformed(ActionEvent e) {
