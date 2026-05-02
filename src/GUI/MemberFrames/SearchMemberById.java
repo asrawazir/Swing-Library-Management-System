@@ -14,6 +14,8 @@ public class SearchMemberById implements ActionListener {
     CreateSubmitButton siSubmitButton;
     CreateBackButton siBackButton;
     CreateExitButton siExitButton;
+    JLabel siIdLabel;
+    JTextField siIdTextField;
 
     @Override
     public void actionPerformed(ActionEvent e) {
