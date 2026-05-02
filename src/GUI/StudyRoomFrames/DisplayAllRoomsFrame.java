@@ -21,19 +21,25 @@ public class DisplayAllRoomsFrame implements ActionListener {
 
         backButton.addActionListener(this);
         exitButton.addActionListener(this);
-        String[] column = {"Room Number", "Status", "Reserved By"};
+        String[] column = {"Room Number","Status","Reserved By"};
 
         String[][] data = {
                 {"101", "Available", "null"},
                 {"102", "Available", "null"},
                 {"103", "Available", "null"},
-                {"104", "Available", "null"}
+                {"104", "Available", "null"},
+                {"105", "Available", "null"},
+                {"106", "Available", "null"},
+                {"107", "Available", "null"},
+                {"108", "Available", "null"},
+
+
         };
 
         JTable table = new JTable(data, column);
         JScrollPane scrollPane = new JScrollPane(table);
 
-        scrollPane.setBounds(100, 150, 500, 90);
+        scrollPane.setBounds(100, 150, 500, 150);
         frame.add(label);
         frame.add(backButton);
         frame.add(exitButton);
