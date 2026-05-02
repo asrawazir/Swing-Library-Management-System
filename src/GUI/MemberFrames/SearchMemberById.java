@@ -40,6 +40,7 @@ public class SearchMemberById implements ActionListener {
         siIdTextField.setBackground(Color.WHITE);
         siIdTextField.setCaretColor(Color.BLACK);
 
+        siBackButton.addActionListener(this);
         siFrame.add(siLabel);
         siFrame.add(siSubmitButton);
         siFrame.add(siBackButton);
