@@ -19,6 +19,8 @@ public class SearchMemberById implements ActionListener {
 
     public SearchMemberById(){
 
+        siFrame = new CreateFrame();
+        siLabel = new CreateLabel("Search Member By ID");
     }
     @Override
     public void actionPerformed(ActionEvent e) {
