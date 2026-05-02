@@ -21,6 +21,10 @@ public class SearchMemberById implements ActionListener {
 
         siFrame = new CreateFrame();
         siLabel = new CreateLabel("Search Member By ID");
+        siSubmitButton = new CreateSubmitButton("Search");
+        siBackButton = new CreateBackButton();
+        siExitButton = new CreateExitButton();
+
     }
     @Override
     public void actionPerformed(ActionEvent e) {
