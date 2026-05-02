@@ -30,6 +30,8 @@ public class SearchMemberById implements ActionListener {
 
         siFrame.add(siLabel);
         siFrame.add(siSubmitButton);
+        siFrame.add(siBackButton);
+        siFrame.add(siExitButton);
     }
     @Override
     public void actionPerformed(ActionEvent e) {
