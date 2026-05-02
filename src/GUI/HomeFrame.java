@@ -19,7 +19,7 @@ public class HomeFrame implements ActionListener {
 
     public HomeFrame(){
         frame=new CreateFrame();
-        label=new CreateLabel("Home Frame");
+        label=new CreateLabel("Library Management System");
         exitButton=new CreateExitButton();
         button1=new FrameButtons(" Book Menu",70,150);
         button2=new FrameButtons(" Member Menu",260,150);
