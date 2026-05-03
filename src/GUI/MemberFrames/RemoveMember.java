@@ -34,6 +34,11 @@ public class RemoveMember implements ActionListener {
         rmIdLabel.setFont(new Font("Inter",Font.BOLD,14));
         rmIdLabel.setBackground(Color.LIGHT_GRAY);
 
+        rmIdTextField.setBounds(10,160,670,30);
+        rmIdTextField.setFont(new Font("Inter",Font.PLAIN,14));
+        rmIdTextField.setForeground(Color.BLACK);
+        rmIdTextField.setBackground(Color.WHITE);
+        rmIdTextField.setCaretColor(Color.BLACK);
     }
     @Override
     public void actionPerformed(ActionEvent e) {
