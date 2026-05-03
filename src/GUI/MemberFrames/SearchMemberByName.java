@@ -31,6 +31,12 @@ public class SearchMemberByName implements ActionListener {
         snNameLabel.setBounds(10,120,680,30);
         snNameLabel.setFont(new Font("Inter",Font.BOLD,14));
         snNameLabel.setBackground(Color.LIGHT_GRAY);
+
+        snNameTextField.setBounds(10,160,670,30);
+        snNameTextField.setFont(new Font("Inter",Font.PLAIN,14));
+        snNameTextField.setForeground(Color.BLACK);
+        snNameTextField.setBackground(Color.WHITE);
+        snNameTextField.setCaretColor(Color.BLACK);
     }
     @Override
     public void actionPerformed(ActionEvent e) {
