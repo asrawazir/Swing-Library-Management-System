@@ -16,8 +16,8 @@ public class ViewIssuedBooks implements ActionListener {
     CreateExitButton ibExitButton;
     CreateSubmitButton ibSubmitButton;
 
-    JLabel ibNameLabel;
-    JTextField ibNameTextField;
+    JLabel ibIdLabel;
+    JTextField ibIdTextField;
 
     JTable ibBooksTable;
     DefaultTableModel ibTableModel;
@@ -31,17 +31,17 @@ public class ViewIssuedBooks implements ActionListener {
         ibExitButton = new CreateExitButton();
         ibSubmitButton = new CreateSubmitButton("Search");
 
-        ibNameLabel = new JLabel();
-        ibNameTextField = new JTextField();
+        ibIdLabel = new JLabel();
+        ibIdTextField = new JTextField();
 
         ibScrollPane = new JScrollPane(ibBooksTable);
 
-        ibNameLabel.setText("Enter Member ID: ");
-        ibNameLabel.setBounds(10, 120, 680, 30);
-        ibNameLabel.setFont(new Font("Inter", Font.BOLD, 14));
+        ibIdLabel.setText("Enter Member ID: ");
+        ibIdLabel.setBounds(10, 120, 680, 30);
+        ibIdLabel.setFont(new Font("Inter", Font.BOLD, 14));
 
-        ibNameTextField.setBounds(10, 160, 450, 30);
-        ibNameTextField.setFont(new Font("Inter", Font.PLAIN, 14));
+        ibIdTextField.setBounds(10, 160, 450, 30);
+        ibIdTextField.setFont(new Font("Inter", Font.PLAIN, 14));
 
         String[] columns = {"Book ID", "Book Title", "Issue Date"};
 
@@ -58,6 +58,8 @@ public class ViewIssuedBooks implements ActionListener {
         ibBooksTable.setRowHeight(25);
 
         ibScrollPane.setBounds(10, 210, 670, 300);
+
+        
     }
     @Override
     public void actionPerformed(ActionEvent e) {
