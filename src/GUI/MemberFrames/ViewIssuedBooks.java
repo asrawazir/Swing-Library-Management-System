@@ -30,6 +30,7 @@ public class ViewIssuedBooks implements ActionListener {
         ibBackButton = new CreateBackButton();
         ibExitButton = new CreateExitButton();
         ibSubmitButton = new CreateSubmitButton("Search");
+        ibSubmitButton.setBounds(470, 160, 210, 30);
 
         ibIdLabel = new JLabel();
         ibIdTextField = new JTextField();
@@ -74,17 +75,6 @@ public class ViewIssuedBooks implements ActionListener {
         if (e.getSource() == ibBackButton) {
             ibFrame.dispose();
             new MemberHomeFrame();
-        }
-
-        if (e.getSource() == ibSubmitButton) {
-            String mId = ibIdTextField.getText();
-            ibTableModel.setRowCount(0);
-
-            boolean found = false;
-
-            if (!found && !mId.isEmpty()) {
-                JOptionPane.showMessageDialog(ibFrame, "No records found for this Member ID.");
-            }
         }
     }
 }
