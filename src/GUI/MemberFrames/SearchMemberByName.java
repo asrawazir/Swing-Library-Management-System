@@ -38,6 +38,8 @@ public class SearchMemberByName implements ActionListener {
         snNameTextField.setBackground(Color.WHITE);
         snNameTextField.setCaretColor(Color.BLACK);
 
+        snBackButton.addActionListener(this);
+
         snFrame.add(snLabel);
         snFrame.add(snSubmitButton);
         snFrame.add(snBackButton);
