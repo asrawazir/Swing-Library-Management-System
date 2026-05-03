@@ -18,6 +18,9 @@ public class RemoveMember implements ActionListener {
     JLabel rmIdLabel;
     JTextField rmIdTextField;
 
+    public RemoveMember(){
+
+    }
     @Override
     public void actionPerformed(ActionEvent e) {
 
