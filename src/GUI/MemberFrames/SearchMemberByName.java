@@ -13,8 +13,8 @@ public class SearchMemberByName implements ActionListener {
     CreateSubmitButton snSubmitButton;
     CreateBackButton snBackButton;
     CreateExitButton snExitButton;
-    JLabel snIdLabel;
-    JTextField snIdTextField;
+    JLabel snNameLabel;
+    JTextField snNameTextField;
 
     public SearchMemberByName(){
 
@@ -23,6 +23,9 @@ public class SearchMemberByName implements ActionListener {
         snSubmitButton = new CreateSubmitButton("Search");
         snBackButton = new CreateBackButton();
         snExitButton = new CreateExitButton();
+
+        snNameLabel = new JLabel();
+        snNameTextField = new JTextField();
     }
     @Override
     public void actionPerformed(ActionEvent e) {
