@@ -18,6 +18,8 @@ public class SearchMemberByName implements ActionListener {
 
     public SearchMemberByName(){
 
+        snFrame = new CreateFrame();
+        snLabel = new CreateLabel("Search Member By Name");
     }
     @Override
     public void actionPerformed(ActionEvent e) {
