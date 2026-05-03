@@ -34,6 +34,8 @@ public class ViewIssuedBooks implements ActionListener {
         ibNameLabel = new JLabel();
         ibNameTextField = new JTextField();
 
+        ibScrollPane = new JScrollPane(ibBooksTable);
+
         ibNameLabel.setText("Enter Member ID: ");
         ibNameLabel.setBounds(10, 120, 680, 30);
         ibNameLabel.setFont(new Font("Inter", Font.BOLD, 14));
@@ -54,6 +56,8 @@ public class ViewIssuedBooks implements ActionListener {
         ibBooksTable.getTableHeader().setFont(new Font("Inter", Font.BOLD, 13));
         ibBooksTable.setFont(new Font("Inter", Font.PLAIN, 13));
         ibBooksTable.setRowHeight(25);
+
+        scrollPane.setBounds(10, 210, 670, 300);
     }
     @Override
     public void actionPerformed(ActionEvent e) {
