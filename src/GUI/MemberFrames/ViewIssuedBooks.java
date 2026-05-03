@@ -1,9 +1,6 @@
 package GUI.MemberFrames;
 
-import GUI.AdditionalClasses.CreateBackButton;
-import GUI.AdditionalClasses.CreateExitButton;
-import GUI.AdditionalClasses.CreateFrame;
-import GUI.AdditionalClasses.CreateLabel;
+import GUI.AdditionalClasses.*;
 
 import java.awt.*;
 import javax.swing.*;
@@ -17,6 +14,7 @@ public class ViewIssuedBooks implements ActionListener {
     CreateLabel ibLabel;
     CreateBackButton ibBackButton;
     CreateExitButton ibExitButton;
+    CreateSubmitButton ibSubmitButton;
 
     JLabel ibNameLabel;
     JTextField ibNameTextField;
@@ -31,6 +29,7 @@ public class ViewIssuedBooks implements ActionListener {
         ibLabel = new CreateLabel("Books Issued to Member");
         ibBackButton = new CreateBackButton();
         ibExitButton = new CreateExitButton();
+        ibSubmitButton = new CreateSubmitButton("Search");
     }
     @Override
     public void actionPerformed(ActionEvent e) {
