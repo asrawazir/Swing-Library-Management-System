@@ -46,6 +46,7 @@ public class SearchMemberByName implements ActionListener {
         snFrame.add(snNameLabel);
         snFrame.add(snNameTextField);
 
+        snFrame.setVisible(true);
 
     }
     @Override
