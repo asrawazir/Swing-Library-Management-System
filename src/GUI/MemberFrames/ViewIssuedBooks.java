@@ -71,6 +71,10 @@ public class ViewIssuedBooks implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == ibBackButton) {
+            ibFrame.dispose();
+            new MemberHomeFrame();
+        }
 
     }
 }
