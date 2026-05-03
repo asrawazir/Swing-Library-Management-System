@@ -66,6 +66,8 @@ public class ViewIssuedBooks implements ActionListener {
         ibFrame.add(ibIdLabel);
         ibFrame.add(ibIdTextField);
         ibFrame.add(ibScrollPane);
+
+        ibFrame.setVisible(true);
     }
     @Override
     public void actionPerformed(ActionEvent e) {
