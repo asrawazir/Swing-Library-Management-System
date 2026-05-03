@@ -7,6 +7,7 @@ import GUI.AdditionalClasses.CreateLabel;
 
 import java.awt.*;
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -17,6 +18,12 @@ public class ViewIssuedBooks implements ActionListener {
     CreateBackButton ibBackButton;
     CreateExitButton ibExitButton;
 
+    JLabel ibNameLabel;
+    JTextField ibNameTextField;
+
+    JTable ibBooksTable;
+    DefaultTableModel ibBableModel;
+    JScrollPane ibSrollPane;
     @Override
     public void actionPerformed(ActionEvent e) {
 
