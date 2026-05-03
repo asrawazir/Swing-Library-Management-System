@@ -27,7 +27,8 @@ public class ViewIssuedBooks implements ActionListener {
 
     public ViewIssuedBooks(){
 
-
+        ibFrame = new CreateFrame();
+        ibLabel = new CreateLabel("Books Issued to Member");
     }
     @Override
     public void actionPerformed(ActionEvent e) {
