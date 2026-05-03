@@ -23,7 +23,7 @@ public class ViewIssuedBooks implements ActionListener {
 
     JTable ibBooksTable;
     DefaultTableModel ibBableModel;
-    JScrollPane ibSrollPane;
+    JScrollPane ibScrollPane;
     @Override
     public void actionPerformed(ActionEvent e) {
 
