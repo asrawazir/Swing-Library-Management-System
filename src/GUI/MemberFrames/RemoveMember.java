@@ -41,7 +41,7 @@ public class RemoveMember implements ActionListener {
         rmIdTextField.setCaretColor(Color.BLACK);
 
         rmFrame.add(rmLabel);
-        rmLabel.add(rmSubmitButton);
+        rmFrame.add(rmSubmitButton);
 
     }
     @Override
