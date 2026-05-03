@@ -22,7 +22,9 @@ public class RemoveMember implements ActionListener {
 
         rmFrame = new CreateFrame();
         rmLabel = new CreateLabel("Remove Member");
-
+        rmSubmitButton = new CreateSubmitButton("Remove");
+        rmBackButton = new CreateBackButton();
+        rmExitButton = new CreateExitButton();
     }
     @Override
     public void actionPerformed(ActionEvent e) {
