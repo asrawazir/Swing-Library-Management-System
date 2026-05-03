@@ -26,6 +26,11 @@ public class SearchMemberByName implements ActionListener {
 
         snNameLabel = new JLabel();
         snNameTextField = new JTextField();
+
+        snNameLabel.setText("Enter Member Name : ");
+        snNameLabel.setBounds(10,120,680,30);
+        snNameLabel.setFont(new Font("Inter",Font.BOLD,14));
+        snNameLabel.setBackground(Color.LIGHT_GRAY);
     }
     @Override
     public void actionPerformed(ActionEvent e) {
