@@ -76,5 +76,15 @@ public class ViewIssuedBooks implements ActionListener {
             new MemberHomeFrame();
         }
 
+        if (e.getSource() == ibSubmitButton) {
+            String mId = ibIdTextField.getText();
+            ibTableModel.setRowCount(0);
+
+            boolean found = false;
+
+            if (!found && !mId.isEmpty()) {
+                JOptionPane.showMessageDialog(ibFrame, "No records found for this Member ID.");
+            }
+        }
     }
 }
