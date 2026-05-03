@@ -42,6 +42,10 @@ public class RemoveMember implements ActionListener {
 
         rmFrame.add(rmLabel);
         rmFrame.add(rmSubmitButton);
+        rmFrame.add(rmBackButton);
+        rmFrame.add(rmExitButton);
+        rmFrame.add(rmIdLabel);
+        rmFrame.add(rmIdTextField);
 
     }
     @Override
