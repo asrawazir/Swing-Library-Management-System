@@ -20,7 +20,7 @@ public class ViewIssuedBooks implements ActionListener {
     JTextField ibNameTextField;
 
     JTable ibBooksTable;
-    DefaultTableModel ibBableModel;
+    DefaultTableModel ibTableModel;
     JScrollPane ibScrollPane;
 
     public ViewIssuedBooks(){
@@ -42,6 +42,13 @@ public class ViewIssuedBooks implements ActionListener {
         ibNameTextField.setFont(new Font("Inter", Font.PLAIN, 14));
 
         String[] columns = {"Book ID", "Book Title", "Issue Date"};
+
+        ibTableModel = new DefaultTableModel(columns, 0) {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
     }
     @Override
     public void actionPerformed(ActionEvent e) {
