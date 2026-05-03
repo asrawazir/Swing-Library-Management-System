@@ -20,6 +20,9 @@ public class SearchMemberByName implements ActionListener {
 
         snFrame = new CreateFrame();
         snLabel = new CreateLabel("Search Member By Name");
+        snSubmitButton = new CreateSubmitButton("Search");
+        snBackButton = new CreateBackButton();
+        snExitButton = new CreateExitButton();
     }
     @Override
     public void actionPerformed(ActionEvent e) {
