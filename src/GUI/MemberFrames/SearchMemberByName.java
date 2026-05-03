@@ -10,9 +10,9 @@ import javax.swing.*;
 public class SearchMemberByName implements ActionListener {
     CreateFrame snFrame;
     CreateLabel snLabel;
-    CreateSubmitButton siSubmitButton;
-    CreateBackButton siBackButton;
-    CreateExitButton siExitButton;
+    CreateSubmitButton snSubmitButton;
+    CreateBackButton snBackButton;
+    CreateExitButton snExitButton;
 
     @Override
     public void actionPerformed(ActionEvent e) {
