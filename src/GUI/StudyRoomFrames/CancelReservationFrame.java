@@ -70,6 +70,10 @@ public class CancelReservationFrame implements ActionListener {
             new StudyRoomHomeFrame();
         }
 
+        if(e.getSource()==submitButton){
+            new CreateDialogBox("Reservation Cancelled","Your reservation is successfully cancelled");
+
+        }
 
     }
 }

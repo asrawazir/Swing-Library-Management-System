@@ -72,6 +72,10 @@ public class ReserveRoomFrame implements ActionListener {
             new StudyRoomHomeFrame();
         }
 
+        if(e.getSource()==submitButton){
+            new CreateDialogBox("Room Reserved","Room is reserved");
+
+        }
 
     }
 }
