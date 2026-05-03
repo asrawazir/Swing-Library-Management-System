@@ -30,6 +30,7 @@ public class ViewIssuedBooks implements ActionListener {
         ibBackButton = new CreateBackButton();
         ibExitButton = new CreateExitButton();
         ibSubmitButton = new CreateSubmitButton("Search");
+        ibSubmitButton.setBounds(470, 160, 210, 30);
 
         ibIdLabel = new JLabel();
         ibIdTextField = new JTextField();
@@ -59,6 +60,8 @@ public class ViewIssuedBooks implements ActionListener {
 
         ibScrollPane.setBounds(10, 210, 670, 300);
 
+        ibBackButton.addActionListener(this);
+
         ibFrame.add(ibLabel);
         ibFrame.add(ibSubmitButton);
         ibFrame.add(ibBackButton);
@@ -75,6 +78,5 @@ public class ViewIssuedBooks implements ActionListener {
             ibFrame.dispose();
             new MemberHomeFrame();
         }
-
     }
 }
