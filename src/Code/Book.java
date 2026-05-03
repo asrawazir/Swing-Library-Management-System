@@ -23,4 +23,26 @@ public class Book {
         this.availableQuantity = qty;
     }
 
+
+
+    public int getID() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public int getTotalQuantity() {
+        return totalQuantity;
+    }
+
+    public int getAvailableQuantity() {
+        return availableQuantity;
+    }
+
 }
