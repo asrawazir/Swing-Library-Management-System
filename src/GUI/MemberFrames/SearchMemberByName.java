@@ -52,5 +52,9 @@ public class SearchMemberByName implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
+        if (e.getSource()==snBackButton){
+            snFrame.dispose();
+            new SearchMember();
+        }
     }
 }
