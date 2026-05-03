@@ -33,6 +33,10 @@ public class ViewIssuedBooks implements ActionListener {
 
         ibNameLabel = new JLabel();
         ibNameTextField = new JTextField();
+
+        ibNameLabel.setText("Enter Member ID: ");
+        ibNameLabel.setBounds(10, 120, 680, 30);
+        ibNameLabel.setFont(new Font("Inter", Font.BOLD, 14));
     }
     @Override
     public void actionPerformed(ActionEvent e) {
