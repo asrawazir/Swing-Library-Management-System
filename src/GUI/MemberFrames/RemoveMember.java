@@ -47,7 +47,7 @@ public class RemoveMember implements ActionListener {
         rmFrame.add(rmIdLabel);
         rmFrame.add(rmIdTextField);
 
-
+        rmFrame.setVisible(true);
     }
     @Override
     public void actionPerformed(ActionEvent e) {
