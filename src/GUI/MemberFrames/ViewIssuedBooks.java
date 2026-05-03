@@ -60,6 +60,8 @@ public class ViewIssuedBooks implements ActionListener {
 
         ibScrollPane.setBounds(10, 210, 670, 300);
 
+        ibBackButton.addActionListener(this);
+
         ibFrame.add(ibLabel);
         ibFrame.add(ibSubmitButton);
         ibFrame.add(ibBackButton);
