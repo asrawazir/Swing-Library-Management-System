@@ -1,14 +1,10 @@
 package GUI.MemberFrames;
 
 import GUI.AdditionalClasses.*;
-import GUI.BookFrames.RemoveBook;
 import GUI.HomeFrame;
 
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.lang.reflect.Member;
-import javax.swing.*;
 
 public class MemberHomeFrame implements ActionListener {
 
@@ -73,7 +69,7 @@ public class MemberHomeFrame implements ActionListener {
 
         if(e.getSource() == button2){
             mhFrame.dispose();
-            new SeachMember();
+            new SearchMember();
         }
 
         if(e.getSource() == button3) {
