@@ -55,7 +55,7 @@ public class RemoveMember implements ActionListener {
 
         if (e.getSource()==rmBackButton){
             rmFrame.dispose();
-            new BookHomeFrame();
+            new MemberHomeFrame();
         }
         if (e.getSource()==rmSubmitButton){
             new CreateDialogBox("Success","Member Removed Successfully");
