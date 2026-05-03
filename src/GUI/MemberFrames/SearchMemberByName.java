@@ -1,7 +1,6 @@
 package GUI.MemberFrames;
 
-import GUI.AdditionalClasses.CreateFrame;
-import GUI.AdditionalClasses.CreateLabel;
+import GUI.AdditionalClasses.*;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -11,6 +10,9 @@ import javax.swing.*;
 public class SearchMemberByName implements ActionListener {
     CreateFrame snFrame;
     CreateLabel snLabel;
+    CreateSubmitButton siSubmitButton;
+    CreateBackButton siBackButton;
+    CreateExitButton siExitButton;
 
     @Override
     public void actionPerformed(ActionEvent e) {
