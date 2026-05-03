@@ -15,6 +15,9 @@ public class RemoveMember implements ActionListener {
     CreateExitButton rmExitButton;
     CreateSubmitButton rmSubmitButton;
 
+    JLabel rmIdLabel;
+    JTextField rmIdTextField;
+
     @Override
     public void actionPerformed(ActionEvent e) {
 
