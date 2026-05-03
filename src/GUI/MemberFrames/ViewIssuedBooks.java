@@ -41,7 +41,7 @@ public class ViewIssuedBooks implements ActionListener {
         ibNameTextField.setBounds(10, 160, 450, 30);
         ibNameTextField.setFont(new Font("Inter", Font.PLAIN, 14));
 
-        
+        String[] columns = {"Book ID", "Book Title", "Issue Date"};
     }
     @Override
     public void actionPerformed(ActionEvent e) {
