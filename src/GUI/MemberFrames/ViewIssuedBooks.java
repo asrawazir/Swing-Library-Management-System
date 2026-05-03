@@ -59,7 +59,13 @@ public class ViewIssuedBooks implements ActionListener {
 
         ibScrollPane.setBounds(10, 210, 670, 300);
 
-        
+        ibFrame.add(ibLabel);
+        ibFrame.add(ibSubmitButton);
+        ibFrame.add(ibBackButton);
+        ibFrame.add(ibExitButton);
+        ibFrame.add(ibIdLabel);
+        ibFrame.add(ibIdTextField);
+        ibFrame.add(ibScrollPane);
     }
     @Override
     public void actionPerformed(ActionEvent e) {
