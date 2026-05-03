@@ -57,7 +57,7 @@ public class ViewIssuedBooks implements ActionListener {
         ibBooksTable.setFont(new Font("Inter", Font.PLAIN, 13));
         ibBooksTable.setRowHeight(25);
 
-        scrollPane.setBounds(10, 210, 670, 300);
+        ibScrollPane.setBounds(10, 210, 670, 300);
     }
     @Override
     public void actionPerformed(ActionEvent e) {
