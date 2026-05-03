@@ -29,6 +29,8 @@ public class ViewIssuedBooks implements ActionListener {
 
         ibFrame = new CreateFrame();
         ibLabel = new CreateLabel("Books Issued to Member");
+        ibBackButton = new CreateBackButton();
+        ibExitButton = new CreateExitButton();
     }
     @Override
     public void actionPerformed(ActionEvent e) {
