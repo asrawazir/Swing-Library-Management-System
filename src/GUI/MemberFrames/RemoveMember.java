@@ -20,6 +20,9 @@ public class RemoveMember implements ActionListener {
 
     public RemoveMember(){
 
+        rmFrame = new CreateFrame();
+        rmLabel = new CreateLabel("Remove Member");
+
     }
     @Override
     public void actionPerformed(ActionEvent e) {
