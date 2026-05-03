@@ -1,4 +1,13 @@
 package GUI.MemberFrames;
 
-public class SearchMemberByName {
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+
+public class SearchMemberByName implements ActionListener {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+    }
 }
