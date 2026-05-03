@@ -1,6 +1,7 @@
 package GUI.MemberFrames;
 
 import GUI.AdditionalClasses.*;
+import GUI.BookFrames.BookHomeFrame;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -52,5 +53,12 @@ public class RemoveMember implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
+        if (e.getSource()==rmBackButton){
+            rmFrame.dispose();
+            new BookHomeFrame();
+        }
+        if (e.getSource()==rmSubmitButton){
+            new CreateDialogBox("Success","Member Removed Successfully");
+        }
     }
 }
