@@ -1,7 +1,6 @@
 package GUI.MemberFrames;
 
-import GUI.AdditionalClasses.CreateFrame;
-import GUI.AdditionalClasses.CreateLabel;
+import GUI.AdditionalClasses.*;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,6 +11,10 @@ public class RemoveMember implements ActionListener {
 
     CreateFrame rmFrame;
     CreateLabel rmLabel;
+    CreateBackButton rmBackButton;
+    CreateExitButton rmExitButton;
+    CreateSubmitButton rmSubmitButton;
+
     @Override
     public void actionPerformed(ActionEvent e) {
 
