@@ -29,6 +29,11 @@ public class RemoveMember implements ActionListener {
         rmIdLabel = new JLabel();
         rmIdTextField = new JTextField();
 
+        rmIdLabel.setText("Enter Member ID : ");
+        rmIdLabel.setBounds(10,120,680,30);
+        rmIdLabel.setFont(new Font("Inter",Font.BOLD,14));
+        rmIdLabel.setBackground(Color.LIGHT_GRAY);
+
     }
     @Override
     public void actionPerformed(ActionEvent e) {
