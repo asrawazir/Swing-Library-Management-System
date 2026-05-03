@@ -14,4 +14,13 @@ public class Book {
         this.totalQuantity = 0;
         this.availableQuantity = 0;
     }
+
+    public Book(int id, String title, String author, int qty) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.totalQuantity = qty;
+        this.availableQuantity = qty;
+    }
+
 }
