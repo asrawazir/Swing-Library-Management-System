@@ -37,6 +37,11 @@ public class ViewIssuedBooks implements ActionListener {
         ibNameLabel.setText("Enter Member ID: ");
         ibNameLabel.setBounds(10, 120, 680, 30);
         ibNameLabel.setFont(new Font("Inter", Font.BOLD, 14));
+
+        ibNameTextField.setBounds(10, 160, 450, 30);
+        ibNameTextField.setFont(new Font("Inter", Font.PLAIN, 14));
+
+        
     }
     @Override
     public void actionPerformed(ActionEvent e) {
