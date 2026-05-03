@@ -30,6 +30,9 @@ public class ViewIssuedBooks implements ActionListener {
         ibBackButton = new CreateBackButton();
         ibExitButton = new CreateExitButton();
         ibSubmitButton = new CreateSubmitButton("Search");
+
+        ibNameLabel = new JLabel();
+        ibNameTextField = new JTextField();
     }
     @Override
     public void actionPerformed(ActionEvent e) {
