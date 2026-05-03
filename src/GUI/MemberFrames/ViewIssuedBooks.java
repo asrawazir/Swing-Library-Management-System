@@ -49,6 +49,11 @@ public class ViewIssuedBooks implements ActionListener {
                 return false;
             }
         };
+
+        ibBooksTable = new JTable(ibTableModel);
+        ibBooksTable.getTableHeader().setFont(new Font("Inter", Font.BOLD, 13));
+        ibBooksTable.setFont(new Font("Inter", Font.PLAIN, 13));
+        ibBooksTable.setRowHeight(25);
     }
     @Override
     public void actionPerformed(ActionEvent e) {
