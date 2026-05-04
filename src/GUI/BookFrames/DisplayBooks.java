@@ -47,12 +47,15 @@ public class DisplayBooks implements ActionListener {
 
         JScrollPane scrollPane = new JScrollPane(table);
 
+        scrollPane.setBounds(70,80,560,280);
+
         //Adding action listener method to back button
         backButton.addActionListener(this);
 
         //Adding main label to the frame
         dbFrame.add(label);
 
+        dbFrame.add(scrollPane);
         //Adding buttons to the frame
         dbFrame.add(backButton);
         dbFrame.add(exitButton);
