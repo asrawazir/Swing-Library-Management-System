@@ -29,7 +29,7 @@ public class SearchMemberById implements ActionListener {
         siIdLabel = new JLabel();
         siIdTextField = new JTextField();
 
-        siIdLabel.setText("Enter Book ID : ");
+        siIdLabel.setText("Enter Member ID : ");
         siIdLabel.setBounds(10,120,680,30);
         siIdLabel.setFont(new Font("Inter",Font.BOLD,14));
         siIdLabel.setBackground(Color.LIGHT_GRAY);
