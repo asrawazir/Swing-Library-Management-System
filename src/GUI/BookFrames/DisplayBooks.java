@@ -45,6 +45,8 @@ public class DisplayBooks implements ActionListener {
 
         JTable table = new JTable(data,headers);
 
+        JScrollPane scrollPane = new JScrollPane(table);
+
         //Adding action listener method to back button
         backButton.addActionListener(this);
 
