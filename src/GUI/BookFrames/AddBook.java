@@ -123,6 +123,10 @@ public class AddBook implements ActionListener {
 
         //processing the press on submit button
         if (e.getSource()==submitButton){
+            String id = idTextField.getText();
+            String title = titleTextField.getText();
+            String author = authorTextField.getText();
+            String quantity = quantityTextField.getText();
             new CreateDialogBox("Success","Book Added Successfully");
         }
     }
