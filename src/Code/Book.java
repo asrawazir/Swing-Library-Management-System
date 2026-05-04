@@ -4,18 +4,18 @@ public class Book {
     private String id;
     private String title;
     private String author;
-    private int totalQuantity;
-    private int availableQuantity;
+    private String totalQuantity;
+    private String availableQuantity;
 
     public Book() {
         this.id = "0";
         this.title = "Not assigned";
         this.author = "Unknown";
-        this.totalQuantity = 0;
-        this.availableQuantity = 0;
+        this.totalQuantity = "0";
+        this.availableQuantity = "0";
     }
 
-    public Book(String id, String title, String author, int qty) {
+    public Book(String id, String title, String author, String qty) {
         this.id = id;
         this.title = title;
         this.author = author;
@@ -37,11 +37,11 @@ public class Book {
         return author;
     }
 
-    public int getTotalQuantity() {
+    public String getTotalQuantity() {
         return totalQuantity;
     }
 
-    public int getAvailableQuantity() {
+    public String getAvailableQuantity() {
         return availableQuantity;
     }
 
