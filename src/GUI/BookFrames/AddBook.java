@@ -11,6 +11,8 @@ import java.awt.event.ActionListener;
 
 public class AddBook implements ActionListener {
 
+    ArrayListsManager alm = ArrayListsManager.instance;
+
     //creating a basic frame using pre-defined class
     CreateFrame abFrame = new CreateFrame();
 
@@ -131,6 +133,7 @@ public class AddBook implements ActionListener {
             String quantity = quantityTextField.getText();
 
             Book book = new Book(id,title,author,quantity);
+            alm.addBook(book);
 
             new CreateDialogBox("Success","Book Added Successfully");
         }
