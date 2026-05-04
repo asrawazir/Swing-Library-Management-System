@@ -1,5 +1,7 @@
 package GUI.BookFrames;
 
+import Code.ArrayListsManager;
+import Code.Book;
 import GUI.AdditionalClasses.*;
 
 import javax.swing.*;
@@ -127,6 +129,9 @@ public class AddBook implements ActionListener {
             String title = titleTextField.getText();
             String author = authorTextField.getText();
             String quantity = quantityTextField.getText();
+
+            Book book = new Book(id,title,author,quantity);
+
             new CreateDialogBox("Success","Book Added Successfully");
         }
     }
