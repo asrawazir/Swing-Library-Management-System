@@ -1,6 +1,7 @@
 package GUI.BookFrames;
 
 import Code.ArrayListsManager;
+import Code.Book;
 import GUI.AdditionalClasses.CreateBackButton;
 import GUI.AdditionalClasses.CreateExitButton;
 import GUI.AdditionalClasses.CreateFrame;
@@ -8,6 +9,7 @@ import GUI.AdditionalClasses.CreateLabel;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class DisplayBooks implements ActionListener {
 
@@ -25,6 +27,8 @@ public class DisplayBooks implements ActionListener {
 
     //Default Constructor
     public DisplayBooks(){
+
+        ArrayList<Book> books = alm.getBooksList();
 
         //Creating an array holding headers for table
         String[] headers = {"Book Id","Title","Author","Quantity"};
