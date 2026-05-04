@@ -35,6 +35,12 @@ public class DisplayBooks implements ActionListener {
 
         //Creating a 2D array to hold data for tables
         String[][] data = new String[books.size()][4];
+        for (int i = 0; i < books.size(); i++){
+            data[i][0] = books.get(i).getID();
+            data[i][1] = books.get(i).getTitle();
+            data[i][2] = books.get(i).getAuthor();
+            data[i][3] = books.get(i).getTotalQuantity();
+        }
 
         //Adding action listener method to back button
         backButton.addActionListener(this);
