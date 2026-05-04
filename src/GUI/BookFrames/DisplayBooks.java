@@ -23,6 +23,9 @@ public class DisplayBooks implements ActionListener {
     //Default Constructor
     public DisplayBooks(){
 
+        //Creating an array holding headers for table
+        String[] headers = {"Book Id","Title","Author","Quantity"};
+
         //Adding action listener method to back button
         backButton.addActionListener(this);
 
