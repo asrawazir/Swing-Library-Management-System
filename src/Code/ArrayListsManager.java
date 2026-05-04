@@ -14,4 +14,7 @@ public class ArrayListsManager {
         books.add(book);
     }
 
+    public ArrayList<Book> getBooksList(){
+        return books;
+    }
 }
