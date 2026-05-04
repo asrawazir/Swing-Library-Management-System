@@ -7,6 +7,7 @@ import GUI.AdditionalClasses.CreateExitButton;
 import GUI.AdditionalClasses.CreateFrame;
 import GUI.AdditionalClasses.CreateLabel;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -41,6 +42,8 @@ public class DisplayBooks implements ActionListener {
             data[i][2] = books.get(i).getAuthor();
             data[i][3] = books.get(i).getTotalQuantity();
         }
+
+        JTable table = new JTable(data,headers);
 
         //Adding action listener method to back button
         backButton.addActionListener(this);
