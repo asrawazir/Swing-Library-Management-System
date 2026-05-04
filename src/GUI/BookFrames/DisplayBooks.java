@@ -1,5 +1,6 @@
 package GUI.BookFrames;
 
+import Code.ArrayListsManager;
 import GUI.AdditionalClasses.CreateBackButton;
 import GUI.AdditionalClasses.CreateExitButton;
 import GUI.AdditionalClasses.CreateFrame;
@@ -15,6 +16,8 @@ public class DisplayBooks implements ActionListener {
 
     //Defining the main label
     CreateLabel label = new CreateLabel("Display Books");
+
+    ArrayListsManager alm = ArrayListsManager.instance;
 
     //Creating buttons using pre-defined button classes
     CreateBackButton backButton = new CreateBackButton();
