@@ -19,6 +19,7 @@ public class SearchBookByID implements ActionListener {
     ArrayListsManager alm = ArrayListsManager.instance;
     JLabel idLabel = new JLabel();
     JTextField idTextField = new JTextField();
+    ArrayList<Book> books;
 
     public SearchBookByID(){
 
@@ -33,7 +34,7 @@ public class SearchBookByID implements ActionListener {
         idTextField.setBackground(Color.WHITE);
         idTextField.setCaretColor(Color.BLACK);
 
-        ArrayList<Book> books = alm.getBooksList();
+        books = alm.getBooksList();
         backButton.addActionListener(this);
 
         sbiFrame.add(submitButton);
@@ -54,6 +55,11 @@ public class SearchBookByID implements ActionListener {
 
         if (e.getSource()==submitButton){
             String id = idTextField.getText();
+            for (int i = 0; i < books.size();i++){
+                if(books.get(i).getID().equalsIgnoreCase(id)){
+
+                }
+            }
         }
     }
 }
