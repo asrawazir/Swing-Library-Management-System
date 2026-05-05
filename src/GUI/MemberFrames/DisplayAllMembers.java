@@ -32,6 +32,13 @@ public class DisplayAllMembers implements ActionListener {
         String [] headings = {"Member Id" , "Name" , "Phone" , " Email"};
 
         String [][] data = new String[members.size()][4];
+
+        for(int i = 0; i < members.size(); i++){
+            data[i][0] = members.get(i).getId();
+            data[i][1] = members.get(i).getName();
+            data[i][2] = members.get(i).getPhone();
+            data[i][3] = members.get(i).getEmail();
+        }
     }
     @Override
     public void actionPerformed(ActionEvent e) {
