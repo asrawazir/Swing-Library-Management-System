@@ -58,5 +58,10 @@ public class DisplayAllMembers implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
+        if(e.getSource() == dmBackButton){
+            dmFrame.dispose();
+            new MemberHomeFrame();
+        }
+
     }
 }
