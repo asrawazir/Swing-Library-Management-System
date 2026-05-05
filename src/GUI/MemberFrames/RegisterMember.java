@@ -1,5 +1,7 @@
 package GUI.MemberFrames;
 
+import Code.Book;
+import Code.Member;
 import GUI.AdditionalClasses.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -115,6 +117,17 @@ public class RegisterMember implements ActionListener{
         if(e.getSource() == rmBackButton){
             rmFrame.dispose();
             new MemberHomeFrame();
+        }
+
+        if (e.getSource()==rmSubmitButton){
+            String id = idTextField.getText();
+            String name = nameTextField.getText();
+            String phone = phoneTextField.getText();
+            String email = emailTextField.getText();
+
+            Member member = new Member(id,name,phone,email);
+
+            new CreateDialogBox("Success","Book Added Successfully");
         }
     }
 }
