@@ -1,5 +1,8 @@
 package GUI.MemberFrames;
 
+import Code.ArrayListsManager;
+import Code.Book;
+import Code.Member;
 import GUI.AdditionalClasses.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,6 +10,8 @@ import java.awt.*;
 import javax.swing.*;
 
 public class RegisterMember implements ActionListener{
+
+    ArrayListsManager alm = ArrayListsManager.instance;
 
     CreateFrame rmFrame;
     CreateLabel rmLabel;
@@ -115,6 +120,18 @@ public class RegisterMember implements ActionListener{
         if(e.getSource() == rmBackButton){
             rmFrame.dispose();
             new MemberHomeFrame();
+        }
+
+        if (e.getSource()==rmSubmitButton){
+            String id = idTextField.getText();
+            String name = nameTextField.getText();
+            String phone = phoneTextField.getText();
+            String email = emailTextField.getText();
+
+            Member member = new Member(id,name,phone,email);
+            alm.registerMember(member);
+
+            new CreateDialogBox("Success","Member Added Successfully");
         }
     }
 }
