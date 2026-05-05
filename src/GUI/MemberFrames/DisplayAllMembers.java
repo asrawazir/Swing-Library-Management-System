@@ -19,6 +19,11 @@ public class DisplayAllMembers implements ActionListener {
     CreateBackButton dmBackButton;
     CreateExitButton dmExitButton;
     ArrayListsManager alm = ArrayListsManager.instance;
+
+    public DisplayAllMembers(){
+        dmFrame = new CreateFrame();
+        dmLabel = new CreateLabel();
+    }
     @Override
     public void actionPerformed(ActionEvent e) {
 
