@@ -6,7 +6,7 @@ public class ArrayListsManager {
 
     public static ArrayListsManager instance = new ArrayListsManager();
     static ArrayList<Book> books;
-    static ArrayList<Member> members;
+    ArrayList<Member> members;
 
     public ArrayListsManager(){
 
