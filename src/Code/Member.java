@@ -15,4 +15,12 @@ public class Member extends Person{
         this.phone = p;
         this.email = e;
     }
+
+    public void setPhone(String phone){
+        this.phone = phone;
+    }
+
+    public void setEmail(){
+        this.email = email;
+    }
 }
