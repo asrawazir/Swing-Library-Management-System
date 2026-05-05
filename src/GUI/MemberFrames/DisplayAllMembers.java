@@ -29,7 +29,7 @@ public class DisplayAllMembers implements ActionListener {
 
         ArrayList<Member> members = alm.getMembersList();
 
-
+        String [] headings = {"Member Id" , "Name" , "Phone" , " Email"};
     }
     @Override
     public void actionPerformed(ActionEvent e) {
