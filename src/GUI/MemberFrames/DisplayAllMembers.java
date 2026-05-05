@@ -22,7 +22,7 @@ public class DisplayAllMembers implements ActionListener {
 
     public DisplayAllMembers(){
         dmFrame = new CreateFrame();
-        dmLabel = new CreateLabel();
+        dmLabel = new CreateLabel("Display Members");
     }
     @Override
     public void actionPerformed(ActionEvent e) {
