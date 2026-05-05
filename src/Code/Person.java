@@ -9,4 +9,9 @@ public class Person {
         id = "null";
         name = "none";
     }
+
+    public Person(String i, String n){
+        id = i;
+        name = n;
+    }
 }
