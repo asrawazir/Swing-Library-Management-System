@@ -42,6 +42,9 @@ public class DisplayAllMembers implements ActionListener {
             data[i][2] = members.get(i).getPhone();
             data[i][3] = members.get(i).getEmail();
         }
+
+        dmTable = new JTable(data,headings);
+
     }
     @Override
     public void actionPerformed(ActionEvent e) {
