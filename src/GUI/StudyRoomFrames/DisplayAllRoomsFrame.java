@@ -25,15 +25,9 @@ public class DisplayAllRoomsFrame implements ActionListener {
         exitButton.addActionListener(this);
         String[] column = {"Room Number","Status","Reserved By"};
 
-        String[][] data = {
-                {"101", "Available", "null"},
-                {"102", "Available", "null"},
-                {"103", "Available", "null"},
-                {"104", "Available", "null"},
-                {"105", "Available", "null"},
-                {"106", "Available", "null"},
-                {"107", "Available", "null"},
-                {"108", "Available", "null"},
+        String[][] data = new String[roomList.size()][3];
+        for(int i=0;i<roomList.size();i++){
+            StudyRoom r=roomList.get(i);
 
             data[i][0]= r.getRoomNumber();;
             data[i][1]=r.getIsReserved()?"Reserved":"Available";
