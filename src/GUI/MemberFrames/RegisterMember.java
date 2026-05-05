@@ -1,7 +1,6 @@
 package GUI.MemberFrames;
 
 import Code.ArrayListsManager;
-import Code.Book;
 import Code.Member;
 import GUI.AdditionalClasses.*;
 import java.awt.event.ActionEvent;
