@@ -46,6 +46,13 @@ public class DisplayAllMembers implements ActionListener {
         dmTable = new JTable(data,headings);
 
         dmScrollPane = new JScrollPane(dmTable);
+        dmScrollPane.setBounds(70,80,560,280);
+
+        dmFrame.add(dmLabel);
+        dmFrame.add(dmScrollPane);
+        dmFrame.add(dmBackButton);
+        dmFrame.add(dmExitButton);
+
     }
     @Override
     public void actionPerformed(ActionEvent e) {
