@@ -47,5 +47,9 @@ public class SearchBookByID implements ActionListener {
             sbiFrame.dispose();
             new SearchBook();
         }
+
+        if (e.getSource()==submitButton){
+            String id = idTextField.getText();
+        }
     }
 }
