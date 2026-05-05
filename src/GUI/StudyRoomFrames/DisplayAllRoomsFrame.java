@@ -12,6 +12,8 @@ public class DisplayAllRoomsFrame implements ActionListener {
     CreateBackButton backButton;
 
     CreateExitButton exitButton;
+    ArrayListsManager aa=ArrayListsManager.instance;
+    ArrayList<StudyRoom>roomList=aa.getRooms();
 
     public DisplayAllRoomsFrame() {
         frame = new CreateFrame();
