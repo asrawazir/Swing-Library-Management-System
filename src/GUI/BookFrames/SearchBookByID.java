@@ -66,6 +66,12 @@ public class SearchBookByID implements ActionListener {
                     JLabel foundBookTotalLabel = new JLabel("Total Quantities: "+foundBook.getTotalQuantity());
                     JLabel foundBookAvailableLabel = new JLabel("Available Quantity: "+foundBook.getAvailableQuantity());
 
+                    foundBookIdLabel.setFont(new Font("Inter",Font.PLAIN,15));
+                    foundBookTitleLabel.setFont(new Font("Inter",Font.PLAIN,15));
+                    foundBookAuthorLabel.setFont(new Font("Inter",Font.PLAIN,15));
+                    foundBookTotalLabel.setFont(new Font("Inter",Font.PLAIN,15));
+                    foundBookAvailableLabel.setFont(new Font("Inter",Font.PLAIN,15));
+
                     foundBookIdLabel.setBounds(100,200,300,40);
                     foundBookTitleLabel.setBounds(100,230,300,40);
                     foundBookAuthorLabel.setBounds(100,260,300,40);
