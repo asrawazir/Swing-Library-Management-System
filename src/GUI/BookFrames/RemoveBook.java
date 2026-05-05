@@ -1,11 +1,14 @@
 package GUI.BookFrames;
 
+import Code.ArrayListsManager;
+import Code.Book;
 import GUI.AdditionalClasses.*;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class RemoveBook implements ActionListener {
 
@@ -18,6 +21,9 @@ public class RemoveBook implements ActionListener {
     //Creating a label and text field to receive book id
     JLabel idLabel = new JLabel();
     JTextField idTextField = new JTextField();
+
+    ArrayListsManager alm = ArrayListsManager.instance;
+    ArrayList<Book> books = alm.getBooksList();
 
     //Creating exit button, back button and submit button using pre-defined classes
     CreateExitButton exitButton = new CreateExitButton();
@@ -38,6 +44,8 @@ public class RemoveBook implements ActionListener {
         idTextField.setForeground(Color.BLACK);
         idTextField.setBackground(Color.WHITE);
         idTextField.setCaretColor(Color.BLACK);
+
+
 
         //Adding action listeners to the buttons
         backButton.addActionListener(this);
@@ -70,6 +78,13 @@ public class RemoveBook implements ActionListener {
         }
         //Defining the action for submit button
         if (e.getSource()==submitButton){
+            String id = idTextField.getText();
+            for (int i =0; i<books.size();i++){
+                if (books.get(i).getID().equalsIgnoreCase(id)){
+                    alm.removeBook(books.get(i));
+                }
+            }
+
             new CreateDialogBox("Success","Book Removed Successfully");
         }
     }
