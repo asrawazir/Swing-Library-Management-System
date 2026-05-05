@@ -21,6 +21,9 @@ public class DisplayAllMembers implements ActionListener {
     CreateExitButton dmExitButton;
     ArrayListsManager alm = ArrayListsManager.instance;
 
+    JTable dmTable;
+    JScrollPane dmScrollPane;
+
     public DisplayAllMembers(){
         dmFrame = new CreateFrame();
         dmLabel = new CreateLabel("Display Members");
