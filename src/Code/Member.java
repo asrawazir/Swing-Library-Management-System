@@ -23,4 +23,12 @@ public class Member extends Person{
     public void setEmail(){
         this.email = email;
     }
+
+    public String getPhone(){
+        return this.phone;
+    }
+
+    public String getEmail(){
+        return this.email;
+    }
 }
