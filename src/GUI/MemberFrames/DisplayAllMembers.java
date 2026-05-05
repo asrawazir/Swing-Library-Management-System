@@ -23,6 +23,8 @@ public class DisplayAllMembers implements ActionListener {
     public DisplayAllMembers(){
         dmFrame = new CreateFrame();
         dmLabel = new CreateLabel("Display Members");
+        dmBackButton = new CreateBackButton();
+        dmExitButton = new CreateExitButton();
     }
     @Override
     public void actionPerformed(ActionEvent e) {
