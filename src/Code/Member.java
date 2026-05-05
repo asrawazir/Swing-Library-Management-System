@@ -9,4 +9,5 @@ public class Member extends Person{
         phone = "03xxxxxxxxx";
         email = "-----@gmail.com";
     }
+
 }
