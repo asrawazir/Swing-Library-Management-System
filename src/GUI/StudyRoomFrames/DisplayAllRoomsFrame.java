@@ -33,6 +33,9 @@ public class DisplayAllRoomsFrame implements ActionListener {
                 {"107", "Available", "null"},
                 {"108", "Available", "null"},
 
+            data[i][0]= r.getRoomNumber();;
+            data[i][1]=r.getIsReserved()?"Reserved":"Available";
+            data[i][2]=r.getIsReserved()?r.getReservedByMemberID():"-";
 
         };
 
