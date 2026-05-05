@@ -127,7 +127,7 @@ public class RegisterMember implements ActionListener{
 
             Member member = new Member(id,name,phone,email);
 
-            new CreateDialogBox("Success","Book Added Successfully");
+            new CreateDialogBox("Success","Member Added Successfully");
         }
     }
 }
