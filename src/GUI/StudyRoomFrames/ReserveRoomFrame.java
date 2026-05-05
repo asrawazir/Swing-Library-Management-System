@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 
 
 public class ReserveRoomFrame implements ActionListener {
+    ArrayListsManager aa=ArrayListsManager.instance;
     CreateFrame frame;
     CreateBackButton backButton;
     CreateLabel label;
