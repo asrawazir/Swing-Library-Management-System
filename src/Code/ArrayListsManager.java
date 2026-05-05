@@ -21,4 +21,9 @@ public class ArrayListsManager {
     public ArrayList<Book> getBooksList(){
         return books;
     }
+
+    public void registerMember(Member member){
+        members.add(member);
+    }
+
 }
