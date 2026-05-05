@@ -66,6 +66,20 @@ public class SearchBookByID implements ActionListener {
                     JLabel foundBookTotalLabel = new JLabel("Total Quantities: "+foundBook.getTotalQuantity());
                     JLabel foundBookAvailableLabel = new JLabel("Available Quantity: "+foundBook.getAvailableQuantity());
 
+                    foundBookIdLabel.setBounds(100,200,300,40);
+                    foundBookTitleLabel.setBounds(100,230,300,40);
+                    foundBookAuthorLabel.setBounds(100,260,300,40);
+                    foundBookTotalLabel.setBounds(100,290,300,40);
+                    foundBookAvailableLabel.setBounds(100,320,300,40);
+
+                    sbiFrame.add(foundBookIdLabel);
+                    sbiFrame.add(foundBookTitleLabel);
+                    sbiFrame.add(foundBookAuthorLabel);
+                    sbiFrame.add(foundBookTotalLabel);
+                    sbiFrame.add(foundBookAvailableLabel);
+
+                    sbiFrame.revalidate();
+                    sbiFrame.repaint();
 
                     found = true;
                     break;
