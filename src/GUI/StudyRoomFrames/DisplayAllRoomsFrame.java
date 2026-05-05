@@ -1,5 +1,7 @@
 package GUI.StudyRoomFrames;
 
+import Code.ArrayListsManager;
+import Code.StudyRoom;
 import GUI.AdditionalClasses.*;
 
 import javax.swing.*;
