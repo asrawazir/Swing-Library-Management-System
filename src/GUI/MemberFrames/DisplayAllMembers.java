@@ -1,5 +1,7 @@
 package GUI.MemberFrames;
 
+import GUI.AdditionalClasses.CreateBackButton;
+import GUI.AdditionalClasses.CreateExitButton;
 import GUI.AdditionalClasses.CreateFrame;
 import GUI.AdditionalClasses.CreateLabel;
 
@@ -12,7 +14,8 @@ public class DisplayAllMembers implements ActionListener {
 
     CreateFrame dmFrame;
     CreateLabel dmLabel;
-
+    CreateBackButton dmBackButton;
+    CreateExitButton dmExitButton;
     @Override
     public void actionPerformed(ActionEvent e) {
 
