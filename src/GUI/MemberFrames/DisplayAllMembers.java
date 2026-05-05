@@ -1,6 +1,7 @@
 package GUI.MemberFrames;
 
 import Code.ArrayListsManager;
+import Code.Member;
 import GUI.AdditionalClasses.CreateBackButton;
 import GUI.AdditionalClasses.CreateExitButton;
 import GUI.AdditionalClasses.CreateFrame;
@@ -10,7 +11,7 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class DisplayAllMembers implements ActionListener {
 
@@ -25,6 +26,10 @@ public class DisplayAllMembers implements ActionListener {
         dmLabel = new CreateLabel("Display Members");
         dmBackButton = new CreateBackButton();
         dmExitButton = new CreateExitButton();
+
+        ArrayList<Member> members = alm.getMembersList();
+
+
     }
     @Override
     public void actionPerformed(ActionEvent e) {
