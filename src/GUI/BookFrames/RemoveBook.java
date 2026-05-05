@@ -70,6 +70,8 @@ public class RemoveBook implements ActionListener {
         }
         //Defining the action for submit button
         if (e.getSource()==submitButton){
+            String id = idTextField.getText();
+
             new CreateDialogBox("Success","Book Removed Successfully");
         }
     }
