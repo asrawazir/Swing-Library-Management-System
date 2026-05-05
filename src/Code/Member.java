@@ -11,7 +11,8 @@ public class Member extends Person{
     }
 
 
-    public Member(String p, String e){
+    public Member(String i, String n, String p, String e){
+        super(i,n);
         this.phone = p;
         this.email = e;
     }
