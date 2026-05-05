@@ -46,5 +46,9 @@ public class SearchBookByAuthor implements ActionListener {
             sbaFrame.dispose();
             new SearchBook();
         }
+
+        if (e.getSource()==authorTextField){
+            String author = authorTextField.getText();
+        }
     }
 }
