@@ -35,9 +35,7 @@ public class DisplayAllRoomsFrame implements ActionListener {
             data[i][0]= r.getRoomNumber();;
             data[i][1]=r.getIsReserved()?"Reserved":"Available";
             data[i][2]=r.getIsReserved()?r.getReservedByMemberID():"-";
-
-        };
-
+        }
         JTable table = new JTable(data, column);
         JScrollPane scrollPane = new JScrollPane(table);
 
