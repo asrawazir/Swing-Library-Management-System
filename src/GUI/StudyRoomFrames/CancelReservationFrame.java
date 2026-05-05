@@ -9,6 +9,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class CancelReservationFrame implements ActionListener {
+
+    ArrayListsManager aa=ArrayListsManager.instance;
     CreateFrame frame;
     CreateBackButton button;
     CreateLabel label;
