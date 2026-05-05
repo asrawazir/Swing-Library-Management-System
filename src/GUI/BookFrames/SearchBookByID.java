@@ -57,7 +57,10 @@ public class SearchBookByID implements ActionListener {
             String id = idTextField.getText();
             for (int i = 0; i < books.size();i++){
                 if(books.get(i).getID().equalsIgnoreCase(id)){
-
+                    Book foundBook = books.get(i);
+                }
+                else{
+                    return;
                 }
             }
         }
