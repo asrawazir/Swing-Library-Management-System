@@ -53,6 +53,7 @@ public class DisplayAllMembers implements ActionListener {
         dmFrame.add(dmBackButton);
         dmFrame.add(dmExitButton);
 
+        dmFrame.setVisible(true);
     }
     @Override
     public void actionPerformed(ActionEvent e) {
