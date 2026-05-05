@@ -60,6 +60,12 @@ public class SearchBookByID implements ActionListener {
             for (int i = 0; i < books.size();i++){
                 if(books.get(i).getID().equalsIgnoreCase(id)){
                     Book foundBook = books.get(i);
+                    JLabel foundBookIdLabel = new JLabel();
+                    JLabel foundBookTitleLabel = new JLabel();
+                    JLabel foundBookAuthorLabel = new JLabel();
+                    JLabel foundBookTotalLabel = new JLabel();
+                    JLabel foundBookAvailableLabel = new JLabel();
+
                     found = true;
                     break;
                 }
