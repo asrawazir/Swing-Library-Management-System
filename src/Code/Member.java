@@ -10,4 +10,9 @@ public class Member extends Person{
         email = "-----@gmail.com";
     }
 
+
+    public Member(String p, String e){
+        this.phone = p;
+        this.email = e;
+    }
 }
