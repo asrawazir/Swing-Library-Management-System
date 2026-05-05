@@ -1,5 +1,6 @@
 package GUI.StudyRoomFrames;
 
+import Code.ArrayListsManager;
 import GUI.AdditionalClasses.*;
 import GUI.HomeFrame;
 
