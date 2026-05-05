@@ -1,11 +1,14 @@
 package GUI.BookFrames;
 
+import Code.ArrayListsManager;
+import Code.Book;
 import GUI.AdditionalClasses.*;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class SearchBookByID implements ActionListener {
     CreateFrame sbiFrame = new CreateFrame();
@@ -13,7 +16,7 @@ public class SearchBookByID implements ActionListener {
     CreateExitButton exitButton = new CreateExitButton();
     CreateLabel label = new CreateLabel("Search Book by ID");
     CreateSubmitButton submitButton = new CreateSubmitButton("Search");
-
+    ArrayListsManager alm = ArrayListsManager.instance;
     JLabel idLabel = new JLabel();
     JTextField idTextField = new JTextField();
 
@@ -30,6 +33,7 @@ public class SearchBookByID implements ActionListener {
         idTextField.setBackground(Color.WHITE);
         idTextField.setCaretColor(Color.BLACK);
 
+        ArrayList<Book> books = alm.getBooksList();
         backButton.addActionListener(this);
 
         sbiFrame.add(submitButton);
