@@ -56,6 +56,22 @@ public class SearchBookByID implements ActionListener {
 
         if (e.getSource()==submitButton){
             String id = idTextField.getText();
+            boolean found = false;
+            for (int i = 0; i < books.size();i++){
+                if(books.get(i).getID().equalsIgnoreCase(id)){
+                    Book foundBook = books.get(i);
+                    found = true;
+                    break;
+                }
+            }
+            if(!found){
+                JLabel notFoundLabel = new JLabel("Book not found");
+                notFoundLabel.setFont(new Font("Inter",Font.BOLD,25));
+                notFoundLabel.setBounds(250,200,300,40);
+                sbiFrame.add(notFoundLabel);
+                sbiFrame.repaint();
+                sbiFrame.revalidate();
+            }
 
         }
     }
