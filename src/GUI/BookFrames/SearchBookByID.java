@@ -36,6 +36,7 @@ public class SearchBookByID implements ActionListener {
 
         books = alm.getBooksList();
         backButton.addActionListener(this);
+        submitButton.addActionListener(this);
 
         sbiFrame.add(submitButton);
         sbiFrame.add(idTextField);
@@ -55,14 +56,7 @@ public class SearchBookByID implements ActionListener {
 
         if (e.getSource()==submitButton){
             String id = idTextField.getText();
-            for (int i = 0; i < books.size();i++){
-                if(books.get(i).getID().equalsIgnoreCase(id)){
-                    Book foundBook = books.get(i);
-                }
-                else{
-                    return;
-                }
-            }
+
         }
     }
 }
