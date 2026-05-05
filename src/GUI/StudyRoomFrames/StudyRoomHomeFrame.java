@@ -1,14 +1,18 @@
 package GUI.StudyRoomFrames;
 
+//Importing custom GUI helper classes
 import GUI.AdditionalClasses.*;
 import GUI.HomeFrame;
 
+//Importing swing and awt libraries for GUI components and event handling
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class StudyRoomHomeFrame implements ActionListener  {
+
+    //declaring frame and GUI components
        CreateFrame frame;
        CreateBackButton button;
        FrameButtons button1;
@@ -17,6 +21,7 @@ public class StudyRoomHomeFrame implements ActionListener  {
        FrameButtons button4;
        CreateLabel label;
        CreateExitButton exitButton;
+
 
    public  StudyRoomHomeFrame(){
        frame =new CreateFrame();
