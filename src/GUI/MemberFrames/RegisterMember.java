@@ -130,6 +130,7 @@ public class RegisterMember implements ActionListener{
 
             Member member = new Member(id,name,phone,email);
             alm.registerMember(member);
+
             new CreateDialogBox("Success","Member Added Successfully");
         }
     }
