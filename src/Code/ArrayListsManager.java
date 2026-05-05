@@ -32,4 +32,12 @@ public class ArrayListsManager {
     public ArrayList<Book> getBooksList(){
         return books;
     }
+
+    public ArrayList<StudyRoom> getRooms() {
+        return rooms;
+    }
 }
+
+
+
+
