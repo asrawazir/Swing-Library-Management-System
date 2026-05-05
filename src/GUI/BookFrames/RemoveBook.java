@@ -23,6 +23,7 @@ public class RemoveBook implements ActionListener {
     JTextField idTextField = new JTextField();
 
     ArrayListsManager alm = ArrayListsManager.instance;
+    ArrayList<Book> books = alm.getBooksList();
 
     //Creating exit button, back button and submit button using pre-defined classes
     CreateExitButton exitButton = new CreateExitButton();
@@ -44,7 +45,7 @@ public class RemoveBook implements ActionListener {
         idTextField.setBackground(Color.WHITE);
         idTextField.setCaretColor(Color.BLACK);
 
-        ArrayList<Book> books = alm.getBooksList();
+
 
         //Adding action listeners to the buttons
         backButton.addActionListener(this);
@@ -78,6 +79,11 @@ public class RemoveBook implements ActionListener {
         //Defining the action for submit button
         if (e.getSource()==submitButton){
             String id = idTextField.getText();
+            for (int i =0; i<books.size();i++){
+                if (books.get(i).getID().equalsIgnoreCase(id)){
+                    alm.removeBook(books.get(i));
+                }
+            }
 
             new CreateDialogBox("Success","Book Removed Successfully");
         }
