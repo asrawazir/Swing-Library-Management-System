@@ -75,7 +75,7 @@ public class CancelReservationFrame implements ActionListener {
         }
 
         if (e.getSource() == submitButton) {
-            new CreateDialogBox("Room reservation", "Room is reserved");
+            new CreateDialogBox("Cancel Reservation", "Reservation is cancelled ");
         }
 
     }
