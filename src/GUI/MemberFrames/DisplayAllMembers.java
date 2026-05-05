@@ -30,6 +30,8 @@ public class DisplayAllMembers implements ActionListener {
         ArrayList<Member> members = alm.getMembersList();
 
         String [] headings = {"Member Id" , "Name" , "Phone" , " Email"};
+
+        String [][] data = new String[members.size()][4];
     }
     @Override
     public void actionPerformed(ActionEvent e) {
