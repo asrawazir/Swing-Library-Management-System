@@ -26,4 +26,7 @@ public class ArrayListsManager {
         members.add(member);
     }
 
+    public ArrayList<Member> getMembersList(){
+        return members;
+    }
 }
