@@ -7,7 +7,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ReturnBook implements ActionListener {
+public class ReturnBookFrame implements ActionListener {
     CreateFrame rbFrame = new CreateFrame();
     CreateLabel label = new CreateLabel("Return Book");
     CreateExitButton exitButton = new CreateExitButton();
@@ -21,7 +21,7 @@ public class ReturnBook implements ActionListener {
 
     CreateSubmitButton submitButton = new CreateSubmitButton("Return");
 
-    public ReturnBook(){
+    public ReturnBookFrame(){
 
         memberIdLabel.setText("Enter Member ID : ");
         bookIdLabel.setText("Enter Book ID : ");

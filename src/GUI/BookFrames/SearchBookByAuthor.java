@@ -44,7 +44,7 @@ public class SearchBookByAuthor implements ActionListener {
     public void actionPerformed(ActionEvent e){
         if (e.getSource()==backButton){
             sbaFrame.dispose();
-            new SearchBook();
+            new SearchBookFrame();
         }
 
         if (e.getSource()==authorTextField){

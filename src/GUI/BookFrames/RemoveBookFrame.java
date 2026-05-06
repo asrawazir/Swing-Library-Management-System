@@ -10,7 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class RemoveBook implements ActionListener {
+public class RemoveBookFrame implements ActionListener {
 
     //Creating a frame from pre-defined CreateFrame class
     CreateFrame rbFrame = new CreateFrame();
@@ -30,7 +30,7 @@ public class RemoveBook implements ActionListener {
     CreateBackButton backButton = new CreateBackButton();
     CreateSubmitButton submitButton = new CreateSubmitButton("Remove");
 
-    public RemoveBook(){
+    public RemoveBookFrame(){
 
         //Defining the properties for idLabel
         idLabel.setText("Enter Book ID : ");

@@ -5,7 +5,7 @@ import GUI.AdditionalClasses.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class SearchBook implements ActionListener {
+public class SearchBookFrame implements ActionListener {
 
     CreateFrame sbFrame = new CreateFrame();
     CreateLabel label = new CreateLabel("Search Book");
@@ -14,7 +14,7 @@ public class SearchBook implements ActionListener {
     FrameButtons button1 = new FrameButtons("Search by ID",120,150);
     FrameButtons button2 = new FrameButtons("Search by Author",380,150);
 
-    public SearchBook(){
+    public SearchBookFrame(){
 
         button1.addActionListener(this);
         button2.addActionListener(this);

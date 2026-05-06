@@ -51,7 +51,7 @@ public class SearchBookByID implements ActionListener {
     public void actionPerformed(ActionEvent e){
         if (e.getSource()==backButton){
             sbiFrame.dispose();
-            new SearchBook();
+            new SearchBookFrame();
         }
 
         if (e.getSource()==submitButton){
