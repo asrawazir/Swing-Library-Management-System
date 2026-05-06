@@ -44,4 +44,8 @@ public class ArrayListsManager {
     public ArrayList<Member> getMembersList(){
         return members;
     }
+
+    public ArrayList<StudyRoom> getRooms() {
+        return rooms;
+    }
 }
