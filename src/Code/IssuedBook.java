@@ -1,5 +1,7 @@
 package Code;
 
+import java.util.ArrayList;
+
 public class IssuedBook {
     private Book book;
     private Member member;
@@ -16,5 +18,19 @@ public class IssuedBook {
         this.book = book;
         this.member = member;
         this.issueDate = date;
+    }
+
+    public IssuedBook issueBook(String bookId,String memberId, String date){
+        ArrayListsManager alm = ArrayListsManager.instance;
+        ArrayList<Book> books = alm.getBooksList();
+        ArrayList<Member> members = alm.getMembersList();
+        Book book;
+        Member member;
+        for (int i = 0; i < books.size();i++){
+            if (books.get(i).getID().equalsIgnoreCase(bookId)){
+                book = books.get(i);
+            }
+        }
+
     }
 }
