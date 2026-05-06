@@ -6,12 +6,14 @@ public class ArrayListsManager {
 
     public static ArrayListsManager instance = new ArrayListsManager();
     static ArrayList<Book> books;
+    ArrayList<IssuedBook> issuedBooks;
     ArrayList<Member> members;
     ArrayList<StudyRoom> rooms;
 
     public ArrayListsManager(){
 
         books = new ArrayList<>();
+        issuedBooks = new ArrayList<>();
         members = new ArrayList<>();
         rooms=new ArrayList<>();
         rooms.add(new StudyRoom("101"));
@@ -36,6 +38,10 @@ public class ArrayListsManager {
 
     public ArrayList<Book> getBooksList(){
         return books;
+    }
+
+    public ArrayList<IssuedBook> getIssuedBooksList(){
+        return issuedBooks;
     }
 
     public void registerMember(Member member){
@@ -126,8 +132,37 @@ public class ArrayListsManager {
 
     }
 
-    //issue book
-    public void issueBook(IssuedBook issuedBook) {
+
+    public IssuedBook findIssueBook(String bookId, String memberId, String date){
+        ArrayListsManager alm = ArrayListsManager.instance;
+        ArrayList<Book> books = alm.getBooksList();
+        ArrayList<Member> members = alm.getMembersList();
+        Book book = null;
+        Member member = null;
+        for (int i = 0; i < books.size();i++){
+            if (books.get(i).getID().equalsIgnoreCase(bookId)){
+                book = books.get(i);
+            }
+            else {
+                return null;
+            }
+        }
+        for (int i = 0; i < members.size();i++){
+            if (members.get(i).getId().equalsIgnoreCase(memberId)){
+                member = members.get(i);
+            }
+            else {
+                return null;
+            }
+        }
+        if (book!= null && member!= null){
+            return new IssuedBook(book,member,date);
+        }
+        return null;
+    }
+
+    public void addIssuedBook(IssuedBook issuedBook){
+        issuedBooks.add(issuedBook);
     }
 
     public String registerNewMember(String id, String name, String phone, String email){

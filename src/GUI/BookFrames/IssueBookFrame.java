@@ -9,7 +9,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class IssueBook implements ActionListener {
+public class IssueBookFrame implements ActionListener {
 
     //creating a basic frame using pre-defined class
     CreateFrame ibFrame = new CreateFrame();
@@ -35,7 +35,7 @@ public class IssueBook implements ActionListener {
     CreateSubmitButton submitButton = new CreateSubmitButton("Issue");
 
     //Default Constructor
-    public IssueBook(){
+    public IssueBookFrame(){
 
         //Defining the text for JLabel objects
         memberIdLabel.setText("Enter Member ID : ");
@@ -113,9 +113,8 @@ public class IssueBook implements ActionListener {
             String bookId = bookIdTextField.getText();
             String memberId = memberIdTextField.getText();
             String date = dateTextField.getText();
-            IssuedBook manager = new IssuedBook();
-            IssuedBook issuedBook = manager.issueBook(bookId,memberId,date);
-            alm.issueBook(issuedBook);
+            IssuedBook iB = alm.findIssueBook(bookId,memberId,date);
+            alm.addIssuedBook(iB);
             new CreateDialogBox("Success", "Book Issued Successfully");
         }
     }

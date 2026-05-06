@@ -3,7 +3,6 @@ package GUI.BookFrames;
 import GUI.AdditionalClasses.*;
 import GUI.HomeFrame;
 
-import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -72,31 +71,31 @@ public class BookHomeFrame implements ActionListener {
         //Functionality for other frame buttons
         if (e.getSource()==button1){
             bhFrame.dispose();
-            new AddBook();
+            new AddBookFrame();
         }
         if (e.getSource()==button2){
             bhFrame.dispose();
-            new RemoveBook();
+            new RemoveBookFrame();
         }
         if (e.getSource()==button3){
             bhFrame.dispose();
-            new SearchBook();
+            new SearchBookFrame();
         }
         if (e.getSource()==button4){
             bhFrame.dispose();;
-            new DisplayBooks();
+            new DisplayBooksFrame();
         }
         if (e.getSource()==button5){
             bhFrame.dispose();;
-            new IssueBook();
+            new IssueBookFrame();
         }
         if (e.getSource()==button6){
             bhFrame.dispose();
-            new ReturnBook();
+            new ReturnBookFrame();
         }
         if (e.getSource()==button7){
             bhFrame.dispose();
-            new ShowIssuedBooks();
+            new ShowIssuedBooksFrame();
         }
     }
 }

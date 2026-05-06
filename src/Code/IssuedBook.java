@@ -20,33 +20,16 @@ public class IssuedBook {
         this.issueDate = date;
     }
 
-    public IssuedBook issueBook(String bookId,String memberId, String date){
-        ArrayListsManager alm = ArrayListsManager.instance;
-        ArrayList<Book> books = alm.getBooksList();
-        ArrayList<Member> members = alm.getMembersList();
-        Book book = null;
-        Member member = null;
-        for (int i = 0; i < books.size();i++){
-            if (books.get(i).getID().equalsIgnoreCase(bookId)){
-                book = books.get(i);
-            }
-            else {
-                return null;
-            }
-        }
-
-        for (int i = 0; i < members.size();i++){
-            if (members.get(i).getId().equalsIgnoreCase(memberId)){
-                member = members.get(i);
-            }
-            else {
-                return null;
-            }
-        }
-
-        if (book!= null && member!= null){
-            return new IssuedBook(book,member,date);
-        }
-        return null;
+    public Book getBook() {
+        return book;
     }
+
+    public Member getMember() {
+        return member;
+    }
+
+    public String getDate() {
+        return issueDate;
+    }
+
 }

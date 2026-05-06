@@ -9,7 +9,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AddBook implements ActionListener {
+public class AddBookFrame implements ActionListener {
 
     ArrayListsManager alm = ArrayListsManager.instance;
 
@@ -37,7 +37,7 @@ public class AddBook implements ActionListener {
     CreateSubmitButton submitButton = new CreateSubmitButton("Add");
 
     //Default Constructor
-    public AddBook(){
+    public AddBookFrame(){
 
         //Setting the text of the JLabel objects
         idLabel.setText("Enter Book ID : ");

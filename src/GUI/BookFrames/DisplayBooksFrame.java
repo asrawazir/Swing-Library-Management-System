@@ -12,7 +12,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class DisplayBooks implements ActionListener {
+public class DisplayBooksFrame implements ActionListener {
 
     //Creating a basic frame
     CreateFrame dbFrame = new CreateFrame();
@@ -28,7 +28,7 @@ public class DisplayBooks implements ActionListener {
     CreateExitButton exitButton = new CreateExitButton();
 
     //Default Constructor
-    public DisplayBooks(){
+    public DisplayBooksFrame(){
 
         ArrayList<Book> books = alm.getBooksList();
 
