@@ -131,6 +131,12 @@ public class ArrayListsManager {
     }
 
     public String registerNewMember(String id, String name, String phone, String email){
+
+        if (id.trim().isEmpty() || name.trim().isEmpty() ||
+                phone.trim().isEmpty() || email.trim().isEmpty()) {
+            return "All fields are required for registration";
+        }
+
         if (findMemberById(id) != null) {
             return "Member ID already exists";
 
@@ -140,29 +146,16 @@ public class ArrayListsManager {
         return "Member registered successfully";
     }
 
-    public String searchMemberById(String id){
-        Member m = findMemberById(id);
-
-        if(m == null){
-            return "Member not found";
-        }
-
-        return "Member found";
+    public Member searchMemberById(String id) {
+        return findMemberById(id);
     }
 
-    public void searchMemberByName(String name){
-        boolean found = false;
-
-        //using for loop
+    public Member searchMemberByName(String name) {
         for (Member m : members) {
             if (m.getName().equalsIgnoreCase(name)) {
-                System.out.println("Member Found:");
-                found = true;
+                return m;
             }
         }
-
-        if (!found) {
-            System.out.println("Member not found");
-        }
+        return null;
     }
 }
