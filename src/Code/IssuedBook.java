@@ -20,4 +20,16 @@ public class IssuedBook {
         this.issueDate = date;
     }
 
+    public Book getBook() {
+        return book;
+    }
+
+    public Member getMember() {
+        return member;
+    }
+
+    public String getDate() {
+        return issueDate;
+    }
+
 }
