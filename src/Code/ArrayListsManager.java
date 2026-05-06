@@ -122,6 +122,8 @@ public class ArrayListsManager {
 
         }
 
+            return "Room is not reserved";
+
     }
 
 
