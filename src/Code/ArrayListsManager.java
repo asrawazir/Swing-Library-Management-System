@@ -131,6 +131,14 @@ public class ArrayListsManager {
     }
 
     public void registerNewMember(String id, String name, String phone, String email){
+        if (findMemberById(id) != null) {
+            System.out.println("Member ID already exists.");
+            return;
+
+        }
+
+        members.add(new Member(id,name,phone,email));
+        System.out.println("Member registered successfully");
 
     }
 }
