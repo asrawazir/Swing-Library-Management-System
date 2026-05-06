@@ -23,6 +23,7 @@ public class IssueBook implements ActionListener {
     //Creating text fields to receive user input on frame
     JTextField memberIdTextField = new JTextField();
     JTextField bookIdTextField = new JTextField();
+    JTextField dateTextField = new JTextField();
 
     //Creating back button, submit button and exit button using pre-defined classes
     CreateBackButton backButton = new CreateBackButton();
@@ -63,6 +64,12 @@ public class IssueBook implements ActionListener {
         bookIdTextField.setBackground(Color.WHITE);
         bookIdTextField.setCaretColor(Color.BLACK);
         //================================================================
+        dateTextField.setBounds(10,220,670,30);
+        dateTextField.setFont(new Font("Inter",Font.PLAIN,14));
+        dateTextField.setForeground(Color.BLACK);
+        dateTextField.setBackground(Color.WHITE);
+        dateTextField.setCaretColor(Color.BLACK);
+        //================================================================
 
         //Adding action listener method to buttons defined in the frame
         submitButton.addActionListener(this);
@@ -77,6 +84,7 @@ public class IssueBook implements ActionListener {
         //Adding text field object to the frame
         ibFrame.add(memberIdTextField);
         ibFrame.add(bookIdTextField);
+        ibFrame.add(dateTextField);
 
         //Adding submit buttons for the frame
         ibFrame.add(submitButton);
