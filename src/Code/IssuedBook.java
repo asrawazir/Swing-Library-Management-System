@@ -11,4 +11,10 @@ public class IssuedBook {
         this.issueDate = "not specified";
     }
 
+    public IssuedBook(Book book, Member member, String date)
+    {
+        this.book = book;
+        this.member = member;
+        this.issueDate = date;
+    }
 }
