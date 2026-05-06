@@ -40,6 +40,10 @@ public class ArrayListsManager {
         return books;
     }
 
+    public ArrayList<IssuedBook> getIssuedBooksList(){
+        return issuedBooks;
+    }
+
     public void registerMember(Member member){
         members.add(member);
     }
