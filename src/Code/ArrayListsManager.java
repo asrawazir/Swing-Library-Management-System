@@ -142,6 +142,13 @@ public class ArrayListsManager {
     }
 
     public void searchMemberById(String id){
+        Member m = findMemberById(id);
 
+        if(m == null){
+            System.out.println("Member not found");
+            return;
+        }
+
+        System.out.println("Member found.");
     }
 }
