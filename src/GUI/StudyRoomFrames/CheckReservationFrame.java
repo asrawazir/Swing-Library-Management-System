@@ -1,5 +1,6 @@
 package GUI.StudyRoomFrames;
 
+import Code.ArrayListsManager;
 import GUI.AdditionalClasses.*;
 import GUI.HomeFrame;
 
@@ -19,6 +20,7 @@ public class CheckReservationFrame implements ActionListener {
     CreateExitButton exitButton;
 
 
+    ArrayListsManager aa=ArrayListsManager.instance;
 
     public CheckReservationFrame(){
         frame=new CreateFrame();
@@ -61,6 +63,12 @@ public class CheckReservationFrame implements ActionListener {
             new StudyRoomHomeFrame();
         }
 
+        if(e.getSource()==submitButton){
+            String roomNumber = textField.getText();
+            String result = aa.checkReservationStatus(roomNumber);
+            new CreateDialogBox("Check Reservation",result);
+
+        }
 
     }
 

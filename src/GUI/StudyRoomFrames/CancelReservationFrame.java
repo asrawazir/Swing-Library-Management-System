@@ -75,7 +75,12 @@ public class CancelReservationFrame implements ActionListener {
         }
 
         if (e.getSource() == submitButton) {
-            new CreateDialogBox("Cancel Reservation", "Reservation is cancelled ");
+            String roomNumber = roomField.getText();
+            String memberID = memberField.getText();
+
+             String result = aa.cancelReservation(roomNumber, memberID);
+           new CreateDialogBox("Cancel Reservation",result);
+
         }
 
     }
