@@ -1,5 +1,7 @@
 package GUI.StudyRoomFrames;
 
+import Code.ArrayListsManager;
+import Code.StudyRoom;
 import GUI.AdditionalClasses.*;
 import GUI.HomeFrame;
 
@@ -9,6 +11,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class CancelReservationFrame implements ActionListener {
+
+    ArrayListsManager aa=ArrayListsManager.instance;
     CreateFrame frame;
     CreateBackButton button;
     CreateLabel label;
@@ -70,9 +74,8 @@ public class CancelReservationFrame implements ActionListener {
             new StudyRoomHomeFrame();
         }
 
-        if(e.getSource()==submitButton){
-            new CreateDialogBox("Reservation Cancelled","Your reservation is successfully cancelled");
-
+        if (e.getSource() == submitButton) {
+            new CreateDialogBox("Cancel Reservation", "Reservation is cancelled ");
         }
 
     }

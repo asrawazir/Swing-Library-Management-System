@@ -1,5 +1,6 @@
 package GUI.StudyRoomFrames;
 
+import Code.ArrayListsManager;
 import GUI.AdditionalClasses.*;
 import GUI.HomeFrame;
 
@@ -10,6 +11,7 @@ import java.awt.event.ActionListener;
 
 
 public class ReserveRoomFrame implements ActionListener {
+    ArrayListsManager aa=ArrayListsManager.instance;
     CreateFrame frame;
     CreateBackButton backButton;
     CreateLabel label;

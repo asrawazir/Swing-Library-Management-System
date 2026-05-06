@@ -7,13 +7,11 @@ public class ArrayListsManager {
     public static ArrayListsManager instance = new ArrayListsManager();
     static ArrayList<Book> books;
     ArrayList<Member> members;
-    ArrayList<IssuedBook> issuedBooks;
 
     public ArrayListsManager(){
 
         books = new ArrayList<>();
         members = new ArrayList<>();
-        issuedBooks = new ArrayList<>();
     }
 
     public void addBook(Book book){
@@ -26,10 +24,6 @@ public class ArrayListsManager {
 
     public ArrayList<Book> getBooksList(){
         return books;
-    }
-
-    public void issueBook(IssuedBook issuedBook){
-        issuedBooks.add(issuedBook);
     }
 
     public void registerMember(Member member){
