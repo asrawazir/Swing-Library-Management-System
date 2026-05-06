@@ -129,4 +129,8 @@ public class ArrayListsManager {
     //issue book
     public void issueBook(IssuedBook issuedBook) {
     }
+
+    public void registerNewMember(String id, String name, String phone, String email){
+
+    }
 }
