@@ -139,6 +139,9 @@ public class ArrayListsManager {
 
         members.add(new Member(id,name,phone,email));
         System.out.println("Member registered successfully");
+    }
+
+    public void searchMemberById(String id){
 
     }
 }
