@@ -20,6 +20,10 @@ public class ShowIssuedBooksFrame implements ActionListener {
     public ShowIssuedBooksFrame(){
 
         ArrayList<IssuedBook> issuedBooks = alm.getIssuedBooksList();
+
+        String[] headers = {"Member Id","Book Id","Book Title","Issue Date"};
+        String[][] data = new String[issuedBooks.size()][4];
+
         backButton.addActionListener(this);
 
         siFrame.add(backButton);
