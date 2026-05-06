@@ -1,5 +1,6 @@
 package GUI.BookFrames;
 
+import Code.ArrayListsManager;
 import Code.IssuedBook;
 import GUI.AdditionalClasses.*;
 
@@ -25,6 +26,8 @@ public class IssueBook implements ActionListener {
     JTextField memberIdTextField = new JTextField();
     JTextField bookIdTextField = new JTextField();
     JTextField dateTextField = new JTextField();
+
+    ArrayListsManager alm = ArrayListsManager.instance;
 
     //Creating back button, submit button and exit button using pre-defined classes
     CreateBackButton backButton = new CreateBackButton();
@@ -110,7 +113,9 @@ public class IssueBook implements ActionListener {
             String bookId = bookIdTextField.getText();
             String memberId = memberIdTextField.getText();
             String date = dateTextField.getText();
-
+            IssuedBook manager = new IssuedBook();
+            IssuedBook issuedBook = manager.issueBook(bookId,memberId,date);
+            alm.issueBook(issuedBook);
             new CreateDialogBox("Success", "Book Issued Successfully");
         }
     }
