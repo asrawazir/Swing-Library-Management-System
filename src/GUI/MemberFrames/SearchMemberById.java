@@ -80,7 +80,15 @@ public class SearchMemberById implements ActionListener {
                     JLabel foundMemberPhoneLabel = new JLabel("Phone: " + foundMember.getPhone());
                     JLabel foundMemberEmailLabel = new JLabel("Email: " + foundMember.getEmail());
 
+                    foundMemberIdLabel.setFont(new Font("Inter",Font.PLAIN,15));
+                    foundMemberNameLabel.setFont(new Font("Inter",Font.PLAIN,15));
+                    foundMemberPhoneLabel.setFont(new Font("Inter",Font.PLAIN,15));
+                    foundMemberEmailLabel.setFont(new Font("Inter",Font.PLAIN,15));
 
+                    foundMemberIdLabel.setBounds(100,200,300,40);
+                    foundMemberNameLabel.setBounds(100,230,300,40);
+                    foundMemberPhoneLabel.setBounds(100,260,300,40);
+                    foundMemberEmailLabel.setBounds(100,290,300,40);
                 }
             }
         }
