@@ -67,3 +67,27 @@ public class ArrayListsManager {
         }
         return null;
     }
+
+    public String cancelReservation(String roomNumber, String memberID) {
+
+        StudyRoom room=findRoom(roomNumber);
+        Member member=findMemberById(memberID);
+        if(room==null){
+            return "Room does not exist";
+        }
+        if(member==null){
+            return "Member does not exist";
+        }
+        if(!room.getIsReserved()){
+         return "Room is not reserved";
+
+        }
+
+        if(room.getReservedByMemberID()==null || ! room.getReservedByMemberID().equals(memberID)){
+            return " This member did not reserve this room ";
+        }
+         room.cancelReservation();
+        return "Reservation cancelled successfully";
+    }
+
+   
