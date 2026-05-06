@@ -15,6 +15,8 @@ public class CreateFrame extends JFrame{
         this.setLayout(null);
         this.setTitle("Library Management System");
 
+        String path = "C:\\Users\\FA25-BSE-017.CUI\\Pictures\\img\\img3.jpg";
+        ImageIcon backgroundIcon = new ImageIcon(path);
     }
 
 }
