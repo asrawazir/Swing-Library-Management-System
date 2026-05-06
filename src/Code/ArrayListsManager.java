@@ -130,15 +130,14 @@ public class ArrayListsManager {
     public void issueBook(IssuedBook issuedBook) {
     }
 
-    public void registerNewMember(String id, String name, String phone, String email){
+    public String registerNewMember(String id, String name, String phone, String email){
         if (findMemberById(id) != null) {
-            System.out.println("Member ID already exists.");
-            return;
+            return "Member ID already exists.";
 
         }
 
         members.add(new Member(id,name,phone,email));
-        System.out.println("Member registered successfully");
+        return "Member registered successfully";
     }
 
     public void searchMemberById(String id){
@@ -153,6 +152,18 @@ public class ArrayListsManager {
     }
 
     public void searchMemberByName(String name){
+        boolean found = false;
 
+        //using for loop
+        for (Member m : members) {
+            if (m.getName().equalsIgnoreCase(name)) {
+                System.out.println("Member Found:");
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Member not found");
+        }
     }
 }
