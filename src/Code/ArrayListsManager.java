@@ -90,4 +90,27 @@ public class ArrayListsManager {
         return "Reservation cancelled successfully";
     }
 
-   
+    public String reserveRoom(String roomNumber, String memberID) {
+        StudyRoom room = findRoom(roomNumber);
+        Member member=findMemberById(memberID);
+        if (room == null) {
+            return "Room does not exist ";
+        }
+        if(member==null){
+            return "Member does not exist";
+        }
+        if (room.getIsReserved()) {
+            return "Room is already reserved";
+
+        }
+        if(room.getIsReserved()){
+            return " This room is already reserved ";
+        }
+        room.reserveRoom(memberID);
+        return "Room is reserved";
+    }
+
+
+    public void issueBook(IssuedBook issuedBook) {
+    }
+}
