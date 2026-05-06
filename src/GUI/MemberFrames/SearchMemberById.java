@@ -104,6 +104,7 @@ public class SearchMemberById implements ActionListener {
                     break;
                 }
             }
+
             if(!found){
                 JLabel notFoundLabel = new JLabel("Member not found");
                 notFoundLabel.setFont(new Font("Inter",Font.BOLD,25));
