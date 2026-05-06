@@ -74,6 +74,11 @@ public class SearchMemberByName implements ActionListener {
             for (int i = 0; i < members.size();i++) {
                 if (members.get(i).getName().equalsIgnoreCase(name)) {
                     Member foundMember = members.get(i);
+
+                    JLabel foundMemberNameLabel = new JLabel("Name: " + foundMember.getName());
+                    JLabel foundMemberIdLabel = new JLabel("Id: " + foundMember.getId());
+                    JLabel foundMemberPhoneLabel = new JLabel("Phone: " + foundMember.getPhone());
+                    JLabel foundMemberEmailLabel = new JLabel("Email: " + foundMember.getEmail());
         }
     }
 }
