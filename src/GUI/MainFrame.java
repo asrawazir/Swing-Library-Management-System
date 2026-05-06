@@ -1,4 +1,7 @@
 package GUI;
 
-public class MainFrame {
+import java.awt.*;
+import javax.swing.*;
+
+public class MainFrame extends JFrame{
 }
