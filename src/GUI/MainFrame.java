@@ -47,6 +47,7 @@ public class MainFrame implements ActionListener {
         mLabel.setBounds(0, 35, 500, 40);
 
         transparentPanel.add(mLabel);
+        mSubmitButton.addActionListener(this);
 
         mFrame.add(transparentPanel);
         mFrame.add(mSubmitButton);
@@ -54,7 +55,6 @@ public class MainFrame implements ActionListener {
 
         mFrame.setVisible(true);
     }
-
 
     @Override
     public void actionPerformed(ActionEvent e) {
