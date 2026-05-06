@@ -1,5 +1,6 @@
 package GUI.MemberFrames;
 
+import Code.ArrayListsManager;
 import GUI.AdditionalClasses.*;
 
 import java.awt.*;
@@ -8,6 +9,8 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class SearchMemberByName implements ActionListener {
+    ArrayListsManager alm = ArrayListsManager.instance;
+
     CreateFrame snFrame;
     CreateLabel snLabel;
     CreateSubmitButton snSubmitButton;
