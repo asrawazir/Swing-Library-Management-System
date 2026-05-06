@@ -28,7 +28,7 @@ public class SearchMemberById implements ActionListener {
 
         siFrame = new CreateFrame();
         siLabel = new CreateLabel("Search Member By ID");
-        siSubmitButton = new CreateSubmitButton("Search" ,560, 150);
+        siSubmitButton = new CreateSubmitButton("Search" ,560, 110);
         siBackButton = new CreateBackButton();
         siExitButton = new CreateExitButton();
 
@@ -36,11 +36,11 @@ public class SearchMemberById implements ActionListener {
         siIdTextField = new JTextField();
 
         siIdLabel.setText("Enter Member ID : ");
-        siIdLabel.setBounds(10,120,530,30);
+        siIdLabel.setBounds(10,80,530,30);
         siIdLabel.setFont(new Font("Inter",Font.BOLD,14));
         siIdLabel.setBackground(Color.LIGHT_GRAY);
 
-        siIdTextField.setBounds(10,160,530,30);
+        siIdTextField.setBounds(10,120,530,30);
         siIdTextField.setFont(new Font("Inter",Font.PLAIN,14));
         siIdTextField.setForeground(Color.BLACK);
         siIdTextField.setBackground(Color.WHITE);
