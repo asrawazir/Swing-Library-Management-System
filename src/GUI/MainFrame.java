@@ -47,6 +47,11 @@ public class MainFrame implements ActionListener {
         mLabel.setBounds(0, 35, 500, 40);
 
         transparentPanel.add(mLabel);
+
+        mFrame.add(transparentPanel);
+        mFrame.add(mSubmitButton);
+        mFrame.add(backgroundLabel);
+
     }
 
 
