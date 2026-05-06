@@ -5,6 +5,7 @@ import javax.swing.*;
 
 public class CreateFrame extends JFrame{
 
+    JLabel backgroundLabel;
     //default Constructor
     public CreateFrame(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
