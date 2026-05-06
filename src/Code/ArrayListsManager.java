@@ -110,7 +110,7 @@ public class ArrayListsManager {
         return "Room is reserved";
     }
 
-    public String checkReservationStatus(String roomNumber,String memberID) {
+    public String checkReservationStatus(String roomNumber) {
         StudyRoom room = findRoom(roomNumber);
         Member member=findMemberById(memberID);
         if (room == null) {
