@@ -78,8 +78,8 @@ public class SearchMemberById implements ActionListener {
                     Member foundMember = members.get(i);
 
                     JPanel foundMemberPanel = new JPanel();
-                    foundMemberPanel.setBackground(Color.LIGHT_GRAY);
-                    foundMemberPanel.setBounds(180,200, 350,200);
+                    foundMemberPanel.setBackground(Color.white);
+                    foundMemberPanel.setBounds(170,160, 350,170);
                     foundMemberPanel.setLayout(null);
 
                     JLabel foundMemberIdLabel = new JLabel("Id: " + foundMember.getId());
@@ -87,15 +87,15 @@ public class SearchMemberById implements ActionListener {
                     JLabel foundMemberPhoneLabel = new JLabel("Phone: " + foundMember.getPhone());
                     JLabel foundMemberEmailLabel = new JLabel("Email: " + foundMember.getEmail());
 
-                    foundMemberIdLabel.setFont(new Font("Inter",Font.PLAIN,15));
-                    foundMemberNameLabel.setFont(new Font("Inter",Font.PLAIN,15));
-                    foundMemberPhoneLabel.setFont(new Font("Inter",Font.PLAIN,15));
-                    foundMemberEmailLabel.setFont(new Font("Inter",Font.PLAIN,15));
+                    foundMemberIdLabel.setFont(new Font("Inter",Font.BOLD,15));
+                    foundMemberNameLabel.setFont(new Font("Inter",Font.BOLD,15));
+                    foundMemberPhoneLabel.setFont(new Font("Inter",Font.BOLD,15));
+                    foundMemberEmailLabel.setFont(new Font("Inter",Font.BOLD,15));
 
-                    foundMemberIdLabel.setBounds(20, 20, 500, 30);
-                    foundMemberNameLabel.setBounds(20, 60, 500, 30);
-                    foundMemberPhoneLabel.setBounds(20, 100, 500, 30);
-                    foundMemberEmailLabel.setBounds(20, 140, 500, 30);
+                    foundMemberIdLabel.setBounds(70, 20, 200, 30);
+                    foundMemberNameLabel.setBounds(70, 50, 200, 30);
+                    foundMemberPhoneLabel.setBounds(70, 80, 200, 30);
+                    foundMemberEmailLabel.setBounds(70, 110, 200, 30);
 
                     foundMemberPanel.add(foundMemberIdLabel);
                     foundMemberPanel.add(foundMemberNameLabel);
