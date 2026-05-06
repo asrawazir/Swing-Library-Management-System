@@ -13,6 +13,7 @@ public class ArrayListsManager {
 
         books = new ArrayList<>();
         members = new ArrayList<>();
+        rooms=new ArrayList<>();
         rooms.add(new StudyRoom("101"));
         rooms.add(new StudyRoom("102"));
         rooms.add(new StudyRoom("103"));
