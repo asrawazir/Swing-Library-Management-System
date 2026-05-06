@@ -54,6 +54,7 @@ public class HomeFrame implements ActionListener {
         frame.add(button2);
         frame.add(button3);
         frame.add(exitButton);
+        frame.add(backButton);
 
         //making the frame visible to user
         frame.setVisible(true);
