@@ -18,6 +18,7 @@ public class HomeFrame implements ActionListener {
     CreateFrame frame;
     CreateLabel label;
     CreateExitButton exitButton;
+    CreateBackButton backButton;
     FrameButtons button1;
     FrameButtons button2;
     FrameButtons button3;
@@ -31,6 +32,8 @@ public class HomeFrame implements ActionListener {
         //creating title label
         label=new CreateLabel("Library Management System");
 
+        backButton = new CreateBackButton();
+
         //creating exit button
         exitButton=new CreateExitButton();
 
@@ -43,6 +46,7 @@ public class HomeFrame implements ActionListener {
         button1.addActionListener(this);
         button2.addActionListener(this);
         button3.addActionListener(this);
+        backButton.addActionListener(this);
 
         //adding components to frame
         frame.add(label);
@@ -50,6 +54,7 @@ public class HomeFrame implements ActionListener {
         frame.add(button2);
         frame.add(button3);
         frame.add(exitButton);
+        frame.add(backButton);
 
         //making the frame visible to user
         frame.setVisible(true);
@@ -70,6 +75,11 @@ public class HomeFrame implements ActionListener {
         if(e.getSource()==button3){
             frame.dispose();
             new StudyRoomHomeFrame();
+        }
+
+        if(e.getSource() == backButton){
+            frame.dispose();
+            new MainFrame();
         }
     }
 }

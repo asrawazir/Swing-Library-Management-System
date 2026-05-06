@@ -14,7 +14,6 @@ public class CreateFrame extends JFrame{
         this.setLocationRelativeTo(null);
         this.setLayout(null);
         this.setTitle("Library Management System");
-
     }
 
 }
