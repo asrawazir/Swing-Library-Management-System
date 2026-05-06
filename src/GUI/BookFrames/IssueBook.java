@@ -1,5 +1,7 @@
 package GUI.BookFrames;
 
+import Code.ArrayListsManager;
+import Code.IssuedBook;
 import GUI.AdditionalClasses.*;
 
 import javax.swing.*;
@@ -18,10 +20,14 @@ public class IssueBook implements ActionListener {
     //Creating labels to hold the text on frame
     JLabel memberIdLabel = new JLabel();
     JLabel bookIdLabel = new JLabel();
+    JLabel dateLabel = new JLabel();
 
     //Creating text fields to receive user input on frame
     JTextField memberIdTextField = new JTextField();
     JTextField bookIdTextField = new JTextField();
+    JTextField dateTextField = new JTextField();
+
+    ArrayListsManager alm = ArrayListsManager.instance;
 
     //Creating back button, submit button and exit button using pre-defined classes
     CreateBackButton backButton = new CreateBackButton();
@@ -34,29 +40,39 @@ public class IssueBook implements ActionListener {
         //Defining the text for JLabel objects
         memberIdLabel.setText("Enter Member ID : ");
         bookIdLabel.setText("Enter Book ID : ");
+        dateLabel.setText("Enter Issue Date: ");
 
         //setting bounds of the JLabel objects
-        memberIdLabel.setBounds(10,120,680,30);
-        bookIdLabel.setBounds(10,190,680,30);
+        memberIdLabel.setBounds(10,50,680,30);
+        bookIdLabel.setBounds(10,120,680,30);
+        dateLabel.setBounds(10,190,680,30);
 
         //defining font properties and background color for JLabel objects
         memberIdLabel.setFont(new Font("Inter",Font.BOLD,14));
         memberIdLabel.setBackground(Color.LIGHT_GRAY);
         bookIdLabel.setFont(new Font("Inter",Font.BOLD,14));
         bookIdLabel.setBackground(Color.LIGHT_GRAY);
+        dateLabel.setFont(new Font("Inter",Font.BOLD,14));
+        dateLabel.setBackground(Color.LIGHT_GRAY);
 
         //Defining location, font and color properties of text fields
-        memberIdTextField.setBounds(10,150,670,30);
+        memberIdTextField.setBounds(10,80,670,30);
         memberIdTextField.setFont(new Font("Inter",Font.PLAIN,14));
         memberIdTextField.setForeground(Color.BLACK);
         memberIdTextField.setBackground(Color.WHITE);
         memberIdTextField.setCaretColor(Color.BLACK);
         //================================================================
-        bookIdTextField.setBounds(10,220,670,30);
+        bookIdTextField.setBounds(10,150,670,30);
         bookIdTextField.setFont(new Font("Inter",Font.PLAIN,14));
         bookIdTextField.setForeground(Color.BLACK);
         bookIdTextField.setBackground(Color.WHITE);
         bookIdTextField.setCaretColor(Color.BLACK);
+        //================================================================
+        dateTextField.setBounds(10,220,670,30);
+        dateTextField.setFont(new Font("Inter",Font.PLAIN,14));
+        dateTextField.setForeground(Color.BLACK);
+        dateTextField.setBackground(Color.WHITE);
+        dateTextField.setCaretColor(Color.BLACK);
         //================================================================
 
         //Adding action listener method to buttons defined in the frame
@@ -67,10 +83,12 @@ public class IssueBook implements ActionListener {
         ibFrame.add(label);
         ibFrame.add(memberIdLabel);
         ibFrame.add(bookIdLabel);
+        ibFrame.add(dateLabel);
 
         //Adding text field object to the frame
         ibFrame.add(memberIdTextField);
         ibFrame.add(bookIdTextField);
+        ibFrame.add(dateTextField);
 
         //Adding submit buttons for the frame
         ibFrame.add(submitButton);
@@ -92,6 +110,12 @@ public class IssueBook implements ActionListener {
         }
         //processing the input received through submit button
         if (e.getSource()==submitButton){
+            String bookId = bookIdTextField.getText();
+            String memberId = memberIdTextField.getText();
+            String date = dateTextField.getText();
+            IssuedBook manager = new IssuedBook();
+            IssuedBook issuedBook = manager.issueBook(bookId,memberId,date);
+            alm.issueBook(issuedBook);
             new CreateDialogBox("Success", "Book Issued Successfully");
         }
     }

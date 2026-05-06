@@ -1,10 +1,13 @@
 package GUI.StudyRoomFrames;
 
+import Code.ArrayListsManager;
+import Code.StudyRoom;
 import GUI.AdditionalClasses.*;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class DisplayAllRoomsFrame implements ActionListener {
     CreateFrame frame;
@@ -12,6 +15,8 @@ public class DisplayAllRoomsFrame implements ActionListener {
     CreateBackButton backButton;
 
     CreateExitButton exitButton;
+    ArrayListsManager aa=ArrayListsManager.instance;
+    ArrayList<StudyRoom>roomList=aa.getRooms();
 
     public DisplayAllRoomsFrame() {
         frame = new CreateFrame();
@@ -23,19 +28,14 @@ public class DisplayAllRoomsFrame implements ActionListener {
         exitButton.addActionListener(this);
         String[] column = {"Room Number","Status","Reserved By"};
 
-        String[][] data = {
-                {"101", "Available", "null"},
-                {"102", "Available", "null"},
-                {"103", "Available", "null"},
-                {"104", "Available", "null"},
-                {"105", "Available", "null"},
-                {"106", "Available", "null"},
-                {"107", "Available", "null"},
-                {"108", "Available", "null"},
+        String[][] data = new String[roomList.size()][3];
+        for(int i=0;i<roomList.size();i++){
+            StudyRoom r=roomList.get(i);
 
-
-        };
-
+            data[i][0]= r.getRoomNumber();;
+            data[i][1]=r.getIsReserved()?"Reserved":"Available";
+            data[i][2]=r.getIsReserved()?r.getReservedByMemberID():"-";
+        }
         JTable table = new JTable(data, column);
         JScrollPane scrollPane = new JScrollPane(table);
 
