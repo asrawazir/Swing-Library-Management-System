@@ -18,6 +18,8 @@ public class MainFrame implements ActionListener {
 
     public MainFrame() {
 
+        mFrame = new CreateFrame();
+        mSubmitButton = new CreateSubmitButton("LOGIN");
     }
 
 
