@@ -110,6 +110,11 @@ public class ArrayListsManager {
         return "Room is reserved";
     }
 
+    public String checkReservationStatus(String roomNumber,String memberID) {
+    }
+
+    
+
 
     public void issueBook(IssuedBook issuedBook) {
     }
