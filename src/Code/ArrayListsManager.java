@@ -151,4 +151,8 @@ public class ArrayListsManager {
 
         System.out.println("Member found.");
     }
+
+    public void searchMemberByName(String name){
+
+    }
 }
