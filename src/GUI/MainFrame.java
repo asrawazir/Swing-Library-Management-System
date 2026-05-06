@@ -37,6 +37,10 @@ public class MainFrame implements ActionListener {
             }
         };
 
+        transparentPanel.setOpaque(false);
+        transparentPanel.setLayout(null);
+        transparentPanel.setBounds(100, 170, 500, 100);
+
     }
 
 
