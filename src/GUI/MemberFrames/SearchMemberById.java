@@ -46,6 +46,8 @@ public class SearchMemberById implements ActionListener {
         siIdTextField.setBackground(Color.WHITE);
         siIdTextField.setCaretColor(Color.BLACK);
 
+        member = alm.getMembersList();
+
         siBackButton.addActionListener(this);
         siFrame.add(siLabel);
         siFrame.add(siSubmitButton);
@@ -61,10 +63,15 @@ public class SearchMemberById implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        if (e.getSource()==siBackButton){
+        if (e.getSource() == siBackButton){
             siFrame.dispose();
             new SearchMember();
         }
 
+        if(e.getSource() == siSubmitButton){
+            String id = siIdTextField.getText();
+            boolean found = false;
+
+        }
     }
 }
