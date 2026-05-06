@@ -1,6 +1,7 @@
 package GUI.MemberFrames;
 
 import Code.ArrayListsManager;
+import Code.Book;
 import Code.Member;
 import GUI.AdditionalClasses.*;
 
@@ -22,7 +23,7 @@ public class SearchMemberById implements ActionListener {
     JLabel siIdLabel;
     JTextField siIdTextField;
 
-    ArrayList<Member> member;
+    ArrayList<Member> members;
 
     public SearchMemberById(){
 
@@ -46,7 +47,7 @@ public class SearchMemberById implements ActionListener {
         siIdTextField.setBackground(Color.WHITE);
         siIdTextField.setCaretColor(Color.BLACK);
 
-        member = alm.getMembersList();
+        members = alm.getMembersList();
 
         siBackButton.addActionListener(this);
         siFrame.add(siLabel);
@@ -71,7 +72,15 @@ public class SearchMemberById implements ActionListener {
         if(e.getSource() == siSubmitButton){
             String id = siIdTextField.getText();
             boolean found = false;
-
+            for (int i = 0; i < members.size();i++) {
+                if (members.get(i).getId().equalsIgnoreCase(id)) {
+                    Member foundMember = members.get(i);
+                    JLabel foundBookIdLabel = new JLabel("Id: " + foundMember.getId());
+                    JLabel foundBookTitleLabel = new JLabel("Name: " + foundMember.getName());
+                    JLabel foundBookAuthorLabel = new JLabel("Phone: " + foundMember.getPhone());
+                    JLabel foundBookTotalLabel = new JLabel("Email: " + foundMember.getEmail());
+                }
+            }
         }
     }
 }
