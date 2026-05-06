@@ -75,7 +75,11 @@ public class ReserveRoomFrame implements ActionListener {
         }
 
         if(e.getSource()==submitButton){
-            new CreateDialogBox("Room Reserved","Room is reserved");
+            String roomNumber = roomField.getText();
+            String memberID = memberField.getText();
+
+            String result = aa.reserveRoom(roomNumber, memberID);
+            new CreateDialogBox("Room Reservation ",result);
 
         }
 
