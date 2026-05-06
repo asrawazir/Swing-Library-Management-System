@@ -18,6 +18,7 @@ public class HomeFrame implements ActionListener {
     CreateFrame frame;
     CreateLabel label;
     CreateExitButton exitButton;
+    CreateBackButton backButton;
     FrameButtons button1;
     FrameButtons button2;
     FrameButtons button3;
@@ -30,6 +31,8 @@ public class HomeFrame implements ActionListener {
 
         //creating title label
         label=new CreateLabel("Library Management System");
+
+        backButton = new CreateBackButton();
 
         //creating exit button
         exitButton=new CreateExitButton();
