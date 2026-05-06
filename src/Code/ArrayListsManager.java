@@ -127,7 +127,7 @@ public class ArrayListsManager {
     }
 
 
-    public IssuedBook issueBook(String bookId,String memberId, String date){
+    public IssuedBook findIssueBook(String bookId, String memberId, String date){
         ArrayListsManager alm = ArrayListsManager.instance;
         ArrayList<Book> books = alm.getBooksList();
         ArrayList<Member> members = alm.getMembersList();
