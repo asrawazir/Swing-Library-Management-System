@@ -63,6 +63,8 @@ public class CheckReservationFrame implements ActionListener {
 
         if(e.getSource()==submitButton){
             String roomNumber = textField.getText();
+            String result = aa.checkReservationStatus(roomNumber);
+            new CreateDialogBox("Check Reservation",result);
 
         }
 
