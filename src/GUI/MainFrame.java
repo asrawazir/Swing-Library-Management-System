@@ -46,6 +46,7 @@ public class MainFrame implements ActionListener {
         mLabel.setForeground(new Color(20, 30, 48));
         mLabel.setBounds(0, 35, 500, 40);
 
+        transparentPanel.add(mLabel);
     }
 
 
