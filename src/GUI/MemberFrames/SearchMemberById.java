@@ -1,14 +1,18 @@
 package GUI.MemberFrames;
 
+import Code.ArrayListsManager;
+import Code.Member;
 import GUI.AdditionalClasses.*;
-import GUI.BookFrames.SearchBook;
 
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class SearchMemberById implements ActionListener {
+
+    ArrayListsManager alm = ArrayListsManager.instance;
 
     CreateFrame siFrame;
     CreateLabel siLabel;
@@ -17,6 +21,8 @@ public class SearchMemberById implements ActionListener {
     CreateExitButton siExitButton;
     JLabel siIdLabel;
     JTextField siIdTextField;
+
+    ArrayList<Member> member;
 
     public SearchMemberById(){
 
@@ -59,5 +65,6 @@ public class SearchMemberById implements ActionListener {
             siFrame.dispose();
             new SearchMember();
         }
+
     }
 }
