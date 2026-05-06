@@ -76,6 +76,12 @@ public class SearchMemberById implements ActionListener {
             for (int i = 0; i < members.size();i++) {
                 if (members.get(i).getId().equalsIgnoreCase(id)) {
                     Member foundMember = members.get(i);
+
+                    JPanel foundMemberPanel = new JPanel();
+                    foundMemberPanel.setBackground(Color.LIGHT_GRAY);
+                    foundMemberPanel.setBounds(180,200, 350,200);
+                    foundMemberPanel.setLayout(null);
+
                     JLabel foundMemberIdLabel = new JLabel("Id: " + foundMember.getId());
                     JLabel foundMemberNameLabel = new JLabel("Name: " + foundMember.getName());
                     JLabel foundMemberPhoneLabel = new JLabel("Phone: " + foundMember.getPhone());
@@ -86,18 +92,17 @@ public class SearchMemberById implements ActionListener {
                     foundMemberPhoneLabel.setFont(new Font("Inter",Font.PLAIN,15));
                     foundMemberEmailLabel.setFont(new Font("Inter",Font.PLAIN,15));
 
-                    foundMemberIdLabel.setBounds(100,200,300,40);
-                    foundMemberNameLabel.setBounds(100,230,300,40);
-                    foundMemberPhoneLabel.setBounds(100,260,300,40);
-                    foundMemberEmailLabel.setBounds(100,290,300,40);
+                    foundMemberIdLabel.setBounds(20, 20, 500, 30);
+                    foundMemberNameLabel.setBounds(20, 60, 500, 30);
+                    foundMemberPhoneLabel.setBounds(20, 100, 500, 30);
+                    foundMemberEmailLabel.setBounds(20, 140, 500, 30);
 
-                    siFrame.add(foundMemberIdLabel);
-                    siFrame.add(foundMemberNameLabel);
-                    siFrame.add(foundMemberPhoneLabel);
-                    siFrame.add(foundMemberEmailLabel);
+                    foundMemberPanel.add(foundMemberIdLabel);
+                    foundMemberPanel.add(foundMemberNameLabel);
+                    foundMemberPanel.add(foundMemberPhoneLabel);
+                    foundMemberPanel.add(foundMemberEmailLabel);
 
-                    siFrame.revalidate();
-                    siFrame.repaint();
+                    siFrame.add(foundMemberPanel);
 
                     found = true;
                     break;
@@ -112,6 +117,9 @@ public class SearchMemberById implements ActionListener {
                 siFrame.repaint();
                 siFrame.revalidate();
             }
+
+            siFrame.revalidate();
+            siFrame.repaint();
         }
     }
 }
