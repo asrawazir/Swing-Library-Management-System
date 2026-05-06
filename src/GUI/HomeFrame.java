@@ -74,5 +74,10 @@ public class HomeFrame implements ActionListener {
             frame.dispose();
             new StudyRoomHomeFrame();
         }
+
+        if(e.getSource() == backButton){
+            frame.dispose();
+            new MainFrame();
+        }
     }
 }
