@@ -48,6 +48,7 @@ public class SearchMemberByName implements ActionListener {
         members = alm.getMembersList();
 
         snBackButton.addActionListener(this);
+        snSubmitButton.addActionListener(this);
 
         snFrame.add(snLabel);
         snFrame.add(snSubmitButton);
