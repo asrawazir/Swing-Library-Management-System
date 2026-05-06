@@ -127,10 +127,18 @@ public class RegisterMember implements ActionListener{
             String phone = phoneTextField.getText();
             String email = emailTextField.getText();
 
-            Member member = new Member(id,name,phone,email);
-            alm.registerMember(member);
+            String result = alm.registerNewMember(id, name, phone, email);
 
-            new CreateDialogBox("Success","Member Added Successfully");
+            if (result.equals("Member registered successfully")) {
+                new CreateDialogBox("Success", result);
+
+                idTextField.setText("");
+                nameTextField.setText("");
+                phoneTextField.setText("");
+                emailTextField.setText("");
+            } else {
+                new CreateDialogBox("Registration Error", result);
+            }
         }
     }
 }
