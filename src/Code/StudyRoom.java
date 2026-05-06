@@ -55,8 +55,7 @@ public class StudyRoom {
     //cancel reservation method
     public void cancelReservation()
     {
-        if(isReserved)
-        {
+
             isReserved=false;
             reservedByMemberID=null;
             System.out.println("Reservation of room is cancelled");
