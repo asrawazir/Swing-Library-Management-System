@@ -46,6 +46,7 @@ public class HomeFrame implements ActionListener {
         button1.addActionListener(this);
         button2.addActionListener(this);
         button3.addActionListener(this);
+        backButton.addActionListener(this);
 
         //adding components to frame
         frame.add(label);
