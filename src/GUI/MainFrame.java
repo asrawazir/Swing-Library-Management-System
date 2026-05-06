@@ -16,6 +16,10 @@ public class MainFrame implements ActionListener {
     JPanel transparentPanel;
     CreateSubmitButton mSubmitButton;
 
+    public MainFrame() {
+
+    }
+
 
     @Override
     public void actionPerformed(ActionEvent e) {
