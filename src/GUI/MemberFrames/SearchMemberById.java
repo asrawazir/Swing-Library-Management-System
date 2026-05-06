@@ -50,6 +50,8 @@ public class SearchMemberById implements ActionListener {
         members = alm.getMembersList();
 
         siBackButton.addActionListener(this);
+        siSubmitButton.addActionListener(this);
+
         siFrame.add(siLabel);
         siFrame.add(siSubmitButton);
         siFrame.add(siBackButton);
