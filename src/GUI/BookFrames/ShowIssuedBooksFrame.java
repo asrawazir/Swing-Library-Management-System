@@ -24,6 +24,13 @@ public class ShowIssuedBooksFrame implements ActionListener {
         String[] headers = {"Member Id","Book Id","Book Title","Issue Date"};
         String[][] data = new String[issuedBooks.size()][4];
 
+        for (int i = 0; i < issuedBooks.size(); i++){
+            data[i][0] = issuedBooks.get(i).getMember().getId();
+            data[i][1] = issuedBooks.get(i).getBook().getID();
+            data[i][2] = issuedBooks.get(i).getBook().getTitle();
+            data[i][3] = issuedBooks.get(i).getDate();
+        }
+
         backButton.addActionListener(this);
 
         siFrame.add(backButton);
