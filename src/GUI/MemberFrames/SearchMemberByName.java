@@ -1,11 +1,13 @@
 package GUI.MemberFrames;
 
 import Code.ArrayListsManager;
+import Code.Member;
 import GUI.AdditionalClasses.*;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import javax.swing.*;
 
 public class SearchMemberByName implements ActionListener {
@@ -18,6 +20,8 @@ public class SearchMemberByName implements ActionListener {
     CreateExitButton snExitButton;
     JLabel snNameLabel;
     JTextField snNameTextField;
+
+    ArrayList<Member> members;
 
     public SearchMemberByName(){
 
