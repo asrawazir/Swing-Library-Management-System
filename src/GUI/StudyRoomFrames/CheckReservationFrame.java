@@ -61,6 +61,10 @@ public class CheckReservationFrame implements ActionListener {
             new StudyRoomHomeFrame();
         }
 
+        if(e.getSource()==submitButton){
+            String roomNumber = textField.getText();
+
+        }
 
     }
 
