@@ -6,12 +6,14 @@ public class ArrayListsManager {
 
     public static ArrayListsManager instance = new ArrayListsManager();
     static ArrayList<Book> books;
+    ArrayList<IssuedBook> issuedBooks;
     ArrayList<Member> members;
     ArrayList<StudyRoom> rooms;
 
     public ArrayListsManager(){
 
         books = new ArrayList<>();
+        issuedBooks = new ArrayList<>();
         members = new ArrayList<>();
         rooms=new ArrayList<>();
         rooms.add(new StudyRoom("101"));
