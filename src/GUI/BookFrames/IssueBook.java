@@ -18,6 +18,7 @@ public class IssueBook implements ActionListener {
     //Creating labels to hold the text on frame
     JLabel memberIdLabel = new JLabel();
     JLabel bookIdLabel = new JLabel();
+    JLabel dateLabel = new JLabel();
 
     //Creating text fields to receive user input on frame
     JTextField memberIdTextField = new JTextField();
@@ -34,16 +35,20 @@ public class IssueBook implements ActionListener {
         //Defining the text for JLabel objects
         memberIdLabel.setText("Enter Member ID : ");
         bookIdLabel.setText("Enter Book ID : ");
+        dateLabel.setText("Enter Issue Date: ");
 
         //setting bounds of the JLabel objects
         memberIdLabel.setBounds(10,50,680,30);
         bookIdLabel.setBounds(10,120,680,30);
+        dateLabel.setBounds(10,190,680,30);
 
         //defining font properties and background color for JLabel objects
         memberIdLabel.setFont(new Font("Inter",Font.BOLD,14));
         memberIdLabel.setBackground(Color.LIGHT_GRAY);
         bookIdLabel.setFont(new Font("Inter",Font.BOLD,14));
         bookIdLabel.setBackground(Color.LIGHT_GRAY);
+        dateLabel.setFont(new Font("Inter",Font.BOLD,14));
+        dateLabel.setBackground(Color.LIGHT_GRAY);
 
         //Defining location, font and color properties of text fields
         memberIdTextField.setBounds(10,80,670,30);
@@ -67,6 +72,7 @@ public class IssueBook implements ActionListener {
         ibFrame.add(label);
         ibFrame.add(memberIdLabel);
         ibFrame.add(bookIdLabel);
+        ibFrame.add(dateLabel);
 
         //Adding text field object to the frame
         ibFrame.add(memberIdTextField);
