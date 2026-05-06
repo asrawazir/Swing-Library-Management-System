@@ -1,5 +1,6 @@
 package GUI.BookFrames;
 
+import Code.IssuedBook;
 import GUI.AdditionalClasses.*;
 
 import javax.swing.*;
@@ -106,6 +107,10 @@ public class IssueBook implements ActionListener {
         }
         //processing the input received through submit button
         if (e.getSource()==submitButton){
+            String bookId = bookIdTextField.getText();
+            String memberId = memberIdTextField.getText();
+            String date = dateTextField.getText();
+
             new CreateDialogBox("Success", "Book Issued Successfully");
         }
     }
