@@ -20,6 +20,11 @@ public class MainFrame implements ActionListener {
 
         mFrame = new CreateFrame();
         mSubmitButton = new CreateSubmitButton("LOGIN");
+
+        ImageIcon backgroundIcon = new ImageIcon("img3.jpg");
+        Image scaledImage = backgroundIcon.getImage().getScaledInstance(700, 500, Image.SCALE_SMOOTH);
+        backgroundLabel = new JLabel(new ImageIcon(scaledImage));
+
     }
 
 
