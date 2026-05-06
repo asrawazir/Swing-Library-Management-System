@@ -25,6 +25,18 @@ public class MainFrame implements ActionListener {
         Image scaledImage = backgroundIcon.getImage().getScaledInstance(700, 500, Image.SCALE_SMOOTH);
         backgroundLabel = new JLabel(new ImageIcon(scaledImage));
         backgroundLabel.setBounds(0, 0, 700, 500);
+
+        transparentPanel = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                Graphics2D g2d = (Graphics2D) g.create();
+                g2d.setColor(new Color(255, 255, 255, 180));
+                g2d.fillRect(0, 0, getWidth(), getHeight());
+                g2d.dispose();
+                super.paintComponent(g);
+            }
+        };
+
     }
 
 
