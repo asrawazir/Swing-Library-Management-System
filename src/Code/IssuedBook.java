@@ -44,5 +44,9 @@ public class IssuedBook {
             }
         }
 
+        if (book!= null && member!= null){
+            return new IssuedBook(book,member,date);
+        }
+        return null;
     }
 }
