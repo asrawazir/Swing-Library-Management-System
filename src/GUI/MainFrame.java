@@ -52,6 +52,7 @@ public class MainFrame implements ActionListener {
         mFrame.add(mSubmitButton);
         mFrame.add(backgroundLabel);
 
+        mFrame.setVisible(true);
     }
 
 
