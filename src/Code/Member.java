@@ -24,6 +24,10 @@ public class Member extends Person{
         this.email = email;
     }
 
+    public String getId(){
+        return super.getId();
+    }
+
     public String getPhone(){
         return this.phone;
     }
