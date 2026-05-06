@@ -89,6 +89,11 @@ public class SearchMemberById implements ActionListener {
                     foundMemberNameLabel.setBounds(100,230,300,40);
                     foundMemberPhoneLabel.setBounds(100,260,300,40);
                     foundMemberEmailLabel.setBounds(100,290,300,40);
+
+                    siFrame.add(foundMemberIdLabel);
+                    siFrame.add(foundMemberNameLabel);
+                    siFrame.add(foundMemberPhoneLabel);
+                    siFrame.add(foundMemberEmailLabel);
                 }
             }
         }
