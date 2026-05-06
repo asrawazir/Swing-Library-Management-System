@@ -69,7 +69,11 @@ public class SearchMemberByName implements ActionListener {
         }
 
         if(e.getSource() == snSubmitButton){
-
+            String name = snNameTextField.getText();
+            boolean found = false;
+            for (int i = 0; i < members.size();i++) {
+                if (members.get(i).getName().equalsIgnoreCase(name)) {
+                    Member foundMember = members.get(i);
         }
     }
 }
