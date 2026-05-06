@@ -45,6 +45,8 @@ public class SearchMemberByName implements ActionListener {
         snNameTextField.setBackground(Color.WHITE);
         snNameTextField.setCaretColor(Color.BLACK);
 
+        members = alm.getMembersList();
+
         snBackButton.addActionListener(this);
 
         snFrame.add(snLabel);
