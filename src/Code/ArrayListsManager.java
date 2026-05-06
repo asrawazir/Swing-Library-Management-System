@@ -111,9 +111,15 @@ public class ArrayListsManager {
     }
 
     public String checkReservationStatus(String roomNumber,String memberID) {
+        StudyRoom room = findRoom(roomNumber);
+        Member member=findMemberById(memberID);
+        if (room == null) {
+            return "Room does not exist ";
+        }
+
     }
 
-    
+
 
 
     public void issueBook(IssuedBook issuedBook) {
