@@ -119,6 +119,10 @@ public class ArrayListsManager {
         if(member==null){
             return "Member does not exist";
         }
+        if (room.getIsReserved()) {
+            return "Room is already reserved";
+
+        }
 
     }
 
