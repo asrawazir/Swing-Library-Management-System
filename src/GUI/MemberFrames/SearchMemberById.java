@@ -75,10 +75,12 @@ public class SearchMemberById implements ActionListener {
             for (int i = 0; i < members.size();i++) {
                 if (members.get(i).getId().equalsIgnoreCase(id)) {
                     Member foundMember = members.get(i);
-                    JLabel foundBookIdLabel = new JLabel("Id: " + foundMember.getId());
-                    JLabel foundBookTitleLabel = new JLabel("Name: " + foundMember.getName());
-                    JLabel foundBookAuthorLabel = new JLabel("Phone: " + foundMember.getPhone());
-                    JLabel foundBookTotalLabel = new JLabel("Email: " + foundMember.getEmail());
+                    JLabel foundMemberIdLabel = new JLabel("Id: " + foundMember.getId());
+                    JLabel foundMemberNameLabel = new JLabel("Name: " + foundMember.getName());
+                    JLabel foundMemberPhoneLabel = new JLabel("Phone: " + foundMember.getPhone());
+                    JLabel foundMemberEmailLabel = new JLabel("Email: " + foundMember.getEmail());
+
+
                 }
             }
         }
