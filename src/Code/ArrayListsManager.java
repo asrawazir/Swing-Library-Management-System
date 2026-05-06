@@ -49,4 +49,21 @@ public class ArrayListsManager {
     public ArrayList<StudyRoom> getRooms() {
         return rooms;
     }
-}
+
+    public StudyRoom findRoom(String roomNumber)
+    {
+        for(StudyRoom r:rooms ){
+            if(r.getRoomNumber().equals(roomNumber)){
+                return r;
+            }
+        }
+        return null;
+    }
+    public Member findMemberById(String id){
+        for(Member m : members){
+            if(m.getId().equals(id)){
+                return m;
+            }
+        }
+        return null;
+    }
