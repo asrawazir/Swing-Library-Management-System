@@ -38,17 +38,11 @@ public class StudyRoom {
     }
 
     // room reservation method
-    public void reserveRoom(String memberID)
-    {
-        if(!isReserved)
-        {
-            isReserved=true;
-            reservedByMemberID=memberID;
-            System.out.println("Room is reserved");
-        }
-        else
-        {
-            System.out.println("Room is already reserved");
+    public void reserveRoom(String memberID) {
+        if (!isReserved) {
+            isReserved = true;
+            reservedByMemberID = memberID;
+
         }
     }
 
