@@ -97,6 +97,9 @@ public class SearchMemberById implements ActionListener {
                     siFrame.add(foundMemberPhoneLabel);
                     siFrame.add(foundMemberEmailLabel);
 
+                    siFrame.revalidate();
+                    siFrame.repaint();
+
                     found = true;
                     break;
                 }
