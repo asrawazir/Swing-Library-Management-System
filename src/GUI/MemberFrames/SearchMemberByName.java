@@ -27,7 +27,7 @@ public class SearchMemberByName implements ActionListener {
 
         snFrame = new CreateFrame();
         snLabel = new CreateLabel("Search Member By Name");
-        snSubmitButton = new CreateSubmitButton("Search");
+        snSubmitButton = new CreateSubmitButton("Search",560, 110);
         snBackButton = new CreateBackButton();
         snExitButton = new CreateExitButton();
 
@@ -35,11 +35,11 @@ public class SearchMemberByName implements ActionListener {
         snNameTextField = new JTextField();
 
         snNameLabel.setText("Enter Member Name : ");
-        snNameLabel.setBounds(10,120,680,30);
+        snNameLabel.setBounds(10,80,530,30);
         snNameLabel.setFont(new Font("Inter",Font.BOLD,14));
         snNameLabel.setBackground(Color.LIGHT_GRAY);
 
-        snNameTextField.setBounds(10,160,670,30);
+        snNameTextField.setBounds(10,120,530,30);
         snNameTextField.setFont(new Font("Inter",Font.PLAIN,14));
         snNameTextField.setForeground(Color.BLACK);
         snNameTextField.setBackground(Color.WHITE);
