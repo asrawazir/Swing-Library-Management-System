@@ -19,6 +19,7 @@ public class CheckReservationFrame implements ActionListener {
     CreateExitButton exitButton;
 
 
+    ArrayListsManager aa=ArrayListsManager.instance;
 
     public CheckReservationFrame(){
         frame=new CreateFrame();
