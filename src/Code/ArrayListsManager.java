@@ -156,4 +156,8 @@ public class ArrayListsManager {
         }
         return null;
     }
+
+    public void addIssuedBook(IssuedBook issuedBook){
+        issuedBooks.add(issuedBook);
+    }
 }
