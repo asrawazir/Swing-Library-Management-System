@@ -10,6 +10,12 @@ import javax.swing.*;
 
 public class MainFrame implements ActionListener {
 
+    CreateFrame mFrame;
+    JLabel mLabel;
+    JLabel backgroundLabel;
+    JPanel transparentPanel;
+    CreateSubmitButton mSubmitButton;
+
 
     @Override
     public void actionPerformed(ActionEvent e) {
