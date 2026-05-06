@@ -132,7 +132,7 @@ public class ArrayListsManager {
 
     public String registerNewMember(String id, String name, String phone, String email){
         if (findMemberById(id) != null) {
-            return "Member ID already exists.";
+            return "Member ID already exists";
 
         }
 
@@ -140,15 +140,14 @@ public class ArrayListsManager {
         return "Member registered successfully";
     }
 
-    public void searchMemberById(String id){
+    public String searchMemberById(String id){
         Member m = findMemberById(id);
 
         if(m == null){
-            System.out.println("Member not found");
-            return;
+            return "Member not found";
         }
 
-        System.out.println("Member found.");
+        return "Member found";
     }
 
     public void searchMemberByName(String name){
