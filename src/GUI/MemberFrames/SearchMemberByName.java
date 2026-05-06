@@ -94,6 +94,14 @@ public class SearchMemberByName implements ActionListener {
                     snFrame.add(foundMemberNameLabel);
                     snFrame.add(foundMemberPhoneLabel);
                     snFrame.add(foundMemberEmailLabel);
+
+                    snFrame.revalidate();
+                    snFrame.repaint();
+
+                    found = true;
+                    break;
+                }
+            }
         }
     }
 }
