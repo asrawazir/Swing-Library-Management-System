@@ -47,10 +47,10 @@ public class ViewIssuedBooks implements ActionListener {
         issuedBooks = alm.getBooksList();
 
         ibIdLabel.setText("Enter Member ID: ");
-        ibIdLabel.setBounds(10, 120, 680, 30);
+        ibIdLabel.setBounds(10,80,530,30);
         ibIdLabel.setFont(new Font("Inter", Font.BOLD, 14));
 
-        ibIdTextField.setBounds(10, 160, 450, 30);
+        ibIdTextField.setBounds(10,120,530,30);
         ibIdTextField.setFont(new Font("Inter", Font.PLAIN, 14));
 
         String[] columns = {"Book ID", "Book Title", "Issue Date"};
