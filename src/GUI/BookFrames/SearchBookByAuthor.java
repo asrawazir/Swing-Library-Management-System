@@ -34,6 +34,7 @@ public class SearchBookByAuthor implements ActionListener {
         authorTextField.setCaretColor(Color.BLACK);
 
         backButton.addActionListener(this);
+        submitButton.addActionListener(this);
 
         sbaFrame.add(submitButton);
         sbaFrame.add(label);
@@ -73,7 +74,7 @@ public class SearchBookByAuthor implements ActionListener {
                 }
                 JTable table = new JTable(data,headers);
                 JScrollPane scrollPane = new JScrollPane(table);
-                scrollPane.setBounds(70,80,560,280);
+                scrollPane.setBounds(70,180,560,180);
                 sbaFrame.add(scrollPane);
             }
         }
