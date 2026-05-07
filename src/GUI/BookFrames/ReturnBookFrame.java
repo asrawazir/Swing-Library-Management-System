@@ -1,5 +1,6 @@
 package GUI.BookFrames;
 
+import Code.ArrayListsManager;
 import GUI.AdditionalClasses.*;
 
 import javax.swing.*;
@@ -18,6 +19,8 @@ public class ReturnBookFrame implements ActionListener {
 
     JTextField memberIdTextField = new JTextField();
     JTextField bookIdTextField = new JTextField();
+
+    ArrayListsManager alm = ArrayListsManager.instance;
 
     CreateSubmitButton submitButton = new CreateSubmitButton("Return");
 
