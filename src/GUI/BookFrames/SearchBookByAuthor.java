@@ -1,11 +1,14 @@
 package GUI.BookFrames;
 
+import Code.ArrayListsManager;
+import Code.Book;
 import GUI.AdditionalClasses.*;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class SearchBookByAuthor implements ActionListener {
     CreateFrame sbaFrame = new CreateFrame();
@@ -15,6 +18,7 @@ public class SearchBookByAuthor implements ActionListener {
     CreateLabel label = new CreateLabel("Search Book by Author Name");
     JLabel authorLabel = new JLabel();
     JTextField authorTextField = new JTextField();
+    ArrayListsManager alm = ArrayListsManager.instance;
 
     public SearchBookByAuthor(){
 
@@ -47,8 +51,9 @@ public class SearchBookByAuthor implements ActionListener {
             new SearchBookFrame();
         }
 
-        if (e.getSource()==authorTextField){
+        if (e.getSource()==submitButton){
             String author = authorTextField.getText();
+            ArrayList<Book> books = alm.getBooksList();
         }
     }
 }
