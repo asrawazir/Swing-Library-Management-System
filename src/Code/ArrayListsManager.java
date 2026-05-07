@@ -164,4 +164,33 @@ public class ArrayListsManager {
     public void addIssuedBook(IssuedBook issuedBook){
         issuedBooks.add(issuedBook);
     }
+
+    public String registerNewMember(String id, String name, String phone, String email){
+
+        if (id.trim().isEmpty() || name.trim().isEmpty() ||
+                phone.trim().isEmpty() || email.trim().isEmpty()) {
+            return "All fields are required for registration";
+        }
+
+        if (findMemberById(id) != null) {
+            return "Member ID already exists";
+
+        }
+
+        members.add(new Member(id,name,phone,email));
+        return "Member registered successfully";
+    }
+
+    public Member searchMemberById(String id) {
+        return findMemberById(id);
+    }
+
+    public Member searchMemberByName(String name) {
+        for (Member m : members) {
+            if (m.getName().equalsIgnoreCase(name)) {
+                return m;
+            }
+        }
+        return null;
+    }
 }
