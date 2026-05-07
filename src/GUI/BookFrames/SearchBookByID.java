@@ -15,7 +15,7 @@ public class SearchBookByID implements ActionListener {
     CreateBackButton backButton = new CreateBackButton();
     CreateExitButton exitButton = new CreateExitButton();
     CreateLabel label = new CreateLabel("Search Book by ID");
-    CreateSubmitButton submitButton = new CreateSubmitButton("Search",550,150);
+    CreateSubmitButton submitButton = new CreateSubmitButton("Search",560,110);
     ArrayListsManager alm = ArrayListsManager.instance;
     JLabel idLabel = new JLabel();
     JTextField idTextField = new JTextField();
@@ -24,11 +24,11 @@ public class SearchBookByID implements ActionListener {
     public SearchBookByID(){
 
         idLabel.setText("Enter Book ID : ");
-        idLabel.setBounds(10,120,500,30);
+        idLabel.setBounds(10,80,530,30);
         idLabel.setFont(new Font("Inter",Font.BOLD,14));
         idLabel.setBackground(Color.LIGHT_GRAY);
 
-        idTextField.setBounds(10,160,500,30);
+        idTextField.setBounds(10,120,530,30);
         idTextField.setFont(new Font("Inter",Font.PLAIN,14));
         idTextField.setForeground(Color.BLACK);
         idTextField.setBackground(Color.WHITE);
