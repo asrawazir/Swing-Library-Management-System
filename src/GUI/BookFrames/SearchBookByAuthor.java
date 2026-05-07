@@ -72,6 +72,9 @@ public class SearchBookByAuthor implements ActionListener {
                     data[i][2] = foundBook.get(i).getAuthor();
                 }
                 JTable table = new JTable(data,headers);
+                JScrollPane scrollPane = new JScrollPane(table);
+                scrollPane.setBounds(70,80,560,280);
+                sbaFrame.add(scrollPane);
             }
         }
     }
