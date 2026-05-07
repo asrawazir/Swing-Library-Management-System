@@ -60,17 +60,23 @@ public class SearchBookByID implements ActionListener {
             for (int i = 0; i < books.size();i++){
                 if(books.get(i).getID().equalsIgnoreCase(id)){
                     Book foundBook = books.get(i);
+
+                    JPanel foundBookPanel = new JPanel();
+                    foundBookPanel.setBackground(Color.white);
+                    foundBookPanel.setBounds(170,160, 350,180);
+                    foundBookPanel.setLayout(null);
+
                     JLabel foundBookIdLabel = new JLabel("Id: "+foundBook.getID());
                     JLabel foundBookTitleLabel = new JLabel("Title: "+foundBook.getTitle());
                     JLabel foundBookAuthorLabel = new JLabel("Author: "+foundBook.getAuthor());
                     JLabel foundBookTotalLabel = new JLabel("Total Quantities: "+foundBook.getTotalQuantity());
                     JLabel foundBookAvailableLabel = new JLabel("Available Quantity: "+foundBook.getAvailableQuantity());
 
-                    foundBookIdLabel.setFont(new Font("Inter",Font.PLAIN,15));
-                    foundBookTitleLabel.setFont(new Font("Inter",Font.PLAIN,15));
-                    foundBookAuthorLabel.setFont(new Font("Inter",Font.PLAIN,15));
-                    foundBookTotalLabel.setFont(new Font("Inter",Font.PLAIN,15));
-                    foundBookAvailableLabel.setFont(new Font("Inter",Font.PLAIN,15));
+                    foundBookIdLabel.setFont(new Font("Inter",Font.BOLD,15));
+                    foundBookTitleLabel.setFont(new Font("Inter",Font.BOLD,15));
+                    foundBookAuthorLabel.setFont(new Font("Inter",Font.BOLD,15));
+                    foundBookTotalLabel.setFont(new Font("Inter",Font.BOLD,15));
+                    foundBookAvailableLabel.setFont(new Font("Inter",Font.BOLD ,15));
 
                     foundBookIdLabel.setBounds(100,200,300,40);
                     foundBookTitleLabel.setBounds(100,230,300,40);
