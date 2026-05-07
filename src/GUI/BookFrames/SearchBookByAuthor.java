@@ -71,6 +71,7 @@ public class SearchBookByAuthor implements ActionListener {
                     data[i][1] = foundBook.get(i).getTitle();
                     data[i][2] = foundBook.get(i).getAuthor();
                 }
+                JTable table = new JTable(data,headers);
             }
         }
     }
