@@ -54,6 +54,12 @@ public class SearchBookByAuthor implements ActionListener {
         if (e.getSource()==submitButton){
             String author = authorTextField.getText();
             ArrayList<Book> books = alm.getBooksList();
+            ArrayList<Book> foundBook = new ArrayList<>();
+            for(int i = 0; i < books.size(); i++){
+                if (books.get(i).getAuthor().equalsIgnoreCase(author)) {
+                    foundBook.add(books.get(i));
+                }
+            }
         }
     }
 }
