@@ -96,6 +96,7 @@ public class RegisterMember implements ActionListener{
         rmSubmitButton.addActionListener(this);
         rmBackButton.addActionListener(this);
 
+        rmFrame.add(rmLabel);
         rmFrame.add(idLabel);
         rmFrame.add(nameLabel);
         rmFrame.add(phoneLabel);
@@ -110,7 +111,6 @@ public class RegisterMember implements ActionListener{
         rmFrame.add(rmBackButton);
         rmFrame.add(rmExitButton);
 
-        rmFrame.add(rmLabel);
         rmFrame.setVisible(true);
     }
 
