@@ -1,5 +1,6 @@
 package GUI.MemberFrames;
 
+import Code.ArrayListsManager;
 import GUI.AdditionalClasses.*;
 
 import java.awt.*;
@@ -9,6 +10,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ViewIssuedBooks implements ActionListener {
+
+    ArrayListsManager alm = ArrayListsManager.instance;
 
     CreateFrame ibFrame;
     CreateLabel ibLabel;
