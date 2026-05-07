@@ -66,7 +66,11 @@ public class SearchBookByAuthor implements ActionListener {
             else {
                 String[] headers = {"Book Id","Title","Author"};
                 String[][] data = new String[foundBook.size()][3];
-
+                for (int i = 0; i < foundBook.size();i++){
+                    data[i][0] = foundBook.get(i).getID();
+                    data[i][1] = foundBook.get(i).getTitle();
+                    data[i][2] = foundBook.get(i).getAuthor();
+                }
             }
         }
     }
