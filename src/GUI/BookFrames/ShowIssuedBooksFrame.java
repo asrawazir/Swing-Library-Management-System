@@ -34,8 +34,12 @@ public class ShowIssuedBooksFrame implements ActionListener {
 
         JTable table = new JTable(data,headers);
 
+        JScrollPane scrollPane = new JScrollPane(table);
+        scrollPane.setBounds(70,80,560,280);
+
         backButton.addActionListener(this);
 
+        siFrame.add(scrollPane);
         siFrame.add(backButton);
         siFrame.add(exitButton);
         siFrame.add(label);
