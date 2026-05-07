@@ -4,6 +4,7 @@ import Code.ArrayListsManager;
 import Code.IssuedBook;
 import GUI.AdditionalClasses.*;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -30,6 +31,8 @@ public class ShowIssuedBooksFrame implements ActionListener {
             data[i][2] = issuedBooks.get(i).getBook().getTitle();
             data[i][3] = issuedBooks.get(i).getDate();
         }
+
+        JTable table = new JTable(data,headers);
 
         backButton.addActionListener(this);
 
