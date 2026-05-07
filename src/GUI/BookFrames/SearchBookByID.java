@@ -90,6 +90,7 @@ public class SearchBookByID implements ActionListener {
                     foundBookPanel.add(foundBookTotalLabel);
                     foundBookPanel.add(foundBookAvailableLabel);
 
+                    sbiFrame.add(foundBookPanel);
                     sbiFrame.revalidate();
                     sbiFrame.repaint();
 
