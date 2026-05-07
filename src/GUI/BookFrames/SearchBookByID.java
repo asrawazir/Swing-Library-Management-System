@@ -78,17 +78,17 @@ public class SearchBookByID implements ActionListener {
                     foundBookTotalLabel.setFont(new Font("Inter",Font.BOLD,15));
                     foundBookAvailableLabel.setFont(new Font("Inter",Font.BOLD ,15));
 
-                    foundBookIdLabel.setBounds(100,200,300,40);
-                    foundBookTitleLabel.setBounds(100,230,300,40);
-                    foundBookAuthorLabel.setBounds(100,260,300,40);
-                    foundBookTotalLabel.setBounds(100,290,300,40);
-                    foundBookAvailableLabel.setBounds(100,320,300,40);
+                    foundBookIdLabel.setBounds(70, 20, 200, 30);
+                    foundBookTitleLabel.setBounds(70, 50, 200, 30);
+                    foundBookAuthorLabel.setBounds(70, 80, 200, 30);
+                    foundBookTotalLabel.setBounds(70, 110, 200, 30);
+                    foundBookAvailableLabel.setBounds(70, 140, 200, 30);
 
-                    sbiFrame.add(foundBookIdLabel);
-                    sbiFrame.add(foundBookTitleLabel);
-                    sbiFrame.add(foundBookAuthorLabel);
-                    sbiFrame.add(foundBookTotalLabel);
-                    sbiFrame.add(foundBookAvailableLabel);
+                    foundBookPanel.add(foundBookIdLabel);
+                    foundBookPanel.add(foundBookTitleLabel);
+                    foundBookPanel.add(foundBookAuthorLabel);
+                    foundBookPanel.add(foundBookTotalLabel);
+                    foundBookPanel.add(foundBookAvailableLabel);
 
                     sbiFrame.revalidate();
                     sbiFrame.repaint();
