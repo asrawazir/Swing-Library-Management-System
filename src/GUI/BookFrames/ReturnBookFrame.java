@@ -1,12 +1,14 @@
 package GUI.BookFrames;
 
 import Code.ArrayListsManager;
+import Code.IssuedBook;
 import GUI.AdditionalClasses.*;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class ReturnBookFrame implements ActionListener {
     CreateFrame rbFrame = new CreateFrame();
@@ -73,6 +75,7 @@ public class ReturnBookFrame implements ActionListener {
         if (e.getSource()==submitButton){
             String memberId = memberIdTextField.getText();
             String bookId = bookIdTextField.getText();
+            ArrayList<IssuedBook> issuedBooks = alm.getIssuedBooksList();
             new CreateDialogBox("Success", "Book Returned Successfully");
         }
     }
