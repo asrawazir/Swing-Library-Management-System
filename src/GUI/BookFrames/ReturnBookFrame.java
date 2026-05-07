@@ -68,6 +68,8 @@ public class ReturnBookFrame implements ActionListener {
         }
 
         if (e.getSource()==submitButton){
+            String memberId = memberIdTextField.getText();
+            String bookId = bookIdTextField.getText();
             new CreateDialogBox("Success", "Book Returned Successfully");
         }
     }
