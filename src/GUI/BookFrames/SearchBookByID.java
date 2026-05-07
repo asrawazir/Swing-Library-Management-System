@@ -15,7 +15,7 @@ public class SearchBookByID implements ActionListener {
     CreateBackButton backButton = new CreateBackButton();
     CreateExitButton exitButton = new CreateExitButton();
     CreateLabel label = new CreateLabel("Search Book by ID");
-    CreateSubmitButton submitButton = new CreateSubmitButton("Search");
+    CreateSubmitButton submitButton = new CreateSubmitButton("Search",550,150);
     ArrayListsManager alm = ArrayListsManager.instance;
     JLabel idLabel = new JLabel();
     JTextField idTextField = new JTextField();
