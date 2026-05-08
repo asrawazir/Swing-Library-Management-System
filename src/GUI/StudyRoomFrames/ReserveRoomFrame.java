@@ -54,7 +54,9 @@ public class ReserveRoomFrame implements ActionListener {
         roomField.setBackground(new Color(10,20,35));
         roomField.setForeground(Color.white);
         roomField.setCaretColor(Color.cyan);
-        
+        roomField.setBorder(BorderFactory.createLineBorder(new Color(0, 180, 255), 1));
+
+
         frame.add(label);
         frame.add(roomLabel);
         frame.add(roomField);
