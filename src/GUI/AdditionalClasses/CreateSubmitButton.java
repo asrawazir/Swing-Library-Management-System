@@ -22,7 +22,7 @@ public class CreateSubmitButton extends JButton{
         this.setLocation(x,y);
         this.setSize(100,40);
         this.setFont(new Font("Roboto", Font.BOLD, 12));
-        this.setBackground(Color.LIGHT_GRAY);
+        this.setBackground(new Color(0,212,255));
         this.setForeground(Color.BLACK);
         this.setText(title);
         this.setOpaque(true);
