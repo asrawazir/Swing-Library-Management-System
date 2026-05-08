@@ -2,6 +2,7 @@ package GUI.MemberFrames;
 
 import Code.ArrayListsManager;
 import Code.Book;
+import Code.IssuedBook;
 import GUI.AdditionalClasses.*;
 
 import java.awt.*;
@@ -28,7 +29,7 @@ public class ViewIssuedBooks implements ActionListener {
     DefaultTableModel ibTableModel;
     JScrollPane ibScrollPane;
 
-    ArrayList<Book> issuedBooks;
+    ArrayList<IssuedBook> issuedBooks;
 
     public ViewIssuedBooks(){
 
@@ -44,7 +45,7 @@ public class ViewIssuedBooks implements ActionListener {
 
         ibScrollPane = new JScrollPane(ibBooksTable);
 
-        issuedBooks = alm.getBooksList();
+        issuedBooks = alm.getIssuedBooksList();
 
         ibIdLabel.setText("Enter Member ID: ");
         ibIdLabel.setBounds(10,80,530,30);
