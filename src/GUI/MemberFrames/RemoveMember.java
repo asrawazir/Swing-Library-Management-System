@@ -33,7 +33,8 @@ public class RemoveMember implements ActionListener {
         rmIdLabel.setText("Enter Member ID : ");
         rmIdLabel.setBounds(10,120,680,25);
         rmIdLabel.setFont(new Font("Inter",Font.BOLD,14));
-        rmIdLabel.setBackground(Color.LIGHT_GRAY);
+        rmIdLabel.setBackground(new Color(10,20,35));
+        rmIdLabel.setForeground(Color.WHITE);
 
         rmIdTextField.setBounds(10,155,670,25);
         rmIdTextField.setFont(new Font("Inter",Font.PLAIN,14));
