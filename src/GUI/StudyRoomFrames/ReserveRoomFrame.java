@@ -45,8 +45,8 @@ public class ReserveRoomFrame implements ActionListener {
         memberIDLabel.setFont(new Font("Inter", Font.BOLD, 14));
         memberIDLabel.setForeground(Color.white);
 
-        roomField.setBounds(10, 150, 670, 30);
-        memberField.setBounds(10, 220, 670, 30);
+        roomField.setBounds(10, 150, 670, 25);
+        memberField.setBounds(10, 220, 670, 25);
 
         roomField.setFont(new Font("Inter", Font.PLAIN, 14));
         memberField.setFont(new Font("Inter", Font.PLAIN, 14));
