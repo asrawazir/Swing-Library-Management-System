@@ -52,7 +52,8 @@ public class ReserveRoomFrame implements ActionListener {
         memberField.setFont(new Font("Inter", Font.PLAIN, 14));
 
         roomField.setBackground(new Color(10,20,35));
-       
+        roomField.setForeground(Color.white);
+        
         frame.add(label);
         frame.add(roomLabel);
         frame.add(roomField);
