@@ -31,21 +31,21 @@ public class ReturnBookFrame implements ActionListener {
         memberIdLabel.setText("Enter Member ID : ");
         bookIdLabel.setText("Enter Book ID : ");
 
-        memberIdLabel.setBounds(10,120,680,30);
-        bookIdLabel.setBounds(10,190,680,30);
+        memberIdLabel.setBounds(10,150,680,25);
+        bookIdLabel.setBounds(10,210,680,25);
 
         memberIdLabel.setFont(new Font("Inter",Font.BOLD,14));
         memberIdLabel.setBackground(Color.LIGHT_GRAY);
         bookIdLabel.setFont(new Font("Inter",Font.BOLD,14));
         bookIdLabel.setBackground(Color.LIGHT_GRAY);
 
-        memberIdTextField.setBounds(10,150,670,30);
+        memberIdTextField.setBounds(10,180,670,30);
         memberIdTextField.setFont(new Font("Inter",Font.PLAIN,14));
         memberIdTextField.setForeground(Color.BLACK);
         memberIdTextField.setBackground(Color.WHITE);
         memberIdTextField.setCaretColor(Color.BLACK);
 
-        bookIdTextField.setBounds(10,220,670,30);
+        bookIdTextField.setBounds(10,240,670,30);
         bookIdTextField.setFont(new Font("Inter",Font.PLAIN,14));
         bookIdTextField.setForeground(Color.BLACK);
         bookIdTextField.setBackground(Color.WHITE);
