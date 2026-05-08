@@ -42,13 +42,13 @@ public class ReturnBookFrame implements ActionListener {
         memberIdTextField.setBounds(10,180,670,30);
         memberIdTextField.setFont(new Font("Inter",Font.PLAIN,14));
         memberIdTextField.setForeground(Color.WHITE);
-        memberIdTextField.setBackground(Color.WHITE);
+        memberIdTextField.setBackground(new Color(10,20,35));
         memberIdTextField.setCaretColor(Color.WHITE);
 
         bookIdTextField.setBounds(10,240,670,30);
         bookIdTextField.setFont(new Font("Inter",Font.PLAIN,14));
         bookIdTextField.setForeground(Color.WHITE);
-        bookIdTextField.setBackground(Color.WHITE);
+        bookIdTextField.setBackground(new Color(10,20,35));
         bookIdTextField.setCaretColor(Color.WHITE);
 
         submitButton.addActionListener(this);
