@@ -23,7 +23,7 @@ public class RemoveMember implements ActionListener {
 
         rmFrame = new CreateFrame();
         rmLabel = new CreateLabel("Remove Member");
-        rmSubmitButton = new CreateSubmitButton("Remove");
+        rmSubmitButton = new CreateSubmitButton("Remove",300,230);
         rmBackButton = new CreateBackButton();
         rmExitButton = new CreateExitButton();
 
