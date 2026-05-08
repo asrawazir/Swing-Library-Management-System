@@ -31,11 +31,11 @@ public class RemoveMember implements ActionListener {
         rmIdTextField = new JTextField();
 
         rmIdLabel.setText("Enter Member ID : ");
-        rmIdLabel.setBounds(10,120,680,30);
+        rmIdLabel.setBounds(10,120,680,25);
         rmIdLabel.setFont(new Font("Inter",Font.BOLD,14));
         rmIdLabel.setBackground(Color.LIGHT_GRAY);
 
-        rmIdTextField.setBounds(10,160,670,30);
+        rmIdTextField.setBounds(10,155,670,25);
         rmIdTextField.setFont(new Font("Inter",Font.PLAIN,14));
         rmIdTextField.setForeground(Color.BLACK);
         rmIdTextField.setBackground(Color.WHITE);
