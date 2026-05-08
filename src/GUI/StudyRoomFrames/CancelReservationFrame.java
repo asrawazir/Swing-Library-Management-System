@@ -42,7 +42,7 @@ public class CancelReservationFrame implements ActionListener {
         memberIDLabel.setBounds(10,190,680,30);
 
         roomLabel.setFont( new Font("Inter", Font.BOLD,14));
-        roomLabel.setBackground(Color.lightGray);
+        roomLabel.setForeground(Color.white);
 
         memberIDLabel.setFont(new Font("Inter", Font.BOLD,14));
         memberIDLabel.setBackground(Color.lightGray);
