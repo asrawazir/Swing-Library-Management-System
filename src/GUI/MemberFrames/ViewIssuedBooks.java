@@ -1,7 +1,6 @@
 package GUI.MemberFrames;
 
 import Code.ArrayListsManager;
-import Code.Book;
 import Code.IssuedBook;
 import GUI.AdditionalClasses.*;
 
@@ -68,7 +67,9 @@ public class ViewIssuedBooks implements ActionListener {
         ibBooksTable.setFont(new Font("Inter", Font.PLAIN, 13));
         ibBooksTable.setRowHeight(25);
 
+        ibScrollPane = new JScrollPane(ibBooksTable);
         ibScrollPane.setBounds(10, 210, 670, 300);
+        ibScrollPane.getViewport().setBackground(Color.WHITE);
 
         ibBackButton.addActionListener(this);
 
