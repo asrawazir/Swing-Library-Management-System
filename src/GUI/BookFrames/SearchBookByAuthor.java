@@ -25,7 +25,7 @@ public class SearchBookByAuthor implements ActionListener {
         authorLabel.setText("Enter Author Name : ");
         authorLabel.setBounds(10,80,530,30);
         authorLabel.setFont(new Font("Inter",Font.BOLD,14));
-        authorLabel.setBackground(Color.LIGHT_GRAY);
+        authorLabel.setForeground(Color.WHITE);
 
         authorTextField.setBounds(10,120,530,30);
         authorTextField.setFont(new Font("Inter",Font.PLAIN,14));
