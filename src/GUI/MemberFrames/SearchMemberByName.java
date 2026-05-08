@@ -42,9 +42,9 @@ public class SearchMemberByName implements ActionListener {
 
         snNameTextField.setBounds(10,120,530,30);
         snNameTextField.setFont(new Font("Inter",Font.PLAIN,14));
-        snNameTextField.setForeground(Color.BLACK);
-        snNameTextField.setBackground(Color.WHITE);
-        snNameTextField.setCaretColor(Color.BLACK);
+        snNameTextField.setForeground(Color.WHITE);
+        snNameTextField.setBackground(new Color(10,20,35));
+        snNameTextField.setCaretColor(Color.CYAN);
 
         members = alm.getMembersList();
 
