@@ -15,7 +15,7 @@ public class SearchBookByID implements ActionListener {
     CreateBackButton backButton = new CreateBackButton();
     CreateExitButton exitButton = new CreateExitButton();
     CreateLabel label = new CreateLabel("Search Book by ID");
-    CreateSubmitButton submitButton = new CreateSubmitButton("Search");
+    CreateSubmitButton submitButton = new CreateSubmitButton("Search",560,110);
     ArrayListsManager alm = ArrayListsManager.instance;
     JLabel idLabel = new JLabel();
     JTextField idTextField = new JTextField();
@@ -24,11 +24,11 @@ public class SearchBookByID implements ActionListener {
     public SearchBookByID(){
 
         idLabel.setText("Enter Book ID : ");
-        idLabel.setBounds(10,120,680,30);
+        idLabel.setBounds(10,80,530,30);
         idLabel.setFont(new Font("Inter",Font.BOLD,14));
         idLabel.setBackground(Color.LIGHT_GRAY);
 
-        idTextField.setBounds(10,160,670,30);
+        idTextField.setBounds(10,120,530,30);
         idTextField.setFont(new Font("Inter",Font.PLAIN,14));
         idTextField.setForeground(Color.BLACK);
         idTextField.setBackground(Color.WHITE);
@@ -60,30 +60,37 @@ public class SearchBookByID implements ActionListener {
             for (int i = 0; i < books.size();i++){
                 if(books.get(i).getID().equalsIgnoreCase(id)){
                     Book foundBook = books.get(i);
+
+                    JPanel foundBookPanel = new JPanel();
+                    foundBookPanel.setBackground(Color.white);
+                    foundBookPanel.setBounds(170,160, 350,180);
+                    foundBookPanel.setLayout(null);
+
                     JLabel foundBookIdLabel = new JLabel("Id: "+foundBook.getID());
                     JLabel foundBookTitleLabel = new JLabel("Title: "+foundBook.getTitle());
                     JLabel foundBookAuthorLabel = new JLabel("Author: "+foundBook.getAuthor());
                     JLabel foundBookTotalLabel = new JLabel("Total Quantities: "+foundBook.getTotalQuantity());
                     JLabel foundBookAvailableLabel = new JLabel("Available Quantity: "+foundBook.getAvailableQuantity());
 
-                    foundBookIdLabel.setFont(new Font("Inter",Font.PLAIN,15));
-                    foundBookTitleLabel.setFont(new Font("Inter",Font.PLAIN,15));
-                    foundBookAuthorLabel.setFont(new Font("Inter",Font.PLAIN,15));
-                    foundBookTotalLabel.setFont(new Font("Inter",Font.PLAIN,15));
-                    foundBookAvailableLabel.setFont(new Font("Inter",Font.PLAIN,15));
+                    foundBookIdLabel.setFont(new Font("Inter",Font.BOLD,15));
+                    foundBookTitleLabel.setFont(new Font("Inter",Font.BOLD,15));
+                    foundBookAuthorLabel.setFont(new Font("Inter",Font.BOLD,15));
+                    foundBookTotalLabel.setFont(new Font("Inter",Font.BOLD,15));
+                    foundBookAvailableLabel.setFont(new Font("Inter",Font.BOLD ,15));
 
-                    foundBookIdLabel.setBounds(100,200,300,40);
-                    foundBookTitleLabel.setBounds(100,230,300,40);
-                    foundBookAuthorLabel.setBounds(100,260,300,40);
-                    foundBookTotalLabel.setBounds(100,290,300,40);
-                    foundBookAvailableLabel.setBounds(100,320,300,40);
+                    foundBookIdLabel.setBounds(70, 20, 200, 30);
+                    foundBookTitleLabel.setBounds(70, 50, 200, 30);
+                    foundBookAuthorLabel.setBounds(70, 80, 200, 30);
+                    foundBookTotalLabel.setBounds(70, 110, 200, 30);
+                    foundBookAvailableLabel.setBounds(70, 140, 200, 30);
 
-                    sbiFrame.add(foundBookIdLabel);
-                    sbiFrame.add(foundBookTitleLabel);
-                    sbiFrame.add(foundBookAuthorLabel);
-                    sbiFrame.add(foundBookTotalLabel);
-                    sbiFrame.add(foundBookAvailableLabel);
+                    foundBookPanel.add(foundBookIdLabel);
+                    foundBookPanel.add(foundBookTitleLabel);
+                    foundBookPanel.add(foundBookAuthorLabel);
+                    foundBookPanel.add(foundBookTotalLabel);
+                    foundBookPanel.add(foundBookAvailableLabel);
 
+                    sbiFrame.add(foundBookPanel);
                     sbiFrame.revalidate();
                     sbiFrame.repaint();
 

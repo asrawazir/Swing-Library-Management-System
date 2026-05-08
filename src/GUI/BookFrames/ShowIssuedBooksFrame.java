@@ -4,6 +4,7 @@ import Code.ArrayListsManager;
 import Code.IssuedBook;
 import GUI.AdditionalClasses.*;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -31,8 +32,14 @@ public class ShowIssuedBooksFrame implements ActionListener {
             data[i][3] = issuedBooks.get(i).getDate();
         }
 
+        JTable table = new JTable(data,headers);
+
+        JScrollPane scrollPane = new JScrollPane(table);
+        scrollPane.setBounds(70,80,560,280);
+
         backButton.addActionListener(this);
 
+        siFrame.add(scrollPane);
         siFrame.add(backButton);
         siFrame.add(exitButton);
         siFrame.add(label);
