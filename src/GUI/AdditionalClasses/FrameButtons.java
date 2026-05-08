@@ -10,8 +10,8 @@ public class FrameButtons extends JButton {
         this.setLocation(x,y);
         this.setSize(170,65);
         this.setFont(new Font("Roboto", Font.BOLD, 14));
-        this.setBackground(Color.LIGHT_GRAY);
-        this.setForeground(Color.BLACK);
+        this.setBackground(new Color(15,52,96));
+        this.setForeground(new Color(0,212,255));
         this.setText(title);
         this.setOpaque(true);
         this.setFocusable(false);
