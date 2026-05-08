@@ -46,10 +46,10 @@ public class AddBookFrame implements ActionListener {
         quantityLabel.setText("Enter Total Quantity : ");
 
         //setting bounds of the JLabel objects
-        idLabel.setBounds(10,50,680,30);
-        titleLabel.setBounds(10,120,680,30);
-        authorLabel.setBounds(10,190,680,30);
-        quantityLabel.setBounds(10,260,680,30);
+        idLabel.setBounds(10,80,680,25);
+        titleLabel.setBounds(10,150,680,25);
+        authorLabel.setBounds(10,210,680,25);
+        quantityLabel.setBounds(10,270,680,25);
 
         //defining font properties and background color of JLabel objects
         idLabel.setFont(new Font("Inter",Font.BOLD,14));
@@ -62,10 +62,10 @@ public class AddBookFrame implements ActionListener {
         quantityLabel.setBackground(Color.LIGHT_GRAY);
 
         //defining the location of Text Fields
-        idTextField.setBounds(10,80,670,30);
-        titleTextField.setBounds(10,150,670,30);
-        authorTextField.setBounds(10,220,670,30);
-        quantityTextField.setBounds(10,290,670,30);
+        idTextField.setBounds(10,110,670,30);
+        titleTextField.setBounds(10,180,670,30);
+        authorTextField.setBounds(10,240,670,30);
+        quantityTextField.setBounds(10,300,670,30);
 
         //Defining the font and color properties of text fields
         idTextField.setFont(new Font("Inter",Font.PLAIN,14));
