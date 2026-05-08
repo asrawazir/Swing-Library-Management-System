@@ -30,7 +30,7 @@ public class ViewIssuedBooks implements ActionListener {
 
     ArrayList<IssuedBook> issuedBooks;
 
-    public ViewIssuedBooks(){
+    public ViewIssuedBooks() {
 
         ibFrame = new CreateFrame();
         ibLabel = new CreateLabel("Books Issued to Member");
@@ -43,10 +43,10 @@ public class ViewIssuedBooks implements ActionListener {
         ibIdTextField = new JTextField();
 
         ibIdLabel.setText("Enter Member ID: ");
-        ibIdLabel.setBounds(10,80,530,30);
+        ibIdLabel.setBounds(10, 80, 530, 30);
         ibIdLabel.setFont(new Font("Inter", Font.BOLD, 14));
 
-        ibIdTextField.setBounds(10,120,530,30);
+        ibIdTextField.setBounds(10, 120, 530, 30);
         ibIdTextField.setFont(new Font("Inter", Font.PLAIN, 14));
 
         String[] columns = {"Book ID", "Book Title", "Issue Date"};
@@ -81,6 +81,7 @@ public class ViewIssuedBooks implements ActionListener {
 
         ibFrame.setVisible(true);
     }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == ibBackButton) {
@@ -88,7 +89,7 @@ public class ViewIssuedBooks implements ActionListener {
             new MemberHomeFrame();
         }
 
-        if(e.getSource() == ibSubmitButton){
+        if (e.getSource() == ibSubmitButton) {
             String searchId = ibIdTextField.getText().trim();
 
             if (searchId.isEmpty()) {
@@ -98,33 +99,19 @@ public class ViewIssuedBooks implements ActionListener {
 
             ibTableModel.setRowCount(0);
 
-            ArrayList<IssuedBook> issuedBooksList = alm.getIssuedBooksList();
-            boolean found = false;
+            ArrayList<IssuedBook> issuedBooksList = alm.viewBooksByMemberId(searchId);
 
-            if (issuedBooksList == null || issuedBooksList.isEmpty()) {
-                new CreateDialogBox("System Info", "No books issued");
-                return;
-            }
-
-            for (IssuedBook ib : issuedBooksList) {
-                if (ib.getMember() != null) {
-                    String memberIdInRecord = ib.getMember().getId();
-
-                    if (memberIdInRecord != null && memberIdInRecord.equalsIgnoreCase(searchId)) {
-
-                        Object[] rowData = {
-                                ib.getBook().getID(),
-                                ib.getBook().getTitle(),
-                                ib.getDate()
-                        };
-
-                        ibTableModel.addRow(rowData);
-                        found = true;
-                    }
-                }
-            }
-            if (!found) {
+            if (issuedBooksList.isEmpty()) {
                 new CreateDialogBox("No Results", "No books found for Member ID: " + searchId);
+            } else {
+                for (IssuedBook ib : issuedBooksList) {
+                    Object[] rowData = {
+                            ib.getBook().getID(),
+                            ib.getBook().getTitle(),
+                            ib.getDate()
+                    };
+                    ibTableModel.addRow(rowData);
+                }
             }
         }
     }
