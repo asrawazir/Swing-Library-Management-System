@@ -44,8 +44,6 @@ public class ViewIssuedBooks implements ActionListener {
 
         ibScrollPane = new JScrollPane(ibBooksTable);
 
-        issuedBooks = alm.getIssuedBooksList();
-
         ibIdLabel.setText("Enter Member ID: ");
         ibIdLabel.setBounds(10,80,530,30);
         ibIdLabel.setFont(new Font("Inter", Font.BOLD, 14));
@@ -72,6 +70,7 @@ public class ViewIssuedBooks implements ActionListener {
         ibScrollPane.getViewport().setBackground(Color.WHITE);
 
         ibBackButton.addActionListener(this);
+        ibSubmitButton.addActionListener(this);
 
         ibFrame.add(ibLabel);
         ibFrame.add(ibSubmitButton);
@@ -94,11 +93,14 @@ public class ViewIssuedBooks implements ActionListener {
             String searchId = ibIdTextField.getText().trim();
 
             if (searchId.isEmpty()) {
-                new CreateDialogBox("Error", "Member ID required");
+                new CreateDialogBox("Error", "Please enter a Member ID.");
                 return;
             }
 
             ibTableModel.setRowCount(0);
+
+            ArrayList<IssuedBook> issuedBooksList = alm.getIssuedBooksList();
+            boolean found = false;
         }
     }
 }
