@@ -53,6 +53,7 @@ public class ReserveRoomFrame implements ActionListener {
 
         roomField.setBackground(new Color(10,20,35));
         roomField.setForeground(Color.white);
+        roomField.setCaretColor(Color.cyan);
         
         frame.add(label);
         frame.add(roomLabel);
