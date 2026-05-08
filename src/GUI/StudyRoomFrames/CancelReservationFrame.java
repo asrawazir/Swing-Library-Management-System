@@ -38,8 +38,8 @@ public class CancelReservationFrame implements ActionListener {
         roomLabel.setText("Enter Room Number:");
         memberIDLabel.setText("Enter Member ID:");
 
-        roomLabel.setBounds(10,120,680,30);
-        memberIDLabel.setBounds(10,190,680,30);
+        roomLabel.setBounds(10,120,680,25);
+        memberIDLabel.setBounds(10,190,680,25);
 
         roomLabel.setFont( new Font("Inter", Font.BOLD,14));
         roomLabel.setForeground(Color.white);
@@ -47,8 +47,8 @@ public class CancelReservationFrame implements ActionListener {
         memberIDLabel.setFont(new Font("Inter", Font.BOLD,14));
         memberIDLabel.setForeground(Color.white);
 
-        roomField.setBounds(10,150,670,30);
-        memberField.setBounds(10,220,670,30);
+        roomField.setBounds(10,150,670,25);
+        memberField.setBounds(10,220,670,25);
 
         roomField.setFont(new Font("Inter", Font.PLAIN,14));
         memberField.setFont(new Font("Inter", Font.PLAIN,14));
