@@ -14,8 +14,8 @@ public class CreateExitButton extends JButton implements ActionListener, KeyList
         this.setLocation(580,390);
         this.setSize(80,40);
         this.setFont(new Font("Roboto", Font.BOLD, 12));
-        this.setBackground(Color.LIGHT_GRAY);
-        this.setForeground(Color.BLACK);
+        this.setBackground(new Color(233,69,96));
+        this.setForeground(Color.white);
         this.addActionListener(this);
         this.addKeyListener(this);
         this.setText("Exit");
