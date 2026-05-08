@@ -70,6 +70,7 @@ public class ViewIssuedBooks implements ActionListener {
         ibScrollPane.getViewport().setBackground(Color.WHITE);
 
         ibBackButton.addActionListener(this);
+
         ibSubmitButton.addActionListener(this);
 
         ibFrame.add(ibLabel);
