@@ -5,6 +5,7 @@ import Code.IssuedBook;
 import GUI.AdditionalClasses.*;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -33,6 +34,8 @@ public class ShowIssuedBooksFrame implements ActionListener {
         }
 
         JTable table = new JTable(data,headers);
+        table.setBackground(new Color(10,20,35));
+        table.setForeground(Color.white);
 
         JScrollPane scrollPane = new JScrollPane(table);
         scrollPane.setBounds(70,80,560,280);
