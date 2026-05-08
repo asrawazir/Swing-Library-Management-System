@@ -29,9 +29,9 @@ public class SearchBookByAuthor implements ActionListener {
 
         authorTextField.setBounds(10,120,530,30);
         authorTextField.setFont(new Font("Inter",Font.PLAIN,14));
-        authorTextField.setForeground(Color.BLACK);
+        authorTextField.setForeground(Color.WHITE);
         authorTextField.setBackground(new Color(10,20,35));
-        authorTextField.setCaretColor(Color.BLACK);
+        authorTextField.setCaretColor(Color.WHITE);
 
         backButton.addActionListener(this);
         submitButton.addActionListener(this);
