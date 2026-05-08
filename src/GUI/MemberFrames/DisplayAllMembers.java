@@ -48,7 +48,7 @@ public class DisplayAllMembers implements ActionListener {
         dmTable.setForeground(Color.WHITE);
 
         dmScrollPane = new JScrollPane(dmTable);
-        dmScrollPane.setBounds(70,80,560,280);
+        dmScrollPane.setBounds(80,80,560,280);
 
         dmFrame.add(dmLabel);
         dmFrame.add(dmScrollPane);
