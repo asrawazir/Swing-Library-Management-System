@@ -23,7 +23,7 @@ public class RemoveMember implements ActionListener {
 
         rmFrame = new CreateFrame();
         rmLabel = new CreateLabel("Remove Member");
-        rmSubmitButton = new CreateSubmitButton("Remove");
+        rmSubmitButton = new CreateSubmitButton("Remove",300,230);
         rmBackButton = new CreateBackButton();
         rmExitButton = new CreateExitButton();
 
@@ -31,15 +31,16 @@ public class RemoveMember implements ActionListener {
         rmIdTextField = new JTextField();
 
         rmIdLabel.setText("Enter Member ID : ");
-        rmIdLabel.setBounds(10,120,680,30);
+        rmIdLabel.setBounds(10,120,680,25);
         rmIdLabel.setFont(new Font("Inter",Font.BOLD,14));
-        rmIdLabel.setBackground(Color.LIGHT_GRAY);
+        rmIdLabel.setBackground(new Color(10,20,35));
+        rmIdLabel.setForeground(Color.WHITE);
 
-        rmIdTextField.setBounds(10,160,670,30);
+        rmIdTextField.setBounds(10,155,670,25);
         rmIdTextField.setFont(new Font("Inter",Font.PLAIN,14));
-        rmIdTextField.setForeground(Color.BLACK);
-        rmIdTextField.setBackground(Color.WHITE);
-        rmIdTextField.setCaretColor(Color.BLACK);
+        rmIdTextField.setForeground(Color.WHITE);
+        rmIdTextField.setBackground(new Color(10,20,35));
+        rmIdTextField.setCaretColor(Color.CYAN);
 
         rmBackButton.addActionListener(this);
         rmSubmitButton.addActionListener(this);

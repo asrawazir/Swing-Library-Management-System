@@ -38,13 +38,14 @@ public class SearchMemberById implements ActionListener {
         siIdLabel.setText("Enter Member ID : ");
         siIdLabel.setBounds(10,80,530,30);
         siIdLabel.setFont(new Font("Inter",Font.BOLD,14));
-        siIdLabel.setBackground(Color.LIGHT_GRAY);
+        siIdLabel.setBackground(new Color(10,20,35));
+        siIdLabel.setForeground(Color.WHITE);
 
         siIdTextField.setBounds(10,120,530,30);
         siIdTextField.setFont(new Font("Inter",Font.PLAIN,14));
-        siIdTextField.setForeground(Color.BLACK);
-        siIdTextField.setBackground(Color.WHITE);
-        siIdTextField.setCaretColor(Color.BLACK);
+        siIdTextField.setForeground(Color.WHITE);
+        siIdTextField.setBackground(new Color(10,20,35));
+        siIdTextField.setCaretColor(Color.CYAN);
 
         members = alm.getMembersList();
 
