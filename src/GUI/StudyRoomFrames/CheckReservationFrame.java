@@ -48,7 +48,7 @@ public class CheckReservationFrame implements ActionListener {
          textField.setBackground(new Color(10,20,35));
         textField.setForeground(Color.white);
         textField.setCaretColor(Color.cyan);
-        
+        textField.setBorder(BorderFactory.createLineBorder(new Color(0, 180, 255), 1));
 
         frame.add(label);
         frame.add(jLabel);
