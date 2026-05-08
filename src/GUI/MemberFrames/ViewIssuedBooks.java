@@ -101,6 +101,11 @@ public class ViewIssuedBooks implements ActionListener {
 
             ArrayList<IssuedBook> issuedBooksList = alm.getIssuedBooksList();
             boolean found = false;
+
+            if (issuedBooksList == null || issuedBooksList.isEmpty()) {
+                new CreateDialogBox("System Info", "No books issued");
+                return;
+            }
         }
     }
 }
