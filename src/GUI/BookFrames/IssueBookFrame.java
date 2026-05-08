@@ -49,11 +49,11 @@ public class IssueBookFrame implements ActionListener {
 
         //defining font properties and background color for JLabel objects
         memberIdLabel.setFont(new Font("Inter",Font.BOLD,14));
-        memberIdLabel.setBackground(Color.LIGHT_GRAY);
+        memberIdLabel.setForeground(Color.WHITE);
         bookIdLabel.setFont(new Font("Inter",Font.BOLD,14));
-        bookIdLabel.setBackground(Color.LIGHT_GRAY);
+        bookIdLabel.setForeground(Color.WHITE);
         dateLabel.setFont(new Font("Inter",Font.BOLD,14));
-        dateLabel.setBackground(Color.LIGHT_GRAY);
+        dateLabel.setForeground(Color.WHITE);
 
         //Defining location, font and color properties of text fields
         memberIdTextField.setBounds(10,120,670,30);
