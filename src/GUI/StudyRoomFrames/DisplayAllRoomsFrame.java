@@ -5,6 +5,7 @@ import Code.StudyRoom;
 import GUI.AdditionalClasses.*;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -37,6 +38,9 @@ public class DisplayAllRoomsFrame implements ActionListener {
             data[i][2]=r.getIsReserved()?r.getReservedByMemberID():"-";
         }
         JTable table = new JTable(data, column);
+        table.setBackground(new Color(10,20,35));
+        table.setForeground(Color.white);
+
         JScrollPane scrollPane = new JScrollPane(table);
 
         scrollPane.setBounds(100, 100, 500, 170);
