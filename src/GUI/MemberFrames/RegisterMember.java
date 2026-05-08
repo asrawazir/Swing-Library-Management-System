@@ -52,13 +52,13 @@ public class RegisterMember implements ActionListener{
         idLabel.setForeground(Color.BLACK);
 
         nameLabel.setText("Enter your name: ");
-        nameLabel.setBounds(10,120,680,25);
+        nameLabel.setBounds(10,140,680,25);
         nameLabel.setBackground(Color.LIGHT_GRAY);
         nameLabel.setFont(new Font("Inter",Font.BOLD,14));
         nameLabel.setForeground(Color.BLACK);
 
         phoneLabel.setText("Enter your phone Number: ");
-        phoneLabel.setBounds(10,190,680,25);
+        phoneLabel.setBounds(10,200,680,25);
         phoneLabel.setBackground(Color.LIGHT_GRAY);
         phoneLabel.setFont(new Font("Inter",Font.BOLD,14));
         phoneLabel.setForeground(Color.BLACK);
@@ -69,19 +69,19 @@ public class RegisterMember implements ActionListener{
         emailLabel.setFont(new Font("Inter",Font.BOLD,14));
         emailLabel.setForeground(Color.BLACK);
 
-        idTextField.setBounds(10,80,670,25);
+        idTextField.setBounds(10,110,670,25);
         idTextField.setFont(new Font("Inter",Font.PLAIN,14));
         idTextField.setForeground(Color.BLACK);
         idTextField.setBackground(Color.WHITE);
         idTextField.setCaretColor(Color.BLACK);
 
-        nameTextField.setBounds(10,150,670,25);
+        nameTextField.setBounds(10,170,670,25);
         nameTextField.setFont(new Font("Inter",Font.PLAIN,14));
         nameTextField.setForeground(Color.BLACK);
         nameTextField.setBackground(Color.WHITE);
         nameTextField.setCaretColor(Color.BLACK);
 
-        phoneTextField.setBounds(10,220,670,25);
+        phoneTextField.setBounds(10,230,670,25);
         phoneTextField.setFont(new Font("Inter",Font.PLAIN,14));
         phoneTextField.setForeground(Color.BLACK);
         phoneTextField.setBackground(Color.WHITE);
