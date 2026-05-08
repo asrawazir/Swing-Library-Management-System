@@ -30,7 +30,7 @@ public class MainFrame implements ActionListener {
             @Override
             protected void paintComponent(Graphics g) {
                 Graphics2D g2d = (Graphics2D) g.create();
-                g2d.setColor(new Color(255, 255, 255, 180));
+                g2d.setColor(new Color(15,52,96));
                 g2d.fillRect(0, 0, getWidth(), getHeight());
                 g2d.dispose();
                 super.paintComponent(g);
