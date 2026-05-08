@@ -53,13 +53,13 @@ public class AddBookFrame implements ActionListener {
 
         //defining font properties and background color of JLabel objects
         idLabel.setFont(new Font("Inter",Font.BOLD,14));
-        idLabel.setBackground(Color.LIGHT_GRAY);
+        idLabel.setForeground(Color.WHITE);
         titleLabel.setFont(new Font("Inter",Font.BOLD,14));
-        titleLabel.setBackground(Color.LIGHT_GRAY);
+        titleLabel.setForeground(Color.WHITE);
         authorLabel.setFont(new Font("Inter",Font.BOLD,14));
-        authorLabel.setBackground(Color.LIGHT_GRAY);
+        authorLabel.setForeground(Color.WHITE);
         quantityLabel.setFont(new Font("Inter",Font.BOLD,14));
-        quantityLabel.setBackground(Color.LIGHT_GRAY);
+        quantityLabel.setForeground(Color.WHITE);
 
         //defining the location of Text Fields
         idTextField.setBounds(10,110,670,30);
