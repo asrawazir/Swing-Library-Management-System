@@ -108,7 +108,24 @@ public class ViewIssuedBooks implements ActionListener {
             }
 
             for (IssuedBook ib : issuedBooksList) {
+                if (ib.getMember() != null) {
+                    String memberIdInRecord = ib.getMember().getId();
 
+                    if (memberIdInRecord != null && memberIdInRecord.equalsIgnoreCase(searchId)) {
+
+                        Object[] rowData = {
+                                ib.getBook().getID(),
+                                ib.getBook().getTitle(),
+                                ib.getDate()
+                        };
+
+                        ibTableModel.addRow(rowData);
+                        found = true;
+                    }
+                }
+            }
+            if (!found) {
+                new CreateDialogBox("No Results", "No books found for Member ID: " + searchId);
             }
         }
     }
