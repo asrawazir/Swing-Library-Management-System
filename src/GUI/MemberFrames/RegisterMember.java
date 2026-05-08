@@ -72,25 +72,25 @@ public class RegisterMember implements ActionListener{
         idTextField.setBounds(10,110,670,25);
         idTextField.setFont(new Font("Inter",Font.PLAIN,14));
         idTextField.setForeground(Color.BLACK);
-        idTextField.setBackground(Color.WHITE);
+        idTextField.setBackground(new Color(10,20,35));
         idTextField.setCaretColor(Color.BLACK);
 
         nameTextField.setBounds(10,170,670,25);
         nameTextField.setFont(new Font("Inter",Font.PLAIN,14));
         nameTextField.setForeground(Color.BLACK);
-        nameTextField.setBackground(Color.WHITE);
+        nameTextField.setBackground(new Color(10,20,35));
         nameTextField.setCaretColor(Color.BLACK);
 
         phoneTextField.setBounds(10,230,670,25);
         phoneTextField.setFont(new Font("Inter",Font.PLAIN,14));
         phoneTextField.setForeground(Color.BLACK);
-        phoneTextField.setBackground(Color.WHITE);
+        phoneTextField.setBackground(new Color(10,20,35));
         phoneTextField.setCaretColor(Color.BLACK);
 
         emailTextField.setBounds(10,290,670,25);
         emailTextField.setFont(new Font("Inter",Font.PLAIN,14));
         emailTextField.setForeground(Color.BLACK);
-        emailTextField.setBackground(Color.WHITE);
+        emailTextField.setBackground(new Color(10,20,35));
         emailTextField.setCaretColor(Color.BLACK);
 
         rmSubmitButton.addActionListener(this);
