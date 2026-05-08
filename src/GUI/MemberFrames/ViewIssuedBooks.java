@@ -106,6 +106,10 @@ public class ViewIssuedBooks implements ActionListener {
                 new CreateDialogBox("System Info", "No books issued");
                 return;
             }
+
+            for (IssuedBook ib : issuedBooksList) {
+
+            }
         }
     }
 }
