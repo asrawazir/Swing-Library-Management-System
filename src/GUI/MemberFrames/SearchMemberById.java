@@ -43,9 +43,9 @@ public class SearchMemberById implements ActionListener {
 
         siIdTextField.setBounds(10,120,530,30);
         siIdTextField.setFont(new Font("Inter",Font.PLAIN,14));
-        siIdTextField.setForeground(Color.BLACK);
-        siIdTextField.setBackground(Color.WHITE);
-        siIdTextField.setCaretColor(Color.BLACK);
+        siIdTextField.setForeground(Color.WHITE);
+        siIdTextField.setBackground(new Color(10,20,35));
+        siIdTextField.setCaretColor(Color.CYAN);
 
         members = alm.getMembersList();
 
