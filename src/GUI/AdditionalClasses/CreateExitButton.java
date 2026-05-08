@@ -20,7 +20,7 @@ public class CreateExitButton extends JButton implements ActionListener, KeyList
         this.addKeyListener(this);
         this.setText("Exit");
         this.setOpaque(true);
-        this.setFocusable(true);
+        this.setFocusable(false);
     }
 
     @Override
