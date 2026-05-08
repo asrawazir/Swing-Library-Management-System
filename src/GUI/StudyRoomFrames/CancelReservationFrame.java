@@ -59,6 +59,8 @@ public class CancelReservationFrame implements ActionListener {
 
         memberField.setBackground(new Color(10,20,35));
         memberField.setForeground(Color.white);
+        memberField.setCaretColor(Color.cyan);
+       
 
         frame.add(label);
         frame.add(roomLabel);
