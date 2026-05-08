@@ -26,7 +26,7 @@ public class SearchBookByID implements ActionListener {
         idLabel.setText("Enter Book ID : ");
         idLabel.setBounds(10,80,530,30);
         idLabel.setFont(new Font("Inter",Font.BOLD,14));
-        idLabel.setBackground(Color.LIGHT_GRAY);
+        idLabel.setForeground(Color.WHITE);
 
         idTextField.setBounds(10,120,530,30);
         idTextField.setFont(new Font("Inter",Font.PLAIN,14));
