@@ -30,9 +30,9 @@ public class SearchBookByID implements ActionListener {
 
         idTextField.setBounds(10,120,530,30);
         idTextField.setFont(new Font("Inter",Font.PLAIN,14));
-        idTextField.setForeground(Color.BLACK);
+        idTextField.setForeground(Color.WHITE);
         idTextField.setBackground(new Color(10,20,35));
-        idTextField.setCaretColor(Color.BLACK);
+        idTextField.setCaretColor(Color.WHITE);
 
         books = alm.getBooksList();
         backButton.addActionListener(this);
