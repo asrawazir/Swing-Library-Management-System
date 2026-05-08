@@ -42,8 +42,6 @@ public class ViewIssuedBooks implements ActionListener {
         ibIdLabel = new JLabel();
         ibIdTextField = new JTextField();
 
-        ibScrollPane = new JScrollPane(ibBooksTable);
-
         ibIdLabel.setText("Enter Member ID: ");
         ibIdLabel.setBounds(10,80,530,30);
         ibIdLabel.setFont(new Font("Inter", Font.BOLD, 14));
