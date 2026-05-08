@@ -90,7 +90,12 @@ public class ViewIssuedBooks implements ActionListener {
         }
 
         if(e.getSource() == ibSubmitButton){
+            String searchId = ibIdTextField.getText().trim();
 
+            if (searchId.isEmpty()) {
+                new CreateDialogBox("Error", "Member ID required");
+                return;
+            }
         }
     }
 }
