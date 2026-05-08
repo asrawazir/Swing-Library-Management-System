@@ -38,9 +38,9 @@ public class RemoveMember implements ActionListener {
 
         rmIdTextField.setBounds(10,155,670,25);
         rmIdTextField.setFont(new Font("Inter",Font.PLAIN,14));
-        rmIdTextField.setForeground(Color.BLACK);
-        rmIdTextField.setBackground(Color.WHITE);
-        rmIdTextField.setCaretColor(Color.BLACK);
+        rmIdTextField.setForeground(Color.WHITE);
+        rmIdTextField.setBackground(new Color(10,20,35));
+        rmIdTextField.setCaretColor(Color.CYAN);
 
         rmBackButton.addActionListener(this);
         rmSubmitButton.addActionListener(this);
