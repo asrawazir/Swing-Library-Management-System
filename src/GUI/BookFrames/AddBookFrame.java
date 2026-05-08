@@ -70,22 +70,22 @@ public class AddBookFrame implements ActionListener {
         //Defining the font and color properties of text fields
         idTextField.setFont(new Font("Inter",Font.PLAIN,14));
         idTextField.setForeground(Color.BLACK);
-        idTextField.setBackground(Color.WHITE);
+        idTextField.setBackground(new Color(10,20,35));
         idTextField.setCaretColor(Color.BLACK);
         //================================================================
         titleTextField.setFont(new Font("Inter",Font.PLAIN,14));
         titleTextField.setForeground(Color.BLACK);
-        titleTextField.setBackground(Color.WHITE);
+        titleTextField.setBackground(new Color(10,20,35));
         titleTextField.setCaretColor(Color.BLACK);
         //================================================================
         authorTextField.setFont(new Font("Inter",Font.PLAIN,14));
         authorTextField.setForeground(Color.BLACK);
-        authorTextField.setBackground(Color.WHITE);
+        authorTextField.setBackground(new Color(10,20,35));
         authorTextField.setCaretColor(Color.BLACK);
         //================================================================
         quantityTextField.setFont(new Font("Inter",Font.PLAIN,14));
         quantityTextField.setForeground(Color.BLACK);
-        quantityTextField.setBackground(Color.WHITE);
+        quantityTextField.setBackground(new Color(10,20,35));
         quantityTextField.setCaretColor(Color.BLACK);
         //================================================================
 
