@@ -41,15 +41,15 @@ public class ReturnBookFrame implements ActionListener {
 
         memberIdTextField.setBounds(10,180,670,30);
         memberIdTextField.setFont(new Font("Inter",Font.PLAIN,14));
-        memberIdTextField.setForeground(Color.BLACK);
+        memberIdTextField.setForeground(Color.WHITE);
         memberIdTextField.setBackground(Color.WHITE);
-        memberIdTextField.setCaretColor(Color.BLACK);
+        memberIdTextField.setCaretColor(Color.WHITE);
 
         bookIdTextField.setBounds(10,240,670,30);
         bookIdTextField.setFont(new Font("Inter",Font.PLAIN,14));
-        bookIdTextField.setForeground(Color.BLACK);
+        bookIdTextField.setForeground(Color.WHITE);
         bookIdTextField.setBackground(Color.WHITE);
-        bookIdTextField.setCaretColor(Color.BLACK);
+        bookIdTextField.setCaretColor(Color.WHITE);
 
         submitButton.addActionListener(this);
         backButton.addActionListener(this);
