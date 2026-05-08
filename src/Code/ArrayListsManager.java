@@ -194,7 +194,7 @@ public class ArrayListsManager {
         return null;
     }
 
-    public ArrayList<IssuedBook> ViewBooksByMemberId(String memberID) {
+    public ArrayList<IssuedBook> viewBooksByMemberId(String memberID) {
         ArrayList<IssuedBook> result = new ArrayList<>();
 
         if (this.issuedBooks == null) return result;
