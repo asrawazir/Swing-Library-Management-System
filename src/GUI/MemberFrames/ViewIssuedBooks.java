@@ -47,6 +47,9 @@ public class ViewIssuedBooks implements ActionListener {
 
         ibIdTextField.setBounds(10, 120, 530, 30);
         ibIdTextField.setFont(new Font("Inter", Font.PLAIN, 14));
+        ibIdTextField.setForeground(Color.WHITE);
+        ibIdTextField.setBackground(new Color(10,20,35));
+        ibIdTextField.setCaretColor(Color.CYAN);
 
         String[] columns = {"Book ID", "Book Title", "Issue Date"};
 
