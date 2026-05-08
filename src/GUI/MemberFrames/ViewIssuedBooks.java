@@ -44,6 +44,8 @@ public class ViewIssuedBooks implements ActionListener {
         ibIdLabel.setText("Enter Member ID: ");
         ibIdLabel.setBounds(10, 80, 530, 30);
         ibIdLabel.setFont(new Font("Inter", Font.BOLD, 14));
+        ibIdLabel.setBackground(new Color(10,20,35));
+        ibIdLabel.setForeground(Color.WHITE);
 
         ibIdTextField.setBounds(10, 120, 530, 30);
         ibIdTextField.setFont(new Font("Inter", Font.PLAIN, 14));
