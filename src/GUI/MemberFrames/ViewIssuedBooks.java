@@ -96,6 +96,8 @@ public class ViewIssuedBooks implements ActionListener {
                 new CreateDialogBox("Error", "Member ID required");
                 return;
             }
+
+            ibTableModel.setRowCount(0);
         }
     }
 }
