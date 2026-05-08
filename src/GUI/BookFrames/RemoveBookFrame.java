@@ -34,12 +34,12 @@ public class RemoveBookFrame implements ActionListener {
 
         //Defining the properties for idLabel
         idLabel.setText("Enter Book ID : ");
-        idLabel.setBounds(10,120,680,30);
+        idLabel.setBounds(10,150,680,25);
         idLabel.setFont(new Font("Inter",Font.BOLD,14));
-        idLabel.setBackground(Color.LIGHT_GRAY);
+        idLabel.setForeground(Color.WHITE);
 
         //Defining the properties for idTextField
-        idTextField.setBounds(10,160,670,30);
+        idTextField.setBounds(10,180,670,30);
         idTextField.setFont(new Font("Inter",Font.PLAIN,14));
         idTextField.setForeground(Color.BLACK);
         idTextField.setBackground(Color.WHITE);
