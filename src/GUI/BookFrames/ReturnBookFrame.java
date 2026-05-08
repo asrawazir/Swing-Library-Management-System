@@ -35,9 +35,9 @@ public class ReturnBookFrame implements ActionListener {
         bookIdLabel.setBounds(10,210,680,25);
 
         memberIdLabel.setFont(new Font("Inter",Font.BOLD,14));
-        memberIdLabel.setBackground(Color.LIGHT_GRAY);
+        memberIdLabel.setForeground(Color.WHITE);
         bookIdLabel.setFont(new Font("Inter",Font.BOLD,14));
-        bookIdLabel.setBackground(Color.LIGHT_GRAY);
+        bookIdLabel.setForeground(Color.WHITE);
 
         memberIdTextField.setBounds(10,180,670,30);
         memberIdTextField.setFont(new Font("Inter",Font.PLAIN,14));
