@@ -43,7 +43,7 @@ public class MainFrame implements ActionListener {
 
         mLabel = new JLabel("Library Management System");
         mLabel.setFont(new Font("Bookman Old Style", Font.BOLD, 28));
-        mLabel.setForeground(new Color(20, 30, 48));
+        mLabel.setForeground(Color.white);
         mLabel.setBounds(40, 35, 450, 40);
 
         transparentPanel.add(mLabel);
