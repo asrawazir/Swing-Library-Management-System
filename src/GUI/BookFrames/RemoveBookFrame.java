@@ -2,6 +2,7 @@ package GUI.BookFrames;
 
 import Code.ArrayListsManager;
 import Code.Book;
+import Code.FileManager;
 import GUI.AdditionalClasses.*;
 
 import javax.swing.*;
@@ -22,6 +23,7 @@ public class RemoveBookFrame implements ActionListener {
     JLabel idLabel = new JLabel();
     JTextField idTextField = new JTextField();
 
+    FileManager fileManager = new FileManager();
     ArrayListsManager alm = ArrayListsManager.instance;
     ArrayList<Book> books = alm.getBooksList();
 
@@ -84,6 +86,7 @@ public class RemoveBookFrame implements ActionListener {
                     alm.removeBook(books.get(i));
                 }
             }
+            fileManager.saveBooksDataToFile();
 
             new CreateDialogBox("Success","Book Removed Successfully");
         }
