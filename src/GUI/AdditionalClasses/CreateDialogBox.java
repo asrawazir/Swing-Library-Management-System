@@ -32,6 +32,8 @@ public class CreateDialogBox extends JOptionPane {
      closeButton.setFont(new Font("Arial", Font.BOLD, 14));
      closeButton.setMargin(new Insets(0,0,0,0));
 
+     closeButton.addActionListener(e -> dispose());
+   
 
 
 
