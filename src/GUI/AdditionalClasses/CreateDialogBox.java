@@ -38,7 +38,8 @@ public class CreateDialogBox extends JOptionPane {
 
 
      JLabel message=new JLabel(text);
-     
+     message.setForeground(Color.white);
+    
 
 
 
