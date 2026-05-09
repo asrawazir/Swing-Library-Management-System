@@ -1,6 +1,9 @@
 package Code;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileManager {
@@ -21,6 +24,21 @@ public class FileManager {
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
+        }
+    }
+
+    public void saveBooksDataToFile(){
+        try (PrintWriter pw = new PrintWriter(new FileWriter(BOOKS_DATA_FILE))) {
+            ArrayList<Book> books = alm.getBooksList();
+            for (int i = 0; i < books.size(); i++) {
+                pw.println(
+                        books.get(i).getID()+","+
+                                books.get(i).getTitle()+","+
+                                books.get(i).getAuthor()+","+
+                                books.get(i).getTotalQuantity());
+            }
+        } catch (Exception e2) {
+            System.out.println("Error saving books data.");
         }
     }
 }
