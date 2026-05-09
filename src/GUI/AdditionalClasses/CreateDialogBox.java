@@ -10,3 +10,7 @@ public class CreateDialogBox extends JOptionPane {
      setLocationRelativeTo(null);
      setModal(true);
      setLayout(null);
+
+     getContentPane().setBackground(new Color(20,26,46));
+    
+
