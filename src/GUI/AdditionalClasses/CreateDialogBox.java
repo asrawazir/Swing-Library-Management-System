@@ -18,6 +18,9 @@ public class CreateDialogBox extends JOptionPane {
      topPanel.setBounds(0,0,300,30);
      topPanel.setLayout(null);
 
+     JLabel titleLabel=new JLabel(title);
+    
+
 
     }
 }
