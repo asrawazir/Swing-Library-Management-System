@@ -51,7 +51,9 @@ public class DisplayAllRoomsFrame implements ActionListener {
 
         JScrollPane scrollPane = new JScrollPane(table);
 
-        scrollPane.setBounds(100, 100, 500, 170);
+        scrollPane.setBounds(40, 100, 600, 250);
+
+
         frame.add(label);
         frame.add(backButton);
         frame.add(exitButton);
