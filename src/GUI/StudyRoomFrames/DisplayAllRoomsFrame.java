@@ -47,7 +47,7 @@ public class DisplayAllRoomsFrame implements ActionListener {
 
         table.getTableHeader().setBackground(new Color(10,15,35));
         table.getTableHeader().setForeground(Color.CYAN);
-        
+        table.getTableHeader().setFont(new Font("Arial",Font.BOLD,14));
 
         JScrollPane scrollPane = new JScrollPane(table);
 
