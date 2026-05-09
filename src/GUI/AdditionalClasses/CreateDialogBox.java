@@ -37,6 +37,10 @@ public class CreateDialogBox extends JOptionPane {
      topPanel.add(closeButton);
 
 
+     JLabel message=new JLabel(text);
+     
+
+
 
     }
 }
