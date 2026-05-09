@@ -46,7 +46,7 @@ public class CreateDialogBox extends JOptionPane {
      okButton.setBounds(110,90,80,30);
 
      okButton.setBackground(new Color(40,50,80));
-     
+     okButton.setForeground(Color.cyan);
 
 
     }
