@@ -19,7 +19,8 @@ public class CreateDialogBox extends JOptionPane {
      topPanel.setLayout(null);
 
      JLabel titleLabel=new JLabel(title);
-    
+     titleLabel.setForeground(Color.WHITE);
+     
 
 
     }
