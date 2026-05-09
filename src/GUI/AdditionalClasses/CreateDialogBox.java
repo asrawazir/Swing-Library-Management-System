@@ -42,6 +42,8 @@ public class CreateDialogBox extends JOptionPane {
      message.setHorizontalAlignment(SwingConstants.CENTER);
      message.setBounds(0,50,300,20);
 
+     JButton okButton=new JButton("OK");
+     
 
 
     }
