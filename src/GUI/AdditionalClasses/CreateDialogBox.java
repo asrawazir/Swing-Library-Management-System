@@ -27,6 +27,7 @@ public class CreateDialogBox extends JOptionPane {
      closeButton.setBounds(255,2,40,25);
      closeButton.setBorderPainted(false);
      closeButton.setContentAreaFilled(false);
+     closeButton.setBackground(new Color(10,15,35));
     
 
 
