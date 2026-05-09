@@ -32,6 +32,8 @@ public class CreateFrame extends JFrame implements ActionListener, MouseListener
         titleLabel.setText("Library Management System");
         titleLabel.setForeground(Color.WHITE);
         titleLabel.setFont(new Font("Inter", Font.BOLD,12));
+
+        titlebar.add(titleLabel, BorderLayout.WEST);
     }
 
     @Override
