@@ -38,7 +38,7 @@ public class DisplayAllRoomsFrame implements ActionListener {
             data[i][2]=r.getIsReserved()?r.getReservedByMemberID():"-";
         }
         JTable table = new JTable(data, column);
-        table.setBackground(new Color(10,20,35));
+        table.setBackground(new Color(15,22,40));
         table.setForeground(Color.white);
 
         JScrollPane scrollPane = new JScrollPane(table);
