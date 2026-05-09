@@ -34,7 +34,7 @@ public class CreateDialogBox extends JOptionPane {
 
      closeButton.addActionListener(e -> dispose());
      topPanel.add(titleLabel);
-   
+     topPanel.add(closeButton);
 
 
 
