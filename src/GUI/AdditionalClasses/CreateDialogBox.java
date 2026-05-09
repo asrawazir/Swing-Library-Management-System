@@ -9,4 +9,4 @@ public class CreateDialogBox extends JOptionPane {
      setSize(300,150);
      setLocationRelativeTo(null);
      setModal(true);
-     
+     setLayout(null);
