@@ -36,12 +36,12 @@ public class SearchMemberById implements ActionListener {
         siIdTextField = new JTextField();
 
         siIdLabel.setText("Enter Member ID : ");
-        siIdLabel.setBounds(10,80,530,30);
+        siIdLabel.setBounds(10,90,530,30);
         siIdLabel.setFont(new Font("Inter",Font.BOLD,14));
         siIdLabel.setBackground(new Color(10,20,35));
         siIdLabel.setForeground(Color.WHITE);
 
-        siIdTextField.setBounds(10,120,530,30);
+        siIdTextField.setBounds(10,130,530,30);
         siIdTextField.setFont(new Font("Inter",Font.PLAIN,14));
         siIdTextField.setForeground(Color.WHITE);
         siIdTextField.setBackground(new Color(10,20,35));
