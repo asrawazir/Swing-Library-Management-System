@@ -43,7 +43,8 @@ public class CreateDialogBox extends JOptionPane {
      message.setBounds(0,50,300,20);
 
      JButton okButton=new JButton("OK");
-     
+     okButton.setBounds(110,90,80,30);
+
 
 
     }
