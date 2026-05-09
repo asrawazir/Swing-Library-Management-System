@@ -15,6 +15,7 @@ public class CreateDialogBox extends JOptionPane {
      setUndecorated(true);
      JPanel topPanel=new JPanel();
      topPanel.setBackground(new Color(10,15,35));
+     topPanel.setBounds(0,0,300,30);
      
 
 
