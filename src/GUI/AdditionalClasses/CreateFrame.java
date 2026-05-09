@@ -49,6 +49,9 @@ public class CreateFrame extends JFrame implements ActionListener, MouseListener
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == closeButton){
+            System.exit(0);
+        }
 
     }
 
