@@ -49,7 +49,7 @@ public class CreateDialogBox extends JOptionPane {
      okButton.setForeground(Color.cyan);
 
      okButton.setFocusable(false);
-     
+     okButton.addActionListener(e -> dispose());
 
 
 
