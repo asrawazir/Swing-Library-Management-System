@@ -46,48 +46,48 @@ public class RegisterMember implements ActionListener{
         emailTextField = new JTextField();
 
         idLabel.setText("Enter your id: ");
-        idLabel.setBounds(10,80,680,25);
+        idLabel.setBounds(10,90,680,25);
         idLabel.setBackground(new Color(10,20,35));
         idLabel.setFont(new Font("Inter",Font.BOLD,14));
         idLabel.setForeground(Color.WHITE);
 
         nameLabel.setText("Enter your name: ");
-        nameLabel.setBounds(10,140,680,25);
+        nameLabel.setBounds(10,150,680,25);
         nameLabel.setBackground(new Color(10,20,35));
         nameLabel.setFont(new Font("Inter",Font.BOLD,14));
         nameLabel.setForeground(Color.WHITE);
 
         phoneLabel.setText("Enter your phone Number: ");
-        phoneLabel.setBounds(10,200,680,25);
+        phoneLabel.setBounds(10,210,680,25);
         phoneLabel.setBackground(new Color(10,20,35));
         phoneLabel.setFont(new Font("Inter",Font.BOLD,14));
         phoneLabel.setForeground(Color.WHITE);
 
         emailLabel.setText("Enter your email: ");
-        emailLabel.setBounds(10,260,680,25);
+        emailLabel.setBounds(10,270,680,25);
         emailLabel.setBackground(new Color(10,20,35));
         emailLabel.setFont(new Font("Inter",Font.BOLD,14));
         emailLabel.setForeground(Color.WHITE);
 
-        idTextField.setBounds(10,110,670,25);
+        idTextField.setBounds(10,120,670,25);
         idTextField.setFont(new Font("Inter",Font.PLAIN,14));
         idTextField.setForeground(Color.WHITE);
         idTextField.setBackground(new Color(10,20,35));
         idTextField.setCaretColor(Color.CYAN);
 
-        nameTextField.setBounds(10,170,670,25);
+        nameTextField.setBounds(10,180,670,25);
         nameTextField.setFont(new Font("Inter",Font.PLAIN,14));
         nameTextField.setForeground(Color.WHITE);
         nameTextField.setBackground(new Color(10,20,35));
         nameTextField.setCaretColor(Color.CYAN);
 
-        phoneTextField.setBounds(10,230,670,25);
+        phoneTextField.setBounds(10,240,670,25);
         phoneTextField.setFont(new Font("Inter",Font.PLAIN,14));
         phoneTextField.setForeground(Color.WHITE);
         phoneTextField.setBackground(new Color(10,20,35));
         phoneTextField.setCaretColor(Color.CYAN);
 
-        emailTextField.setBounds(10,290,670,25);
+        emailTextField.setBounds(10,300,670,25);
         emailTextField.setFont(new Font("Inter",Font.PLAIN,14));
         emailTextField.setForeground(Color.WHITE);
         emailTextField.setBackground(new Color(10,20,35));
