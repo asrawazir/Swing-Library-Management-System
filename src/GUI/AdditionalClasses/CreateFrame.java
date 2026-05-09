@@ -13,6 +13,8 @@ public class CreateFrame extends JFrame implements ActionListener, MouseListener
 
     //default Constructor
     public CreateFrame(){
+        this.setUndecorated(true);
+
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(700,500);
         this.getContentPane().setBackground(new Color(26,26,46));
