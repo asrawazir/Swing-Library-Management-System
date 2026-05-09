@@ -55,6 +55,8 @@ public class CreateDialogBox extends JOptionPane {
      add(message);
      add(okButton);
 
+     setVisible(true);
+
 
     }
 }
