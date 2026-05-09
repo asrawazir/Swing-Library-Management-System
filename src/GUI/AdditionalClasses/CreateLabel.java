@@ -7,7 +7,7 @@ public class CreateLabel extends JLabel{
 
     //default Constructor
     public CreateLabel(String title) {
-        this.setLocation(0, 0);
+        this.setLocation(0, 30);
         this.setSize(700, 70);
         this.setBackground(new Color(22,33,62));
         this.setForeground(new Color(0,212,255)); //text color
