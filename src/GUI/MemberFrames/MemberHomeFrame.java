@@ -24,11 +24,11 @@ public class MemberHomeFrame implements ActionListener {
         mhFrame = new CreateFrame();
         mhLabel = new CreateLabel("Member Home Frame");
 
-        button1 = new FrameButtons("Register Member",60,120);
-        button2 = new FrameButtons("Search Member", 260,120);
-        button3 = new FrameButtons("View Issued Books", 460,120);
-        button4 = new FrameButtons("Remove Member", 160,220);
-        button5 = new FrameButtons("Display All", 360,220);
+        button1 = new FrameButtons("Register Member",60,150);
+        button2 = new FrameButtons("Search Member", 260,150);
+        button3 = new FrameButtons("View Issued Books", 460,150);
+        button4 = new FrameButtons("Remove Member", 160,250);
+        button5 = new FrameButtons("Display All", 360,250);
 
         mhBackButton = new CreateBackButton();
         mhExitButton = new CreateExitButton();
