@@ -193,4 +193,21 @@ public class ArrayListsManager {
         }
         return null;
     }
+
+    public ArrayList<IssuedBook> viewBooksByMemberId(String memberID) {
+        ArrayList<IssuedBook> result = new ArrayList<>();
+
+        if (this.issuedBooks == null) return result;
+
+        for (IssuedBook ib : this.issuedBooks) {
+            if (ib == null || ib.getMember() == null || ib.getBook() == null) {
+                continue;
+            }
+
+            if (ib.getMember().getId().equalsIgnoreCase(memberID)) {
+                result.add(ib);
+            }
+        }
+        return result;
+    }
 }
