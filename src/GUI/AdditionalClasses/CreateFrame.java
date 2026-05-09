@@ -27,6 +27,8 @@ public class CreateFrame extends JFrame implements ActionListener, MouseListener
         titlebar.setBackground(new Color(26,26,46));
         titlebar.setBounds(0, 0, 700, 30);
         titlebar.setLayout(new BorderLayout());
+
+        JLabel titleLabel = new JLabel();
     }
 
     @Override
