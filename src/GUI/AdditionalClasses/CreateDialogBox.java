@@ -3,7 +3,7 @@ package GUI.AdditionalClasses;
 import javax.swing.*;
 import java.awt.*;
 
-public class CreateDialogBox extends JOptionPane {
+public class CreateDialogBox extends JDialog {
 
     public CreateDialogBox( String title, String text){
      setTitle(title);
