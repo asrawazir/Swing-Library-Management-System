@@ -38,9 +38,9 @@ public class HomeFrame implements ActionListener {
         exitButton=new CreateExitButton();
 
         //creating navigation buttons with titles and labels
-        button1=new FrameButtons(" Book Menu",70,150);
-        button2=new FrameButtons(" Member Menu",260,150);
-        button3=new FrameButtons(" Room Menu",455,150);
+        button1=new FrameButtons(" Book Menu",70,170);
+        button2=new FrameButtons(" Member Menu",260,170);
+        button3=new FrameButtons(" Room Menu",455,170);
 
         //registering action listeners for buttons
         button1.addActionListener(this);
