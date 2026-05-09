@@ -1,6 +1,7 @@
 package GUI.AdditionalClasses;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class CreateDialogBox extends JOptionPane {
 
