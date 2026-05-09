@@ -43,6 +43,8 @@ public class CreateFrame extends JFrame implements ActionListener, MouseListener
         closeButton.setFont(new Font("Inter", Font.BOLD,12));
 
         titlebar.add(closeButton, BorderLayout.EAST);
+
+        this.add(titlebar);
     }
 
     @Override
