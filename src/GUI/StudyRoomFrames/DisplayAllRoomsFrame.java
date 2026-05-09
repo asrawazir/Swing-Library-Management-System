@@ -53,7 +53,8 @@ public class DisplayAllRoomsFrame implements ActionListener {
 
         scrollPane.setBounds(40, 100, 600, 250);
         scrollPane.getViewport().setBackground(new Color(15, 22, 40));
-
+        scrollPane.setBorder(BorderFactory.createLineBorder(
+                new Color(0, 180, 255), 1));
 
 
         frame.add(label);
