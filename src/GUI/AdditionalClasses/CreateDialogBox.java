@@ -20,7 +20,7 @@ public class CreateDialogBox extends JOptionPane {
 
      JLabel titleLabel=new JLabel(title);
      titleLabel.setForeground(Color.WHITE);
-     
+     titleLabel.setBounds(10,5,200,20);
 
 
     }
