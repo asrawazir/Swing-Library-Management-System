@@ -8,6 +8,9 @@ public class CreateFrame extends JFrame implements ActionListener, MouseListener
 
     private int mouseX;
     private int mouseY;
+    private JPanel titlebar;
+    private JButton closeButton;
+
     //default Constructor
     public CreateFrame(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
