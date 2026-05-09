@@ -33,6 +33,7 @@ public class CreateDialogBox extends JOptionPane {
      closeButton.setMargin(new Insets(0,0,0,0));
 
      closeButton.addActionListener(e -> dispose());
+     topPanel.add(titleLabel);
    
 
 
