@@ -34,6 +34,9 @@ public class CreateFrame extends JFrame implements ActionListener, MouseListener
         titleLabel.setFont(new Font("Inter", Font.BOLD,12));
 
         titlebar.add(titleLabel, BorderLayout.WEST);
+
+        closeButton = new JButton();
+
     }
 
     @Override
