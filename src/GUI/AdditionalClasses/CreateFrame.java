@@ -22,6 +22,8 @@ public class CreateFrame extends JFrame implements ActionListener, MouseListener
         this.setLocationRelativeTo(null);
         this.setLayout(null);
         this.setTitle("Library Management System");
+
+        titlebar = new JPanel();
     }
 
     @Override
