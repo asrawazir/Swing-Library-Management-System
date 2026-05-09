@@ -36,7 +36,7 @@ public class ViewIssuedBooks implements ActionListener {
         ibLabel = new CreateLabel("Books Issued to Member");
         ibBackButton = new CreateBackButton();
         ibExitButton = new CreateExitButton();
-        ibSubmitButton = new CreateSubmitButton("Search",560,110);
+        ibSubmitButton = new CreateSubmitButton("Search",560,120);
 
         ibIdLabel = new JLabel();
         ibIdTextField = new JTextField();
