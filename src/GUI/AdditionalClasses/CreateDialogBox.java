@@ -51,6 +51,8 @@ public class CreateDialogBox extends JOptionPane {
      okButton.setFocusable(false);
      okButton.addActionListener(e -> dispose());
 
+     add(topPanel);
+     
 
 
     }
