@@ -8,4 +8,5 @@ public class CreateDialogBox extends JOptionPane {
      setTitle(title);
      setSize(300,150);
      setLocationRelativeTo(null);
-    
+     setModal(true);
+     
