@@ -40,7 +40,7 @@ public class CreateDialogBox extends JOptionPane {
      JLabel message=new JLabel(text);
      message.setForeground(Color.white);
      message.setHorizontalAlignment(SwingConstants.CENTER);
-    
+     message.setBounds(0,50,300,20);
 
 
 
