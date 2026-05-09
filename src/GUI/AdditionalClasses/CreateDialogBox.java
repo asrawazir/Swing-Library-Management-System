@@ -23,7 +23,8 @@ public class CreateDialogBox extends JOptionPane {
      titleLabel.setBounds(10,5,200,20);
 
      JButton closeButton=new JButton("X");
-     
+     closeButton.setFocusable(false);
+
 
 
     }
