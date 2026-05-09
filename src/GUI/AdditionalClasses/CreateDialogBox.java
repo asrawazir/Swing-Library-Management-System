@@ -24,6 +24,8 @@ public class CreateDialogBox extends JOptionPane {
 
      JButton closeButton=new JButton("X");
      closeButton.setFocusable(false);
+     closeButton.setBounds(255,2,40,25);
+     
 
 
 
