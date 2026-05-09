@@ -46,47 +46,47 @@ public class AddBookFrame implements ActionListener {
         quantityLabel.setText("Enter Total Quantity : ");
 
         //setting bounds of the JLabel objects
-        idLabel.setBounds(10,50,680,30);
-        titleLabel.setBounds(10,120,680,30);
-        authorLabel.setBounds(10,190,680,30);
-        quantityLabel.setBounds(10,260,680,30);
+        idLabel.setBounds(10,90,680,25);
+        titleLabel.setBounds(10,150,680,25);
+        authorLabel.setBounds(10,210,680,25);
+        quantityLabel.setBounds(10,270,680,25);
 
         //defining font properties and background color of JLabel objects
         idLabel.setFont(new Font("Inter",Font.BOLD,14));
-        idLabel.setBackground(Color.LIGHT_GRAY);
+        idLabel.setForeground(Color.WHITE);
         titleLabel.setFont(new Font("Inter",Font.BOLD,14));
-        titleLabel.setBackground(Color.LIGHT_GRAY);
+        titleLabel.setForeground(Color.WHITE);
         authorLabel.setFont(new Font("Inter",Font.BOLD,14));
-        authorLabel.setBackground(Color.LIGHT_GRAY);
+        authorLabel.setForeground(Color.WHITE);
         quantityLabel.setFont(new Font("Inter",Font.BOLD,14));
-        quantityLabel.setBackground(Color.LIGHT_GRAY);
+        quantityLabel.setForeground(Color.WHITE);
 
         //defining the location of Text Fields
-        idTextField.setBounds(10,80,670,30);
-        titleTextField.setBounds(10,150,670,30);
-        authorTextField.setBounds(10,220,670,30);
-        quantityTextField.setBounds(10,290,670,30);
+        idTextField.setBounds(10,120,670,30);
+        titleTextField.setBounds(10,180,670,30);
+        authorTextField.setBounds(10,240,670,30);
+        quantityTextField.setBounds(10,300,670,30);
 
         //Defining the font and color properties of text fields
         idTextField.setFont(new Font("Inter",Font.PLAIN,14));
-        idTextField.setForeground(Color.BLACK);
-        idTextField.setBackground(Color.WHITE);
-        idTextField.setCaretColor(Color.BLACK);
+        idTextField.setForeground(Color.WHITE);
+        idTextField.setBackground(new Color(10,20,35));
+        idTextField.setCaretColor(Color.WHITE);
         //================================================================
         titleTextField.setFont(new Font("Inter",Font.PLAIN,14));
-        titleTextField.setForeground(Color.BLACK);
-        titleTextField.setBackground(Color.WHITE);
-        titleTextField.setCaretColor(Color.BLACK);
+        titleTextField.setForeground(Color.WHITE);
+        titleTextField.setBackground(new Color(10,20,35));
+        titleTextField.setCaretColor(Color.WHITE);
         //================================================================
         authorTextField.setFont(new Font("Inter",Font.PLAIN,14));
-        authorTextField.setForeground(Color.BLACK);
-        authorTextField.setBackground(Color.WHITE);
-        authorTextField.setCaretColor(Color.BLACK);
+        authorTextField.setForeground(Color.WHITE);
+        authorTextField.setBackground(new Color(10,20,35));
+        authorTextField.setCaretColor(Color.WHITE);
         //================================================================
         quantityTextField.setFont(new Font("Inter",Font.PLAIN,14));
-        quantityTextField.setForeground(Color.BLACK);
-        quantityTextField.setBackground(Color.WHITE);
-        quantityTextField.setCaretColor(Color.BLACK);
+        quantityTextField.setForeground(Color.WHITE);
+        quantityTextField.setBackground(new Color(10,20,35));
+        quantityTextField.setCaretColor(Color.WHITE);
         //================================================================
 
         //Adding the labels to the frame

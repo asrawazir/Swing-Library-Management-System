@@ -26,13 +26,13 @@ public class SearchBookByID implements ActionListener {
         idLabel.setText("Enter Book ID : ");
         idLabel.setBounds(10,80,530,30);
         idLabel.setFont(new Font("Inter",Font.BOLD,14));
-        idLabel.setBackground(Color.LIGHT_GRAY);
+        idLabel.setForeground(Color.WHITE);
 
         idTextField.setBounds(10,120,530,30);
         idTextField.setFont(new Font("Inter",Font.PLAIN,14));
-        idTextField.setForeground(Color.BLACK);
-        idTextField.setBackground(Color.WHITE);
-        idTextField.setCaretColor(Color.BLACK);
+        idTextField.setForeground(Color.WHITE);
+        idTextField.setBackground(new Color(10,20,35));
+        idTextField.setCaretColor(Color.WHITE);
 
         books = alm.getBooksList();
         backButton.addActionListener(this);

@@ -38,12 +38,25 @@ public class DisplayAllRoomsFrame implements ActionListener {
             data[i][2]=r.getIsReserved()?r.getReservedByMemberID():"-";
         }
         JTable table = new JTable(data, column);
-        table.setBackground(new Color(10,20,35));
+        table.setBackground(new Color(15,22,40));
         table.setForeground(Color.white);
+        table.setSelectionBackground(new Color(0,120,215));
+        table.setSelectionForeground(Color.white);
+        table.setGridColor(new Color(40,60,90));
+        table.setRowHeight(20);
+
+        table.getTableHeader().setBackground(new Color(10,15,35));
+        table.getTableHeader().setForeground(Color.CYAN);
+        table.getTableHeader().setFont(new Font("Arial",Font.BOLD,14));
 
         JScrollPane scrollPane = new JScrollPane(table);
 
-        scrollPane.setBounds(100, 100, 500, 170);
+        scrollPane.setBounds(40, 100, 600, 250);
+        scrollPane.getViewport().setBackground(new Color(15, 22, 40));
+        scrollPane.setBorder(BorderFactory.createLineBorder(
+                new Color(0, 180, 255), 1));
+
+
         frame.add(label);
         frame.add(backButton);
         frame.add(exitButton);

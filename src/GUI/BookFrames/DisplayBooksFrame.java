@@ -8,6 +8,7 @@ import GUI.AdditionalClasses.CreateFrame;
 import GUI.AdditionalClasses.CreateLabel;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -48,6 +49,8 @@ public class DisplayBooksFrame implements ActionListener {
 
         //Creating the JTable object
         JTable table = new JTable(data,headers);
+        table.setBackground(new Color(10,20,35));
+        table.setForeground(Color.white);
 
         //Creating a scroll pane
         JScrollPane scrollPane = new JScrollPane(table);

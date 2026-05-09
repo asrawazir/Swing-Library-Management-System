@@ -43,36 +43,36 @@ public class IssueBookFrame implements ActionListener {
         dateLabel.setText("Enter Issue Date: ");
 
         //setting bounds of the JLabel objects
-        memberIdLabel.setBounds(10,50,680,30);
-        bookIdLabel.setBounds(10,120,680,30);
-        dateLabel.setBounds(10,190,680,30);
+        memberIdLabel.setBounds(10,90,680,25);
+        bookIdLabel.setBounds(10,150,680,25);
+        dateLabel.setBounds(10,210,680,25);
 
         //defining font properties and background color for JLabel objects
         memberIdLabel.setFont(new Font("Inter",Font.BOLD,14));
-        memberIdLabel.setBackground(Color.LIGHT_GRAY);
+        memberIdLabel.setForeground(Color.WHITE);
         bookIdLabel.setFont(new Font("Inter",Font.BOLD,14));
-        bookIdLabel.setBackground(Color.LIGHT_GRAY);
+        bookIdLabel.setForeground(Color.WHITE);
         dateLabel.setFont(new Font("Inter",Font.BOLD,14));
-        dateLabel.setBackground(Color.LIGHT_GRAY);
+        dateLabel.setForeground(Color.WHITE);
 
         //Defining location, font and color properties of text fields
-        memberIdTextField.setBounds(10,80,670,30);
+        memberIdTextField.setBounds(10,120,670,30);
         memberIdTextField.setFont(new Font("Inter",Font.PLAIN,14));
-        memberIdTextField.setForeground(Color.BLACK);
-        memberIdTextField.setBackground(Color.WHITE);
-        memberIdTextField.setCaretColor(Color.BLACK);
+        memberIdTextField.setForeground(Color.WHITE);
+        memberIdTextField.setBackground(new Color(10,20,35));
+        memberIdTextField.setCaretColor(Color.WHITE);
         //================================================================
-        bookIdTextField.setBounds(10,150,670,30);
+        bookIdTextField.setBounds(10,180,670,30);
         bookIdTextField.setFont(new Font("Inter",Font.PLAIN,14));
-        bookIdTextField.setForeground(Color.BLACK);
-        bookIdTextField.setBackground(Color.WHITE);
-        bookIdTextField.setCaretColor(Color.BLACK);
+        bookIdTextField.setForeground(Color.WHITE);
+        bookIdTextField.setBackground(new Color(10,20,35));
+        bookIdTextField.setCaretColor(Color.WHITE);
         //================================================================
-        dateTextField.setBounds(10,220,670,30);
+        dateTextField.setBounds(10,240,670,30);
         dateTextField.setFont(new Font("Inter",Font.PLAIN,14));
-        dateTextField.setForeground(Color.BLACK);
-        dateTextField.setBackground(Color.WHITE);
-        dateTextField.setCaretColor(Color.BLACK);
+        dateTextField.setForeground(Color.WHITE);
+        dateTextField.setBackground(new Color(10,20,35));
+        dateTextField.setCaretColor(Color.WHITE);
         //================================================================
 
         //Adding action listener method to buttons defined in the frame

@@ -2,6 +2,7 @@ package GUI.BookFrames;
 
 import Code.ArrayListsManager;
 import Code.Book;
+import Code.FileManager;
 import GUI.AdditionalClasses.*;
 
 import javax.swing.*;
@@ -22,6 +23,7 @@ public class RemoveBookFrame implements ActionListener {
     JLabel idLabel = new JLabel();
     JTextField idTextField = new JTextField();
 
+    FileManager fileManager = new FileManager();
     ArrayListsManager alm = ArrayListsManager.instance;
     ArrayList<Book> books = alm.getBooksList();
 
@@ -34,16 +36,16 @@ public class RemoveBookFrame implements ActionListener {
 
         //Defining the properties for idLabel
         idLabel.setText("Enter Book ID : ");
-        idLabel.setBounds(10,120,680,30);
+        idLabel.setBounds(10,150,680,25);
         idLabel.setFont(new Font("Inter",Font.BOLD,14));
-        idLabel.setBackground(Color.LIGHT_GRAY);
+        idLabel.setForeground(Color.WHITE);
 
         //Defining the properties for idTextField
-        idTextField.setBounds(10,160,670,30);
+        idTextField.setBounds(10,180,670,30);
         idTextField.setFont(new Font("Inter",Font.PLAIN,14));
-        idTextField.setForeground(Color.BLACK);
-        idTextField.setBackground(Color.WHITE);
-        idTextField.setCaretColor(Color.BLACK);
+        idTextField.setForeground(Color.WHITE);
+        idTextField.setBackground(new Color(10,20,35));
+        idTextField.setCaretColor(Color.WHITE);
 
 
 
@@ -84,6 +86,7 @@ public class RemoveBookFrame implements ActionListener {
                     alm.removeBook(books.get(i));
                 }
             }
+            fileManager.saveBooksDataToFile();
 
             new CreateDialogBox("Success","Book Removed Successfully");
         }

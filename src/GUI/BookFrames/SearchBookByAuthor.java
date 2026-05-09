@@ -25,13 +25,13 @@ public class SearchBookByAuthor implements ActionListener {
         authorLabel.setText("Enter Author Name : ");
         authorLabel.setBounds(10,80,530,30);
         authorLabel.setFont(new Font("Inter",Font.BOLD,14));
-        authorLabel.setBackground(Color.LIGHT_GRAY);
+        authorLabel.setForeground(Color.WHITE);
 
         authorTextField.setBounds(10,120,530,30);
         authorTextField.setFont(new Font("Inter",Font.PLAIN,14));
-        authorTextField.setForeground(Color.BLACK);
-        authorTextField.setBackground(Color.WHITE);
-        authorTextField.setCaretColor(Color.BLACK);
+        authorTextField.setForeground(Color.WHITE);
+        authorTextField.setBackground(new Color(10,20,35));
+        authorTextField.setCaretColor(Color.WHITE);
 
         backButton.addActionListener(this);
         submitButton.addActionListener(this);
@@ -73,6 +73,8 @@ public class SearchBookByAuthor implements ActionListener {
                     data[i][2] = foundBook.get(i).getAuthor();
                 }
                 JTable table = new JTable(data,headers);
+                table.setBackground(new Color(10,20,35));
+                table.setForeground(Color.white);
                 JScrollPane scrollPane = new JScrollPane(table);
                 scrollPane.setBounds(70,180,560,180);
                 sbaFrame.add(scrollPane);
