@@ -6,6 +6,8 @@ import javax.swing.*;
 
 public class CreateFrame extends JFrame implements ActionListener, MouseListener, MouseMotionListener {
 
+    private int mouseX;
+    private int mouseY;
     //default Constructor
     public CreateFrame(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
