@@ -22,6 +22,9 @@ public class CreateDialogBox extends JOptionPane {
      titleLabel.setForeground(Color.WHITE);
      titleLabel.setBounds(10,5,200,20);
 
+     JButton closeButton=new JButton("X");
+     
+
 
     }
 }
