@@ -45,7 +45,8 @@ public class DisplayAllRoomsFrame implements ActionListener {
         table.setGridColor(new Color(40,60,90));
         table.setRowHeight(20);
 
-       
+        table.getTableHeader().setBackground(new Color(10,15,35));
+
 
         JScrollPane scrollPane = new JScrollPane(table);
 
