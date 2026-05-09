@@ -26,14 +26,15 @@ public class CreateFrame extends JFrame implements ActionListener, MouseListener
         titlebar = new JPanel();
         titlebar.setBackground(new Color(26,26,46));
         titlebar.setBounds(0, 0, 700, 30);
-        titlebar.setLayout(new BorderLayout());
+        titlebar.setLayout(null);
 
         JLabel titleLabel = new JLabel();
         titleLabel.setText("Library Management System");
         titleLabel.setForeground(Color.WHITE);
         titleLabel.setFont(new Font("Inter", Font.BOLD,12));
+        titleLabel.setBounds(10,0,200,30);
 
-        titlebar.add(titleLabel, BorderLayout.WEST);
+        titlebar.add(titleLabel);
 
         closeButton = new JButton();
         closeButton.setText("X");
