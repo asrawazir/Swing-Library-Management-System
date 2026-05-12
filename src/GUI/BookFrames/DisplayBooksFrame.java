@@ -51,6 +51,8 @@ public class DisplayBooksFrame implements ActionListener {
         JTable table = new JTable(data,headers);
         table.setBackground(new Color(15,22,40));
         table.setForeground(Color.white);
+        table.setSelectionBackground(new Color(0,120,215));
+
 
         //Creating a scroll pane
         JScrollPane scrollPane = new JScrollPane(table);
