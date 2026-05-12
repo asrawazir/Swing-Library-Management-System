@@ -68,7 +68,7 @@ public class DisplayBooksFrame implements ActionListener {
         //Creating a scroll pane
         JScrollPane scrollPane = new JScrollPane(table);
         //Setting pounds of Scroll pane
-        scrollPane.setBounds(70,80,560,280);
+        scrollPane.setBounds(70,100,560,280);
 
         //Adding action listener method to back button
         backButton.addActionListener(this);
