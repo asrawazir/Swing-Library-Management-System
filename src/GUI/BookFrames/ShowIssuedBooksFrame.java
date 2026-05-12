@@ -38,7 +38,7 @@ public class ShowIssuedBooksFrame implements ActionListener {
         table.setForeground(Color.white);
 
         JScrollPane scrollPane = new JScrollPane(table);
-        scrollPane.setBounds(70,80,560,280);
+        scrollPane.setBounds(70,120,560,250);
 
         backButton.addActionListener(this);
 
