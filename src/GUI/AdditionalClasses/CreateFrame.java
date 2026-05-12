@@ -103,6 +103,11 @@ public class CreateFrame extends JFrame implements ActionListener, MouseListener
 
     @Override
     public void mouseDragged(MouseEvent e) {
+        if(e.getSource() == titlebar){
+            int newX = getLocation().x + e.getX() - mouseX;
+            int newY = getLocation().y + e.getY() - mouseY;
+            setLocation(newX,newY);
+        }
 
     }
 
