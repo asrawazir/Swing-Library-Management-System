@@ -45,4 +45,8 @@ public class Book {
         return availableQuantity;
     }
 
+    public void subtractAvailableQuantity() {
+        this.availableQuantity = Integer.toString(Integer.parseInt(availableQuantity) - 1);
+    }
+
 }

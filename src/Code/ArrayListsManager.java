@@ -161,6 +161,15 @@ public class ArrayListsManager {
         return null;
     }
 
+    public void issueBook(String id){
+        ArrayListsManager alm = ArrayListsManager.instance;
+        ArrayList<Book> books = alm.getBooksList();
+        for (int i = 0; i < books.size(); i++){
+            if (books.get(i).getID().equals(id)){
+                books.get(i).subtractAvailableQuantity();
+            }
+        }
+    }
     public void addIssuedBook(IssuedBook issuedBook){
         issuedBooks.add(issuedBook);
     }

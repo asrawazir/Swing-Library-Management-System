@@ -20,6 +20,8 @@ public class SearchBookByID implements ActionListener {
     JLabel idLabel = new JLabel();
     JTextField idTextField = new JTextField();
     ArrayList<Book> books;
+    JPanel foundBookPanel = null;
+    JLabel notFoundLabel = null;
 
     public SearchBookByID(){
 
@@ -54,14 +56,24 @@ public class SearchBookByID implements ActionListener {
             new SearchBookFrame();
         }
 
-        if (e.getSource()==submitButton){
+        if (e.getSource()==submitButton)
+        {
+            if (foundBookPanel != null) {
+                sbiFrame.remove(foundBookPanel);
+                foundBookPanel = null;
+            }
+            if (notFoundLabel != null) {
+                sbiFrame.remove(notFoundLabel);
+                notFoundLabel = null;
+            }
+
             String id = idTextField.getText();
             boolean found = false;
             for (int i = 0; i < books.size();i++){
                 if(books.get(i).getID().equalsIgnoreCase(id)){
                     Book foundBook = books.get(i);
 
-                    JPanel foundBookPanel = new JPanel();
+                    foundBookPanel = new JPanel();
                     foundBookPanel.setBackground(Color.white);
                     foundBookPanel.setBounds(170,160, 350,180);
                     foundBookPanel.setLayout(null);
@@ -99,14 +111,13 @@ public class SearchBookByID implements ActionListener {
                 }
             }
             if(!found){
-                JLabel notFoundLabel = new JLabel("Book not found");
+                notFoundLabel = new JLabel("Book not found");
                 notFoundLabel.setFont(new Font("Inter",Font.BOLD,25));
                 notFoundLabel.setBounds(250,200,300,40);
                 sbiFrame.add(notFoundLabel);
-                sbiFrame.repaint();
-                sbiFrame.revalidate();
             }
-
+            sbiFrame.repaint();
+            sbiFrame.revalidate();
         }
     }
 }
