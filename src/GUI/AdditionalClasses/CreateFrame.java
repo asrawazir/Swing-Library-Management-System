@@ -84,6 +84,9 @@ public class CreateFrame extends JFrame implements ActionListener, MouseListener
 
     @Override
     public void mouseExited(MouseEvent e) {
+        if(e.getSource() == closeButton){
+            closeButton.setBackground(new Color(26,26,46));
+        }
 
     }
 
