@@ -49,7 +49,8 @@ public class CreateFrame extends JFrame implements ActionListener, MouseListener
         closeButton.addActionListener(this);
         closeButton.addMouseListener(this);
 
-
+        titlebar.addMouseListener(this);
+        titlebar.addMouseMotionListener(this);
 
         this.add(titlebar);
     }
