@@ -49,7 +49,7 @@ public class DisplayBooksFrame implements ActionListener {
 
         //Creating the JTable object
         JTable table = new JTable(data,headers);
-        table.setBackground(new Color(10,20,35));
+        table.setBackground(new Color(15,22,40));
         table.setForeground(Color.white);
 
         //Creating a scroll pane
