@@ -55,7 +55,8 @@ public class DisplayBooksFrame implements ActionListener {
         table.setSelectionForeground(Color.white);
         table.setGridColor(new Color(40,60,90));
         table.setRowHeight(20);
-        
+        table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+       
 
         //Creating a scroll pane
         JScrollPane scrollPane = new JScrollPane(table);
