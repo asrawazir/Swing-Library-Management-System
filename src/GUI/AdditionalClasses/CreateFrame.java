@@ -40,13 +40,17 @@ public class CreateFrame extends JFrame implements ActionListener, MouseListener
         closeButton.setText("X");
         closeButton.setBackground(new Color(26,26,46));
         closeButton.setForeground(Color.WHITE);
-        closeButton.setBounds(670,0,30,30);
+        closeButton.setBounds(655,0,45,30);
         closeButton.setFont(new Font("Inter", Font.BOLD,12));
         closeButton.setFocusPainted(false);
 
-        titlebar.add(closeButton, BorderLayout.EAST);
+        titlebar.add(closeButton);
 
         closeButton.addActionListener(this);
+        closeButton.addMouseListener(this);
+
+        titlebar.addMouseListener(this);
+        titlebar.addMouseMotionListener(this);
 
         this.add(titlebar);
     }
@@ -66,26 +70,48 @@ public class CreateFrame extends JFrame implements ActionListener, MouseListener
 
     @Override
     public void mousePressed(MouseEvent e) {
+        if(e.getSource() == titlebar){
+            mouseX = e.getX();
+            mouseY = e.getY();
 
+            titlebar.setBackground(new Color(10, 35, 70));
+        }
+
+        if (e.getSource() == closeButton) {
+            closeButton.setBackground(new Color(180, 0, 0)); // Darker red
+        }
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-
+        if (e.getSource() == titlebar) {
+            titlebar.setBackground(new Color(15, 52, 96)); // Original color
+        }
     }
 
     @Override
     public void mouseEntered(MouseEvent e) {
+        if(e.getSource() == closeButton){
+            closeButton.setBackground(Color.RED);
+        }
 
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
+        if(e.getSource() == closeButton){
+            closeButton.setBackground(new Color(26,26,46));
+        }
 
     }
 
     @Override
     public void mouseDragged(MouseEvent e) {
+        if(e.getSource() == titlebar){
+            int newX = getLocation().x + e.getX() - mouseX;
+            int newY = getLocation().y + e.getY() - mouseY;
+            setLocation(newX,newY);
+        }
 
     }
 
