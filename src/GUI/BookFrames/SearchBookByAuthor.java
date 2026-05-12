@@ -14,7 +14,7 @@ public class SearchBookByAuthor implements ActionListener {
     CreateFrame sbaFrame = new CreateFrame();
     CreateBackButton backButton = new CreateBackButton();
     CreateExitButton exitButton = new CreateExitButton();
-    CreateSubmitButton submitButton = new CreateSubmitButton("Search",560,110);
+    CreateSubmitButton submitButton = new CreateSubmitButton("Search",560,125);
     CreateLabel label = new CreateLabel("Search Book by Author Name");
     JLabel authorLabel = new JLabel();
     JTextField authorTextField = new JTextField();
@@ -23,11 +23,11 @@ public class SearchBookByAuthor implements ActionListener {
     public SearchBookByAuthor(){
 
         authorLabel.setText("Enter Author Name : ");
-        authorLabel.setBounds(10,80,530,30);
+        authorLabel.setBounds(10,90,530,30);
         authorLabel.setFont(new Font("Inter",Font.BOLD,14));
         authorLabel.setForeground(Color.WHITE);
 
-        authorTextField.setBounds(10,120,530,30);
+        authorTextField.setBounds(10,130,530,30);
         authorTextField.setFont(new Font("Inter",Font.PLAIN,14));
         authorTextField.setForeground(Color.WHITE);
         authorTextField.setBackground(new Color(10,20,35));
