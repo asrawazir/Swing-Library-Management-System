@@ -115,10 +115,9 @@ public class SearchBookByID implements ActionListener {
                 notFoundLabel.setFont(new Font("Inter",Font.BOLD,25));
                 notFoundLabel.setBounds(250,200,300,40);
                 sbiFrame.add(notFoundLabel);
-                sbiFrame.repaint();
-                sbiFrame.revalidate();
             }
-
+            sbiFrame.repaint();
+            sbiFrame.revalidate();
         }
     }
 }
