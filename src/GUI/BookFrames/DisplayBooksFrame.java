@@ -61,7 +61,8 @@ public class DisplayBooksFrame implements ActionListener {
         table.getColumnModel().getColumn(2).setPreferredWidth(150);
         table.getColumnModel().getColumn(3).setPreferredWidth(80);
         table.getTableHeader().setBackground(new Color(10,15,35));
-
+        table.getTableHeader().setForeground(Color.CYAN);
+       
 
 
         //Creating a scroll pane
