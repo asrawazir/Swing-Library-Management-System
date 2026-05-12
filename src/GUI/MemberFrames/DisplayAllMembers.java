@@ -52,7 +52,7 @@ public class DisplayAllMembers implements ActionListener {
         dmTable.setRowHeight(20);
 
         dmScrollPane = new JScrollPane(dmTable);
-        dmScrollPane.setBounds(80,100,560,270);
+        dmScrollPane.setBounds(70,100,560,270);
 
         dmBackButton.addActionListener(this);
 
