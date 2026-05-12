@@ -111,9 +111,10 @@ public class SearchBookByID implements ActionListener {
                 }
             }
             if(!found){
-                notFoundLabel = new JLabel("Book not found");
-                notFoundLabel.setFont(new Font("Inter",Font.BOLD,25));
-                notFoundLabel.setBounds(250,200,300,40);
+                notFoundLabel = new JLabel("Book not found!");
+                notFoundLabel.setFont(new Font("Inter",Font.BOLD,30));
+                notFoundLabel.setForeground(Color.WHITE);
+                notFoundLabel.setBounds(250,250,300,40);
                 sbiFrame.add(notFoundLabel);
             }
             sbiFrame.repaint();
