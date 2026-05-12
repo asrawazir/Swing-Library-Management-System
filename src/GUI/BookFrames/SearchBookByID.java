@@ -20,6 +20,8 @@ public class SearchBookByID implements ActionListener {
     JLabel idLabel = new JLabel();
     JTextField idTextField = new JTextField();
     ArrayList<Book> books;
+    JPanel foundBookPanel = null;
+    JLabel notFoundLabel = null;
 
     public SearchBookByID(){
 
