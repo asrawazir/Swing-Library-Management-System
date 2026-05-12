@@ -40,11 +40,11 @@ public class CreateFrame extends JFrame implements ActionListener, MouseListener
         closeButton.setText("X");
         closeButton.setBackground(new Color(26,26,46));
         closeButton.setForeground(Color.WHITE);
-        closeButton.setBounds(670,0,30,30);
+        closeButton.setBounds(655,0,45,30);
         closeButton.setFont(new Font("Inter", Font.BOLD,12));
         closeButton.setFocusPainted(false);
 
-        titlebar.add(closeButton, BorderLayout.EAST);
+        titlebar.add(closeButton);
 
         closeButton.addActionListener(this);
 
@@ -76,6 +76,9 @@ public class CreateFrame extends JFrame implements ActionListener, MouseListener
 
     @Override
     public void mouseEntered(MouseEvent e) {
+        if(e.getSource() == closeButton){
+            closeButton.setBackground(Color.RED);
+        }
 
     }
 
