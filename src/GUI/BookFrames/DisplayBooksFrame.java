@@ -49,13 +49,26 @@ public class DisplayBooksFrame implements ActionListener {
 
         //Creating the JTable object
         JTable table = new JTable(data,headers);
-        table.setBackground(new Color(10,20,35));
+        table.setBackground(new Color(15,22,40));
         table.setForeground(Color.white);
+        table.setSelectionBackground(new Color(0,120,215));
+        table.setSelectionForeground(Color.white);
+        table.setGridColor(new Color(40,60,90));
+        table.setRowHeight(20);
+        table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        table.getColumnModel().getColumn(0).setPreferredWidth(60);
+        table.getColumnModel().getColumn(1).setPreferredWidth(250);
+        table.getColumnModel().getColumn(2).setPreferredWidth(150);
+        table.getColumnModel().getColumn(3).setPreferredWidth(80);
+        table.getTableHeader().setBackground(new Color(10,15,35));
+        table.getTableHeader().setForeground(Color.CYAN);
+        table.getTableHeader().setFont(new Font("Arial",Font.BOLD,14));
+
 
         //Creating a scroll pane
         JScrollPane scrollPane = new JScrollPane(table);
         //Setting pounds of Scroll pane
-        scrollPane.setBounds(70,80,560,280);
+        scrollPane.setBounds(70,100,560,280);
 
         //Adding action listener method to back button
         backButton.addActionListener(this);
