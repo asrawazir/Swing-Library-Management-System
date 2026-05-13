@@ -61,16 +61,26 @@ public class FileManager {
         }
     }
 
-    public void LoadMembersFromFile(){
+    public void loadMembersFromFile(){
 
         try{
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream(MEMBERS_DATA_FILE));
 
-            members = (ArrayList<Member>) ois.readObject();
+            alm.members = (ArrayList<Member>) ois.readObject();
+
+            System.out.println("Members loaded successfully");
+
+        } catch (FileNotFoundException e) {
+
+            System.out.println("No previous file found");
 
         } catch (IOException e) {
 
             System.out.println("Error reading file");
+
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            System.out.println("Class not found");
 
             e.printStackTrace();
         }
