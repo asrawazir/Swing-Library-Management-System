@@ -74,34 +74,43 @@ public class SearchBookByID implements ActionListener {
                     Book foundBook = books.get(i);
 
                     foundBookPanel = new JPanel();
-                    foundBookPanel.setBackground(Color.white);
-                    foundBookPanel.setBounds(170,160, 350,180);
-                    foundBookPanel.setLayout(null);
+                    foundBookPanel.setBounds(170,190,350,180);
+                    foundBookPanel.setBackground(new Color(20,30,45));
+                    foundBookPanel.setBorder(
+                            BorderFactory.createLineBorder(Color.WHITE,2)
+                    );
 
-                    JLabel foundBookIdLabel = new JLabel("Id: "+foundBook.getID());
-                    JLabel foundBookTitleLabel = new JLabel("Title: "+foundBook.getTitle());
-                    JLabel foundBookAuthorLabel = new JLabel("Author: "+foundBook.getAuthor());
-                    JLabel foundBookTotalLabel = new JLabel("Total Quantities: "+foundBook.getTotalQuantity());
-                    JLabel foundBookAvailableLabel = new JLabel("Available Quantity: "+foundBook.getAvailableQuantity());
+                    foundBookPanel.setLayout(new GridLayout(5,1,5,5));
 
-                    foundBookIdLabel.setFont(new Font("Inter",Font.BOLD,15));
-                    foundBookTitleLabel.setFont(new Font("Inter",Font.BOLD,15));
-                    foundBookAuthorLabel.setFont(new Font("Inter",Font.BOLD,15));
-                    foundBookTotalLabel.setFont(new Font("Inter",Font.BOLD,15));
-                    foundBookAvailableLabel.setFont(new Font("Inter",Font.BOLD ,15));
+                    JLabel foundBookIdLabel =
+                            new JLabel("Book ID: " + foundBook.getID());
 
-                    foundBookIdLabel.setBounds(70, 20, 200, 30);
-                    foundBookTitleLabel.setBounds(70, 50, 200, 30);
-                    foundBookAuthorLabel.setBounds(70, 80, 200, 30);
-                    foundBookTotalLabel.setBounds(70, 110, 200, 30);
-                    foundBookAvailableLabel.setBounds(70, 140, 200, 30);
+                    JLabel foundBookTitleLabel =
+                            new JLabel("Title: " + foundBook.getTitle());
 
-                    foundBookPanel.add(foundBookIdLabel);
-                    foundBookPanel.add(foundBookTitleLabel);
-                    foundBookPanel.add(foundBookAuthorLabel);
-                    foundBookPanel.add(foundBookTotalLabel);
-                    foundBookPanel.add(foundBookAvailableLabel);
+                    JLabel foundBookAuthorLabel =
+                            new JLabel("Author: " + foundBook.getAuthor());
 
+                    JLabel foundBookTotalLabel =
+                            new JLabel("Total Quantity: " + foundBook.getTotalQuantity());
+
+                    JLabel foundBookAvailableLabel =
+                            new JLabel("Available Quantity: " + foundBook.getAvailableQuantity());
+
+                    JLabel[] labels = {
+                            foundBookIdLabel,
+                            foundBookTitleLabel,
+                            foundBookAuthorLabel,
+                            foundBookTotalLabel,
+                            foundBookAvailableLabel
+                    };
+
+                    for (JLabel lbl : labels) {
+                        lbl.setForeground(Color.WHITE);
+                        lbl.setFont(new Font("Inter", Font.BOLD, 16));
+                        lbl.setBorder(BorderFactory.createEmptyBorder(0,15,0,0));
+                        foundBookPanel.add(lbl);
+                    }
                     sbiFrame.add(foundBookPanel);
                     sbiFrame.revalidate();
                     sbiFrame.repaint();
