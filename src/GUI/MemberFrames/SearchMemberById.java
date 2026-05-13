@@ -101,6 +101,10 @@ public class SearchMemberById implements ActionListener {
                 JTable table = new JTable(data, headers);
                 table.setBackground(new Color(10, 20, 35));
                 table.setForeground(Color.white);
+
+                JScrollPane scrollPane = new JScrollPane(table);
+                scrollPane.setBounds(70, 180, 560, 180);
+                siFrame.add(scrollPane);
             }
 
         }
