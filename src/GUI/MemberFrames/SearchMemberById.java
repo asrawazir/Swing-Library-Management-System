@@ -84,28 +84,29 @@ public class SearchMemberById implements ActionListener {
             if (foundMember == null) {
                 JLabel notFoundLabel = new JLabel("Member not found");
                 notFoundLabel.setFont(new Font("Inter", Font.BOLD, 25));
+                notFoundLabel.setForeground(Color.WHITE);
                 notFoundLabel.setBounds(230, 200, 300, 40);
                 siFrame.add(notFoundLabel);
             }
 
             else {
-                String[] headers = {"Field", "Information"};
+                String[] headers = {"  Field", "Member Details"};
                 String[][] data = {
-                        {"ID", foundMember.getId()},
-                        {"Name", foundMember.getName()},
-                        {"Phone", foundMember.getPhone()},
-                        {"Email", foundMember.getEmail()}
+                        {"  ID", foundMember.getId()},
+                        {"  Name", foundMember.getName()},
+                        {"  Phone", foundMember.getPhone()},
+                        {"  Email", foundMember.getEmail()}
                 };
 
                 JTable table = new JTable(data, headers);
                 table.setBackground(new Color(10, 20, 35));
                 table.setForeground(Color.white);
-                table.setRowHeight(40);
+                table.setRowHeight(25);
                 table.setGridColor(Color.GRAY);
 
-                table.setBounds(70, 210, 560, 150);
+                table.setBounds(120, 210, 460, 100);
 
-                table.getTableHeader().setBounds(70, 180, 560, 30);
+                table.getTableHeader().setBounds(120, 190, 460, 20);
                 table.getTableHeader().setBackground(new Color(20, 40, 60));
                 table.getTableHeader().setForeground(Color.WHITE);
 
