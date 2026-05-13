@@ -45,7 +45,7 @@ public class CreateDialogBox extends JDialog {
      message.setForeground(Color.white);
      message.setHorizontalAlignment(SwingConstants.CENTER);
      message.setFont(new Font("Segoe UI", Font.PLAIN, 14));
-     message.setBounds(0,50,300,20);
+     message.setBorder(new EmptyBorder(10,0,20,0));
 
      JButton okButton=new JButton("OK");
      okButton.setBounds(110,90,80,30);
