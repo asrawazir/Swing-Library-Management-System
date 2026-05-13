@@ -91,7 +91,12 @@ public class SearchMemberById implements ActionListener {
                 String[] headers = {"ID", "Name", "Phone", "Email"};
                 String[][] data = new String[foundMembers.size()][4];
 
-
+                for (int i = 0; i < foundMembers.size(); i++) {
+                    data[i][0] = foundMembers.get(i).getId();
+                    data[i][1] = foundMembers.get(i).getName();
+                    data[i][2] = foundMembers.get(i).getPhone();
+                    data[i][3] = foundMembers.get(i).getEmail();
+                }
             }
         }
     }
