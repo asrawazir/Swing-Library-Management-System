@@ -207,7 +207,7 @@ public class ArrayListsManager {
                 continue;
             }
 
-            if (ib.getMember().getId().equalsIgnoreCase(memberID)) {
+            if (ib.getMember().getId().trim().equalsIgnoreCase(memberID)) {
                 result.add(ib);
             }
         }
