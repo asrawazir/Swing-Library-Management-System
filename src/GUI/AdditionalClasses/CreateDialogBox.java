@@ -39,6 +39,7 @@ public class CreateDialogBox extends JDialog {
      closeButton.setFont(new Font("Segoe UI", Font.BOLD, 14));
      closeButton.setMargin(new Insets(0,0,0,0));
      closeButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+     closeButton.setBorder(new EmptyBorder(0, 0, 0, 10));
 
      closeButton.addActionListener(e -> dispose());
      topPanel.add(titleLabel, BorderLayout.WEST);
