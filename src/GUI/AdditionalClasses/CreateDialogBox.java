@@ -20,11 +20,11 @@ public class CreateDialogBox extends JDialog {
 
      JLabel titleLabel=new JLabel(title);
      titleLabel.setForeground(Color.WHITE);
-     titleLabel.setBounds(10,5,200,20);
+
 
      JButton closeButton=new JButton("X");
      closeButton.setFocusable(false);
-     closeButton.setBounds(255,2,40,25);
+
      closeButton.setBorderPainted(false);
      closeButton.setContentAreaFilled(false);
      closeButton.setBackground(new Color(10,15,35));
@@ -33,8 +33,9 @@ public class CreateDialogBox extends JDialog {
      closeButton.setMargin(new Insets(0,0,0,0));
 
      closeButton.addActionListener(e -> dispose());
-     topPanel.add(titleLabel);
-     topPanel.add(closeButton);
+     topPanel.add(titleLabel, BorderLayout.WEST);
+     topPanel.add(closeButton, BorderLayout.EAST);
+     topPanel.setPreferredSize(new Dimension(300, 35));
 
 
      JLabel message=new JLabel(text);
