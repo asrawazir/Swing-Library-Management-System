@@ -113,6 +113,9 @@ public class SearchMemberByName implements ActionListener {
 
                 snFrame.add(table.getTableHeader());
                 snFrame.add(table);
+            }
+            snFrame.revalidate();
+            snFrame.repaint();
         }
     }
 }
