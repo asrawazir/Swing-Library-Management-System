@@ -80,6 +80,12 @@ public class SearchMemberById implements ActionListener {
                     foundMembers.add(members.get(i));
                 }
             }
+            if (foundMembers.isEmpty()) {
+                JLabel notFoundLabel = new JLabel("Member not found");
+                notFoundLabel.setFont(new Font("Inter", Font.BOLD, 25));
+                notFoundLabel.setBounds(230, 200, 300, 40);
+                siFrame.add(notFoundLabel);
+            }
         }
     }
 }
