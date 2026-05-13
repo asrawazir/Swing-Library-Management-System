@@ -107,7 +107,6 @@ public class SearchMemberByName implements ActionListener {
             }
 
             else {
-                // 2. Consistent Headers as per your Search by ID code
                 String[] headers = {"  Field", "Member Details"};
                 String[][] data = {
                         {"  Name", foundMember.getName()},
@@ -116,7 +115,7 @@ public class SearchMemberByName implements ActionListener {
                         {"  Email", foundMember.getEmail()}
                 };
 
-                JTable table = new JTable(data, headers);
+                table = new JTable(data, headers);
                 table.setBackground(new Color(10, 20, 35));
                 table.setForeground(Color.white);
                 table.setRowHeight(25);
