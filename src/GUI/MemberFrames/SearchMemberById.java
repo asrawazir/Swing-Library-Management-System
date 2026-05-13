@@ -97,7 +97,12 @@ public class SearchMemberById implements ActionListener {
                     data[i][2] = foundMembers.get(i).getPhone();
                     data[i][3] = foundMembers.get(i).getEmail();
                 }
+
+                JTable table = new JTable(data, headers);
+                table.setBackground(new Color(10, 20, 35));
+                table.setForeground(Color.white);
             }
+
         }
     }
 }
