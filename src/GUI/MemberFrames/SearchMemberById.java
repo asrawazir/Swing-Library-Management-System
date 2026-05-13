@@ -77,6 +77,13 @@ public class SearchMemberById implements ActionListener {
         }
 
         if(e.getSource() == siSubmitButton){
+            if (table != null) {
+                siFrame.remove(table);
+                siFrame.remove(tableHeader);
+                table = null;
+                tableHeader = null;
+            }
+
             String id = siIdTextField.getText();
             Member foundMember = null;
 
