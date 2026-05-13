@@ -51,8 +51,13 @@ public class FileManager {
 
             System.out.println("Members saved successfully to file.");
         }
-        catch(IOException e){
-
+        catch (FileNotFoundException ex)
+        {
+            ex.printStackTrace();
+        }
+        catch (IOException ex)
+        {
+            ex.printStackTrace();
         }
     }
 }
