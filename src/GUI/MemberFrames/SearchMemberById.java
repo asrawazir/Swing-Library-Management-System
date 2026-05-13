@@ -73,14 +73,15 @@ public class SearchMemberById implements ActionListener {
 
         if(e.getSource() == siSubmitButton){
             String id = siIdTextField.getText();
-            ArrayList<Member> foundMembers = new ArrayList<>();
+            Member foundMember = null;
 
-            for(int i = 0; i <members.size(); i++){
+            for(int i = 0; i < members.size(); i++){
                 if(members.get(i).getId().equalsIgnoreCase(id)){
-                    foundMembers.add(members.get(i));
+                    foundMember = members.get(i);
+                    break;
                 }
             }
-            if (foundMembers.isEmpty()) {
+            if (foundMember == null) {
                 JLabel notFoundLabel = new JLabel("Member not found");
                 notFoundLabel.setFont(new Font("Inter", Font.BOLD, 25));
                 notFoundLabel.setBounds(230, 200, 300, 40);
@@ -88,23 +89,28 @@ public class SearchMemberById implements ActionListener {
             }
 
             else {
-                String[] headers = {"ID", "Name", "Phone", "Email"};
-                String[][] data = new String[foundMembers.size()][4];
-
-                for (int i = 0; i < foundMembers.size(); i++) {
-                    data[i][0] = foundMembers.get(i).getId();
-                    data[i][1] = foundMembers.get(i).getName();
-                    data[i][2] = foundMembers.get(i).getPhone();
-                    data[i][3] = foundMembers.get(i).getEmail();
-                }
+                String[] headers = {"Field", "Information"};
+                String[][] data = {
+                        {"ID", foundMember.getId()},
+                        {"Name", foundMember.getName()},
+                        {"Phone", foundMember.getPhone()},
+                        {"Email", foundMember.getEmail()}
+                };
 
                 JTable table = new JTable(data, headers);
                 table.setBackground(new Color(10, 20, 35));
                 table.setForeground(Color.white);
+                table.setRowHeight(40);
+                table.setGridColor(Color.GRAY);
 
-                JScrollPane scrollPane = new JScrollPane(table);
-                scrollPane.setBounds(70, 180, 560, 180);
-                siFrame.add(scrollPane);
+                table.setBounds(70, 210, 560, 150);
+
+                table.getTableHeader().setBounds(70, 180, 560, 30);
+                table.getTableHeader().setBackground(new Color(20, 40, 60));
+                table.getTableHeader().setForeground(Color.WHITE);
+
+                siFrame.add(table.getTableHeader());
+                siFrame.add(table);
             }
             siFrame.revalidate();
             siFrame.repaint();
