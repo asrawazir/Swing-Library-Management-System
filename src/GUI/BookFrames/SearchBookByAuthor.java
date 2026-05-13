@@ -78,6 +78,9 @@ public class SearchBookByAuthor implements ActionListener {
                 JScrollPane scrollPane = new JScrollPane(table);
                 scrollPane.setBounds(70,180,560,180);
                 sbaFrame.add(scrollPane);
+
+                sbaFrame.revalidate();
+                sbaFrame.repaint();
             }
         }
     }
