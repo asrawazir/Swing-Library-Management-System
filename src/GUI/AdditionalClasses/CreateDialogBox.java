@@ -8,7 +8,7 @@ public class CreateDialogBox extends JDialog {
 
     public CreateDialogBox( String title, String text){
      setTitle(title);
-     setSize(310,170);
+     setSize(280,130);
      setLocationRelativeTo(null);
      setModal(true);
      setUndecorated(true);
@@ -44,7 +44,7 @@ public class CreateDialogBox extends JDialog {
      closeButton.addActionListener(e -> dispose());
      topPanel.add(titleLabel, BorderLayout.WEST);
      topPanel.add(closeButton, BorderLayout.EAST);
-     topPanel.setPreferredSize(new Dimension(300, 30));
+     topPanel.setPreferredSize(new Dimension(280, 30));
 
 
      JLabel message=new JLabel(text);
