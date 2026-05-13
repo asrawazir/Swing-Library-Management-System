@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class FileManager {
     ArrayListsManager alm =ArrayListsManager.instance;
+    ArrayList<Member> members = alm.getMembersList();
     final String BOOKS_DATA_FILE = "Books.txt";
     final String MEMBERS_DATA_FILE = "Members.txt";
 
@@ -45,6 +46,10 @@ public class FileManager {
     public void loadMembersFromFile(){
         try{
             ObjectOutputStream mos = new ObjectOutputStream(new FileOutputStream(MEMBERS_DATA_FILE));
+
+            mos.writeObject(members);
+
+            System.out.println("Members saved successfully to file.");
         }
         catch(IOException e){
 
