@@ -115,7 +115,7 @@ public class SearchMemberById implements ActionListener {
                         {"  Email", foundMember.getEmail()}
                 };
 
-                JTable table = new JTable(data, headers);
+                table = new JTable(data, headers);
                 table.setBackground(new Color(10, 20, 35));
                 table.setForeground(Color.white);
                 table.setRowHeight(25);
