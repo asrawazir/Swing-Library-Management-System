@@ -8,7 +8,7 @@ public class CreateDialogBox extends JDialog {
 
     public CreateDialogBox( String title, String text){
      setTitle(title);
-     setSize(340,190);
+     setSize(310,170);
      setLocationRelativeTo(null);
      setModal(true);
      setUndecorated(true);
@@ -22,7 +22,7 @@ public class CreateDialogBox extends JDialog {
      JPanel centerPanel = new JPanel();
      centerPanel.setBackground(new Color(20,26,46));
      centerPanel.setLayout(new BoxLayout(centerPanel, BoxLayout.Y_AXIS));
-     centerPanel.setBorder(new EmptyBorder(20,20,20,20));
+     centerPanel.setBorder(new EmptyBorder(15,15,15,15));
 
      JLabel titleLabel=new JLabel("  "+title);
      titleLabel.setForeground(Color.WHITE);
@@ -44,19 +44,19 @@ public class CreateDialogBox extends JDialog {
      closeButton.addActionListener(e -> dispose());
      topPanel.add(titleLabel, BorderLayout.WEST);
      topPanel.add(closeButton, BorderLayout.EAST);
-     topPanel.setPreferredSize(new Dimension(300, 35));
+     topPanel.setPreferredSize(new Dimension(300, 30));
 
 
      JLabel message=new JLabel(text);
      message.setForeground(Color.white);
      message.setHorizontalAlignment(SwingConstants.CENTER);
      message.setFont(new Font("Segoe UI", Font.PLAIN, 14));
-     message.setBorder(new EmptyBorder(10,0,20,0));
+     message.setBorder(new EmptyBorder(5,0,15,0));
      message.setAlignmentX(Component.CENTER_ALIGNMENT);
 
      JButton okButton=new JButton("OK");
-     okButton.setPreferredSize(new Dimension(90,35));
-     okButton.setMaximumSize(new Dimension(90,35));
+     okButton.setPreferredSize(new Dimension(80,30));
+     okButton.setMaximumSize(new Dimension(85,32));
      okButton.setFocusPainted(false);
      okButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
      okButton.setAlignmentX(Component.CENTER_ALIGNMENT);
