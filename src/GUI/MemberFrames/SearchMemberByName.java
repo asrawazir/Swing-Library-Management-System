@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.*;
+import javax.swing.table.JTableHeader;
 
 public class SearchMemberByName implements ActionListener {
     ArrayListsManager alm = ArrayListsManager.instance;
@@ -20,6 +21,9 @@ public class SearchMemberByName implements ActionListener {
     CreateExitButton snExitButton;
     JLabel snNameLabel;
     JTextField snNameTextField;
+    JTable table = null;
+    JLabel notFoundLabel = null;
+    JTableHeader tableHeader = null;
 
     ArrayList<Member> members;
 
@@ -71,8 +75,16 @@ public class SearchMemberByName implements ActionListener {
         }
 
         if(e.getSource() == snSubmitButton){
+            if (table != null) {
+                snFrame.remove(table);
+                snFrame.remove(tableHeader);
+                table = null;
+                tableHeader = null;
+            }
+
             String name = snNameTextField.getText();
             Member foundMember = null;
+
 
             for (int i = 0; i < members.size(); i++) {
                 if (members.get(i).getName().equalsIgnoreCase(name)) {
