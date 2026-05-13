@@ -64,6 +64,9 @@ public class FileManager {
     public void LoadMembersFromFile(){
 
         try{
+            ObjectInputStream ois = new ObjectInputStream(new FileInputStream(MEMBERS_DATA_FILE));
+
+            members = (ArrayList<Member>) ois.readObject();
 
         } catch (IOException e) {
 
