@@ -67,9 +67,12 @@ public class CreateDialogBox extends JDialog {
      message.setAlignmentX(Component.CENTER_ALIGNMENT);
      okButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-     add(topPanel);
-     add(message);
-     add(okButton);
+     centerPanel.add(message);
+     centerPanel.add(okButton);
+     mainPanel.add(topPanel, BorderLayout.NORTH);
+     mainPanel.add(centerPanel, BorderLayout.CENTER);
+
+
      add(mainPanel);
      setVisible(true);
 
