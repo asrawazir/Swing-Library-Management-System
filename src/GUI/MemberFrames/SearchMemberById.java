@@ -73,54 +73,13 @@ public class SearchMemberById implements ActionListener {
 
         if(e.getSource() == siSubmitButton){
             String id = siIdTextField.getText();
-            boolean found = false;
-            for (int i = 0; i < members.size();i++) {
-                if (members.get(i).getId().equalsIgnoreCase(id)) {
-                    Member foundMember = members.get(i);
+            ArrayList<Member> foundMembers = new ArrayList<>();
 
-                    JPanel foundMemberPanel = new JPanel();
-                    foundMemberPanel.setBackground(Color.white);
-                    foundMemberPanel.setBounds(170,160, 350,170);
-                    foundMemberPanel.setLayout(null);
-
-                    JLabel foundMemberIdLabel = new JLabel("Id: " + foundMember.getId());
-                    JLabel foundMemberNameLabel = new JLabel("Name: " + foundMember.getName());
-                    JLabel foundMemberPhoneLabel = new JLabel("Phone: " + foundMember.getPhone());
-                    JLabel foundMemberEmailLabel = new JLabel("Email: " + foundMember.getEmail());
-
-                    foundMemberIdLabel.setFont(new Font("Inter",Font.BOLD,15));
-                    foundMemberNameLabel.setFont(new Font("Inter",Font.BOLD,15));
-                    foundMemberPhoneLabel.setFont(new Font("Inter",Font.BOLD,15));
-                    foundMemberEmailLabel.setFont(new Font("Inter",Font.BOLD,15));
-
-                    foundMemberIdLabel.setBounds(70, 20, 200, 30);
-                    foundMemberNameLabel.setBounds(70, 50, 200, 30);
-                    foundMemberPhoneLabel.setBounds(70, 80, 200, 30);
-                    foundMemberEmailLabel.setBounds(70, 110, 200, 30);
-
-                    foundMemberPanel.add(foundMemberIdLabel);
-                    foundMemberPanel.add(foundMemberNameLabel);
-                    foundMemberPanel.add(foundMemberPhoneLabel);
-                    foundMemberPanel.add(foundMemberEmailLabel);
-
-                    siFrame.add(foundMemberPanel);
-
-                    found = true;
-                    break;
+            for(int i = 0; i <members.size(); i++){
+                if(members.get(i).getId().equalsIgnoreCase(id)){
+                    foundMembers.add(members.get(i));
                 }
             }
-
-            if(!found){
-                JLabel notFoundLabel = new JLabel("Member not found");
-                notFoundLabel.setFont(new Font("Inter",Font.BOLD,25));
-                notFoundLabel.setBounds(230,200,300,40);
-                siFrame.add(notFoundLabel);
-                siFrame.repaint();
-                siFrame.revalidate();
-            }
-
-            siFrame.revalidate();
-            siFrame.repaint();
         }
     }
 }
