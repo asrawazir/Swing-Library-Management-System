@@ -86,6 +86,13 @@ public class SearchMemberById implements ActionListener {
                 notFoundLabel.setBounds(230, 200, 300, 40);
                 siFrame.add(notFoundLabel);
             }
+
+            else {
+                String[] headers = {"ID", "Name", "Phone", "Email"};
+                String[][] data = new String[foundMembers.size()][4];
+
+
+            }
         }
     }
 }
