@@ -1,6 +1,7 @@
 package GUI.AdditionalClasses;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
 public class CreateDialogBox extends JDialog {
@@ -53,6 +54,10 @@ public class CreateDialogBox extends JDialog {
      okButton.setFocusable(false);
      okButton.addActionListener(e -> dispose());
 
+     JPanel centerPanel = new JPanel();
+     centerPanel.setBackground(new Color(20,26,46));
+     centerPanel.setLayout(new BoxLayout(centerPanel, BoxLayout.Y_AXIS));
+     centerPanel.setBorder(new EmptyBorder(20,20,20,20));
 
      add(topPanel);
      add(message);
