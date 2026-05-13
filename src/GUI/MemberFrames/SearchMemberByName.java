@@ -124,11 +124,12 @@ public class SearchMemberByName implements ActionListener {
 
                 table.setBounds(120, 210, 460, 100);
 
-                table.getTableHeader().setBounds(120, 190, 460, 20);
-                table.getTableHeader().setBackground(new Color(20, 40, 60));
-                table.getTableHeader().setForeground(Color.WHITE);
+                tableHeader = table.getTableHeader();
+                tableHeader.setBounds(120, 190, 460, 20);
+                tableHeader.setBackground(new Color(20, 40, 60));
+                tableHeader.setForeground(Color.WHITE);
 
-                snFrame.add(table.getTableHeader());
+                snFrame.add(tableHeader);
                 snFrame.add(table);
             }
             snFrame.revalidate();
