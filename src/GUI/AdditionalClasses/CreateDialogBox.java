@@ -8,7 +8,7 @@ public class CreateDialogBox extends JDialog {
 
     public CreateDialogBox( String title, String text){
      setTitle(title);
-     setSize(300,150);
+     setSize(340,190);
      setLocationRelativeTo(null);
      setModal(true);
 
