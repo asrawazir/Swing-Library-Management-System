@@ -11,13 +11,18 @@ public class CreateDialogBox extends JDialog {
      setSize(340,190);
      setLocationRelativeTo(null);
      setModal(true);
+     setUndecorated(true);
 
      JPanel mainPanel = new JPanel(new BorderLayout());
      mainPanel.setBackground(new Color(20,26,46));
 
-     setUndecorated(true);
      JPanel topPanel = new JPanel(new BorderLayout());
      topPanel.setBackground(new Color(10,15,35));
+
+     JPanel centerPanel = new JPanel();
+     centerPanel.setBackground(new Color(20,26,46));
+     centerPanel.setLayout(new BoxLayout(centerPanel, BoxLayout.Y_AXIS));
+     centerPanel.setBorder(new EmptyBorder(20,20,20,20));
 
      JLabel titleLabel=new JLabel("  "+title);
      titleLabel.setForeground(Color.WHITE);
@@ -46,12 +51,14 @@ public class CreateDialogBox extends JDialog {
      message.setHorizontalAlignment(SwingConstants.CENTER);
      message.setFont(new Font("Segoe UI", Font.PLAIN, 14));
      message.setBorder(new EmptyBorder(10,0,20,0));
+     message.setAlignmentX(Component.CENTER_ALIGNMENT);
 
      JButton okButton=new JButton("OK");
      okButton.setPreferredSize(new Dimension(90,35));
      okButton.setMaximumSize(new Dimension(90,35));
      okButton.setFocusPainted(false);
      okButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+     okButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 
      okButton.setBackground(new Color(0,120,215));
      okButton.setForeground(Color.white);
@@ -59,14 +66,6 @@ public class CreateDialogBox extends JDialog {
      okButton.setFocusable(false);
      okButton.addActionListener(e -> dispose());
 
-     JPanel centerPanel = new JPanel();
-     centerPanel.setBackground(new Color(20,26,46));
-     centerPanel.setLayout(new BoxLayout(centerPanel, BoxLayout.Y_AXIS));
-     centerPanel.setBorder(new EmptyBorder(20,20,20,20));
-
-     message.setHorizontalAlignment(SwingConstants.CENTER);
-     message.setAlignmentX(Component.CENTER_ALIGNMENT);
-     okButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 
      centerPanel.add(message);
      centerPanel.add(okButton);
@@ -74,14 +73,13 @@ public class CreateDialogBox extends JDialog {
      mainPanel.add(centerPanel, BorderLayout.CENTER);
 
 
-     add(mainPanel);
-
      mainPanel.setBorder(
              BorderFactory.createLineBorder(Color.CYAN,1)
      );
 
-     setVisible(true);
+     add(mainPanel);
 
+     setVisible(true);
 
     }
 }
