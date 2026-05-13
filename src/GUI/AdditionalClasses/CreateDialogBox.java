@@ -48,10 +48,12 @@ public class CreateDialogBox extends JDialog {
      message.setBorder(new EmptyBorder(10,0,20,0));
 
      JButton okButton=new JButton("OK");
-     okButton.setBounds(110,90,80,30);
+     okButton.setPreferredSize(new Dimension(90,35));
+     okButton.setMaximumSize(new Dimension(90,35));
+     okButton.setFocusPainted(false);
 
-     okButton.setBackground(new Color(40,50,80));
-     okButton.setForeground(Color.cyan);
+     okButton.setBackground(new Color(0,120,215));
+     okButton.setForeground(Color.white);
 
      okButton.setFocusable(false);
      okButton.addActionListener(e -> dispose());
