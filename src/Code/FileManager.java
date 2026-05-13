@@ -1,8 +1,6 @@
 package Code;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -45,6 +43,11 @@ public class FileManager {
     }
 
     public void loadMembersFromFile(){
+        try{
+            ObjectOutputStream mos = new ObjectOutputStream(new FileOutputStream(MEMBERS_DATA_FILE));
+        }
+        catch(IOException e){
 
+        }
     }
 }
