@@ -74,6 +74,11 @@ public class CreateDialogBox extends JDialog {
 
 
      add(mainPanel);
+
+     mainPanel.setBorder(
+             BorderFactory.createLineBorder(Color.CYAN,1)
+     );
+
      setVisible(true);
 
 
