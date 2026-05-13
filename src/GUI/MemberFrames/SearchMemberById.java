@@ -6,6 +6,7 @@ import GUI.AdditionalClasses.*;
 
 import java.awt.*;
 import javax.swing.*;
+import javax.swing.table.JTableHeader;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -21,6 +22,10 @@ public class SearchMemberById implements ActionListener {
     CreateExitButton siExitButton;
     JLabel siIdLabel;
     JTextField siIdTextField;
+
+    JTable table = null;
+    JLabel notFoundLabel = null;
+    JTableHeader tableHeader = null;
 
     ArrayList<Member> members;
 
