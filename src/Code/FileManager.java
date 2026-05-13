@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class FileManager {
     ArrayListsManager alm =ArrayListsManager.instance;
     final String BOOKS_DATA_FILE = "Books.txt";
+    final String MEMBERS_DATA_FILE = "Members.txt";
 
     public void loadDataFromFile(){
         try {
@@ -40,5 +41,6 @@ public class FileManager {
         } catch (Exception e2) {
             System.out.println("Error saving books data.");
         }
+
     }
 }
