@@ -18,7 +18,6 @@ public class CreateDialogBox extends JDialog {
      setUndecorated(true);
      JPanel topPanel = new JPanel(new BorderLayout());
      topPanel.setBackground(new Color(10,15,35));
-     topPanel.setBounds(0,0,300,30);
 
      JLabel titleLabel=new JLabel("  "+title);
      titleLabel.setForeground(Color.WHITE);
