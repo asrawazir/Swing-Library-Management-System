@@ -82,6 +82,11 @@ public class SearchMemberByName implements ActionListener {
                 tableHeader = null;
             }
 
+            if (notFoundLabel != null) {
+                snFrame.remove(notFoundLabel);
+                notFoundLabel = null;
+            }
+
             String name = snNameTextField.getText();
             Member foundMember = null;
 
