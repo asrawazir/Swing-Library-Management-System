@@ -84,6 +84,7 @@ public class SearchMemberByName implements ActionListener {
             if (foundMember == null) {
                 JLabel notFoundLabel = new JLabel("Member not found");
                 notFoundLabel.setFont(new Font("Inter", Font.BOLD, 25));
+                notFoundLabel.setForeground(Color.WHITE);
                 notFoundLabel.setBounds(230, 200, 300, 40);
                 snFrame.add(notFoundLabel);
             }
