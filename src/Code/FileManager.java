@@ -43,7 +43,7 @@ public class FileManager {
 
     }
 
-    public void loadMembersFromFile(){
+    public void saveMembersToFile(){
         try{
             ObjectOutputStream mos = new ObjectOutputStream(new FileOutputStream(MEMBERS_DATA_FILE));
 
@@ -59,5 +59,9 @@ public class FileManager {
         {
             ex.printStackTrace();
         }
+    }
+
+    public void LoadMembersFromFile(){
+
     }
 }
