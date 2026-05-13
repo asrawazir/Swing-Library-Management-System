@@ -106,6 +106,8 @@ public class SearchMemberById implements ActionListener {
                 scrollPane.setBounds(70, 180, 560, 180);
                 siFrame.add(scrollPane);
             }
+            siFrame.revalidate();
+            siFrame.repaint();
 
         }
     }
