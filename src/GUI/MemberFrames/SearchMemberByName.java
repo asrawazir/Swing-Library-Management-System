@@ -21,6 +21,7 @@ public class SearchMemberByName implements ActionListener {
     CreateExitButton snExitButton;
     JLabel snNameLabel;
     JTextField snNameTextField;
+
     JTable table = null;
     JLabel notFoundLabel = null;
     JTableHeader tableHeader = null;
