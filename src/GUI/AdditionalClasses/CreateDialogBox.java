@@ -11,8 +11,9 @@ public class CreateDialogBox extends JDialog {
      setLocationRelativeTo(null);
      setModal(true);
 
+     JPanel mainPanel = new JPanel(new BorderLayout());
+     mainPanel.setBackground(new Color(20,26,46));
 
-     getContentPane().setBackground(new Color(20,26,46));
      setUndecorated(true);
      JPanel topPanel = new JPanel(new BorderLayout());
      topPanel.setBackground(new Color(10,15,35));
@@ -52,10 +53,11 @@ public class CreateDialogBox extends JDialog {
      okButton.setFocusable(false);
      okButton.addActionListener(e -> dispose());
 
+
      add(topPanel);
      add(message);
      add(okButton);
-
+     add(mainPanel);
      setVisible(true);
 
 
