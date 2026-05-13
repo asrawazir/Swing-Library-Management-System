@@ -52,6 +52,7 @@ public class CreateDialogBox extends JDialog {
      okButton.setPreferredSize(new Dimension(90,35));
      okButton.setMaximumSize(new Dimension(90,35));
      okButton.setFocusPainted(false);
+     okButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
      okButton.setBackground(new Color(0,120,215));
      okButton.setForeground(Color.white);
