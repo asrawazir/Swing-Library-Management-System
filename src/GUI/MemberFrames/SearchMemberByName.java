@@ -27,7 +27,7 @@ public class SearchMemberByName implements ActionListener {
 
         snFrame = new CreateFrame();
         snLabel = new CreateLabel("Search Member By Name");
-        snSubmitButton = new CreateSubmitButton("Search",560, 110);
+        snSubmitButton = new CreateSubmitButton("Search",560, 120);
         snBackButton = new CreateBackButton();
         snExitButton = new CreateExitButton();
 
