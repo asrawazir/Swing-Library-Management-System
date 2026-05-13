@@ -20,7 +20,7 @@ public class CreateDialogBox extends JDialog {
      topPanel.setBackground(new Color(10,15,35));
      topPanel.setBounds(0,0,300,30);
 
-     JLabel titleLabel=new JLabel(title);
+     JLabel titleLabel=new JLabel("  "+title);
      titleLabel.setForeground(Color.WHITE);
      titleLabel.setFont(new Font("Segoe UI", Font.BOLD, 15));
 
