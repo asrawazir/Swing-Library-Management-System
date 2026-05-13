@@ -88,6 +88,31 @@ public class SearchMemberByName implements ActionListener {
                 notFoundLabel.setBounds(230, 200, 300, 40);
                 snFrame.add(notFoundLabel);
             }
+
+            else {
+                // 2. Consistent Headers as per your Search by ID code
+                String[] headers = {"  Field", "Member Details"};
+                String[][] data = {
+                        {"  Name", foundMember.getName()},
+                        {"  ID", foundMember.getId()},
+                        {"  Phone", foundMember.getPhone()},
+                        {"  Email", foundMember.getEmail()}
+                };
+
+                JTable table = new JTable(data, headers);
+                table.setBackground(new Color(10, 20, 35));
+                table.setForeground(Color.white);
+                table.setRowHeight(25);
+                table.setGridColor(Color.GRAY);
+
+                table.setBounds(120, 210, 460, 100);
+
+                table.getTableHeader().setBounds(120, 190, 460, 20);
+                table.getTableHeader().setBackground(new Color(20, 40, 60));
+                table.getTableHeader().setForeground(Color.WHITE);
+
+                snFrame.add(table.getTableHeader());
+                snFrame.add(table);
         }
     }
 }
