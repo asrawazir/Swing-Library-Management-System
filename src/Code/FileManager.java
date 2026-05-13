@@ -43,4 +43,8 @@ public class FileManager {
         }
 
     }
+
+    public void loadMembersFromFile(){
+
+    }
 }
