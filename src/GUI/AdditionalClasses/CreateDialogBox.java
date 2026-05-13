@@ -22,6 +22,7 @@ public class CreateDialogBox extends JDialog {
 
      JLabel titleLabel=new JLabel(title);
      titleLabel.setForeground(Color.WHITE);
+     titleLabel.setFont(new Font("Segoe UI", Font.BOLD, 15));
 
 
      JButton closeButton=new JButton("X");
@@ -31,7 +32,7 @@ public class CreateDialogBox extends JDialog {
      closeButton.setContentAreaFilled(false);
      closeButton.setBackground(new Color(10,15,35));
      closeButton.setForeground(Color.white);
-     closeButton.setFont(new Font("Arial", Font.BOLD, 14));
+     closeButton.setFont(new Font("Segoe UI", Font.BOLD, 14));
      closeButton.setMargin(new Insets(0,0,0,0));
 
      closeButton.addActionListener(e -> dispose());
@@ -43,6 +44,7 @@ public class CreateDialogBox extends JDialog {
      JLabel message=new JLabel(text);
      message.setForeground(Color.white);
      message.setHorizontalAlignment(SwingConstants.CENTER);
+     message.setFont(new Font("Segoe UI", Font.PLAIN, 14));
      message.setBounds(0,50,300,20);
 
      JButton okButton=new JButton("OK");
