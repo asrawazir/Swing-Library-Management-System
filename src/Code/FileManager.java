@@ -18,7 +18,10 @@ public class FileManager {
                 while (sc.hasNextLine()){
                     String bookData = sc.nextLine();
                     String[] parts = bookData.split(",");
-                    Book b = new Book(parts[0],parts[1],parts[2],parts[3]);
+
+                    int quantity = Integer.parseInt(parts[3]);
+                    Book b = new Book(parts[0], parts[1], parts[2], quantity);
+
                     alm.addBook(b);
                 }
             }
