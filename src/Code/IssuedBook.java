@@ -1,8 +1,8 @@
 package Code;
 
-import java.util.ArrayList;
+import java.io.*;
 
-public class IssuedBook {
+public class IssuedBook implements Serializable {
     //attributes
     private Book book;
     private Member member;

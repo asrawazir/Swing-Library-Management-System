@@ -1,6 +1,8 @@
 package Code;
 
-public class Book {
+import java.io.*;
+
+public class Book implements Serializable {
     private String id;
     private String title;
     private String author;
