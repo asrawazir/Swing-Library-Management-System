@@ -201,6 +201,20 @@ public class ArrayListsManager {
         return "Book issued successfully";
     }
 
+    public IssuedBook findIssuedBookRecord(String bookId, String memberId){
+        for(IssuedBook ib : issuedBooks){
+            if(
+                    ib.getBook().getID().equalsIgnoreCase(bookId)
+                            &&
+                            ib.getMember().getId().equalsIgnoreCase(memberId)
+            )
+            {
+                return ib;
+            }
+        }
+        return null;
+    }
+
     public void issueBook(String id){
         ArrayListsManager alm = ArrayListsManager.instance;
         ArrayList<Book> books = alm.getBooksList();
