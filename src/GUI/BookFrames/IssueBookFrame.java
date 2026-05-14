@@ -113,13 +113,12 @@ public class IssueBookFrame implements ActionListener {
             String bookId = bookIdTextField.getText();
             String memberId = memberIdTextField.getText();
             String date = dateTextField.getText();
-            IssuedBook iB = alm.findIssueBook(bookId,memberId,date);
-            if (iB != null) {
-                alm.issueBook(bookId);
-                alm.addIssuedBook(iB);
-                new CreateDialogBox("Success", "Book Issued Successfully");
-            } else {
-                new CreateDialogBox("Error", "Could not issue book. Check IDs.");
+            String result = alm.issueBookToMember(bookId, memberId, date);
+            if(result.equals("Book issued successfully")){
+                new CreateDialogBox("Success", result);
+            }
+            else{
+                new CreateDialogBox("Error", result);
             }
         }
     }
