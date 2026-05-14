@@ -23,7 +23,13 @@ public class Book {
         this.availableQuantity = qty;
     }
 
-
+    public Book(String id, String title, String author, int totalQuantity, int availableQuantity) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.totalQuantity = totalQuantity;
+        this.availableQuantity = availableQuantity;
+    }
 
     public String getID() {
         return id;
