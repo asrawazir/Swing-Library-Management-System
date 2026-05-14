@@ -167,6 +167,40 @@ public class ArrayListsManager {
         return null;
     }
 
+    public String issueBookToMember(String bookId, String memberId, String date){
+
+        Book book = findBookById(bookId);
+        Member member = findMemberById(memberId);
+
+        if(book == null)
+        {
+            return "Book does not exist";
+        }
+
+        if(member == null)
+        {
+            return "Member does not exist";
+        }
+
+        if(book.getAvailableQuantity() <= 0)
+        {
+            return "Book is out of stock";
+        }
+
+        boolean reduced = book.subtractAvailableQuantity();
+
+        if(!reduced)
+        {
+            return "Book is out of stock";
+        }
+
+        IssuedBook issuedBook = new IssuedBook(book, member, date);
+
+        issuedBooks.add(issuedBook);
+
+        return "Book issued successfully";
+    }
+
     public void issueBook(String id){
         ArrayListsManager alm = ArrayListsManager.instance;
         ArrayList<Book> books = alm.getBooksList();
