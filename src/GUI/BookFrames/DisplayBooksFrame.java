@@ -34,7 +34,7 @@ public class DisplayBooksFrame implements ActionListener {
         ArrayList<Book> books = alm.getBooksList();
 
         //Creating an array holding headers for table
-        String[] headers = {"Book Id","Title","Author","Quantity","Available Quantity"};
+        String[] headers = {"Id","Title","Author","Quantity","Available"};
 
         //Creating a 2D array to hold data for tables
         String[][] data = new String[books.size()][5];
@@ -57,10 +57,11 @@ public class DisplayBooksFrame implements ActionListener {
         table.setGridColor(new Color(40,60,90));
         table.setRowHeight(20);
         table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-        table.getColumnModel().getColumn(0).setPreferredWidth(60);
-        table.getColumnModel().getColumn(1).setPreferredWidth(250);
-        table.getColumnModel().getColumn(2).setPreferredWidth(150);
+        table.getColumnModel().getColumn(0).setPreferredWidth(50);
+        table.getColumnModel().getColumn(1).setPreferredWidth(210);
+        table.getColumnModel().getColumn(2).setPreferredWidth(120);
         table.getColumnModel().getColumn(3).setPreferredWidth(80);
+        table.getColumnModel().getColumn(4).setPreferredWidth(80);
         table.getTableHeader().setBackground(new Color(10,15,35));
         table.getTableHeader().setForeground(Color.CYAN);
         table.getTableHeader().setFont(new Font("Arial",Font.BOLD,14));
