@@ -45,8 +45,14 @@ public class Book {
         return availableQuantity;
     }
 
-    public void subtractAvailableQuantity() {
-        this.availableQuantity = availableQuantity - 1;
+    public boolean subtractAvailableQuantity() {
+        if (availableQuantity <= 0)
+        {
+            return false;
+        }
+
+        availableQuantity--;
+        return true;
     }
 
 }
