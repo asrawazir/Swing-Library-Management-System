@@ -144,6 +144,10 @@ public class AddBookFrame implements ActionListener {
             alm.addBook(book);
 
             new CreateDialogBox("Success","Book Added Successfully");
+            idTextField.setText("");
+            titleTextField.setText("");
+            authorTextField.setText("");
+            quantityTextField.setText("");
         }
     }
 }
