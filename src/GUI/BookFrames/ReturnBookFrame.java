@@ -72,11 +72,20 @@ public class ReturnBookFrame implements ActionListener {
             new BookHomeFrame();
         }
 
-        if (e.getSource()==submitButton){
-            String memberId = memberIdTextField.getText();
-            String bookId = bookIdTextField.getText();
-            ArrayList<IssuedBook> issuedBooks = alm.getIssuedBooksList();
-            new CreateDialogBox("Success", "Book Returned Successfully");
+        if (e.getSource()==submitButton)
+        {
+            String memberId = memberIdTextField.getText().trim();
+            String bookId = bookIdTextField.getText().trim();
+            String result = alm.returnBook(bookId, memberId);
+            if(result.equals("Book returned successfully"))
+            {
+                new CreateDialogBox("Success", result);
+            }
+            else
+            {
+                new CreateDialogBox("Error", result);
+            }
         }
+
     }
 }
