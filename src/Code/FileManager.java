@@ -20,7 +20,8 @@ public class FileManager {
                     String[] parts = bookData.split(",");
 
                     int quantity = Integer.parseInt(parts[3]);
-                    Book b = new Book(parts[0], parts[1], parts[2], quantity);
+                    int availableQuantity = Integer.parseInt(parts[4]);
+                    Book b = new Book(parts[0], parts[1], parts[2], quantity,availableQuantity);
 
                     alm.addBook(b);
                 }
