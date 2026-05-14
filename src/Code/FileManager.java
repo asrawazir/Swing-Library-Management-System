@@ -38,7 +38,8 @@ public class FileManager {
                         books.get(i).getID()+","+
                                 books.get(i).getTitle()+","+
                                 books.get(i).getAuthor()+","+
-                                books.get(i).getTotalQuantity());
+                                books.get(i).getTotalQuantity()+","+
+                                books.get(i).getAvailableQuantity());
             }
         } catch (Exception e2) {
             System.out.println("Error saving books data.");
