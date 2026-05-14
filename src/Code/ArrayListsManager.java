@@ -215,6 +215,31 @@ public class ArrayListsManager {
         return null;
     }
 
+    public String returnBook(String bookId, String memberId){
+        Book book = findBookById(bookId);
+        if(book == null)
+        {
+            return "Book does not exist";
+        }
+        Member member = findMemberById(memberId);
+        if(member == null)
+        {
+            return "Member does not exist";
+        }
+        IssuedBook issuedBook = findIssuedBookRecord(bookId, memberId);
+        if(issuedBook == null)
+        {
+            return "This member did not issue this book";
+        }
+        boolean added = book.addAvailableQuantity();
+        if(!added)
+        {
+            return "Book quantity exceeds total inventory";
+        }
+        issuedBooks.remove(issuedBook);
+        return "Book returned successfully";
+    }
+
     public void issueBook(String id){
         ArrayListsManager alm = ArrayListsManager.instance;
         ArrayList<Book> books = alm.getBooksList();
