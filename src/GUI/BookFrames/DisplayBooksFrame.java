@@ -34,17 +34,18 @@ public class DisplayBooksFrame implements ActionListener {
         ArrayList<Book> books = alm.getBooksList();
 
         //Creating an array holding headers for table
-        String[] headers = {"Book Id","Title","Author","Quantity"};
+        String[] headers = {"Book Id","Title","Author","Quantity","Available Quantity"};
 
         //Creating a 2D array to hold data for tables
-        String[][] data = new String[books.size()][4];
+        String[][] data = new String[books.size()][5];
 
         //Loading the data in the 2D array from the array list
         for (int i = 0; i < books.size(); i++){
             data[i][0] = books.get(i).getID();
             data[i][1] = books.get(i).getTitle();
             data[i][2] = books.get(i).getAuthor();
-            data[i][3] = books.get(i).getTotalQuantity();
+            data[i][3] = String.valueOf(books.get(i).getTotalQuantity());
+            data[i][4] = String.valueOf(books.get(i).getAvailableQuantity());
         }
 
         //Creating the JTable object
