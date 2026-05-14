@@ -155,6 +155,18 @@ public class ArrayListsManager {
         return null;
     }
 
+    public Book findBookById(String id){
+
+        for(Book b : books){
+
+            if(b.getID().equalsIgnoreCase(id)){
+                return b;
+            }
+        }
+
+        return null;
+    }
+
     public void issueBook(String id){
         ArrayListsManager alm = ArrayListsManager.instance;
         ArrayList<Book> books = alm.getBooksList();
