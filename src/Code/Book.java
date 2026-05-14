@@ -45,6 +45,11 @@ public class Book {
         return availableQuantity;
     }
 
+    public void addAvailableQuantity()
+    {
+        availableQuantity++;
+    }
+
     public boolean subtractAvailableQuantity() {
         if (availableQuantity <= 0)
         {
