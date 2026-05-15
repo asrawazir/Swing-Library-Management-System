@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class ArrayListsManager {
 
     public static ArrayListsManager instance = new ArrayListsManager();
-    FileManager fm = new FileManager();
+    FileManager filemanager = new FileManager();
     static ArrayList<Book> books;
     ArrayList<IssuedBook> issuedBooks;
     ArrayList<Member> members;
@@ -182,6 +182,7 @@ public class ArrayListsManager {
         }
 
         members.add(new Member(id,name,phone,email));
+        filemanager.saveMembersToFile();
         return "Member registered successfully";
     }
 
