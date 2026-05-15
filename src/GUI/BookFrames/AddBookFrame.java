@@ -130,12 +130,24 @@ public class AddBookFrame implements ActionListener {
             String id = idTextField.getText();
             String title = titleTextField.getText();
             String author = authorTextField.getText();
-            String quantity = quantityTextField.getText();
+            String quantityText = quantityTextField.getText();
+            int quantity;
 
+            try{
+                quantity = Integer.parseInt(quantityText);
+            }
+            catch(NumberFormatException ex){
+                new CreateDialogBox("Error", "Quantity must be a number");
+                return;
+            }
             Book book = new Book(id,title,author,quantity);
             alm.addBook(book);
 
             new CreateDialogBox("Success","Book Added Successfully");
+            idTextField.setText("");
+            titleTextField.setText("");
+            authorTextField.setText("");
+            quantityTextField.setText("");
         }
     }
 }

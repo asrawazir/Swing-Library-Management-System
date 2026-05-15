@@ -1,21 +1,23 @@
 package Code;
 
-public class Book {
+import java.io.*;
+
+public class Book implements Serializable {
     private String id;
     private String title;
     private String author;
-    private String totalQuantity;
-    private String availableQuantity;
+    private int totalQuantity;
+    private int availableQuantity;
 
     public Book() {
         this.id = "0";
         this.title = "Not assigned";
         this.author = "Unknown";
-        this.totalQuantity = "0";
-        this.availableQuantity = "0";
+        this.totalQuantity = 0;
+        this.availableQuantity = 0;
     }
 
-    public Book(String id, String title, String author, String qty) {
+    public Book(String id, String title, String author, int qty) {
         this.id = id;
         this.title = title;
         this.author = author;
@@ -23,7 +25,13 @@ public class Book {
         this.availableQuantity = qty;
     }
 
-
+    public Book(String id, String title, String author, int totalQuantity, int availableQuantity) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.totalQuantity = totalQuantity;
+        this.availableQuantity = availableQuantity;
+    }
 
     public String getID() {
         return id;
@@ -37,16 +45,32 @@ public class Book {
         return author;
     }
 
-    public String getTotalQuantity() {
+    public int getTotalQuantity() {
         return totalQuantity;
     }
 
-    public String getAvailableQuantity() {
+    public int getAvailableQuantity() {
         return availableQuantity;
     }
 
-    public void subtractAvailableQuantity() {
-        this.availableQuantity = Integer.toString(Integer.parseInt(availableQuantity) - 1);
+    public boolean addAvailableQuantity()
+    {
+        if(availableQuantity >= totalQuantity){
+            availableQuantity = totalQuantity;
+            return false;
+        }
+        availableQuantity++;
+        return true;
+    }
+
+    public boolean subtractAvailableQuantity() {
+        if (availableQuantity <= 0)
+        {
+            return false;
+        }
+
+        availableQuantity--;
+        return true;
     }
 
 }

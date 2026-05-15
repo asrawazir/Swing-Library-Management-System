@@ -156,6 +156,91 @@ public class ArrayListsManager {
         return null;
     }
 
+    public Book findBookById(String id){
+
+        for(Book b : books){
+
+            if(b.getID().equalsIgnoreCase(id)){
+                return b;
+            }
+        }
+
+        return null;
+    }
+
+    public String issueBookToMember(String bookId, String memberId, String date){
+
+        Book book = findBookById(bookId);
+        Member member = findMemberById(memberId);
+
+        if(book == null)
+        {
+            return "Book does not exist";
+        }
+
+        if(member == null)
+        {
+            return "Member does not exist";
+        }
+
+        if(book.getAvailableQuantity() <= 0)
+        {
+            return "Book is out of stock";
+        }
+
+        boolean reduced = book.subtractAvailableQuantity();
+
+        if(!reduced)
+        {
+            return "Book is out of stock";
+        }
+
+        IssuedBook issuedBook = new IssuedBook(book, member, date);
+
+        issuedBooks.add(issuedBook);
+
+        return "Book issued successfully";
+    }
+
+    public IssuedBook findIssuedBookRecord(String bookId, String memberId){
+        for(IssuedBook ib : issuedBooks){
+            if(
+                    ib.getBook().getID().equalsIgnoreCase(bookId)
+                            &&
+                            ib.getMember().getId().equalsIgnoreCase(memberId)
+            )
+            {
+                return ib;
+            }
+        }
+        return null;
+    }
+
+    public String returnBook(String bookId, String memberId){
+        Book book = findBookById(bookId);
+        if(book == null)
+        {
+            return "Book does not exist";
+        }
+        Member member = findMemberById(memberId);
+        if(member == null)
+        {
+            return "Member does not exist";
+        }
+        IssuedBook issuedBook = findIssuedBookRecord(bookId, memberId);
+        if(issuedBook == null)
+        {
+            return "This member did not issue this book";
+        }
+        boolean added = book.addAvailableQuantity();
+        if(!added)
+        {
+            return "Book quantity exceeds total inventory";
+        }
+        issuedBooks.remove(issuedBook);
+        return "Book returned successfully";
+    }
+
     public void issueBook(String id){
         ArrayListsManager alm = ArrayListsManager.instance;
         ArrayList<Book> books = alm.getBooksList();

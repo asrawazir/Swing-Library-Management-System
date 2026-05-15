@@ -43,7 +43,7 @@ public class DisplayAllRoomsFrame implements ActionListener {
         table.setSelectionBackground(new Color(0,120,215));
         table.setSelectionForeground(Color.white);
         table.setGridColor(new Color(40,60,90));
-        table.setRowHeight(20);
+        table.setRowHeight(24);
 
         table.getTableHeader().setBackground(new Color(10,15,35));
         table.getTableHeader().setForeground(Color.CYAN);
