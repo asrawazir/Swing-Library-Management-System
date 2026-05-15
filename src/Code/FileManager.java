@@ -8,7 +8,7 @@ public class FileManager {
     ArrayListsManager alm =ArrayListsManager.instance;
     ArrayList<Member> members = alm.getMembersList();
     final String BOOKS_DATA_FILE = "Books.txt";
-    final String MEMBERS_DATA_FILE = "Members.txt";
+    final String MEMBERS_DATA_FILE = "Members.dat";
 
     public void loadDataFromFile(){
         try {
@@ -47,7 +47,7 @@ public class FileManager {
         try{
             ObjectOutputStream mos = new ObjectOutputStream(new FileOutputStream(MEMBERS_DATA_FILE));
 
-            mos.writeObject(members);
+            mos.writeObject(alm.getMembersList());
 
             System.out.println("Members saved successfully to file.");
         }
@@ -81,8 +81,6 @@ public class FileManager {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             System.out.println("Class not found");
-
-            e.printStackTrace();
         }
     }
 }
