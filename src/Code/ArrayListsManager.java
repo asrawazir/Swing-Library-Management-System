@@ -299,4 +299,20 @@ public class ArrayListsManager {
         }
         return result;
     }
+
+    public String removeMember(String memberID){
+
+        Member member = findMemberById(memberID);
+
+        if(member == null){
+
+            return "Member does not exist";
+        }
+
+        members.remove(member);
+
+        new FileManager().saveMembersToFile();
+
+        return "Member removed successfully";
+    }
 }
