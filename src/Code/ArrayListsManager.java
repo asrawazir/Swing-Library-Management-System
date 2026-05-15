@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class ArrayListsManager {
 
     public static ArrayListsManager instance = new ArrayListsManager();
+    FileManager fm = new FileManager();
     static ArrayList<Book> books;
     ArrayList<IssuedBook> issuedBooks;
     ArrayList<Member> members;
