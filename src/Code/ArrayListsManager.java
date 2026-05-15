@@ -267,7 +267,7 @@ public class ArrayListsManager {
         }
 
         members.add(new Member(id,name,phone,email));
-        filemanager.saveMembersToFile();
+        new FileManager().saveMembersToFile();
         return "Member registered successfully";
     }
 
