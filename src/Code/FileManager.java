@@ -5,7 +5,7 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+import java.io.*;
 public class FileManager {
     ArrayListsManager alm =ArrayListsManager.instance;
     final String BOOKS_DATA_FILE = "Books.txt";
