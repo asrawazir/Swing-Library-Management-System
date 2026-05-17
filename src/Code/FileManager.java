@@ -53,4 +53,10 @@ public class FileManager {
             ObjectOutputStream oos=new ObjectOutputStream(new FileOutputStream(ROOM_FILE));
             oos.writeObject(rooms);
             oos.close();
-}
+
+        } catch (Exception e) {
+            System.out.println("Exception : " + e.toString());
+        }
+    }
+
+    
