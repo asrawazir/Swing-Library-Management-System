@@ -10,6 +10,7 @@ public class FileManager {
     ArrayListsManager alm =ArrayListsManager.instance;
     final String BOOKS_DATA_FILE = "Books.txt";
     final String ISSUED_BOOKS_DATA_FILE = "IssuedBooks.ser";
+    final String ROOM_FILE="rooms.ser";
 
     public void loadDataFromFile(){
         try {
