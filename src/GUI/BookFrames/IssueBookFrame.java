@@ -1,6 +1,7 @@
 package GUI.BookFrames;
 
 import Code.ArrayListsManager;
+import Code.FileManager;
 import Code.IssuedBook;
 import GUI.AdditionalClasses.*;
 
@@ -114,12 +115,15 @@ public class IssueBookFrame implements ActionListener {
             String memberId = memberIdTextField.getText();
             String date = dateTextField.getText();
             String result = alm.issueBookToMember(bookId, memberId, date);
-            if(result.equals("Book issued successfully")){
+
+            if(result.equals("Book issued successfully"))
+            {
+                FileManager fm = new FileManager();
+                fm.saveBooksDataToFile();
+                fm.saveIssuedBooksDataToFile();
                 new CreateDialogBox("Success", result);
             }
-            else{
-                new CreateDialogBox("Error", result);
-            }
+
         }
     }
 }
