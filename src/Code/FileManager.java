@@ -51,4 +51,5 @@ public class FileManager {
     public void saveRooms(ArrayList<StudyRoom>rooms){
         try{
             ObjectOutputStream oos=new ObjectOutputStream(new FileOutputStream(ROOM_FILE));
+            oos.writeObject(rooms);
           
