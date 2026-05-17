@@ -64,4 +64,5 @@ public class FileManager {
         try {
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream(ROOM_FILE));
             rooms = (ArrayList<StudyRoom>) ois.readObject();
-           
+            ois.close();
+       
