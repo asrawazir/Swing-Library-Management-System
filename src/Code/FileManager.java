@@ -49,3 +49,5 @@ public class FileManager {
     }
 
     public void saveRooms(ArrayList<StudyRoom>rooms){
+        try{
+           
