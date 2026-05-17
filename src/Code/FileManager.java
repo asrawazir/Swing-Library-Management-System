@@ -60,3 +60,5 @@ public class FileManager {
     }
 
     public ArrayList<StudyRoom> loadRooms() {
+        ArrayList<StudyRoom> rooms = new ArrayList<>();
+       
