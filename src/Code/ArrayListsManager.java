@@ -95,6 +95,7 @@ public class ArrayListsManager {
             return " This member did not reserve this room ";
         }
          room.cancelReservation();
+         fm.saveRooms(rooms);
         return "Reservation cancelled successfully";
     }
 
