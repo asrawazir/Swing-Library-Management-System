@@ -47,4 +47,5 @@ public class FileManager {
             System.out.println("Error saving books data.");
         }
     }
-}
+
+    public void saveRooms(ArrayList<StudyRoom>rooms){
