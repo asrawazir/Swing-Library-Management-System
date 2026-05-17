@@ -52,4 +52,5 @@ public class FileManager {
         try{
             ObjectOutputStream oos=new ObjectOutputStream(new FileOutputStream(ROOM_FILE));
             oos.writeObject(rooms);
-          
+            oos.close();
+}
