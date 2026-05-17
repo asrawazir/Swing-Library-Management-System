@@ -2,6 +2,7 @@ package GUI.BookFrames;
 
 import Code.ArrayListsManager;
 import Code.Book;
+import Code.FileManager;
 import GUI.AdditionalClasses.*;
 
 import javax.swing.*;
@@ -142,7 +143,7 @@ public class AddBookFrame implements ActionListener {
             }
             Book book = new Book(id,title,author,quantity);
             alm.addBook(book);
-
+            new FileManager().saveBooksDataToFile();
             new CreateDialogBox("Success","Book Added Successfully");
             idTextField.setText("");
             titleTextField.setText("");
