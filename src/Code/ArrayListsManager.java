@@ -9,8 +9,8 @@ public class ArrayListsManager {
     ArrayList<IssuedBook> issuedBooks;
     ArrayList<Member> members;
     ArrayList<StudyRoom> rooms;
-
-    public ArrayListsManager(){
+    FileManager fm=new FileManager();
+    public ArrayListsManager() {
 
         books = new ArrayList<>();
         issuedBooks = new ArrayList<>();
