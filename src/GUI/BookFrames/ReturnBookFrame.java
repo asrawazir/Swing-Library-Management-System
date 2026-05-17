@@ -1,6 +1,7 @@
 package GUI.BookFrames;
 
 import Code.ArrayListsManager;
+import Code.FileManager;
 import Code.IssuedBook;
 import GUI.AdditionalClasses.*;
 
@@ -77,15 +78,14 @@ public class ReturnBookFrame implements ActionListener {
             String memberId = memberIdTextField.getText().trim();
             String bookId = bookIdTextField.getText().trim();
             String result = alm.returnBook(bookId, memberId);
+
             if(result.equals("Book returned successfully"))
             {
+                FileManager fm = new FileManager();
+                fm.saveBooksDataToFile();
+                fm.saveIssuedBooksDataToFile();
                 new CreateDialogBox("Success", result);
             }
-            else
-            {
-                new CreateDialogBox("Error", result);
-            }
         }
-
     }
 }
