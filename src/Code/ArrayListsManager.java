@@ -116,6 +116,7 @@ public class ArrayListsManager {
             return " This room is already reserved ";
         }
         room.reserveRoom(memberID);
+        fm.saveRooms(rooms);
         return "Room is reserved";
     }
 
