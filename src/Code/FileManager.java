@@ -59,4 +59,4 @@ public class FileManager {
         }
     }
 
-    
+    public ArrayList<StudyRoom> loadRooms() {
