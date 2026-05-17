@@ -1,50 +1,45 @@
 package Code;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class FileManager {
-    ArrayListsManager alm =ArrayListsManager.instance;
-    final String BOOKS_DATA_FILE = "books.ser";
-    final String ISSUED_BOOKS_DATA_FILE = "issuedbooks.ser";
+    private final ArrayListsManager alm = ArrayListsManager.instance;
 
-    public void loadDataFromFile(){
-        try {
-            File booksFile = new File(BOOKS_DATA_FILE);
-            if (booksFile.exists()){
-                Scanner sc = new Scanner(booksFile);
-                while (sc.hasNextLine()){
-                    String bookData = sc.nextLine();
-                    String[] parts = bookData.split(",");
+    private final String booksFile = "books.ser";
+    private final String issuedFile = "issuedbooks.ser";
 
-                    int quantity = Integer.parseInt(parts[3]);
-                    int availableQuantity = Integer.parseInt(parts[4]);
-                    Book b = new Book(parts[0], parts[1], parts[2], quantity,availableQuantity);
+    public void loadDataFromFile() {
+        loadBooks();
+        //loadIssuedBooks();
+    }
 
-                    alm.addBook(b);
-                }
-            }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+    private void loadBooks() {
+
+        File file = new File(booksFile);
+        if (!file.exists())
+        {
+            return;
+        }
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(file))) {
+            ArrayList<Book> books = (ArrayList<Book>) in.readObject();
+            alm.getBooksList().clear();
+            alm.getBooksList().addAll(books);
+        }
+        catch (Exception e) {
+            System.out.println("Books load error");
         }
     }
 
-    public void saveBooksDataToFile(){
-        try (PrintWriter pw = new PrintWriter(new FileWriter(BOOKS_DATA_FILE))) {
-            ArrayList<Book> books = alm.getBooksList();
-            for (int i = 0; i < books.size(); i++) {
-                pw.println(
-                        books.get(i).getID()+","+
-                                books.get(i).getTitle()+","+
-                                books.get(i).getAuthor()+","+
-                                books.get(i).getTotalQuantity()+","+
-                                books.get(i).getAvailableQuantity());
-            }
-        } catch (Exception e2) {
-            System.out.println("Error saving books data.");
+    public void saveBooksDataToFile() {
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(booksFile)))
+        {
+            out.writeObject(alm.getBooksList());
+        }
+        catch (Exception e)
+        {
+            System.out.println("Books save error");
         }
     }
+
 }
