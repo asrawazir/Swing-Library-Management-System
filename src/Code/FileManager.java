@@ -8,8 +8,8 @@ import java.util.Scanner;
 
 public class FileManager {
     ArrayListsManager alm =ArrayListsManager.instance;
-    final String BOOKS_DATA_FILE = "Books.txt";
-    final String ISSUED_BOOKS_DATA_FILE = "IssuedBooks.ser";
+    final String BOOKS_DATA_FILE = "books.ser";
+    final String ISSUED_BOOKS_DATA_FILE = "issuedbooks.ser";
 
     public void loadDataFromFile(){
         try {
