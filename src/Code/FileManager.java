@@ -73,4 +73,29 @@ public class FileManager {
             System.out.println("Issued books save error");
         }
     }
+
+    public void saveRooms(ArrayList<StudyRoom>rooms){
+        try{
+            ObjectOutputStream oos=new ObjectOutputStream(new FileOutputStream(ROOM_FILE));
+            oos.writeObject(rooms);
+            oos.close();
+
+        } catch (Exception e) {
+            System.out.println("Exception : " + e.toString());
+        }
+    }
+
+    public ArrayList<StudyRoom> loadRooms() {
+        ArrayList<StudyRoom> rooms = new ArrayList<>();
+        try {
+            ObjectInputStream ois = new ObjectInputStream(new FileInputStream(ROOM_FILE));
+            rooms = (ArrayList<StudyRoom>) ois.readObject();
+            ois.close();
+        } catch (Exception e) {
+            System.out.println(e.toString());
+        }
+        return rooms;
+
+    }
+
 }

@@ -1,6 +1,6 @@
 package Code;
-
-public class StudyRoom {
+import java.io.*;
+public class StudyRoom implements Serializable {
     //Attributes
     private String roomNumber;
     private boolean isReserved;
