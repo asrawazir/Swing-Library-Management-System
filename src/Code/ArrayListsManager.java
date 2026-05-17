@@ -128,7 +128,7 @@ public class ArrayListsManager {
         }
         
         if (room.getIsReserved()) {
-            return "Room is already reserved";
+            return "Room is already reserved by : " + room.getReservedByMemberID();
 
         }
 
