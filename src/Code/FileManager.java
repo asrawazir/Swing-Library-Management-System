@@ -11,7 +11,7 @@ public class FileManager {
 
     public void loadDataFromFile() {
         loadBooks();
-        //loadIssuedBooks();
+        loadIssuedBooks();
     }
 
     private void loadBooks() {
@@ -42,4 +42,35 @@ public class FileManager {
         }
     }
 
+    private void loadIssuedBooks()
+    {
+        File file = new File(issuedFile);
+        if (!file.exists())
+        {
+            return;
+        }
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(file)))
+        {
+            ArrayList<IssuedBook> issued = (ArrayList<IssuedBook>) in.readObject();
+            alm.getIssuedBooksList().clear();
+            alm.getIssuedBooksList().addAll(issued);
+
+        }
+        catch (Exception e)
+        {
+            System.out.println("Issued books load error");
+        }
+    }
+
+    public void saveIssuedBooksDataToFile()
+    {
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(issuedFile)))
+        {
+            out.writeObject(alm.getIssuedBooksList());
+        }
+        catch (Exception e)
+        {
+            System.out.println("Issued books save error");
+        }
+    }
 }
