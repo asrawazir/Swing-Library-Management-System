@@ -132,7 +132,7 @@ public class ArrayListsManager {
 
         }
 
-            return "Room is not reserved";
+            return "Room is available";
 
     }
 
