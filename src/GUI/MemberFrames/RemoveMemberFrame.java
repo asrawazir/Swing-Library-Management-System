@@ -62,7 +62,7 @@ public class RemoveMemberFrame implements ActionListener {
             new MemberHomeFrame();
         }
         if (e.getSource()==rmSubmitButton){
-            String memberID = rmIdTextField.getText().trim();
+            String memberID = rmIdTextField.getText().trim().toUpperCase();
 
             if(memberID.isEmpty()){
 
