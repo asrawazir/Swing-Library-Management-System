@@ -15,6 +15,7 @@ public class ArrayListsManager {
         books = new ArrayList<>();
         issuedBooks = new ArrayList<>();
         members = new ArrayList<>();
+        fm.loadMembersFromFile();
         rooms = fm.loadRooms();
         if (rooms.isEmpty()) {
             rooms.add(new StudyRoom("101"));
