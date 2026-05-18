@@ -46,10 +46,8 @@ public class StudyRoom implements Serializable {
             reservedByMemberID=memberID;
             System.out.println("Room is reserved");
         }
-        else
-        {
-            System.out.println("Room is already reserved");
-        }
+
+
     }
 
     //cancel reservation method
