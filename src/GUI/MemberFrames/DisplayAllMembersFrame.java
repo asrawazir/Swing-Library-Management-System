@@ -13,7 +13,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class DisplayAllMembers implements ActionListener {
+public class DisplayAllMembersFrame implements ActionListener {
 
     CreateFrame dmFrame;
     CreateLabel dmLabel;
@@ -24,7 +24,7 @@ public class DisplayAllMembers implements ActionListener {
     JTable dmTable;
     JScrollPane dmScrollPane;
 
-    public DisplayAllMembers(){
+    public DisplayAllMembersFrame(){
         dmFrame = new CreateFrame();
         dmLabel = new CreateLabel("Display Members");
         dmBackButton = new CreateBackButton();
