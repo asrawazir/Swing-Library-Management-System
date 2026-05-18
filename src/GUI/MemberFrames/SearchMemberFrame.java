@@ -5,7 +5,7 @@ import GUI.AdditionalClasses.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class SearchMember implements ActionListener {
+public class SearchMemberFrame implements ActionListener {
 
     CreateFrame smFrame;
     CreateLabel smLabel;
@@ -14,7 +14,7 @@ public class SearchMember implements ActionListener {
     FrameButtons button1;
     FrameButtons button2;
 
-    public SearchMember(){
+    public SearchMemberFrame(){
         smFrame = new CreateFrame();
         smLabel = new CreateLabel("Search Member");
 
@@ -48,12 +48,12 @@ public class SearchMember implements ActionListener {
 
         if(e.getSource() == button1){
             smFrame.dispose();
-            new SearchMemberById();
+            new SearchMemberByIdFrame();
         }
 
         if(e.getSource() == button2){
             smFrame.dispose();
-            new SearchMemberByName();
+            new SearchMemberByNameFrame();
         }
     }
 }

@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import javax.swing.*;
 import javax.swing.table.JTableHeader;
 
-public class SearchMemberByName implements ActionListener {
+public class SearchMemberByNameFrame implements ActionListener {
     ArrayListsManager alm = ArrayListsManager.instance;
 
     CreateFrame snFrame;
@@ -28,7 +28,7 @@ public class SearchMemberByName implements ActionListener {
 
     ArrayList<Member> members;
 
-    public SearchMemberByName(){
+    public SearchMemberByNameFrame(){
 
         snFrame = new CreateFrame();
         snLabel = new CreateLabel("Search Member By Name");
@@ -72,7 +72,7 @@ public class SearchMemberByName implements ActionListener {
 
         if (e.getSource() == snBackButton){
             snFrame.dispose();
-            new SearchMember();
+            new SearchMemberFrame();
         }
 
         if(e.getSource() == snSubmitButton){

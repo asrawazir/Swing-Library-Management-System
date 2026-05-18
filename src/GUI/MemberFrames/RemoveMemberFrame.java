@@ -2,14 +2,13 @@ package GUI.MemberFrames;
 
 import Code.ArrayListsManager;
 import GUI.AdditionalClasses.*;
-import GUI.BookFrames.BookHomeFrame;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
-public class RemoveMember implements ActionListener {
+public class RemoveMemberFrame implements ActionListener {
 
     CreateFrame rmFrame;
     CreateLabel rmLabel;
@@ -20,7 +19,7 @@ public class RemoveMember implements ActionListener {
     JLabel rmIdLabel;
     JTextField rmIdTextField;
 
-    public RemoveMember(){
+    public RemoveMemberFrame(){
 
         rmFrame = new CreateFrame();
         rmLabel = new CreateLabel("Remove Member");

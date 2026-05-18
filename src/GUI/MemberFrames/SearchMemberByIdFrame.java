@@ -11,7 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class SearchMemberById implements ActionListener {
+public class SearchMemberByIdFrame implements ActionListener {
 
     ArrayListsManager alm = ArrayListsManager.instance;
 
@@ -29,7 +29,7 @@ public class SearchMemberById implements ActionListener {
 
     ArrayList<Member> members;
 
-    public SearchMemberById(){
+    public SearchMemberByIdFrame(){
 
         siFrame = new CreateFrame();
         siLabel = new CreateLabel("Search Member By ID");
@@ -73,7 +73,7 @@ public class SearchMemberById implements ActionListener {
 
         if (e.getSource() == siBackButton){
             siFrame.dispose();
-            new SearchMember();
+            new SearchMemberFrame();
         }
 
         if(e.getSource() == siSubmitButton){

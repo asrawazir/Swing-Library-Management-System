@@ -64,22 +64,22 @@ public class MemberHomeFrame implements ActionListener {
 
         if(e.getSource() == button1){
             mhFrame.dispose();
-            new RegisterMember();
+            new RegisterMemberFrame();
         }
 
         if(e.getSource() == button2){
             mhFrame.dispose();
-            new SearchMember();
+            new SearchMemberFrame();
         }
 
         if(e.getSource() == button3) {
             mhFrame.dispose();
-            new ViewIssuedBooks();
+            new ViewIssuedBooksFrame();
         }
 
         if(e.getSource() == button4){
             mhFrame.dispose();
-            new RemoveMember();
+            new RemoveMemberFrame();
         }
 
         if(e.getSource() == button5){

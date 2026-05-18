@@ -1,14 +1,13 @@
 package GUI.MemberFrames;
 
 import Code.ArrayListsManager;
-import Code.Member;
 import GUI.AdditionalClasses.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.*;
 import javax.swing.*;
 
-public class RegisterMember implements ActionListener{
+public class RegisterMemberFrame implements ActionListener{
 
     ArrayListsManager alm = ArrayListsManager.instance;
 
@@ -28,7 +27,7 @@ public class RegisterMember implements ActionListener{
     JTextField phoneTextField;
     JTextField emailTextField;
 
-    public RegisterMember(){
+    public RegisterMemberFrame(){
         rmFrame = new CreateFrame();
         rmLabel = new CreateLabel("Register Member");
         rmSubmitButton = new CreateSubmitButton("Register");

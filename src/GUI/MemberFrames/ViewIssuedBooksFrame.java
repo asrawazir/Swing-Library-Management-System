@@ -11,7 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class ViewIssuedBooks implements ActionListener {
+public class ViewIssuedBooksFrame implements ActionListener {
 
     ArrayListsManager alm = ArrayListsManager.instance;
 
@@ -30,7 +30,7 @@ public class ViewIssuedBooks implements ActionListener {
 
     ArrayList<IssuedBook> issuedBooks;
 
-    public ViewIssuedBooks() {
+    public ViewIssuedBooksFrame() {
 
         ibFrame = new CreateFrame();
         ibLabel = new CreateLabel("Books Issued to Member");
