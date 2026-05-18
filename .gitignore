@@ -30,3 +30,5 @@ bin/
 .DS_Store
 
 books.ser
+issuedbooks.ser
+rooms.ser
