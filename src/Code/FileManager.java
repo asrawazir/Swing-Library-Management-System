@@ -8,6 +8,7 @@ public class FileManager {
 
     private final String booksFile = "books.ser";
     private final String issuedFile = "issuedbooks.ser";
+    private final String MEMBER_FILE = "members.ser";
     private final String ROOM_FILE="rooms.ser";
     public void loadDataFromFile() {
         loadBooks();
