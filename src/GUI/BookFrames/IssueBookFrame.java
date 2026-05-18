@@ -123,6 +123,10 @@ public class IssueBookFrame implements ActionListener {
                 fm.saveIssuedBooksDataToFile();
                 new CreateDialogBox("Success", result);
             }
+            else
+            {
+                new CreateDialogBox("Error", result);
+            }
 
         }
     }
