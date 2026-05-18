@@ -270,7 +270,9 @@ public class ArrayListsManager {
         }
 
         members.add(new Member(id,name,phone,email));
-        //new FileManager().saveMembersToFile();
+
+        new FileManager().saveMembersToFile();
+
         return "Member registered successfully";
     }
 
@@ -315,7 +317,7 @@ public class ArrayListsManager {
 
         members.remove(member);
 
-        //new FileManager().saveMembersToFile();
+        new FileManager().saveMembersToFile();
 
         return "Member removed successfully";
     }
