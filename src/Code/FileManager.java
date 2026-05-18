@@ -81,8 +81,6 @@ public class FileManager {
 
             mos.writeObject(alm.getMembersList());
 
-            System.out.println("Members saved successfully to file.");
-
             mos.close();
         }
         catch (FileNotFoundException ex)
