@@ -65,10 +65,14 @@ public class ViewIssuedBooks implements ActionListener {
         ibBooksTable = new JTable(ibTableModel);
         ibBooksTable.getTableHeader().setFont(new Font("Inter", Font.BOLD, 13));
         ibBooksTable.setFont(new Font("Inter", Font.PLAIN, 13));
-        ibBooksTable.setRowHeight(25);
+        ibBooksTable.setForeground(Color.WHITE);
+        ibBooksTable.setSelectionBackground(new Color(0,120,215));
+        ibBooksTable.setSelectionForeground(Color.white);
+        ibBooksTable.setGridColor(new Color(40,60,90));
+        ibBooksTable.setRowHeight(20);
 
         ibScrollPane = new JScrollPane(ibBooksTable);
-        ibScrollPane.setBounds(10, 210, 670, 300);
+        ibScrollPane.setBounds(30, 180, 640, 200);
         ibScrollPane.getViewport().setBackground(Color.WHITE);
 
         ibBackButton.addActionListener(this);

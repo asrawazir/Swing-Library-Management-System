@@ -6,6 +6,7 @@ import GUI.AdditionalClasses.*;
 
 import java.awt.*;
 import javax.swing.*;
+import javax.swing.table.JTableHeader;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -22,13 +23,17 @@ public class SearchMemberById implements ActionListener {
     JLabel siIdLabel;
     JTextField siIdTextField;
 
+    JTable table = null;
+    JLabel notFoundLabel = null;
+    JTableHeader tableHeader = null;
+
     ArrayList<Member> members;
 
     public SearchMemberById(){
 
         siFrame = new CreateFrame();
         siLabel = new CreateLabel("Search Member By ID");
-        siSubmitButton = new CreateSubmitButton("Search" ,560, 110);
+        siSubmitButton = new CreateSubmitButton("Search" ,560, 120);
         siBackButton = new CreateBackButton();
         siExitButton = new CreateExitButton();
 
@@ -72,55 +77,63 @@ public class SearchMemberById implements ActionListener {
         }
 
         if(e.getSource() == siSubmitButton){
+            if (table != null) {
+                siFrame.remove(table);
+                siFrame.remove(tableHeader);
+                table = null;
+                tableHeader = null;
+            }
+
+            if (notFoundLabel != null) {
+                siFrame.remove(notFoundLabel);
+                notFoundLabel = null;
+            }
+
             String id = siIdTextField.getText();
-            boolean found = false;
-            for (int i = 0; i < members.size();i++) {
-                if (members.get(i).getId().equalsIgnoreCase(id)) {
-                    Member foundMember = members.get(i);
+            Member foundMember = null;
 
-                    JPanel foundMemberPanel = new JPanel();
-                    foundMemberPanel.setBackground(Color.white);
-                    foundMemberPanel.setBounds(170,160, 350,170);
-                    foundMemberPanel.setLayout(null);
-
-                    JLabel foundMemberIdLabel = new JLabel("Id: " + foundMember.getId());
-                    JLabel foundMemberNameLabel = new JLabel("Name: " + foundMember.getName());
-                    JLabel foundMemberPhoneLabel = new JLabel("Phone: " + foundMember.getPhone());
-                    JLabel foundMemberEmailLabel = new JLabel("Email: " + foundMember.getEmail());
-
-                    foundMemberIdLabel.setFont(new Font("Inter",Font.BOLD,15));
-                    foundMemberNameLabel.setFont(new Font("Inter",Font.BOLD,15));
-                    foundMemberPhoneLabel.setFont(new Font("Inter",Font.BOLD,15));
-                    foundMemberEmailLabel.setFont(new Font("Inter",Font.BOLD,15));
-
-                    foundMemberIdLabel.setBounds(70, 20, 200, 30);
-                    foundMemberNameLabel.setBounds(70, 50, 200, 30);
-                    foundMemberPhoneLabel.setBounds(70, 80, 200, 30);
-                    foundMemberEmailLabel.setBounds(70, 110, 200, 30);
-
-                    foundMemberPanel.add(foundMemberIdLabel);
-                    foundMemberPanel.add(foundMemberNameLabel);
-                    foundMemberPanel.add(foundMemberPhoneLabel);
-                    foundMemberPanel.add(foundMemberEmailLabel);
-
-                    siFrame.add(foundMemberPanel);
-
-                    found = true;
+            for(int i = 0; i < members.size(); i++){
+                if(members.get(i).getId().equalsIgnoreCase(id)){
+                    foundMember = members.get(i);
                     break;
                 }
             }
-
-            if(!found){
-                JLabel notFoundLabel = new JLabel("Member not found");
-                notFoundLabel.setFont(new Font("Inter",Font.BOLD,25));
-                notFoundLabel.setBounds(230,200,300,40);
+            if (foundMember == null) {
+                notFoundLabel = new JLabel("Member not found");
+                notFoundLabel.setFont(new Font("Inter", Font.BOLD, 25));
+                notFoundLabel.setForeground(Color.WHITE);
+                notFoundLabel.setBounds(230, 200, 300, 40);
                 siFrame.add(notFoundLabel);
-                siFrame.repaint();
-                siFrame.revalidate();
             }
 
+            else {
+                String[] headers = {"  Field", "Member Details"};
+                String[][] data = {
+                        {"  ID", foundMember.getId()},
+                        {"  Name", foundMember.getName()},
+                        {"  Phone", foundMember.getPhone()},
+                        {"  Email", foundMember.getEmail()}
+                };
+
+                table = new JTable(data, headers);
+                table.setBackground(new Color(10, 20, 35));
+                table.setForeground(Color.white);
+                table.setRowHeight(25);
+                table.setGridColor(Color.GRAY);
+
+                table.setBounds(120, 210, 460, 100);
+
+                tableHeader = table.getTableHeader();
+                tableHeader.setBounds(120, 190, 460, 20);
+                tableHeader.setBackground(new Color(20, 40, 60));
+                tableHeader.setForeground(Color.WHITE);
+
+                siFrame.add(table.getTableHeader());
+                siFrame.add(table);
+            }
             siFrame.revalidate();
             siFrame.repaint();
+
         }
     }
 }

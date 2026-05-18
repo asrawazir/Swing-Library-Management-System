@@ -270,6 +270,7 @@ public class ArrayListsManager {
         }
 
         members.add(new Member(id,name,phone,email));
+        new FileManager().saveMembersToFile();
         return "Member registered successfully";
     }
 
@@ -296,10 +297,26 @@ public class ArrayListsManager {
                 continue;
             }
 
-            if (ib.getMember().getId().equalsIgnoreCase(memberID)) {
+            if (ib.getMember().getId().trim().equalsIgnoreCase(memberID)) {
                 result.add(ib);
             }
         }
         return result;
+    }
+
+    public String removeMember(String memberID){
+
+        Member member = findMemberById(memberID);
+
+        if(member == null){
+
+            return "Member does not exist";
+        }
+
+        members.remove(member);
+
+        new FileManager().saveMembersToFile();
+
+        return "Member removed successfully";
     }
 }

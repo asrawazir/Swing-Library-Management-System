@@ -21,8 +21,7 @@ public class FileManager {
         {
             return;
         }
-        try {
-            ObjectInputStream in = new ObjectInputStream(new FileInputStream(file));
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(file))) {
             ArrayList<Book> books = (ArrayList<Book>) in.readObject();
             alm.getBooksList().clear();
             alm.getBooksList().addAll(books);
@@ -33,8 +32,8 @@ public class FileManager {
     }
 
     public void saveBooksDataToFile() {
-        try {
-            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(booksFile));
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(booksFile)))
+        {
             out.writeObject(alm.getBooksList());
         }
         catch (Exception e)
@@ -50,8 +49,8 @@ public class FileManager {
         {
             return;
         }
-        try {
-            ObjectInputStream in = new ObjectInputStream(new FileInputStream(file));
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(file)))
+        {
             ArrayList<IssuedBook> issued = (ArrayList<IssuedBook>) in.readObject();
             alm.getIssuedBooksList().clear();
             alm.getIssuedBooksList().addAll(issued);
@@ -65,8 +64,8 @@ public class FileManager {
 
     public void saveIssuedBooksDataToFile()
     {
-        try {
-            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(issuedFile));
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(issuedFile)))
+        {
             out.writeObject(alm.getIssuedBooksList());
         }
         catch (Exception e)
