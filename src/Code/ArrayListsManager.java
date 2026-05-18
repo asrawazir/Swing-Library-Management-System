@@ -281,7 +281,6 @@ public class ArrayListsManager {
             }
         }
 
-        // Phone validation
         for(int i = 0; i < phone.length(); i++){
 
             char ch = phone.charAt(i);
@@ -292,13 +291,11 @@ public class ArrayListsManager {
             }
         }
 
-        // Simple email validation
         if(!email.contains("@")){
 
             return "Invalid email";
         }
 
-        // ID validation
         if(id.charAt(0) != 'M'){
 
             return "ID must start with M";
