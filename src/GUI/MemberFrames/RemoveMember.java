@@ -1,5 +1,6 @@
 package GUI.MemberFrames;
 
+import Code.ArrayListsManager;
 import GUI.AdditionalClasses.*;
 import GUI.BookFrames.BookHomeFrame;
 
@@ -72,7 +73,21 @@ public class RemoveMember implements ActionListener {
                 return;
             }
 
-            new CreateDialogBox("Success","Member Removed Successfully");
+            ArrayListsManager alm = ArrayListsManager.instance;
+
+            String result = alm.removeMember(memberID);
+
+            if(result.equals("Member removed successfully")){
+
+                new CreateDialogBox("Success",
+                        "Member Removed Successfully");
+
+                rmIdTextField.setText("");
+            }
+            else{
+
+                new CreateDialogBox("Error", result);
+            }
         }
     }
 }
