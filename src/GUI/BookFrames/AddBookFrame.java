@@ -128,11 +128,16 @@ public class AddBookFrame implements ActionListener {
 
         //processing the press on submit button
         if (e.getSource()==submitButton){
-            String id = idTextField.getText();
-            String title = titleTextField.getText();
-            String author = authorTextField.getText();
-            String quantityText = quantityTextField.getText();
+            String id = idTextField.getText().trim();
+            String title = titleTextField.getText().trim();
+            String author = authorTextField.getText().trim();
+            String quantityText = quantityTextField.getText().trim();
             int quantity;
+
+            if(id.isEmpty() || title.isEmpty() || author.isEmpty() || quantityText.isEmpty()){
+                new CreateDialogBox("Error","All fields are required");
+                return;
+            }
 
             try{
                 quantity = Integer.parseInt(quantityText);
