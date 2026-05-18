@@ -53,11 +53,9 @@ public class StudyRoom implements Serializable {
     //cancel reservation method
     public void cancelReservation()
     {
-        if(isReserved)
-        {
-            isReserved=false;
-            reservedByMemberID=null;
-            System.out.println("Reservation of room is cancelled");
+        if(isReserved) {
+            isReserved = false;
+            reservedByMemberID = null;
         }
         else
         {
