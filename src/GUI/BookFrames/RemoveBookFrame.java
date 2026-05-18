@@ -32,21 +32,20 @@ public class RemoveBookFrame implements ActionListener {
     CreateBackButton backButton = new CreateBackButton();
     CreateSubmitButton submitButton = new CreateSubmitButton("Remove");
 
-    public RemoveBookFrame(){
+    public RemoveBookFrame() {
 
         //Defining the properties for idLabel
         idLabel.setText("Enter Book ID : ");
-        idLabel.setBounds(10,150,680,25);
-        idLabel.setFont(new Font("Inter",Font.BOLD,14));
+        idLabel.setBounds(10, 150, 680, 25);
+        idLabel.setFont(new Font("Inter", Font.BOLD, 14));
         idLabel.setForeground(Color.WHITE);
 
         //Defining the properties for idTextField
-        idTextField.setBounds(10,180,670,30);
-        idTextField.setFont(new Font("Inter",Font.PLAIN,14));
+        idTextField.setBounds(10, 180, 670, 30);
+        idTextField.setFont(new Font("Inter", Font.PLAIN, 14));
         idTextField.setForeground(Color.WHITE);
-        idTextField.setBackground(new Color(10,20,35));
+        idTextField.setBackground(new Color(10, 20, 35));
         idTextField.setCaretColor(Color.WHITE);
-
 
 
         //Adding action listeners to the buttons
@@ -71,24 +70,28 @@ public class RemoveBookFrame implements ActionListener {
 
     //Overriding actionPerformed method
     @Override
-    public void actionPerformed(ActionEvent e){
+    public void actionPerformed(ActionEvent e) {
 
         //Defining the action for back button
-        if (e.getSource()==backButton){
+        if (e.getSource() == backButton) {
             rbFrame.dispose();
             new BookHomeFrame();
         }
         //Defining the action for submit button
-        if (e.getSource()==submitButton){
-            String id = idTextField.getText();
-            for (int i =0; i<books.size();i++){
-                if (books.get(i).getID().equalsIgnoreCase(id)){
-                    alm.removeBook(books.get(i));
-                }
-            }
-            fileManager.saveBooksDataToFile();
+        if (e.getSource() == submitButton)
+        {
+            String id = idTextField.getText().trim();
+            Book book = alm.findBookById(id);
 
-            new CreateDialogBox("Success","Book Removed Successfully");
+            if (book != null) {
+                alm.removeBook(book);
+                fileManager.saveBooksDataToFile();
+                new CreateDialogBox("Success", "Book Removed Successfully");
+            }
+            else
+            {
+                new CreateDialogBox("Error", "Book not found");
+            }
         }
     }
 }

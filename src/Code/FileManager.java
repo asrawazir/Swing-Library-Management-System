@@ -1,14 +1,15 @@
 package Code;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileManager {
     ArrayListsManager alm =ArrayListsManager.instance;
-    ArrayList<Member> members = alm.getMembersList();
     final String BOOKS_DATA_FILE = "Books.txt";
-    final String MEMBERS_DATA_FILE = "Members.dat";
+    final String ISSUED_BOOKS_DATA_FILE = "IssuedBooks.ser";
 
     public void loadDataFromFile(){
         try {
@@ -18,7 +19,11 @@ public class FileManager {
                 while (sc.hasNextLine()){
                     String bookData = sc.nextLine();
                     String[] parts = bookData.split(",");
-                    Book b = new Book(parts[0],parts[1],parts[2],parts[3]);
+
+                    int quantity = Integer.parseInt(parts[3]);
+                    int availableQuantity = Integer.parseInt(parts[4]);
+                    Book b = new Book(parts[0], parts[1], parts[2], quantity,availableQuantity);
+
                     alm.addBook(b);
                 }
             }
@@ -35,52 +40,11 @@ public class FileManager {
                         books.get(i).getID()+","+
                                 books.get(i).getTitle()+","+
                                 books.get(i).getAuthor()+","+
-                                books.get(i).getTotalQuantity());
+                                books.get(i).getTotalQuantity()+","+
+                                books.get(i).getAvailableQuantity());
             }
         } catch (Exception e2) {
             System.out.println("Error saving books data.");
-        }
-
-    }
-
-    public void saveMembersToFile(){
-        try{
-            ObjectOutputStream mos = new ObjectOutputStream(new FileOutputStream(MEMBERS_DATA_FILE));
-
-            mos.writeObject(alm.getMembersList());
-
-            System.out.println("Members saved successfully to file.");
-        }
-        catch (FileNotFoundException ex)
-        {
-            ex.printStackTrace();
-        }
-        catch (IOException ex)
-        {
-            ex.printStackTrace();
-        }
-    }
-
-    public void loadMembersFromFile(){
-
-        try{
-            ObjectInputStream ois = new ObjectInputStream(new FileInputStream(MEMBERS_DATA_FILE));
-
-            alm.members = (ArrayList<Member>) ois.readObject();
-
-            System.out.println("Members loaded successfully");
-
-        } catch (FileNotFoundException e) {
-
-            System.out.println("No previous file found");
-
-        } catch (IOException e) {
-
-            System.out.println("Error reading file");
-
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            System.out.println("Class not found");
         }
     }
 }

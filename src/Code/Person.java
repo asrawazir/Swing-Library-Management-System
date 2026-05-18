@@ -1,6 +1,8 @@
 package Code;
 
-public class Person {
+import java.io.Serializable;
+
+public class Person implements Serializable {
 
     private String id;
     private String name;

@@ -1,6 +1,6 @@
 package Code;
-
-public class StudyRoom {
+import java.io.*;
+public class StudyRoom implements Serializable {
     //Attributes
     private String roomNumber;
     private boolean isReserved;
@@ -46,25 +46,18 @@ public class StudyRoom {
             reservedByMemberID=memberID;
             System.out.println("Room is reserved");
         }
-        else
-        {
-            System.out.println("Room is already reserved");
-        }
+
+
     }
 
     //cancel reservation method
     public void cancelReservation()
     {
-        if(isReserved)
-        {
-            isReserved=false;
-            reservedByMemberID=null;
-            System.out.println("Reservation of room is cancelled");
+        if(isReserved) {
+            isReserved = false;
+            reservedByMemberID = null;
         }
-        else
-        {
-            System.out.println("Room is not reserved");
-        }
+
     }
 
     // displaying all room status

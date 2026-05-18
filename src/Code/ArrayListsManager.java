@@ -9,25 +9,27 @@ public class ArrayListsManager {
     ArrayList<IssuedBook> issuedBooks;
     ArrayList<Member> members;
     ArrayList<StudyRoom> rooms;
-
-    public ArrayListsManager(){
+    FileManager fm=new FileManager();
+    public ArrayListsManager() {
 
         books = new ArrayList<>();
         issuedBooks = new ArrayList<>();
         members = new ArrayList<>();
-        rooms=new ArrayList<>();
-        rooms.add(new StudyRoom("101"));
-        rooms.add(new StudyRoom("102"));
-        rooms.add(new StudyRoom("103"));
-        rooms.add(new StudyRoom("104"));
-        rooms.add(new StudyRoom("105"));
-        rooms.add(new StudyRoom("106"));
-        rooms.add(new StudyRoom("107"));
-        rooms.add(new StudyRoom("108"));
-        rooms.add(new StudyRoom("109"));
-        rooms.add(new StudyRoom("110"));
+        rooms = fm.loadRooms();
+        if (rooms.isEmpty()) {
+            rooms.add(new StudyRoom("101"));
+            rooms.add(new StudyRoom("102"));
+            rooms.add(new StudyRoom("103"));
+            rooms.add(new StudyRoom("104"));
+            rooms.add(new StudyRoom("105"));
+            rooms.add(new StudyRoom("106"));
+            rooms.add(new StudyRoom("107"));
+            rooms.add(new StudyRoom("108"));
+            rooms.add(new StudyRoom("109"));
+            rooms.add(new StudyRoom("110"));
+            fm.saveRooms(rooms);
+        }
     }
-
     public void addBook(Book book){
         books.add(book);
     }
@@ -93,6 +95,7 @@ public class ArrayListsManager {
             return " This member did not reserve this room ";
         }
          room.cancelReservation();
+         fm.saveRooms(rooms);
         return "Reservation cancelled successfully";
     }
 
@@ -113,6 +116,7 @@ public class ArrayListsManager {
             return " This room is already reserved ";
         }
         room.reserveRoom(memberID);
+        fm.saveRooms(rooms);
         return "Room is reserved";
     }
 
@@ -124,11 +128,11 @@ public class ArrayListsManager {
         }
         
         if (room.getIsReserved()) {
-            return "Room is already reserved";
+            return "Room is already reserved by : " + room.getReservedByMemberID();
 
         }
 
-            return "Room is not reserved";
+            return "Room is available";
 
     }
 
