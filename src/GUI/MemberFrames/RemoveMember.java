@@ -62,6 +62,16 @@ public class RemoveMember implements ActionListener {
             new MemberHomeFrame();
         }
         if (e.getSource()==rmSubmitButton){
+            String memberID = rmIdTextField.getText().trim();
+
+            if(memberID.isEmpty()){
+
+                new CreateDialogBox("Error",
+                        "Please enter Member ID");
+
+                return;
+            }
+
             new CreateDialogBox("Success","Member Removed Successfully");
         }
     }
