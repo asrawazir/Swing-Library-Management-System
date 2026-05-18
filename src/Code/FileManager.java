@@ -82,6 +82,8 @@ public class FileManager {
             mos.writeObject(alm.getMembersList());
 
             System.out.println("Members saved successfully to file.");
+
+            mos.close();
         }
         catch (FileNotFoundException ex)
         {
@@ -96,11 +98,20 @@ public class FileManager {
     public void loadMembersFromFile(){
 
         try{
-            ObjectInputStream ois = new ObjectInputStream(new FileInputStream(MEMBERS_FILE));
+            File file = new File(MEMBERS_FILE);
+
+            if (!file.exists()) {
+                System.out.println("No previous file found");
+                return;
+            }
+
+            ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file));
 
             alm.members = (ArrayList<Member>) ois.readObject();
 
             System.out.println("Members loaded successfully");
+
+            ois.close();
 
         } catch (FileNotFoundException e) {
 
