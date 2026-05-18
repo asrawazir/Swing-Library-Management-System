@@ -63,8 +63,11 @@ public class ViewIssuedBooksFrame implements ActionListener {
         };
 
         ibBooksTable = new JTable(ibTableModel);
-        ibBooksTable.getTableHeader().setFont(new Font("Inter", Font.BOLD, 13));
+        ibBooksTable.getTableHeader().setBackground(new Color(10,15,35));
+        ibBooksTable.getTableHeader().setForeground(Color.CYAN);
+        ibBooksTable.getTableHeader().setFont(new Font("Inter",Font.BOLD,14));
         ibBooksTable.setFont(new Font("Inter", Font.PLAIN, 13));
+        ibBooksTable.setBackground(new Color(15,22,40));
         ibBooksTable.setForeground(Color.WHITE);
         ibBooksTable.setSelectionBackground(new Color(0,120,215));
         ibBooksTable.setSelectionForeground(Color.white);
