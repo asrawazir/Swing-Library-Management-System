@@ -57,10 +57,7 @@ public class StudyRoom implements Serializable {
             isReserved = false;
             reservedByMemberID = null;
         }
-        else
-        {
-            System.out.println("Room is not reserved");
-        }
+
     }
 
     // displaying all room status
