@@ -9,7 +9,7 @@ public class Main
         //calling home frame class from main
         FileManager fileManager = new FileManager();
         fileManager.loadDataFromFile();
-        //fileManager.loadMembersFromFile();
+        fileManager.loadMembersFromFile();
         new MainFrame();
     }
 }
