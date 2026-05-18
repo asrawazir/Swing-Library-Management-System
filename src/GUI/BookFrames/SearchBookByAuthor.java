@@ -19,6 +19,8 @@ public class SearchBookByAuthor implements ActionListener {
     JLabel authorLabel = new JLabel();
     JTextField authorTextField = new JTextField();
     ArrayListsManager alm = ArrayListsManager.instance;
+    JScrollPane foundBooksScrollPane = null;
+    JLabel notFoundLabel = null;
 
     public SearchBookByAuthor(){
 
@@ -53,6 +55,16 @@ public class SearchBookByAuthor implements ActionListener {
         }
 
         if (e.getSource()==submitButton){
+            if(foundBooksScrollPane != null){
+                sbaFrame.remove(foundBooksScrollPane);
+                foundBooksScrollPane = null;
+            }
+
+            if(notFoundLabel != null){
+                sbaFrame.remove(notFoundLabel);
+                notFoundLabel = null;
+            }
+
             String author = authorTextField.getText();
             ArrayList<Book> books = alm.getBooksList();
             ArrayList<Book> foundBook = new ArrayList<>();
@@ -62,7 +74,12 @@ public class SearchBookByAuthor implements ActionListener {
                 }
             }
             if (foundBook.isEmpty()){
+                notFoundLabel = new JLabel("Book not found!");
+                notFoundLabel.setFont(new Font("Inter",Font.BOLD,30));
+                notFoundLabel.setForeground(Color.WHITE);
+                notFoundLabel.setBounds(250,250,300,40);
 
+                sbaFrame.add(notFoundLabel);
             }
             else {
                 String[] headers = {"Book Id","Title","Author"};
@@ -75,13 +92,13 @@ public class SearchBookByAuthor implements ActionListener {
                 JTable table = new JTable(data,headers);
                 table.setBackground(new Color(10,20,35));
                 table.setForeground(Color.white);
-                JScrollPane scrollPane = new JScrollPane(table);
-                scrollPane.setBounds(70,180,560,180);
-                sbaFrame.add(scrollPane);
+                foundBooksScrollPane = new JScrollPane(table);
+                foundBooksScrollPane.setBounds(70,180,560,180);
+                sbaFrame.add(foundBooksScrollPane);
 
-                sbaFrame.revalidate();
-                sbaFrame.repaint();
             }
+            sbaFrame.revalidate();
+            sbaFrame.repaint();
         }
     }
 }
