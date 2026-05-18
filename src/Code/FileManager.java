@@ -95,38 +95,30 @@ public class FileManager {
         }
     }
 
-    public void loadMembersFromFile(){
+    public ArrayList<Member> loadMembersFromFile(){
+
+        ArrayList<Member> members = new ArrayList<>();
 
         try{
+
             File file = new File(MEMBERS_FILE);
 
             if (!file.exists()) {
-                System.out.println("No previous file found");
-                return;
+                return members;
             }
 
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file));
 
-            alm.members = (ArrayList<Member>) ois.readObject();
-
-            System.out.println("Members loaded successfully");
+            members = (ArrayList<Member>) ois.readObject();
 
             ois.close();
 
-        } catch (FileNotFoundException e) {
-
-            System.out.println("No previous file found");
-
-        } catch (IOException e) {
-
-            System.out.println("Error reading file");
-
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            System.out.println("Class not found");
-
+        }
+        catch(Exception e){
             e.printStackTrace();
         }
+
+        return members;
     }
 
     public void saveRooms(ArrayList<StudyRoom>rooms){
