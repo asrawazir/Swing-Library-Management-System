@@ -257,16 +257,66 @@ public class ArrayListsManager {
         issuedBooks.add(issuedBook);
     }
 
-    public String registerNewMember(String id, String name, String phone, String email){
+    public String registerNewMember(String id,
+                                    String name,
+                                    String phone,
+                                    String email){
 
-        if (id.trim().isEmpty() || name.trim().isEmpty() ||
-                phone.trim().isEmpty() || email.trim().isEmpty()) {
-            return "All fields are required for registration";
+        if(id.trim().isEmpty() ||
+                name.trim().isEmpty() ||
+                phone.trim().isEmpty() ||
+                email.trim().isEmpty()){
+
+            return "All fields are required";
         }
 
-        if (findMemberById(id) != null) {
-            return "Member ID already exists";
+        // Name validation
+        for(int i = 0; i < name.length(); i++){
 
+            char ch = name.charAt(i);
+
+            if(!Character.isLetter(ch) && ch != ' '){
+
+                return "Name can contain alphabets only";
+            }
+        }
+
+        // Phone validation
+        for(int i = 0; i < phone.length(); i++){
+
+            char ch = phone.charAt(i);
+
+            if(!Character.isDigit(ch)){
+
+                return "Phone number must contain digits only";
+            }
+        }
+
+        // Simple email validation
+        if(!email.contains("@")){
+
+            return "Invalid email";
+        }
+
+        // ID validation
+        if(id.charAt(0) != 'M'){
+
+            return "ID must start with M";
+        }
+
+        for(int i = 1; i < id.length(); i++){
+
+            char ch = id.charAt(i);
+
+            if(!Character.isDigit(ch)){
+
+                return "Invalid ID format";
+            }
+        }
+
+        if(findMemberById(id) != null){
+
+            return "Member ID already exists";
         }
 
         members.add(new Member(id,name,phone,email));
