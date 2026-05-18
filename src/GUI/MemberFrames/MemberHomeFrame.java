@@ -84,7 +84,7 @@ public class MemberHomeFrame implements ActionListener {
 
         if(e.getSource() == button5){
             mhFrame.dispose();
-            new DisplayAllMembers();
+            new DisplayAllMembersFrame();
         }
 
     }
