@@ -57,9 +57,9 @@ public class DisplayBooksFrame implements ActionListener {
         table.setGridColor(new Color(40,60,90));
         table.setRowHeight(20);
         table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-        table.getColumnModel().getColumn(0).setPreferredWidth(60);
+        table.getColumnModel().getColumn(0).setPreferredWidth(50);
         table.getColumnModel().getColumn(1).setPreferredWidth(200);
-        table.getColumnModel().getColumn(2).setPreferredWidth(140);
+        table.getColumnModel().getColumn(2).setPreferredWidth(130);
         table.getColumnModel().getColumn(3).setPreferredWidth(80);
         table.getColumnModel().getColumn(4).setPreferredWidth(80);
         table.getTableHeader().setBackground(new Color(10,15,35));
