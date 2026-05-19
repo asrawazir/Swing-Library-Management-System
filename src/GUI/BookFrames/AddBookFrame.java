@@ -151,23 +151,25 @@ public class AddBookFrame implements ActionListener {
                 return;
             }
 
-            //Creating a book object using received fields
             Book book = new Book(id,title,author,quantity);
 
-            //Adding the created book object to array list
-            alm.addBook(book);
+            String result = alm.addBook(book);
 
-            //Creating FileManager object and saving the received book to file
-            new FileManager().saveBooksDataToFile();
+            if(result.equals("Book added successfully"))
+            {
 
-            //Creating a DialogBox
-            new CreateDialogBox("Success","Book Added Successfully");
+                new FileManager().saveBooksDataToFile();
+                new CreateDialogBox("Success", result);
 
-            //Resetting the text on the text field
-            idTextField.setText("");
-            titleTextField.setText("");
-            authorTextField.setText("");
-            quantityTextField.setText("");
+                idTextField.setText("");
+                titleTextField.setText("");
+                authorTextField.setText("");
+                quantityTextField.setText("");
+            }
+            else
+            {
+                new CreateDialogBox("Error", result);
+            }
         }
     }
 }
