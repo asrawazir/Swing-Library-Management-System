@@ -84,6 +84,10 @@ public class ArrayListsManager {
 
         StudyRoom room=findRoom(roomNumber);
         Member member=findMemberById(memberID);
+
+        if(room==null && member==null){
+            return "Room and member does not exist.";
+        }
         if(room==null){
             return "Room does not exist";
         }
