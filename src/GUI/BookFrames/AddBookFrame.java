@@ -128,17 +128,21 @@ public class AddBookFrame implements ActionListener {
 
         //processing the press on submit button
         if (e.getSource()==submitButton){
+
+            //Receiving text from fields
             String id = idTextField.getText().trim();
             String title = titleTextField.getText().trim();
             String author = authorTextField.getText().trim();
             String quantityText = quantityTextField.getText().trim();
             int quantity;
 
+            //Setting a check if text is received in all fields
             if(id.isEmpty() || title.isEmpty() || author.isEmpty() || quantityText.isEmpty()){
                 new CreateDialogBox("Error","All fields are required");
                 return;
             }
 
+            //Parsing the quantity as integer
             try{
                 quantity = Integer.parseInt(quantityText);
             }
@@ -146,10 +150,20 @@ public class AddBookFrame implements ActionListener {
                 new CreateDialogBox("Error", "Quantity must be a number");
                 return;
             }
+
+            //Creating a book object using received fields
             Book book = new Book(id,title,author,quantity);
+
+            //Adding the created book object to array list
             alm.addBook(book);
+
+            //Creating FileManager object and saving the received book to file
             new FileManager().saveBooksDataToFile();
+
+            //Creating a DialogBox
             new CreateDialogBox("Success","Book Added Successfully");
+
+            //Resetting the text on the text field
             idTextField.setText("");
             titleTextField.setText("");
             authorTextField.setText("");
