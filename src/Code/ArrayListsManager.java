@@ -51,10 +51,6 @@ public class ArrayListsManager {
         return issuedBooks;
     }
 
-    public void registerMember(Member member){
-        members.add(member);
-    }
-
     public ArrayList<Member> getMembersList(){
         return members;
     }
@@ -325,19 +321,6 @@ public class ArrayListsManager {
         new FileManager().saveMembersToFile();
 
         return "Member registered successfully";
-    }
-
-    public Member searchMemberById(String id) {
-        return findMemberById(id);
-    }
-
-    public Member searchMemberByName(String name) {
-        for (Member m : members) {
-            if (m.getName().equalsIgnoreCase(name)) {
-                return m;
-            }
-        }
-        return null;
     }
 
     public ArrayList<IssuedBook> viewBooksByMemberId(String memberID) {
