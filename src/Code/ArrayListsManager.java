@@ -78,9 +78,17 @@ public class ArrayListsManager {
     }
 
     public String cancelReservation(String roomNumber, String memberID) {
+        if(roomNumber==null || roomNumber.trim().isEmpty()  || memberID==null || memberID.trim().isEmpty()){
+            return "Please fill in all fields";
+        }
+
 
         StudyRoom room=findRoom(roomNumber);
         Member member=findMemberById(memberID);
+
+        if(room==null && member==null){
+            return "Room and member does not exist.";
+        }
         if(room==null){
             return "Room does not exist";
         }
@@ -101,8 +109,17 @@ public class ArrayListsManager {
     }
 
     public String reserveRoom(String roomNumber, String memberID) {
+        if(roomNumber==null || roomNumber.trim().isEmpty()  || memberID==null || memberID.trim().isEmpty()){
+            return "Please fill in all fields";
+        }
+
         StudyRoom room = findRoom(roomNumber);
         Member member=findMemberById(memberID);
+
+        if(room==null && member==null){
+            return "Room and member does not exist.";
+        }
+
         if (room == null) {
             return "Room does not exist ";
         }
@@ -122,6 +139,9 @@ public class ArrayListsManager {
     }
 
     public String checkReservationStatus(String roomNumber) {
+        if(roomNumber==null || roomNumber.trim().isEmpty()){
+            return "Please fill in all fields";
+        }
         StudyRoom room = findRoom(roomNumber);
 
         if (room == null) {
