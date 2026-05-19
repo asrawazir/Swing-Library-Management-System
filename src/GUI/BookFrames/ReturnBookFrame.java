@@ -12,20 +12,26 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class ReturnBookFrame implements ActionListener {
-    CreateFrame rbFrame = new CreateFrame();
-    CreateLabel label = new CreateLabel("Return Book");
-    CreateExitButton exitButton = new CreateExitButton();
-    CreateBackButton backButton = new CreateBackButton();
 
+    //Creating a Frame
+    CreateFrame rbFrame = new CreateFrame();
+
+    //Defining labels for the frame
+    CreateLabel label = new CreateLabel("Return Book");
     JLabel memberIdLabel = new JLabel();
     JLabel bookIdLabel = new JLabel();
 
+    //Defining text fields for the frame
     JTextField memberIdTextField = new JTextField();
     JTextField bookIdTextField = new JTextField();
 
-    ArrayListsManager alm = ArrayListsManager.instance;
-
+    //Creating button objects for the frame
     CreateSubmitButton submitButton = new CreateSubmitButton("Return");
+    CreateExitButton exitButton = new CreateExitButton();
+    CreateBackButton backButton = new CreateBackButton();
+
+    //Creating an instance object of ArrayLists Manager
+    ArrayListsManager alm = ArrayListsManager.instance;
 
     public ReturnBookFrame(){
 
@@ -52,9 +58,11 @@ public class ReturnBookFrame implements ActionListener {
         bookIdTextField.setBackground(new Color(10,20,35));
         bookIdTextField.setCaretColor(Color.WHITE);
 
+        //Adding actionListener to the buttons
         submitButton.addActionListener(this);
         backButton.addActionListener(this);
 
+        //Adding components to the frame
         rbFrame.add(submitButton);
         rbFrame.add(memberIdTextField);
         rbFrame.add(bookIdTextField);
@@ -68,22 +76,31 @@ public class ReturnBookFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e){
+        //Processing back button
         if (e.getSource()==backButton){
             rbFrame.dispose();
             new BookHomeFrame();
         }
 
+        //Processing submit button
         if (e.getSource()==submitButton)
         {
+            //Receiving data from fields
             String memberId = memberIdTextField.getText().trim();
             String bookId = bookIdTextField.getText().trim();
+
+            //Checking the received data by calling a method ArrayListsManager class
             String result = alm.returnBook(bookId, memberId);
 
             if(result.equals("Book returned successfully"))
             {
+                //Creating an object of FileManager class
                 FileManager fm = new FileManager();
+                //Updating the data in files after returning a book
                 fm.saveBooksDataToFile();
                 fm.saveIssuedBooksDataToFile();
+
+                //Creating DialogBox object
                 new CreateDialogBox("Success", result);
             }
             else
