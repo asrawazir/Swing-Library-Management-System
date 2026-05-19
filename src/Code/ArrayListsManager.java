@@ -30,8 +30,13 @@ public class ArrayListsManager {
             fm.saveRooms(rooms);
         }
     }
-    public void addBook(Book book){
+    public String addBook(Book book)
+    {
+        if(findBookById(book.getID()) != null){
+            return "Book ID already exists";
+        }
         books.add(book);
+        return "Book added successfully";
     }
 
     public void removeBook(Book book){
