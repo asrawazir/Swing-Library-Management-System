@@ -129,6 +129,9 @@ public class ArrayListsManager {
     }
 
     public String checkReservationStatus(String roomNumber) {
+        if(roomNumber==null || roomNumber.trim().isEmpty()){
+            return "Please fill in all fields";
+        }
         StudyRoom room = findRoom(roomNumber);
 
         if (room == null) {
